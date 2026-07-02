@@ -350,38 +350,70 @@ p {
   color: var(--accent-dark);
 }
 
-.download-actions {
+.store-badges {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-top: 12px;
+  margin-top: 14px;
 }
 
-.download-link {
+.store-badge {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-height: 40px;
-  padding: 8px 12px;
-  border: 1px solid var(--line);
+  gap: 10px;
+  min-width: 176px;
+  min-height: 52px;
+  padding: 8px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.92);
-  color: var(--muted);
-  font-size: 0.92rem;
+  background: #101515;
+  color: #ffffff;
   font-weight: 780;
+  box-shadow: 0 12px 26px rgba(31, 42, 45, 0.16);
 }
 
-.download-link svg {
-  width: 18px;
-  height: 18px;
+.store-badge.testflight-badge {
+  background: #114c7d;
+  border-color: #0d3d65;
+}
+
+.store-badge svg,
+.store-badge-icon {
+  width: 22px;
+  height: 22px;
+  max-width: 22px;
+  max-height: 22px;
+  flex: 0 0 22px;
   fill: none;
-  stroke: var(--accent);
+  stroke: currentColor;
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
-  flex: 0 0 auto;
+}
+
+.store-badge .apple-icon {
+  fill: currentColor;
+  stroke: none;
+}
+
+.store-badge span {
+  display: grid;
+  gap: 1px;
+  min-width: 0;
+  line-height: 1;
+}
+
+.store-badge small {
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.store-badge strong {
+  color: #ffffff;
+  font-size: 1.08rem;
+  font-weight: 850;
 }
 
 .app-hero {
@@ -691,6 +723,11 @@ p {
     flex-direction: column;
   }
 
+  .section-index {
+    margin-inline: -14px;
+    padding-inline: 14px;
+  }
+
   .app-card-main {
     grid-template-columns: 72px minmax(0, 1fr);
     gap: 16px;
@@ -700,7 +737,7 @@ p {
   .app-card-links span,
   .availability,
   .button,
-  .download-link {
+  .store-badge {
     width: 100%;
   }
 
