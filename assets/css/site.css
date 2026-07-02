@@ -166,6 +166,17 @@ p {
   font-weight: 700;
 }
 
+.payment-warning {
+  max-width: 740px;
+  margin: 18px 0 0;
+  padding: 12px 14px;
+  border: 1px solid rgba(168, 91, 88, 0.3);
+  border-radius: 8px;
+  background: rgba(248, 241, 236, 0.86);
+  color: #73413f;
+  font-weight: 760;
+}
+
 .status-label {
   display: inline-flex;
   align-items: center;
@@ -494,11 +505,16 @@ p {
   width: min(880px, calc(100% - 40px));
 }
 
+.document-content {
+  margin-inline: auto;
+}
+
 .document-header {
   padding: 76px 0 34px;
 }
 
-.document-header h1 {
+.document-header h1,
+.document-header h2 {
   font-size: clamp(2.4rem, 5vw, 4.4rem);
 }
 
