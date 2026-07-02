@@ -167,14 +167,38 @@ p {
 }
 
 .payment-warning {
-  max-width: 740px;
+  position: relative;
+  max-width: 780px;
   margin: 18px 0 0;
-  padding: 12px 14px;
-  border: 1px solid rgba(168, 91, 88, 0.3);
+  padding: 15px 18px 15px 46px;
+  border: 2px solid rgba(168, 91, 88, 0.62);
+  border-left-width: 8px;
   border-radius: 8px;
-  background: rgba(248, 241, 236, 0.86);
-  color: #73413f;
-  font-weight: 760;
+  background: #fff0e4;
+  color: #65312f;
+  box-shadow: 0 14px 34px rgba(168, 91, 88, 0.16);
+  font-weight: 780;
+}
+
+.payment-warning::before {
+  content: "!";
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--rose);
+  color: #ffffff;
+  font-size: 0.86rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.payment-warning strong {
+  color: #4f2321;
 }
 
 .status-label {
@@ -301,6 +325,13 @@ p {
   color: #ffffff;
 }
 
+.button.active {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(7, 90, 99, 0.18);
+}
+
 .button.secondary {
   background: rgba(255, 255, 255, 0.82);
   border-color: var(--line);
@@ -317,6 +348,40 @@ p {
   background: var(--wash);
   border-color: var(--accent);
   color: var(--accent-dark);
+}
+
+.download-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.download-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 780;
+}
+
+.download-link svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: 0 0 auto;
 }
 
 .app-hero {
@@ -634,7 +699,8 @@ p {
   .app-card-links a,
   .app-card-links span,
   .availability,
-  .button {
+  .button,
+  .download-link {
     width: 100%;
   }
 
