@@ -456,8 +456,8 @@ p {
 
 .feature-layout {
   display: grid;
-  grid-template-columns: 230px minmax(0, 1fr);
-  gap: clamp(32px, 5vw, 64px);
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 52px);
   align-items: start;
 }
 
@@ -499,10 +499,10 @@ p {
 
 .story-section {
   display: grid;
-  grid-template-columns: minmax(0, 0.88fr) minmax(240px, 0.72fr);
-  gap: clamp(28px, 4vw, 48px);
+  grid-template-columns: minmax(0, 0.92fr) minmax(240px, 0.68fr);
+  gap: clamp(24px, 3.6vw, 42px);
   align-items: center;
-  padding: clamp(54px, 8vw, 86px) 0;
+  padding: clamp(50px, 7vw, 76px) 0;
   border-top: 1px solid var(--line);
 }
 
@@ -558,6 +558,9 @@ p {
 }
 
 .visual-frame {
+  justify-self: center;
+  width: min(360px, 100%);
+  aspect-ratio: 16 / 10;
   margin: 0;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -569,7 +572,7 @@ p {
 .visual-frame img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  height: 100%;
   object-fit: cover;
   background: var(--wash);
 }
@@ -588,11 +591,12 @@ p {
 
 .phone-frame {
   justify-self: center;
-  width: min(310px, 100%);
+  width: min(280px, 100%);
+  aspect-ratio: 9 / 16;
   margin: 0;
-  padding: 10px;
-  border: 1px solid rgba(207, 226, 223, 0.9);
-  border-radius: 26px;
+  padding: 8px;
+  border: 1px solid rgba(207, 226, 223, 0.95);
+  border-radius: 24px;
   background: #ffffff;
   box-shadow: var(--shadow);
   overflow: hidden;
@@ -601,20 +605,34 @@ p {
 .phone-frame img {
   display: block;
   width: 100%;
-  height: auto;
-  border-radius: 19px;
+  height: 100%;
+  border-radius: 17px;
   background: #f7fbfa;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.phone-frame.screen-mid img {
+  object-position: center 42%;
+}
+
+.phone-frame.screen-lower img {
+  object-position: center 68%;
+}
+
+.phone-frame.screen-bottom img {
+  object-position: center bottom;
 }
 
 .phone-pair {
   display: grid;
-  grid-template-columns: repeat(2, minmax(130px, 1fr));
+  grid-template-columns: repeat(2, minmax(118px, 1fr));
   gap: 14px;
   align-items: start;
 }
 
 .phone-pair .phone-frame {
-  width: min(210px, 100%);
+  width: min(190px, 100%);
   padding: 7px;
   border-radius: 22px;
 }
@@ -784,7 +802,7 @@ p {
 
   .app-hero {
     min-height: auto;
-    padding: 46px 0 54px;
+    padding: 38px 0 46px;
   }
 
   .hero-artwork {
@@ -805,8 +823,28 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .actions {
+    align-items: stretch;
+  }
+
+  .actions .button {
+    flex: 1 1 150px;
+    width: auto;
+  }
+
+  .store-badges {
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .store-badges .store-badge {
+    flex: 1 1 170px;
+    min-width: 0;
+    width: auto;
+  }
+
   .phone-frame {
-    width: min(320px, 100%);
+    width: min(260px, 100%);
   }
 
   .visual-stack {
