@@ -965,6 +965,16 @@ button.store-badge:focus {
   --workflow-image-origin: 50% 42%;
 }
 
+.workflow-focus-backlog {
+  --workflow-image-zoom: 1.32;
+  --workflow-image-origin: 50% 48%;
+}
+
+.workflow-focus-kanban {
+  --workflow-image-zoom: 1.28;
+  --workflow-image-origin: 50% 46%;
+}
+
 .workflow-focus-call {
   --workflow-image-zoom: 1.16;
   --workflow-image-origin: 55% 45%;
@@ -1601,6 +1611,26 @@ button.store-badge:focus {
 
 .workflow-card.wide-workflow {
   grid-template-columns: minmax(180px, 0.34fr) minmax(460px, 1fr);
+}
+
+.workflow-beats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.workflow-beats span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 6px 10px;
+  border: 1px solid rgba(207, 226, 223, 0.92);
+  border-radius: 999px;
+  background: rgba(238, 247, 245, 0.78);
+  color: var(--accent-dark);
+  font-size: 0.78rem;
+  font-weight: 850;
 }
 
 .screenshot-gallery {

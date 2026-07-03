@@ -80,7 +80,7 @@
 
       <aside class="license-float" id="licenseFloat" aria-label="License summary">
         <strong>License TLDR</strong>
-        <span>Closed source. Free for individuals. Corporate or profit-making use requires written, contract-signed consent.</span>
+        <span>Source-available. Free for research and learning commons use. Enterprise, commercial, production, client, customer, or revenue-generating use needs written permission.</span>
         <a href="#licensing">Read licensing</a>
       </aside>
 
@@ -340,38 +340,120 @@
             </div>
 
             <div class="workflow-stack">
-              <section class="workflow-card wide-workflow" aria-labelledby="kanban-workflow-title">
+              <section class="workflow-card wide-workflow" aria-labelledby="backlog-workflow-title">
                 <div>
-                  <p class="eyebrow">Kanban</p>
-                  <h3 id="kanban-workflow-title">Agents can create work cards that humans can still manage visually.</h3>
-                  <p>Use boards for release checklists, support triage, review queues, or multi-agent work that needs a durable shared surface.</p>
+                  <p class="eyebrow">Backlog + Kanban</p>
+                  <h3 id="backlog-workflow-title">Turn a messy request into reviewable provider changes, not a blind push.</h3>
+                  <p>Let the agent draft the work item, test-plan note, PR task, and board cards locally first. You can edit the proposal, keep it in a review queue, or approve the exact external write when the plan is ready.</p>
+                  <div class="workflow-beats" aria-label="Backlog workflow steps">
+                    <span>Support request</span>
+                    <span>Local proposal</span>
+                    <span>Human approval</span>
+                  </div>
                 </div>
-                <figure class="desktop-frame screenshot-desktop">
-                  <img src="../../assets/img/workbench/screenshots/workbench-kanban.png" width="1280" height="720" alt="MCP Workbench Kanban board with AI workflow cards across To Do, In Progress, and Done columns">
-                  <figcaption>AI-created cards on a local board.</figcaption>
-                </figure>
+                <div class="feature-carousel workflow-carousel" data-carousel aria-label="Backlog and Kanban usage story screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide workflow-focus-backlog is-active" data-carousel-slide>
+                      <img src="../../assets/img/workbench/screenshots/workbench-backlog.png" width="1280" height="720" alt="MCP Workbench Backlog proposal workspace with local approval-first conversations">
+                      <figcaption>Start with a local backlog proposal before anything writes to a provider.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide ai-demo-slide" data-carousel-slide hidden>
+                      <div class="ai-demo" aria-label="Workbench AI response drafting backlog proposals">
+                        <div class="ai-demo-topbar">
+                          <span>Backlog proposal</span>
+                          <span>Approval-first</span>
+                        </div>
+                        <div class="ai-chat">
+                          <div class="ai-message user-message">
+                            <span class="ai-avatar">U</span>
+                            <div>
+                              <strong>User</strong>
+                              <p>Turn this support escalation into Azure DevOps work, but do not push it yet.</p>
+                            </div>
+                          </div>
+                          <div class="ai-message assistant-message">
+                            <span class="ai-avatar">AI</span>
+                            <div>
+                              <strong>Workbench analysis</strong>
+                              <p class="typewriter-copy" data-typewriter data-typewriter-delay="18" data-typewriter-after="3000">I drafted a bug work item, a regression test-plan note, and three Kanban cards. They are local backlog proposals for review, so the provider stays untouched until you approve the exact writes.</p>
+                              <div class="ai-evidence-grid" data-typewriter-reveal>
+                                <span><b>Work item</b>Bug draft with repro and owner.</span>
+                                <span><b>Test plan</b>Regression case for approval.</span>
+                                <span><b>Board</b>Cards staged for triage.</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <figcaption>Use the AI to draft provider-ready changes while keeping the write behind approval.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide workflow-focus-kanban" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-kanban.png" width="1280" height="720" alt="MCP Workbench Kanban board with release and support cards">
+                      <figcaption>Move approved work through a board that remains editable by humans.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Backlog and Kanban usage story screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
               </section>
 
               <section class="workflow-card wide-workflow" aria-labelledby="trace-workflow-title">
                 <div>
                   <p class="eyebrow">Think Trace</p>
                   <h3 id="trace-workflow-title">Resume an old thread, or fix a skill that keeps missing the mark.</h3>
-                  <p>Ask the AI to analyze an old thread, capture the useful evidence in Think Trace, then attach the failed prompt, tool context, decisions, and a proposed skill change. The next agent gets a compact trail instead of a vague memory of what went wrong.</p>
+                  <p>Treat the trace as a debugging artifact for AI work. Capture the old thread, mark the evidence that mattered, ask the AI what kept going wrong, then turn the result into a skill or agent-kit update.</p>
+                  <div class="workflow-beats" aria-label="Think Trace workflow steps">
+                    <span>Recover context</span>
+                    <span>Find the pattern</span>
+                    <span>Patch the skill</span>
+                  </div>
                 </div>
                 <div class="feature-carousel workflow-carousel" data-carousel aria-label="Think Trace resume and skill-improvement story screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide workflow-focus-trace is-active" data-carousel-slide>
                       <img src="../../assets/img/workbench/screenshots/workbench-think-trace.png" width="1280" height="720" alt="MCP Workbench Think Trace showing a graph of AI work evidence and decisions">
-                      <figcaption>Trace the old thread into evidence, decisions, and follow-up actions.</figcaption>
+                      <figcaption>Turn an old thread into evidence, decisions, and follow-up nodes.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide ai-demo-slide" data-carousel-slide hidden>
+                      <div class="ai-demo" aria-label="Workbench AI response explaining a repeated skill miss">
+                        <div class="ai-demo-topbar">
+                          <span>Trace analysis</span>
+                          <span>Skill repair</span>
+                        </div>
+                        <div class="ai-chat">
+                          <div class="ai-message user-message">
+                            <span class="ai-avatar">U</span>
+                            <div>
+                              <strong>User</strong>
+                              <p>Why does this parser-hardening skill keep missing generated fixture failures?</p>
+                            </div>
+                          </div>
+                          <div class="ai-message assistant-message">
+                            <span class="ai-avatar">AI</span>
+                            <div>
+                              <strong>Workbench analysis</strong>
+                              <p class="typewriter-copy" data-typewriter data-typewriter-delay="18" data-typewriter-after="3000">The trace shows the same weak step three times: the skill asks for parser tests, but never requires generated fixtures or fixture-owner review. Add that check to the skill and link the failed prompt, logs, and final response as evidence.</p>
+                              <div class="ai-evidence-grid" data-typewriter-reveal>
+                                <span><b>Pattern</b>3 misses on generated fixtures.</span>
+                                <span><b>Evidence</b>Prompt, logs, and final answer linked.</span>
+                                <span><b>Patch</b>Add fixture-owner review step.</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <figcaption>Ask the AI to explain the failure pattern before changing the skill.</figcaption>
                     </figure>
                     <figure class="carousel-slide workflow-focus-agent" data-carousel-slide hidden>
                       <img src="../../assets/img/workbench/screenshots/workbench-agent-kits.png" width="1280" height="720" alt="MCP Workbench Agent Kits screen for editing reusable skill guidance">
-                      <figcaption>Use the trace to improve the skill or agent kit that caused the weak result.</figcaption>
+                      <figcaption>Patch the reusable skill or agent kit with the trace evidence beside it.</figcaption>
                     </figure>
                     <figure class="carousel-slide workflow-focus-preview" data-carousel-slide hidden>
                       <img src="../../assets/img/workbench/screenshots/workbench-page-preview.png" width="1280" height="720" alt="MCP Workbench page preview for sharing a handoff">
-                      <figcaption>Return a portal link so another agent can resume from the shared handoff.</figcaption>
+                      <figcaption>Send a portal link so the next run starts from the repaired context.</figcaption>
                     </figure>
                   </div>
                   <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Think Trace story screenshots"></button>
@@ -385,6 +467,11 @@
                   <p class="eyebrow">PR Analysis + Code Scanner + Azure DevOps</p>
                   <h3 id="scanner-workflow-title">Use call hierarchy and provider history before trusting a PR review.</h3>
                   <p>Modern apps get complicated fast, and some behavior is older than the developer's time on the team. Have the agent inspect the PR diff through Azure tools, ask Code Scanner for call hierarchy and impact paths, then compare recent PRs or work items from the last few days. AI can fill the context gaps before an old dependency becomes a new incident.</p>
+                  <div class="workflow-beats" aria-label="PR Analysis workflow steps">
+                    <span>Read the diff</span>
+                    <span>Trace the impact</span>
+                    <span>Check recent history</span>
+                  </div>
                 </div>
                 <div class="feature-carousel workflow-carousel" data-carousel aria-label="PR Analysis and Code Scanner story screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
@@ -524,20 +611,20 @@
           <section class="story-block split-block licensing-block" id="licensing" aria-labelledby="licensing-title">
             <div>
               <p class="eyebrow">Licensing</p>
-              <h2 id="licensing-title">Free for individuals, not a corporate free-for-all.</h2>
-              <p>The code is closed source. The software is free for individual use. Corporate, commercial, or profit-making use requires written, contract-signed consent before use.</p>
+              <h2 id="licensing-title">Free for research and learning, not a corporate free-for-all.</h2>
+              <p>The code is source-available. Personal learning, student work, teaching, and nonprofit research are allowed. Enterprise, commercial, production, client, customer, or revenue-generating use requires written permission.</p>
               <div class="license-actions">
                 <button class="button secondary" type="button" data-license-open>Read the full license</button>
               </div>
             </div>
             <div class="trust-stack" aria-label="Licensing summary">
               <div class="trust-banner">
-                <strong>Individuals</strong>
-                <span>Use it freely for personal, learning, hobby, or independent non-corporate work.</span>
+                <strong>Research and learning</strong>
+                <span>Use it freely for personal learning, student work, teaching, nonprofit research, and noncommercial educational settings.</span>
               </div>
               <div class="trust-banner warning-banner">
-                <strong>Companies and profit-making contexts</strong>
-                <span>Get written, contract-signed consent first. That includes internal corporate use, consulting delivery, paid services, and commercial operations.</span>
+                <strong>Enterprise and commercial contexts</strong>
+                <span>Get written permission first. That includes production use, internal business operations, client work, paid services, commercial R&amp;D, and revenue-generating workflows.</span>
               </div>
               <div class="trust-banner">
                 <strong>Contact</strong>
@@ -605,123 +692,577 @@
           <svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
         </button>
         <p class="eyebrow">Full license</p>
-        <h2 id="license-modal-title">MCP Workbench Source-Available License</h2>
+        <h2 id="license-modal-title">Research &amp; Learning Commons Source-Available License</h2>
         <p class="license-source">Source: <a href="https://github.com/shreduck/mcp-workbench-release/blob/master/LICENSE" target="_blank" rel="noopener">mcp-workbench-release/LICENSE</a></p>
-        <pre class="license-text">MCP Workbench Source-Available License
+        <pre class="license-text">Research &amp; Learning Commons Source-Available License
+
 Version 1.0
 
 Copyright (c) 2026 Shreduck and contributors.
 
 Contact: duck_code_contact@proton.me
 
-This software and its source code, documentation, build files, container images,
-binary artifacts, forks, branches, modifications, and derivative works are
-collectively the "Licensed Materials".
+This is a source-available license. It is not an open-source license.
+The Licensed Materials are made available freely for personal learning,
+student work, teaching, nonprofit research, and other noncommercial
+research and learning uses, while enterprise, commercial, production,
+client, customer, and revenue-generating use is restricted as described
+below.
 
-1. Non-Enterprise Permission
+All rights not expressly granted by this License are reserved.
 
-Subject to this license, the repository owner grants individuals permission to
-use, copy, modify, build, and run the Licensed Materials for personal,
-educational, research, hobby, non-commercial, and non-enterprise purposes.
+1. Definitions
 
-This permission is implied by access to the Licensed Materials, but only for the
-uses allowed by this license.
+“Licensor” means Shreduck and any copyright holder who has authorized
+Shreduck to license their contribution under this License.
 
-2. Enterprise Use, Trial Use, and Written Permission
+“Licensed Materials” means this software and its source code,
+documentation, build files, configuration files, container images, binary
+artifacts, examples, forks, branches, modifications, derivative works,
+and any other materials made available in this repository or derived from
+them.
 
-Enterprise and commercial users may use the Licensed Materials without a
-commercial license on a limited trial basis to evaluate whether the Licensed
-Materials are useful in an enterprise environment or workflow.
+“Use” means to access, download, clone, fork, copy, install, build,
+compile, run, execute, evaluate, test, modify, create derivative works
+from, deploy, distribute, host, make available, or otherwise use the
+Licensed Materials.
 
-This trial permission does not allow production deployment, enterprise product
-or service distribution, sublicensing, resale, or making the Licensed Materials
-available to clients or customers.
+“Individual” means a natural person acting in their own personal
+capacity and not by, for, or on behalf of an Organization, employer,
+client, customer, or other third party.
 
-The repository owner trusts enterprise and commercial users to act in good
-conscience. If the Licensed Materials become a used tool within an enterprise
-environment, business process, team workflow, client engagement, customer
-offering, or other commercial or organizational work, the user must contact the
-repository owner at duck_code_contact@proton.me to request written permission.
+“Student” means an Individual using the Licensed Materials for personal
+learning, coursework, class projects, academic study, thesis work,
+dissertation work, portfolio projects, self-directed education, or other
+noncommercial educational purposes.
 
-Except for the limited trial permission above, you must obtain prior written
-permission from the repository owner before using the Licensed Materials for
-Enterprise Work.
+“Educator” means an Individual using the Licensed Materials for
+noncommercial teaching, instruction, mentoring, classroom work, course
+development, workshops, tutorials, or educational demonstrations.
 
-"Enterprise Work" means any use by, for, or on behalf of a company, business,
-government agency, non-profit institution, employer, client, customer, or other
-organization, including but not limited to:
+“Researcher” means an Individual using the Licensed Materials for
+noncommercial research, scholarship, experimentation, evaluation,
+benchmarking, reproducibility work, academic collaboration, publication,
+or public-interest research.
+
+“Organization” means any company, business, partnership, sole
+proprietorship, government agency, nonprofit institution, educational
+institution, employer, client, customer, or other legal entity or
+organized group, whether incorporated or not.
+
+“Affiliate” means any entity that controls, is controlled by, or is under
+common control with an Organization.
+
+“Control” means direct or indirect ownership of more than fifty percent
+(50%) of the voting interests of an entity, or the direct or indirect
+power to direct or influence the management, policies, operations, or
+decision-making of an entity, whether through ownership, contract, voting
+rights, board control, management authority, or otherwise.
+
+“Organization Group” means an Organization together with all of its
+parent entities, subsidiary entities, child entities, sister or sibling
+entities, Affiliates, entities under common control, divisions,
+departments, business units, successors, predecessors, assigns,
+acquirers, merged entities, reorganized entities, and spun-out entities.
+
+“Nonprofit Research Organization” means a nonprofit, charitable,
+educational, academic, public-interest, or research institution that is
+organized and operated primarily for education, scholarship, public
+research, scientific research, or other nonprofit research purposes, and
+that is not acting by, for, under the direction of, or for the primary
+benefit of a For-Profit Entity.
+
+“Educational Institution” means a school, college, university, academy,
+training institution, research lab, public library, museum, or similar
+institution whose primary purpose is education, teaching, scholarship, or
+research.
+
+“For-Profit Entity” means any company, business, commercial entity, or
+other Organization operated primarily for commercial advantage, private
+profit, shareholder value, revenue generation, product development,
+service delivery, consulting, client work, customer work, or other
+business purposes.
+
+“Noncommercial” means not primarily intended for, directed toward, or
+used in connection with commercial advantage, private profit, revenue
+generation, paid services, client work, customer work, enterprise
+operations, for-profit product development, or business activity.
+
+For clarity, academic credit, grades, scholarships, fellowships,
+stipends, grant funding, charitable funding, public research funding,
+conference reimbursement, publication honoraria, or cost-recovery fees do
+not by themselves make a Use commercial, provided the Use is otherwise
+for permitted research, learning, teaching, or nonprofit purposes.
+
+“Research and Learning Use” means Use of the Licensed Materials for one
+or more of the following purposes:
+
+- personal learning;
+- student work;
+- coursework;
+- classroom use;
+- teaching;
+- tutorials;
+- workshops;
+- academic study;
+- thesis or dissertation work;
+- nonprofit research;
+- public-interest research;
+- scholarly research;
+- scientific research;
+- reproducibility work;
+- benchmarking;
+- experimentation;
+- educational demonstrations;
+- noncommercial portfolio projects;
+- noncommercial collaboration among students, educators, researchers, or
+  Nonprofit Research Organizations.
+
+“Permitted Commons Use” means Research and Learning Use by:
+
+- Individuals;
+- Students;
+- Educators;
+- Researchers;
+- Nonprofit Research Organizations;
+- Educational Institutions, but only for noncommercial education,
+  teaching, scholarship, or nonprofit research.
+
+“Enterprise Work” means any Use of the Licensed Materials by, for, or on
+behalf of an Organization, except for Permitted Commons Use.
+
+Enterprise Work includes, but is not limited to, Use in connection with:
 
 - internal business operations;
 - employee, contractor, consultant, client, or customer work;
+- paid employment for a For-Profit Entity;
+- paid consulting;
 - production systems;
+- production data;
+- routine organizational workflows;
 - revenue-generating work;
-- commercial evaluation beyond the limited trial permission described above;
-- hosted services, SaaS, managed services, or internal platforms;
-- work performed as part of paid employment or paid consulting.
+- commercial research and development;
+- commercial evaluation beyond the Trial Period;
+- business processes;
+- team workflows for a commercial or operational purpose;
+- hosted services;
+- SaaS;
+- managed services;
+- internal platforms;
+- developer platforms;
+- customer-facing systems;
+- distribution, embedding, bundling, integration, resale, or offering as
+  part of any product, service, appliance, plugin, extension, platform,
+  or workflow.
 
-The repository owner may condition Enterprise Work permission on a separate
-commercial agreement and payment of a fee.
+Use by a contractor, consultant, vendor, service provider, employee, or
+agent for a client, customer, employer, or other Organization counts as
+Enterprise Work by both the person performing the Use and the
+Organization receiving the benefit of the Use.
 
-3. Enterprise Product Distribution Requires Written Permission
+“Production Use” means any Use of the Licensed Materials in or for live
+systems, customer-facing systems, client work, customer work, internal
+business operations, production data, paid services, revenue-generating
+activity, routine organizational workflows, or any system, workflow, or
+process on which an Organization relies for actual operations.
 
-You must obtain prior written permission from the repository owner before
-distributing, sublicensing, selling, offering, embedding, bundling, hosting, or
-otherwise making available the Licensed Materials, or any branch, fork,
-modification, derivative work, container image, binary artifact, or service based
-on them, as part of an enterprise product or enterprise-facing service.
+“Trial Use” means limited internal, non-production evaluation of the
+Licensed Materials during the Trial Period solely to determine whether to
+request Written Permission or enter into a commercial agreement with
+Licensor.
 
-This restriction applies whether the distribution is source code, compiled code,
-container images, cloud services, appliances, plugins, integrations, forks,
-branches, or any other form.
+“Trial Period” means one period of thirty (30) consecutive calendar days.
 
-The repository owner may condition such permission on a separate commercial
-agreement and payment of a fee.
+“Written Permission” means a written agreement signed by Licensor, or an
+email from duck_code_contact@proton.me or another address publicly
+designated by Licensor, that expressly identifies the recipient, the
+permitted scope of Use, and the Licensed Materials covered. General
+statements, GitHub issues, pull request comments, documentation, silence,
+informal discussions, public availability of the Licensed Materials, or
+failure to object do not constitute Written Permission.
 
-4. Redistribution Limits
+2. Commons Permission for Research and Learning
 
-Except for sharing unmodified copies for allowed Non-Enterprise Permission uses,
-you may not redistribute the Licensed Materials, modified versions, derivative
-works, forks, branches, binary artifacts, or container images without prior
-written permission from the repository owner.
+Subject to this License, Licensor grants each user a worldwide,
+non-exclusive, royalty-free, non-transferable, non-sublicensable license
+to Use the Licensed Materials for Permitted Commons Use.
 
-5. No Trademark Rights
+This permission includes the right to:
 
-This license does not grant rights to use the names, logos, trademarks, service
-marks, or branding of the repository owner or contributors, except as necessary
-to identify the Licensed Materials in an allowed use.
+- access, download, clone, and fork the Licensed Materials;
+- copy, install, build, compile, run, and test the Licensed Materials;
+- modify the Licensed Materials;
+- create derivative works from the Licensed Materials;
+- use the Licensed Materials in classrooms, workshops, tutorials,
+  research labs, academic projects, student projects, nonprofit research
+  projects, and noncommercial educational settings;
+- publish papers, reports, benchmarks, tutorials, demonstrations,
+  screenshots, videos, and other research or educational outputs about
+  the Licensed Materials;
+- share, distribute, and publish copies, forks, modifications, and
+  derivative works of the Licensed Materials, but only for Permitted
+  Commons Use and subject to the conditions in this License.
 
-6. Notices
+There is no time limit, seat limit, installation limit, class-size limit,
+research-group limit, or publication limit for Permitted Commons Use.
 
-You must keep this license and copyright notice with all copies or substantial
-portions of the Licensed Materials.
+3. Student, Educator, and Nonprofit Research Freedom
 
-7. No Warranty
+Students may Use the Licensed Materials freely for noncommercial
+learning, coursework, research, self-study, thesis work, dissertation
+work, portfolio projects, experiments, and academic collaboration.
 
-THE LICENSED MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, SECURITY,
-AVAILABILITY, OR ERROR-FREE OPERATION. USE THE LICENSED MATERIALS AT YOUR OWN
-RISK.
+Educators may Use the Licensed Materials freely for noncommercial
+teaching, classroom demonstrations, workshops, assignments, course
+materials, tutorials, and educational support.
 
-8. Limitation Of Liability
+Researchers and Nonprofit Research Organizations may Use the Licensed
+Materials freely for noncommercial research, nonprofit research,
+scholarship, experimentation, benchmarking, reproducibility, scientific
+publication, and public-interest research.
 
-TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-WILL NOT BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN
-ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION
-WITH THE LICENSED MATERIALS OR THE USE OR OTHER DEALINGS IN THE LICENSED
-MATERIALS.
+Educational Institutions may Use the Licensed Materials freely for
+noncommercial education, teaching, scholarship, classroom work, and
+nonprofit research.
 
-9. Termination
+These permissions include internal deployment within a classroom,
+research lab, nonprofit research environment, student environment,
+academic environment, or educational environment, provided that the Use
+is not Enterprise Work, Production Use for business operations, client
+work, customer work, or revenue-generating work.
 
-Any permission granted by this license terminates automatically if you violate
-this license. After termination, you must stop using and distributing the
-Licensed Materials and delete or destroy copies in your possession or control,
-except where retention is required by law.
+4. Research Outputs
 
-10. Separate Agreements
+This License does not claim ownership over independent papers, articles,
+reports, theses, dissertations, datasets, benchmarks, notes, videos,
+tutorials, slides, models, analyses, or other research, educational, or
+scholarly outputs created using the Licensed Materials.
 
-If you have a separate written agreement with the repository owner, that
-agreement controls where it conflicts with this license.</pre>
+However, any portion of the Licensed Materials copied into those outputs
+remains subject to this License.
+
+You may publish research results, benchmarks, comparisons, criticism,
+commentary, tutorials, and educational materials about the Licensed
+Materials.
+
+5. Conditions for Permitted Commons Distribution
+
+If you share, publish, distribute, or make available the Licensed
+Materials, or any fork, modification, or derivative work of them, under
+Permitted Commons Use, you must:
+
+- include this License;
+- preserve copyright notices, license notices, attribution notices,
+  trademark notices, proprietary notices, and source-available notices;
+- clearly mark any material modifications you made;
+- not misrepresent the origin of the Licensed Materials;
+- not imply sponsorship, approval, endorsement, or affiliation by
+  Licensor unless Licensor has given Written Permission;
+- not remove, weaken, bypass, or obscure the restrictions in this
+  License;
+- not relicense the Licensed Materials under terms that permit uses
+  prohibited by this License;
+- not charge for access to the Licensed Materials except for reasonable
+  cost recovery in connection with Permitted Commons Use.
+
+6. What Commons Permission Does Not Allow
+
+Permitted Commons Use does not allow:
+
+- Enterprise Work;
+- Production Use for business operations;
+- use by, for, or on behalf of a For-Profit Entity;
+- use in commercial research and development;
+- use in a commercial product, commercial service, hosted service, SaaS,
+  managed service, internal platform, developer platform, customer-facing
+  system, client engagement, or customer engagement;
+- use to provide paid consulting, paid services, client services,
+  customer services, or outsourced services;
+- resale, sublicensing, leasing, renting, or commercial hosting of the
+  Licensed Materials;
+- making the Licensed Materials available to customers, clients, or other
+  third parties as part of a product or service;
+- use by a nonprofit, charity, public agency, or educational institution
+  for ordinary internal operations unrelated to education, scholarship,
+  teaching, or nonprofit research;
+- use by a student, educator, or researcher on behalf of an employer,
+  client, customer, or For-Profit Entity.
+
+For example, a student using the Licensed Materials for a class project
+is covered by Permitted Commons Use. A student using the Licensed
+Materials during an internship for a company is performing Enterprise
+Work.
+
+A university lab using the Licensed Materials for nonprofit academic
+research is covered by Permitted Commons Use. A corporate research lab
+using the Licensed Materials for product development is performing
+Enterprise Work.
+
+A nonprofit research institute using the Licensed Materials for public
+research is covered by Permitted Commons Use. A nonprofit using the
+Licensed Materials for ordinary internal business operations, fundraising
+operations, service delivery, or client/customer operations is performing
+Enterprise Work unless Licensor gives Written Permission.
+
+7. Enterprise Trial Permission
+
+Subject to this License, Enterprise Work is permitted without a
+commercial license only for Trial Use during the Trial Period.
+
+Each Organization Group receives only one Trial Period for the Licensed
+Materials.
+
+The Trial Period begins on the earliest date that any person or entity
+within the Organization Group first downloads, clones, forks, installs,
+builds, runs, evaluates, modifies, tests, deploys, accesses, or otherwise
+uses the Licensed Materials for Enterprise Work.
+
+The Trial Period does not restart because of:
+
+- reinstalling the Licensed Materials;
+- creating or using a fork, branch, copy, mirror, container image,
+  binary artifact, modified version, renamed version, rebranded version,
+  or derivative work;
+- changing accounts, employees, contractors, consultants, teams,
+  departments, divisions, business units, projects, clients, customers,
+  repositories, devices, systems, or environments;
+- moving Use to or from a parent company, subsidiary company, child
+  company, sister company, sibling company, Affiliate, related entity,
+  entity under common control, successor, predecessor, acquirer, merged
+  entity, reorganized entity, or spun-out entity;
+- using a later version, earlier version, patch, build, release, renamed
+  release, or substantially similar version of the Licensed Materials;
+- changing ownership, corporate structure, legal entity, brand name,
+  trade name, operating company, holding company, or beneficial owner;
+- transferring the Licensed Materials or related work between entities
+  within the same Organization Group.
+
+Trial Use is limited to internal evaluation in a non-production
+environment.
+
+Trial Use does not permit:
+
+- Production Use;
+- routine business use;
+- use in internal business operations except temporary evaluation;
+- use in client work or customer work;
+- use in paid consulting;
+- use in revenue-generating work;
+- use with live production data;
+- use in hosted services, SaaS, managed services, internal platforms,
+  external platforms, developer platforms, or customer-facing systems;
+- distribution, sublicensing, resale, embedding, bundling, or making
+  available to any third party;
+- offering any product, service, plugin, extension, integration,
+  workflow, appliance, or platform based on the Licensed Materials.
+
+After the Trial Period expires, no person or entity within the
+Organization Group may perform Enterprise Work with the Licensed
+Materials unless the Organization Group has obtained Written Permission
+from Licensor.
+
+If Written Permission is not obtained before the Trial Period expires,
+the Organization Group must immediately stop all Enterprise Work,
+uninstall the Licensed Materials, remove them from organizational
+systems, repositories, devices, build pipelines, containers, artifacts,
+and environments, and delete or destroy all copies in its possession or
+control, except copies it is legally required to retain.
+
+Licensor may extend, renew, waive, or modify the Trial Period only by
+Written Permission.
+
+8. Enterprise Work Requires Written Permission
+
+Except for Trial Use during the Trial Period, you must obtain prior
+Written Permission before performing any Enterprise Work.
+
+Licensor may condition Written Permission on a separate commercial
+agreement, payment of fees, usage limits, seat limits, deployment limits,
+support terms, audit rights, confidentiality terms, or other conditions.
+
+No Enterprise Work is permitted merely because the Licensed Materials are
+publicly accessible, because the repository can be viewed, cloned, or
+forked, because a copy is technically available, or because Licensor has
+not objected.
+
+9. Enterprise Product and Service Distribution
+
+You must obtain prior Written Permission before distributing,
+sublicensing, selling, reselling, offering, embedding, bundling, hosting,
+providing, integrating, or otherwise making available the Licensed
+Materials, or any fork, branch, modification, derivative work, container
+image, binary artifact, plugin, integration, workflow, product, service,
+or platform based on the Licensed Materials, as part of any Enterprise
+Work.
+
+This restriction applies whether the distribution or availability is in
+the form of source code, compiled code, object code, container images,
+cloud services, SaaS, managed services, appliances, plugins,
+integrations, forks, branches, APIs, developer tools, or any other form.
+
+10. General Restrictions
+
+You may not:
+
+- use the Licensed Materials except as expressly permitted by this
+  License;
+- use the Licensed Materials for Enterprise Work except during the Trial
+  Period or with Written Permission;
+- use the Licensed Materials for Production Use without Written
+  Permission, except where the Production Use is solely for Permitted
+  Commons Use in a nonprofit research, educational, classroom, student,
+  or academic environment;
+- sublicense, resell, lease, rent, lend, host, offer, or make available
+  the Licensed Materials to any third party except as expressly permitted
+  for Permitted Commons Use;
+- use the Licensed Materials to provide services to clients or customers
+  without Written Permission;
+- circumvent, disable, remove, bypass, or interfere with any license key,
+  trial limit, access control, usage limit, attribution requirement,
+  notice, telemetry, protection mechanism, or technical restriction
+  included with the Licensed Materials;
+- misrepresent the origin, ownership, license status, endorsement, or
+  approval of the Licensed Materials;
+- use the Licensed Materials in violation of applicable law;
+- authorize, assist, or encourage any third party to do anything
+  prohibited by this License.
+
+11. Ownership
+
+Licensor and contributors retain all right, title, and interest in and
+to the Licensed Materials, including copyrights, trademarks, trade
+secrets, and other intellectual property rights.
+
+This License grants only the limited permissions expressly stated in this
+License. No ownership rights are transferred.
+
+12. Contributions
+
+Unless a separate written agreement says otherwise, by submitting a
+contribution to the Licensed Materials, you grant Licensor a perpetual,
+worldwide, non-exclusive, royalty-free, sublicensable license to use,
+reproduce, modify, prepare derivative works of, publicly display,
+publicly perform, distribute, and commercially license your contribution
+as part of the Licensed Materials.
+
+You represent that you have the right to submit the contribution and to
+grant the rights above.
+
+You retain ownership of your contribution, but Licensor may use and
+license it as described in this section.
+
+Licensor may reject, remove, modify, or relicense contributions as
+permitted by this section.
+
+13. Third-Party Materials
+
+The Licensed Materials may include or depend on third-party software,
+libraries, packages, tools, services, or other materials.
+
+Third-party materials are governed by their own licenses and terms. This
+License does not grant rights to third-party materials except to the
+extent Licensor has the right to do so.
+
+You are responsible for complying with all applicable third-party
+licenses and terms.
+
+14. No Trademark Rights
+
+This License does not grant rights to use the names, logos, trademarks,
+service marks, trade names, branding, or product names of Licensor or
+contributors, except as necessary to accurately identify the Licensed
+Materials in a permitted use.
+
+You may not imply sponsorship, endorsement, affiliation, or approval by
+Licensor without prior Written Permission.
+
+15. Notices
+
+You must keep this License, copyright notices, attribution notices,
+trademark notices, proprietary notices, and source-available notices with
+all copies or substantial portions of the Licensed Materials.
+
+16. No Support or Updates
+
+Licensor has no obligation to provide support, maintenance, updates,
+upgrades, bug fixes, security fixes, documentation, hosting, access, or
+continued availability of the Licensed Materials.
+
+17. No Warranty
+
+THE LICENSED MATERIALS ARE PROVIDED “AS IS” AND “AS AVAILABLE,” WITHOUT
+WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE,
+NON-INFRINGEMENT, SECURITY, AVAILABILITY, ACCURACY, RELIABILITY,
+COMPATIBILITY, OR ERROR-FREE OPERATION.
+
+YOU USE THE LICENSED MATERIALS AT YOUR OWN RISK.
+
+18. Limitation of Liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, LICENSOR, COPYRIGHT HOLDERS, AND
+CONTRIBUTORS WILL NOT BE LIABLE FOR ANY CLAIM, DAMAGES, LOSSES, COSTS,
+EXPENSES, OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT, NEGLIGENCE,
+STRICT LIABILITY, STATUTE, OR OTHERWISE, ARISING FROM OR RELATING TO THE
+LICENSED MATERIALS OR THIS LICENSE.
+
+THIS LIMITATION INCLUDES, WITHOUT LIMITATION, DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, AND PUNITIVE DAMAGES;
+LOST PROFITS; LOST REVENUE; LOST BUSINESS; BUSINESS INTERRUPTION; LOSS
+OF DATA; SECURITY INCIDENTS; SYSTEM FAILURE; PROCUREMENT OF SUBSTITUTE
+GOODS OR SERVICES; OR LOSS OF GOODWILL, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGES.
+
+19. Termination
+
+Any permission granted by this License terminates automatically if you
+violate this License.
+
+Upon termination, you must immediately stop all Use of the Licensed
+Materials not independently permitted by this License, remove the
+Licensed Materials from all systems, repositories, devices, build
+pipelines, containers, artifacts, and environments where the violating
+Use occurred, and delete or destroy all copies in your possession or
+control, except copies you are legally required to retain.
+
+Termination does not limit any rights or remedies available to Licensor.
+
+20. Injunctive Relief
+
+You acknowledge that unauthorized Use, distribution, sublicensing, resale,
+hosting, Enterprise Work, or Production Use of the Licensed Materials may
+cause irreparable harm for which monetary damages may be inadequate.
+
+Licensor may seek injunctive or equitable relief for any actual or
+threatened violation of this License, in addition to any other remedies
+available.
+
+21. Separate Agreements
+
+If you have a separate written agreement with Licensor covering the
+Licensed Materials, that agreement controls where it conflicts with this
+License.
+
+22. Severability
+
+If any provision of this License is held invalid, illegal, or
+unenforceable, the remaining provisions will remain in effect to the
+maximum extent permitted by law.
+
+23. No Waiver
+
+Licensor’s failure to enforce any provision of this License is not a
+waiver of any right to enforce that provision or any other provision
+later.
+
+24. Governing Law and Venue
+
+This License is governed by the laws of [CHOOSE JURISDICTION], excluding
+conflict-of-law rules.
+
+Any dispute arising from or relating to this License or the Licensed
+Materials will be brought exclusively in the courts located in [CHOOSE
+VENUE], unless applicable law requires otherwise.</pre>
       </section>
     </div>
     <div class="carousel-modal" id="carouselModal" hidden>
