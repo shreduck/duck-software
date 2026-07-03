@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MCP Workbench | Duck Code</title>
     <meta name="description" content="MCP Workbench is a local control panel for connecting AI agents to GitHub, Azure DevOps, Kanban, backlog planning, PR review, traces, and code analysis.">
-    <link rel="icon" href="../../assets/img/workbench/screenshots/workbench-home.png">
+    <link rel="icon" href="../../assets/img/workbench/duck_uncertain_transparent.png">
     <link rel="stylesheet" href="../../assets/css/site.css">
   </head>
   <body class="workbench-page">
@@ -14,6 +14,8 @@
       <nav aria-label="Primary navigation">
         <a href="../../#apps">Apps</a>
         <a href="#downloads">Downloads</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#licensing">Licensing</a>
         <a href="https://github.com/shreduck/mcp-workbench-release" target="_blank" rel="noopener">Release repo</a>
         <a href="mailto:duck_code_contact@proton.me">Contact</a>
       </nav>
@@ -24,7 +26,7 @@
         <div class="hero-copy">
           <div class="app-lockup compact-lockup">
             <div class="workbench-mark" aria-hidden="true">
-              <span>mcp</span>
+              <img src="../../assets/img/workbench/duck_uncertain_transparent.png" width="160" height="160" alt="">
             </div>
             <div>
               <p class="eyebrow">MCP Workbench <span class="status-label">Preview</span></p>
@@ -45,10 +47,22 @@
               <svg class="store-badge-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/><path d="M5 20h14"/></svg>
               <span><small>Latest stable</small><strong>v1.3.0</strong></span>
             </a>
+            <button class="store-badge desktop-badge download-badge-button" type="button" data-download-name="Windows with bundled Java" data-download-url="https://github.com/shreduck/mcp-workbench-release/releases/download/2.0.0-SNAPSHOT/mcp-workbench-windows-with-jre-2.0.0-SNAPSHOT.zip">
+              <svg class="store-badge-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="8" height="7"/><rect x="13" y="4" width="8" height="7"/><rect x="3" y="13" width="8" height="7"/><rect x="13" y="13" width="8" height="7"/></svg>
+              <span><small>Direct download</small><strong>Windows</strong></span>
+            </button>
+            <button class="store-badge stable-badge download-badge-button" type="button" data-download-name="macOS with bundled Java" data-download-url="https://github.com/shreduck/mcp-workbench-release/releases/download/2.0.0-SNAPSHOT/mcp-workbench-mac-with-jre-2.0.0-SNAPSHOT.zip">
+              <svg class="store-badge-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 20c-4 0-7-3-7-7s3-7 7-7 7 3 7 7-3 7-7 7Z"/><path d="M12 6V3"/><path d="M9 3h6"/></svg>
+              <span><small>Direct download</small><strong>macOS</strong></span>
+            </button>
             <a class="store-badge docker-badge" href="https://github.com/shreduck/mcp-workbench-release#run-with-docker" target="_blank" rel="noopener">
               <svg class="store-badge-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><path d="M3 15h18"/><path d="M5 15V9h3v6"/><path d="M8 15V7h3v8"/><path d="M11 15v-5h3v5"/><path d="M14 15V8h3v7"/><path d="M17 15v-4h3"/><path d="M4 18h14a4 4 0 0 0 4-4"/></svg>
               <span><small>Run with</small><strong>Docker</strong></span>
             </a>
+          </div>
+          <div class="page-pill-links" aria-label="Workbench policy links">
+            <a href="#privacy">Privacy</a>
+            <a href="#licensing">Licensing</a>
           </div>
         </div>
 
@@ -64,6 +78,12 @@
         </article>
       </section>
 
+      <aside class="license-float" id="licenseFloat" aria-label="License summary">
+        <strong>License TLDR</strong>
+        <span>Closed source. Free for individuals. Corporate or profit-making use requires written, contract-signed consent.</span>
+        <a href="#licensing">Read licensing</a>
+      </aside>
+
       <div class="feature-layout">
         <aside class="section-index" aria-label="MCP Workbench section index">
           <p class="eyebrow">On this page</p>
@@ -72,6 +92,8 @@
             <a href="#ai-workflows">AI workflows</a>
             <a href="#screenshots">Screenshots</a>
             <a href="#downloads">Downloads</a>
+            <a href="#privacy">Privacy</a>
+            <a href="#licensing">Licensing</a>
             <a href="#important-notes">Important notes</a>
           </nav>
         </aside>
@@ -83,41 +105,207 @@
               <h2 id="features-title">One portal for agent tools, human review, and local audit trails.</h2>
             </div>
 
-            <div class="feature-grid">
-              <article class="feature-card">
-                <span class="feature-icon" aria-hidden="true">01</span>
+            <div class="feature-grid feature-grid-visual">
+              <article class="feature-card visual-feature">
                 <h3>MCP keys and tool access</h3>
                 <p>Create per-user MCP keys and connect Claude, Codex, GitHub Copilot, or another MCP client to the same local server.</p>
+                <div class="feature-carousel" data-carousel aria-label="MCP keys and tool access screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/workbench/screenshots/workbench-account.png" width="1280" height="720" alt="MCP Workbench account screen for user and MCP key management">
+                      <figcaption>Create scoped MCP keys from the account screen.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-connect.png" width="1280" height="720" alt="MCP Workbench Connect screen with client setup instructions">
+                      <figcaption>Copy the client setup flow after a key exists.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge MCP keys and tool access screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
               </article>
-              <article class="feature-card">
-                <span class="feature-icon" aria-hidden="true">02</span>
+              <article class="feature-card visual-feature">
                 <h3>GitHub and Azure DevOps</h3>
                 <p>Store user-managed credentials for pull requests, diffs, files, branches, issues, work items, test plans, and PR comments.</p>
+                <div class="feature-carousel" data-carousel aria-label="GitHub and Azure DevOps screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/workbench/screenshots/workbench-github.png" width="1280" height="720" alt="MCP Workbench GitHub credential setup screen">
+                      <figcaption>GitHub tokens can be scoped per user and repository.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-azure.png" width="1280" height="720" alt="MCP Workbench Azure DevOps credential setup screen">
+                      <figcaption>Azure DevOps credentials power PR, work item, and branch tools.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge GitHub and Azure DevOps screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
               </article>
-              <article class="feature-card">
-                <span class="feature-icon" aria-hidden="true">03</span>
+              <article class="feature-card visual-feature">
                 <h3>Kanban and backlog proposals</h3>
                 <p>Let agents organize local boards, draft work item or issue changes, and keep external writes behind an approval step.</p>
+                <div class="feature-carousel" data-carousel aria-label="Kanban and backlog proposal screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/workbench/screenshots/workbench-kanban.png" width="1280" height="720" alt="MCP Workbench Kanban board with cards across columns">
+                      <figcaption>Local cards that remain editable.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-backlog.png" width="1280" height="720" alt="MCP Workbench Backlog proposal workspace">
+                      <figcaption>Backlog proposals keep provider writes reviewable.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Kanban and backlog proposal screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
               </article>
-              <article class="feature-card">
-                <span class="feature-icon" aria-hidden="true">04</span>
+              <article class="feature-card visual-feature">
                 <h3>PR Analysis workspace</h3>
                 <p>Turn review findings into shared cards with comments and replies before selected feedback is pushed back to a PR.</p>
+                <div class="feature-carousel" data-carousel aria-label="PR Analysis workspace screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/workbench/screenshots/workbench-pr-analysis.png" width="1280" height="720" alt="MCP Workbench PR Analysis workspace">
+                      <figcaption>Review findings become shared local analysis cards.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-code-scanner.png" width="1280" height="720" alt="MCP Workbench Code Scanner target view">
+                      <figcaption>Scanner context supports review findings.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge PR Analysis workspace screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
               </article>
-              <article class="feature-card">
-                <span class="feature-icon" aria-hidden="true">05</span>
+              <article class="feature-card visual-feature">
                 <h3>Agent Kits and Spec Docs</h3>
                 <p>Keep reusable agent files, skill notes, and project documentation close to the tools that need them.</p>
+                <div class="feature-carousel" data-carousel aria-label="Agent Kits and Spec Docs screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/workbench/screenshots/workbench-agent-kits.png" width="1280" height="720" alt="MCP Workbench Agent Kits workspace">
+                      <figcaption>Agent and skill files are editable inside the portal.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-spec-docs.png" width="1280" height="720" alt="MCP Workbench Spec Docs workspace">
+                      <figcaption>Spec Docs keep project guidance next to the agent kits.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Agent Kits and Spec Docs screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
               </article>
-              <article class="feature-card">
-                <span class="feature-icon" aria-hidden="true">06</span>
+              <article class="feature-card visual-feature">
                 <h3>Code Scanner</h3>
                 <p>Index Java/Spring and Maven projects for entrypoints, references, call hierarchy, dependency graphs, and risk hints.</p>
+                <p class="feature-pullquote">Avoid long-term and unintended bugs with Code Scanner plus AI analysis.</p>
+                <div class="feature-carousel" data-carousel aria-label="Code Scanner screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/workbench/screenshots/workbench-code-scanner.png" width="1280" height="720" alt="MCP Workbench Code Scanner target for a Java project">
+                      <figcaption>Indexed targets and scan state.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-mcp-apis.png" width="1280" height="720" alt="MCP Workbench MCP API reference with tool schemas">
+                      <figcaption>Scanner tools are visible through the generated MCP API reference.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Code Scanner screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
               </article>
-              <article class="feature-card">
-                <span class="feature-icon" aria-hidden="true">07</span>
+              <article class="feature-card visual-feature">
+                <h3>Think Trace</h3>
+                <p>Capture evidence, decisions, comments, and final responses as a graph-backed handoff that avoids storing private raw chain-of-thought.</p>
+                <div class="feature-carousel" data-carousel aria-label="Think Trace screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/workbench/screenshots/workbench-think-trace.png" width="1280" height="720" alt="MCP Workbench Think Trace graph with evidence and decisions">
+                      <figcaption>Graph-backed work traces.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-agent-kits.png" width="1280" height="720" alt="MCP Workbench Agent Kits screen for improving reusable guidance">
+                      <figcaption>Trace evidence can point back to the skill or agent file to improve.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Think Trace screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
+              </article>
+              <article class="feature-card visual-feature">
+                <h3>MCP APIs and portal links</h3>
+                <p>Agents can create cards, traces, proposals, and analysis records, then return stable local links for you to inspect.</p>
+                <div class="feature-carousel" data-carousel aria-label="MCP APIs and portal link screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/workbench/screenshots/workbench-mcp-apis.png" width="1280" height="720" alt="MCP Workbench MCP API reference screen">
+                      <figcaption>Generated tool docs show the MCP surface agents can use.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-connect.png" width="1280" height="720" alt="MCP Workbench Connect instructions screen">
+                      <figcaption>Connect pages turn the local server into client-ready config.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge MCP APIs and portal link screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
+              </article>
+              <article class="feature-card visual-feature">
+                <h3>Logs, configuration, and local data</h3>
+                <p>Keep the server understandable with visible configuration, local logs, data-folder control, and credential ownership.</p>
+                <div class="feature-carousel" data-carousel aria-label="Logs configuration and local data screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/workbench/screenshots/workbench-logs.png" width="1280" height="720" alt="MCP Workbench Logs screen">
+                      <figcaption>Logs make local server activity inspectable.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-configuration.png" width="1280" height="720" alt="MCP Workbench Configuration screen">
+                      <figcaption>Configuration exposes runtime values and reset controls.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge logs configuration and local data screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
+              </article>
+              <article class="feature-card visual-feature">
                 <h3>Corporate neutral mode</h3>
                 <p>Admins can force a neutral portal UI for serious environments and disable the ducks. You monster.</p>
+                <div class="feature-carousel" data-carousel aria-label="Corporate neutral mode screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/workbench/screenshots/workbench-neutral-loading.png" width="1280" height="720" alt="MCP Workbench neutral loading screen without duck imagery">
+                      <figcaption>Forced neutral loading replaces the duck with HTTP status.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-neutral-configuration.png" width="1280" height="720" alt="MCP Workbench neutral configuration screen with Gray 100 colour label">
+                      <figcaption>Colour labels become neutral, and the environment can lock the mode. You monster.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge corporate neutral mode screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
               </article>
             </div>
           </section>
@@ -146,8 +334,8 @@
 
           <section class="story-block" id="screenshots" aria-labelledby="screenshots-title">
             <div class="section-heading">
-              <p class="eyebrow">Screenshots by workflow</p>
-              <h2 id="screenshots-title">A quick look at the local portal in use.</h2>
+              <p class="eyebrow">Workflow stories</p>
+              <h2 id="screenshots-title">Use the portal as the memory and evidence layer around AI work.</h2>
             </div>
 
             <div class="workflow-stack">
@@ -166,25 +354,113 @@
               <section class="workflow-card wide-workflow" aria-labelledby="trace-workflow-title">
                 <div>
                   <p class="eyebrow">Think Trace</p>
-                  <h3 id="trace-workflow-title">Decision trails become something you can inspect and share.</h3>
-                  <p>Record user requests, context fetches, tool use, decisions, comments, and final responses without storing private raw chain-of-thought.</p>
+                  <h3 id="trace-workflow-title">Resume an old thread, or fix a skill that keeps missing the mark.</h3>
+                  <p>Ask the AI to analyze an old thread, capture the useful evidence in Think Trace, then attach the failed prompt, tool context, decisions, and a proposed skill change. The next agent gets a compact trail instead of a vague memory of what went wrong.</p>
                 </div>
-                <figure class="desktop-frame screenshot-desktop">
-                  <img src="../../assets/img/workbench/screenshots/workbench-think-trace.png" width="1280" height="720" alt="MCP Workbench Think Trace showing an AI-assisted release readiness review">
-                  <figcaption>Explainable AI work as a graph.</figcaption>
-                </figure>
+                <div class="feature-carousel workflow-carousel" data-carousel aria-label="Think Trace resume and skill-improvement story screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/workbench/screenshots/workbench-think-trace.png" width="1280" height="720" alt="MCP Workbench Think Trace showing a graph of AI work evidence and decisions">
+                      <figcaption>Trace the old thread into evidence, decisions, and follow-up actions.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-agent-kits.png" width="1280" height="720" alt="MCP Workbench Agent Kits screen for editing reusable skill guidance">
+                      <figcaption>Use the trace to improve the skill or agent kit that caused the weak result.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-page-preview.png" width="1280" height="720" alt="MCP Workbench page preview for sharing a handoff">
+                      <figcaption>Return a portal link so another agent can resume from the shared handoff.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Think Trace story screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
               </section>
 
               <section class="workflow-card wide-workflow" aria-labelledby="scanner-workflow-title">
                 <div>
-                  <p class="eyebrow">Code Scanner</p>
-                  <h3 id="scanner-workflow-title">Agents can ask code questions against indexed structure.</h3>
-                  <p>Find entrypoints, references, data IO, call hierarchy, Maven dependencies, and impact paths before changing a service.</p>
+                  <p class="eyebrow">PR Analysis + Code Scanner + Azure DevOps</p>
+                  <h3 id="scanner-workflow-title">Use call hierarchy and provider history before trusting a PR review.</h3>
+                  <p>Modern apps get complicated fast, and some behavior is older than the developer's time on the team. Have the agent inspect the PR diff through Azure tools, ask Code Scanner for call hierarchy and impact paths, then compare recent PRs or work items from the last few days. AI can fill the context gaps before an old dependency becomes a new incident.</p>
                 </div>
-                <figure class="desktop-frame screenshot-desktop">
-                  <img src="../../assets/img/workbench/screenshots/workbench-code-scanner.png" width="1280" height="720" alt="MCP Workbench Code Scanner target for the Workbench source repository">
-                  <figcaption>Indexed source code and scan state.</figcaption>
-                </figure>
+                <div class="feature-carousel workflow-carousel" data-carousel aria-label="PR Analysis and Code Scanner story screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/workbench/screenshots/workbench-call-hierarchy-expanded.png" width="1920" height="1080" alt="Fake MCP Workbench Code Scanner call hierarchy graph expanded across dependent API paths">
+                      <figcaption>Start with an expanded call hierarchy search for the changed method.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-fake-pr-analysis-impact.png" width="1920" height="1080" alt="Fake MCP Workbench PR Analysis card showing a missing dependent API coverage finding">
+                      <figcaption>Capture a fake PR analysis card before pushing any provider comment.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide ai-demo-slide" data-carousel-slide hidden>
+                      <div class="ai-demo" aria-label="Fake AI response explaining downstream API impact">
+                        <div class="ai-demo-topbar">
+                          <span>AI review query</span>
+                          <span>PR #1842</span>
+                        </div>
+                        <div class="ai-chat">
+                          <div class="ai-message user-message">
+                            <span class="ai-avatar">U</span>
+                            <div>
+                              <strong>User</strong>
+                              <p>Does PR #1842 only affect checkout preview, or can this break another API?</p>
+                            </div>
+                          </div>
+                          <div class="ai-message assistant-message">
+                            <span class="ai-avatar">AI</span>
+                            <div>
+                              <strong>Workbench analysis</strong>
+                              <p class="typewriter-copy" data-typewriter data-typewriter-delay="18" data-typewriter-after="3000">This change affects another dependent API that is not being considered. PartnerQuoteApi#preview and InvoicePreviewController#calculate both call OrderPricingService#recalculateQuote, but the PR only discusses checkout preview and does not add partner quote or invoice draft API coverage.</p>
+                              <div class="ai-evidence-grid" data-typewriter-reveal>
+                                <span><b>Call hierarchy</b>5 downstream API paths</span>
+                                <span><b>PR diff</b>1 changed service method</span>
+                                <span><b>Gap</b>2 API paths untested</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <figcaption>Ask the AI whether another dependent API is affected and missing from the review.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide ai-demo-slide" data-carousel-slide hidden>
+                      <div class="ai-demo" aria-label="Fake AI response showing recent Azure DevOps PR context">
+                        <div class="ai-demo-topbar">
+                          <span>Azure DevOps context</span>
+                          <span>Last 7 days</span>
+                        </div>
+                        <div class="ai-chat">
+                          <div class="ai-message user-message">
+                            <span class="ai-avatar">U</span>
+                            <div>
+                              <strong>User</strong>
+                              <p>Was a similar quote recalculation change made recently?</p>
+                            </div>
+                          </div>
+                          <div class="ai-message assistant-message">
+                            <span class="ai-avatar">AI</span>
+                            <div>
+                              <strong>Workbench analysis</strong>
+                              <p class="typewriter-copy" data-typewriter data-typewriter-delay="18" data-typewriter-after="3000">Yes. 7 days ago, PR #1831 changed the same dependent flow. It stabilized PartnerQuoteApi#preview rounding after account-limit quote changes, so PR #1842 should link that regression test or explain why the compatibility contract still holds.</p>
+                              <div class="ai-timeline" data-typewriter-reveal>
+                                <span><b>7 days ago</b>PR #1831 fixed partner preview rounding.</span>
+                                <span><b>Current PR</b>PR #1842 changes the same recalculation service.</span>
+                                <span><b>Review action</b>Ask the author to confirm the PR #1831 behavior remains intact.</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <figcaption>Check recent Azure DevOps PRs and link the seven-day-old PR #1831 change.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge PR Analysis and Code Scanner story screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
               </section>
             </div>
           </section>
@@ -222,6 +498,50 @@
             </div>
           </section>
 
+          <section class="story-block split-block" id="privacy" aria-labelledby="privacy-title">
+            <div>
+              <p class="eyebrow">Privacy</p>
+              <h2 id="privacy-title">Built for local-first control.</h2>
+              <p>Workbench runs as your local or self-hosted portal. Your data folder, credentials, MCP keys, traces, cards, and scan history stay under your control unless you explicitly connect external services or approve an action that writes to them.</p>
+            </div>
+            <div class="trust-stack" aria-label="Privacy notes">
+              <div class="trust-banner">
+                <strong>Credentials are user-managed</strong>
+                <span>Use narrow GitHub and Azure DevOps tokens, rotate them yourself, and remove them from the portal when they are no longer needed.</span>
+              </div>
+              <div class="trust-banner">
+                <strong>External writes are deliberate</strong>
+                <span>Workbench is designed around reviewable proposals and explicit push actions for PR comments, issues, work items, and test-plan changes.</span>
+              </div>
+              <div class="trust-banner">
+                <strong>Agents get only what you connect</strong>
+                <span>MCP clients need a portal key and can only use the tools and credentials configured for that local Workbench instance.</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="story-block split-block licensing-block" id="licensing" aria-labelledby="licensing-title">
+            <div>
+              <p class="eyebrow">Licensing</p>
+              <h2 id="licensing-title">Free for individuals, not a corporate free-for-all.</h2>
+              <p>The code is closed source. The software is free for individual use. Corporate, commercial, or profit-making use requires written, contract-signed consent before use.</p>
+            </div>
+            <div class="trust-stack" aria-label="Licensing summary">
+              <div class="trust-banner">
+                <strong>Individuals</strong>
+                <span>Use it freely for personal, learning, hobby, or independent non-corporate work.</span>
+              </div>
+              <div class="trust-banner warning-banner">
+                <strong>Companies and profit-making contexts</strong>
+                <span>Get written, contract-signed consent first. That includes internal corporate use, consulting delivery, paid services, and commercial operations.</span>
+              </div>
+              <div class="trust-banner">
+                <strong>Contact</strong>
+                <span>For permission or license questions, email duck_code_contact@proton.me.</span>
+              </div>
+            </div>
+          </section>
+
           <section class="story-block" id="important-notes" aria-labelledby="important-notes-title">
             <div class="section-heading">
               <p class="eyebrow">Important notes</p>
@@ -240,6 +560,14 @@
               <article class="trust-banner">
                 <strong>Use narrow credentials</strong>
                 <span>Give GitHub and Azure DevOps tokens only the scopes needed for the tools and approval flow you intend to use.</span>
+              </article>
+              <article class="trust-banner warning-banner">
+                <strong>Write-scoped tokens can write</strong>
+                <span>MCP Workbench exposes direct push, branch, pull request, issue, work item, backlog, test-plan, and PR-comment tools for the providers you configure. To guarantee an AI client cannot skip your intended approval flow, enforce it with token permissions, separate users, and narrow MCP keys.</span>
+              </article>
+              <article class="trust-banner">
+                <strong>Provider calls leave the machine</strong>
+                <span>Local-first storage does not make GitHub, Azure DevOps, OAuth, or other provider API calls local. Anything an authorized tool sends to those services is subject to that provider account, token, network, audit, and retention model.</span>
               </article>
             </div>
           </section>
@@ -263,6 +591,25 @@
         <div class="download-modal-actions">
           <button class="button" type="button" id="downloadWarningAccept">Got it, download</button>
           <button class="button secondary" type="button" data-download-close>Close</button>
+        </div>
+      </section>
+    </div>
+    <div class="carousel-modal" id="carouselModal" hidden>
+      <div class="carousel-modal-backdrop" data-carousel-modal-close></div>
+      <section class="carousel-modal-panel" role="dialog" aria-modal="true" aria-labelledby="carousel-modal-title">
+        <button class="download-modal-close" type="button" aria-label="Close enlarged carousel" data-carousel-modal-close>
+          <svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+        <p class="eyebrow">Screenshot</p>
+        <h2 id="carousel-modal-title">Workbench screenshot</h2>
+        <figure class="carousel-modal-figure">
+          <img id="carouselModalImage" src="../../assets/img/workbench/screenshots/workbench-home.png" width="1280" height="720" alt="">
+          <div class="carousel-modal-html" id="carouselModalHtml" hidden></div>
+          <figcaption id="carouselModalCaption"></figcaption>
+        </figure>
+        <div class="carousel-modal-actions">
+          <button class="button secondary" type="button" data-carousel-modal-prev>Previous</button>
+          <button class="button secondary" type="button" data-carousel-modal-next>Next</button>
         </div>
       </section>
     </div>
@@ -303,6 +650,252 @@
         document.addEventListener("keydown", (event) => {
           if (event.key === "Escape" && !modal.hidden) {
             closeModal();
+          }
+        });
+
+        const licenseFloat = document.getElementById("licenseFloat");
+        const featuresSection = document.getElementById("features");
+
+        function updateLicenseFloat() {
+          if (!licenseFloat || !featuresSection) {
+            return;
+          }
+          const featuresVisible = featuresSection.getBoundingClientRect().top < window.innerHeight;
+          licenseFloat.classList.toggle("is-hidden", window.scrollY > 0 && featuresVisible);
+        }
+
+        window.addEventListener("scroll", updateLicenseFloat, { passive: true });
+        window.addEventListener("resize", updateLicenseFloat);
+        updateLicenseFloat();
+
+        const carouselModal = document.getElementById("carouselModal");
+        const modalTitle = document.getElementById("carousel-modal-title");
+        const modalImage = document.getElementById("carouselModalImage");
+        const modalHtml = document.getElementById("carouselModalHtml");
+        const modalCaption = document.getElementById("carouselModalCaption");
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        let modalSlides = [];
+        let modalIndex = 0;
+
+        function prepareTypewriter(copy) {
+          if (!copy.dataset.typewriterText) {
+            copy.dataset.typewriterText = copy.textContent.trim();
+          }
+        }
+
+        function finishTypewriters(root) {
+          root.querySelectorAll("[data-typewriter]").forEach((copy) => {
+            prepareTypewriter(copy);
+            copy.textContent = copy.dataset.typewriterText;
+            copy.classList.add("is-typed");
+          });
+          root.classList.add("typewriter-complete");
+        }
+
+        function playTypewriters(slide, onComplete) {
+          const copies = Array.from(slide.querySelectorAll("[data-typewriter]"));
+          if (!copies.length) {
+            return false;
+          }
+
+          copies.forEach((copy) => {
+            prepareTypewriter(copy);
+            copy.textContent = "";
+            copy.classList.remove("is-typed");
+          });
+          slide.classList.remove("typewriter-complete");
+
+          if (reduceMotion) {
+            finishTypewriters(slide);
+            onComplete();
+            return true;
+          }
+
+          let copyIndex = 0;
+          let charIndex = 0;
+          const activeCopy = () => copies[copyIndex];
+
+          function typeNext() {
+            const copy = activeCopy();
+            const text = copy.dataset.typewriterText || "";
+            copy.textContent = text.slice(0, charIndex + 1);
+            charIndex += 1;
+
+            if (charIndex < text.length) {
+              window.setTimeout(typeNext, Number(copy.dataset.typewriterDelay || 16));
+              return;
+            }
+
+            copy.classList.add("is-typed");
+            copyIndex += 1;
+            charIndex = 0;
+            if (copyIndex < copies.length) {
+              window.setTimeout(typeNext, 220);
+              return;
+            }
+
+            slide.classList.add("typewriter-complete");
+            onComplete();
+          }
+
+          window.setTimeout(typeNext, 160);
+          return true;
+        }
+
+        function showModalSlide(index) {
+          if (!modalSlides.length) {
+            return;
+          }
+          modalIndex = (index + modalSlides.length) % modalSlides.length;
+          const slide = modalSlides[modalIndex];
+          modalImage.hidden = slide.type !== "image";
+          modalHtml.hidden = slide.type !== "html";
+          modalHtml.replaceChildren();
+          if (slide.type === "image") {
+            modalImage.src = slide.src;
+            modalImage.alt = slide.alt;
+          } else {
+            const content = slide.content.cloneNode(true);
+            finishTypewriters(content);
+            modalHtml.append(content);
+          }
+          modalCaption.textContent = slide.caption;
+        }
+
+        function openCarouselModal(carousel, index) {
+          const heading = carousel.closest(".feature-card, .workflow-card")?.querySelector("h3")?.textContent || "Workbench screenshot";
+          modalSlides = Array.from(carousel.querySelectorAll("[data-carousel-slide]")).map((slide) => {
+            const image = slide.querySelector(":scope > img");
+            const richContent = Array.from(slide.children).find((child) => child.tagName !== "IMG" && child.tagName !== "FIGCAPTION");
+            const caption = slide.querySelector("figcaption");
+            if (image) {
+              return {
+                type: "image",
+                src: image.getAttribute("src"),
+                alt: image.getAttribute("alt") || "",
+                caption: caption ? caption.textContent : ""
+              };
+            }
+            return {
+              type: "html",
+              content: richContent,
+              caption: caption ? caption.textContent : ""
+            };
+          });
+          modalTitle.textContent = heading;
+          carouselModal.hidden = false;
+          showModalSlide(index);
+        }
+
+        function closeCarouselModal() {
+          carouselModal.hidden = true;
+          modalSlides = [];
+          modalHtml.replaceChildren();
+        }
+
+        document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+          const slides = Array.from(carousel.querySelectorAll("[data-carousel-slide]"));
+          const prev = carousel.querySelector("[data-carousel-prev]");
+          const next = carousel.querySelector("[data-carousel-next]");
+          const open = carousel.querySelector("[data-carousel-enlarge]");
+          const dots = carousel.querySelector("[data-carousel-dots]");
+          let index = slides.findIndex((slide) => slide.classList.contains("is-active"));
+          let timer = null;
+          let autoAdvance = slides.length > 1 && !reduceMotion;
+          let renderToken = 0;
+          index = index >= 0 ? index : 0;
+
+          function scheduleNext(delay) {
+            if (!autoAdvance) {
+              return;
+            }
+            timer = window.setTimeout(() => render(index + 1), delay);
+          }
+
+          function render(nextIndex) {
+            if (timer) {
+              window.clearTimeout(timer);
+              timer = null;
+            }
+            renderToken += 1;
+            const token = renderToken;
+            index = (nextIndex + slides.length) % slides.length;
+            slides.forEach((slide, slideIndex) => {
+              const active = slideIndex === index;
+              slide.hidden = !active;
+              slide.classList.toggle("is-active", active);
+            });
+            if (dots) {
+              dots.querySelectorAll("button").forEach((dot, dotIndex) => {
+                dot.classList.toggle("is-active", dotIndex === index);
+                dot.setAttribute("aria-current", dotIndex === index ? "true" : "false");
+              });
+            }
+            const activeSlide = slides[index];
+            const didType = playTypewriters(activeSlide, () => {
+              if (token === renderToken) {
+                scheduleNext(Number(activeSlide.querySelector("[data-typewriter]")?.dataset.typewriterAfter || 3000));
+              }
+            });
+            if (!didType) {
+              scheduleNext(8000);
+            }
+          }
+
+          function stopAuto() {
+            autoAdvance = false;
+            if (timer) {
+              window.clearTimeout(timer);
+              timer = null;
+            }
+          }
+
+          if (dots) {
+            slides.forEach((_, dotIndex) => {
+              const dot = document.createElement("button");
+              dot.type = "button";
+              dot.setAttribute("aria-label", "Show screenshot " + (dotIndex + 1));
+              dot.addEventListener("click", () => {
+                stopAuto();
+                render(dotIndex);
+              });
+              dots.append(dot);
+            });
+          }
+
+          prev?.addEventListener("click", () => {
+            stopAuto();
+            render(index - 1);
+          });
+
+          next?.addEventListener("click", () => {
+            stopAuto();
+            render(index + 1);
+          });
+
+          open?.addEventListener("click", () => {
+            stopAuto();
+            openCarouselModal(carousel, index);
+          });
+
+          render(index);
+        });
+
+        document.querySelector("[data-carousel-modal-prev]")?.addEventListener("click", () => showModalSlide(modalIndex - 1));
+        document.querySelector("[data-carousel-modal-next]")?.addEventListener("click", () => showModalSlide(modalIndex + 1));
+        document.querySelectorAll("[data-carousel-modal-close]").forEach((button) => {
+          button.addEventListener("click", closeCarouselModal);
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && !carouselModal.hidden) {
+            closeCarouselModal();
+          }
+          if (!carouselModal.hidden && event.key === "ArrowLeft") {
+            showModalSlide(modalIndex - 1);
+          }
+          if (!carouselModal.hidden && event.key === "ArrowRight") {
+            showModalSlide(modalIndex + 1);
           }
         });
       })();
