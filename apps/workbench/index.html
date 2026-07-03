@@ -6,7 +6,7 @@
     <title>MCP Workbench | Duck Code</title>
     <meta name="description" content="MCP Workbench is a local control panel for connecting AI agents to GitHub, Azure DevOps, Kanban, backlog planning, PR review, traces, and code analysis.">
     <link rel="icon" href="../../assets/img/workbench/duck_uncertain_transparent.png">
-    <link rel="stylesheet" href="../../assets/css/site.css">
+    <link rel="stylesheet" href="../../assets/css/site.css?v=workbench-20260703-no-preview">
   </head>
   <body class="workbench-page">
     <header class="site-header">
@@ -29,7 +29,7 @@
               <img src="../../assets/img/workbench/duck_uncertain_transparent.png" width="160" height="160" alt="">
             </div>
             <div>
-              <p class="eyebrow">MCP Workbench <span class="status-label">Preview</span></p>
+              <p class="eyebrow">MCP Workbench</p>
               <h1 id="app-title">A local control room for AI-assisted software work.</h1>
             </div>
           </div>
@@ -103,6 +103,7 @@
             <div class="section-heading">
               <p class="eyebrow">What it brings together</p>
               <h2 id="features-title">One portal for agent tools, human review, and local audit trails.</h2>
+              <p class="section-kicker">Turn the thought/process black box and tedious chat rereads into a more pleasant-ish UI for reviewing what happened, what changed, and what still needs a human decision.</p>
             </div>
 
             <div class="feature-grid feature-grid-visual">
@@ -153,12 +154,56 @@
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-kanban.png" width="1920" height="1080" alt="MCP Workbench Kanban board with cards across columns">
-                      <figcaption>Local cards that remain editable.</figcaption>
+                      <div class="demo-screen mini-kanban-screen" role="img" aria-label="Simulated Workbench Kanban board with populated review columns">
+                        <div class="mini-app-chrome">
+                          <span>MCP Workbench</span>
+                          <span>Kanban</span>
+                        </div>
+                        <div class="mini-kanban-board">
+                          <section>
+                            <h4>To Do</h4>
+                            <article>Draft work item from support escalation</article>
+                            <article>Check owner and service boundary</article>
+                          </section>
+                          <section>
+                            <h4>In Progress</h4>
+                            <article>Prepare regression test-plan note</article>
+                            <article>Link trace evidence</article>
+                          </section>
+                          <section>
+                            <h4>Review</h4>
+                            <article>Human approval before provider write</article>
+                          </section>
+                        </div>
+                      </div>
+                      <figcaption>Use a populated local board as the review surface.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-backlog.png" width="1920" height="1080" alt="MCP Workbench Backlog proposal workspace">
-                      <figcaption>Backlog proposals keep provider writes reviewable.</figcaption>
+                      <div class="demo-screen mini-backlog-screen" role="img" aria-label="Simulated Workbench Backlog proposal with work item, test plan, PR task, and approval queue">
+                        <div class="mini-app-chrome">
+                          <span>Backlog</span>
+                          <span>No provider write yet</span>
+                        </div>
+                        <div class="mini-proposal-layout">
+                          <section>
+                            <h4>Conversation</h4>
+                            <p>Quote totals drift after account-limit update.</p>
+                            <span>Azure DevOps</span>
+                          </section>
+                          <section>
+                            <h4>Drafted changes</h4>
+                            <article><b>Bug item</b>Repro and owner.</article>
+                            <article><b>Test plan</b>Quote regression.</article>
+                            <article><b>PR task</b>Link impact proof.</article>
+                          </section>
+                          <section>
+                            <h4>Approval queue</h4>
+                            <p>Review exact writes before push.</p>
+                            <button type="button">Approve selected</button>
+                          </section>
+                        </div>
+                      </div>
+                      <figcaption>Backlog proposals stay local until you approve the exact write.</figcaption>
                     </figure>
                   </div>
                   <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Kanban and backlog proposal screenshots"></button>
@@ -174,11 +219,41 @@
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
                       <img src="../../assets/img/workbench/screenshots/workbench-pr-analysis.png" width="1920" height="1080" alt="MCP Workbench PR Analysis workspace">
-                      <figcaption>Review findings become shared local analysis cards.</figcaption>
+                      <figcaption>Start from local pull request analysis spaces.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-code-scanner.png" width="1920" height="1080" alt="MCP Workbench Code Scanner target view">
-                      <figcaption>Scanner context supports review findings.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-local-pr-analysis-impact.png" width="1920" height="1080" alt="MCP Workbench local PR Analysis card showing a dependent API impact finding">
+                      <figcaption>Review findings become shared local analysis cards before provider comments.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide ai-demo-slide" data-carousel-slide hidden>
+                      <div class="ai-demo compact-demo" aria-label="Simulated Workbench PR analysis conversation">
+                        <div class="ai-demo-topbar">
+                          <span>Local PR analysis</span>
+                          <span>Before push</span>
+                        </div>
+                        <div class="ai-chat">
+                          <div class="ai-message user-message">
+                            <span class="ai-avatar">U</span>
+                            <div>
+                              <strong>User</strong>
+                              <p>Is this finding ready to push as an Azure DevOps PR comment?</p>
+                            </div>
+                          </div>
+                          <div class="ai-message assistant-message">
+                            <span class="ai-avatar">AI</span>
+                            <div>
+                              <strong>Workbench analysis</strong>
+                              <p class="typewriter-copy" data-typewriter data-typewriter-delay="16">Keep it local for now. The diff touches a shared pricing path, but the PR description only mentions checkout preview. Add partner quote and invoice draft impact before pushing the comment.</p>
+                              <div class="ai-evidence-grid" data-typewriter-reveal>
+                                <span><b>Finding</b>Missing dependent API coverage.</span>
+                                <span><b>State</b>Editable local card.</span>
+                                <span><b>Action</b>Ask author for impact note.</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <figcaption>Ask AI to refine findings before they leave the local review space.</figcaption>
                     </figure>
                   </div>
                   <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge PR Analysis workspace screenshots"></button>
@@ -218,8 +293,31 @@
                       <figcaption>Indexed targets and scan state.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-mcp-apis.png" width="1920" height="1080" alt="MCP Workbench MCP API reference with tool schemas">
-                      <figcaption>Scanner tools are visible through the generated MCP API reference.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-call-hierarchy-expanded.png" width="1920" height="1080" alt="MCP Workbench Code Scanner call hierarchy graph expanded across dependent API paths">
+                      <figcaption>Call hierarchy shows the downstream paths a PR can accidentally touch.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <div class="demo-screen scanner-recommendation-screen" role="img" aria-label="Simulated Code Scanner recommendations and impact findings">
+                        <div class="mini-app-chrome">
+                          <span>Code Scanner</span>
+                          <span>Recommendations</span>
+                        </div>
+                        <div class="scanner-recommendations">
+                          <article class="risk-high">
+                            <b>High impact path</b>
+                            <p>OrderPricingService#recalculateQuote reaches 5 API entrypoints.</p>
+                          </article>
+                          <article>
+                            <b>Suggested check</b>
+                            <p>Add partner quote preview and invoice draft regression coverage.</p>
+                          </article>
+                          <article>
+                            <b>Recent history</b>
+                            <p>PR #1831 changed the same path 7 days ago.</p>
+                          </article>
+                        </div>
+                      </div>
+                      <figcaption>Scanner recommendations turn graphs into review actions.</figcaption>
                     </figure>
                   </div>
                   <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Code Scanner screenshots"></button>
@@ -238,8 +336,27 @@
                       <figcaption>Graph-backed work traces.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-agent-kits.png" width="1920" height="1080" alt="MCP Workbench Agent Kits screen for improving reusable guidance">
-                      <figcaption>Trace evidence can point back to the skill or agent file to improve.</figcaption>
+                      <div class="demo-screen trace-graph-screen dense-trace" role="img" aria-label="Simulated expanded Think Trace graph with many evidence, decision, tool, error, and fix nodes">
+                        <div class="mini-app-chrome">
+                          <span>Think Trace</span>
+                          <span>Expanded graph</span>
+                        </div>
+                        <div class="trace-node-map">
+                          <span class="node query">User query</span>
+                          <span class="node evidence">Source data</span>
+                          <span class="node tool">Report API</span>
+                          <span class="node error">Timeout</span>
+                          <span class="node error">N/A rows</span>
+                          <span class="node decision">Retry plan</span>
+                          <span class="node tool">Accounting API</span>
+                          <span class="node evidence">Trace #TT-2048</span>
+                          <span class="node fix">Skill patch</span>
+                          <span class="node evidence">Final report</span>
+                          <span class="node decision">Ship</span>
+                          <span class="node comment">Human note</span>
+                        </div>
+                      </div>
+                      <figcaption>Expanded traces can show the messy chain of evidence, errors, decisions, and fixes.</figcaption>
                     </figure>
                   </div>
                   <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Think Trace screenshots"></button>
@@ -295,8 +412,20 @@
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-neutral-loading.png" width="1280" height="720" alt="MCP Workbench neutral loading screen without duck imagery">
-                      <figcaption>Forced neutral loading replaces the duck with HTTP status.</figcaption>
+                      <div class="demo-screen neutral-wipe-demo" role="img" aria-label="Animated comparison between duck loading and neutral loading mode">
+                        <div class="neutral-loading before">
+                          <img src="../../assets/img/workbench/duck_uncertain_transparent.png" width="320" height="320" alt="" aria-hidden="true">
+                          <strong>Polishing the breadcrumbs</strong>
+                          <span>Duck loading screen</span>
+                        </div>
+                        <div class="neutral-loading after">
+                          <b>HTTP 102</b>
+                          <strong>Processing</strong>
+                          <span>Neutral loading screen</span>
+                        </div>
+                        <span class="wipe-line" aria-hidden="true"></span>
+                      </div>
+                      <figcaption>A neutral mode wipe shows the same loading moment with and without ducks.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
                       <img src="../../assets/img/workbench/screenshots/workbench-neutral-configuration.png" width="1280" height="720" alt="MCP Workbench neutral configuration screen with Gray 100 colour label">
@@ -388,6 +517,10 @@
                       </div>
                       <figcaption>Use the AI to draft provider-ready changes while keeping the write behind approval.</figcaption>
                     </figure>
+                    <figure class="carousel-slide workflow-focus-backlog" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-backlog.png" width="1920" height="1080" alt="MCP Workbench Backlog proposal workspace with local drafts">
+                      <figcaption>Review the actual backlog proposal screen before anything is pushed to a provider.</figcaption>
+                    </figure>
                   </div>
                   <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Backlog and Kanban usage story screenshots"></button>
                   <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
@@ -398,54 +531,126 @@
               <section class="workflow-card wide-workflow" aria-labelledby="trace-workflow-title">
                 <div>
                   <p class="eyebrow">Think Trace</p>
-                  <h3 id="trace-workflow-title">Resume an old thread, or fix a skill that keeps missing the mark.</h3>
-                  <p>Treat the trace as a debugging artifact for AI work. Capture the old thread, mark the evidence that mattered, ask the AI what kept going wrong, then turn the result into a skill or agent-kit update.</p>
+                  <h3 id="trace-workflow-title">Turn a failed report run into a traceable repair.</h3>
+                  <p>When a report is slow, incomplete, or full of mystery N/A rows, point the AI at the trace id, inspect the error nodes, patch the weak skill, and rerun with a clean trail.</p>
                   <div class="workflow-beats" aria-label="Think Trace workflow steps">
-                    <span>Recover context</span>
-                    <span>Find the pattern</span>
-                    <span>Patch the skill</span>
+                    <span>Broken report</span>
+                    <span>Trace the errors</span>
+                    <span>Patch and rerun</span>
                   </div>
                 </div>
                 <div class="feature-carousel workflow-carousel" data-carousel aria-label="Think Trace resume and skill-improvement story screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
-                    <figure class="carousel-slide workflow-focus-trace is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-think-trace.png" width="1920" height="1080" alt="MCP Workbench Think Trace showing a graph of AI work evidence and decisions">
-                      <figcaption>Turn an old thread into evidence, decisions, and follow-up nodes.</figcaption>
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <div class="demo-screen report-demo report-broken" role="img" aria-label="Simulated report page with missing data, failed charts, and N/A rows">
+                        <div class="mini-app-chrome">
+                          <span>Quarterly margin report</span>
+                          <span>Trace TT-2048</span>
+                        </div>
+                        <div class="report-grid">
+                          <section class="report-chart good">
+                            <h4>Revenue trend</h4>
+                            <span></span>
+                          </section>
+                          <section class="report-chart error">
+                            <h4>Cost allocation</h4>
+                            <p>Chart failed: timeout</p>
+                          </section>
+                          <section class="report-table">
+                            <h4>Regional rows</h4>
+                            <div><b>North</b><span>OK</span><span>12.4%</span></div>
+                            <div><b>South</b><span>N/A</span><span>N/A</span></div>
+                            <div><b>EU</b><span>late</span><span>N/A</span></div>
+                          </section>
+                        </div>
+                      </div>
+                      <figcaption>Start from the broken report: missing rows, failed graphs, and no obvious reason why.</figcaption>
                     </figure>
                     <figure class="carousel-slide ai-demo-slide" data-carousel-slide hidden>
-                      <div class="ai-demo" aria-label="Workbench AI response explaining a repeated skill miss">
+                      <div class="ai-demo trace-debug-demo" aria-label="Workbench AI response explaining Think Trace error nodes for a slow incomplete report">
                         <div class="ai-demo-topbar">
                           <span>Trace analysis</span>
-                          <span>Skill repair</span>
+                          <span>TT-2048</span>
                         </div>
                         <div class="ai-chat">
                           <div class="ai-message user-message">
                             <span class="ai-avatar">U</span>
                             <div>
                               <strong>User</strong>
-                              <p>Why does this parser-hardening skill keep missing generated fixture failures?</p>
+                              <p>Why is report TT-2048 slow and incomplete?</p>
                             </div>
                           </div>
                           <div class="ai-message assistant-message">
                             <span class="ai-avatar">AI</span>
                             <div>
                               <strong>Workbench analysis</strong>
-                              <p class="typewriter-copy" data-typewriter data-typewriter-delay="18">The trace shows the same weak step three times: the skill asks for parser tests, but never requires generated fixtures or fixture-owner review. Add that check to the skill and link the failed prompt, logs, and final response as evidence.</p>
+                              <p class="typewriter-copy" data-typewriter data-typewriter-delay="18">The trace has two error nodes. The skill calls /accounting/v1/costs without the region parameter, then retries a deprecated totals endpoint. That explains the timeout, N/A rows, and missing cost chart.</p>
                               <div class="ai-evidence-grid" data-typewriter-reveal>
-                                <span><b>Pattern</b>3 misses on generated fixtures.</span>
-                                <span><b>Evidence</b>Prompt, logs, and final answer linked.</span>
-                                <span><b>Patch</b>Add fixture-owner review step.</span>
+                                <span><b>Error node</b>Missing region parameter.</span>
+                                <span><b>Error node</b>Deprecated totals endpoint.</span>
+                                <span><b>Impact</b>Slow charts and N/A rows.</span>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <figcaption>Ask the AI to explain the failure pattern before changing the skill.</figcaption>
+                      <figcaption>Ask the AI to explain the slow incomplete run using the expanded trace errors.</figcaption>
                     </figure>
-                    <figure class="carousel-slide workflow-focus-agent" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-agent-kits.png" width="1920" height="1080" alt="MCP Workbench Agent Kits screen for editing reusable skill guidance">
-                      <figcaption>Patch the reusable skill or agent kit with the trace evidence beside it.</figcaption>
+                    <figure class="carousel-slide ai-demo-slide" data-carousel-slide hidden>
+                      <div class="ai-demo trace-debug-demo" aria-label="Workbench AI response fixing a report skill typo and endpoint">
+                        <div class="ai-demo-topbar">
+                          <span>Skill repair</span>
+                          <span>Applied locally</span>
+                        </div>
+                        <div class="ai-chat">
+                          <div class="ai-message user-message">
+                            <span class="ai-avatar">U</span>
+                            <div>
+                              <strong>User</strong>
+                              <p>Can you fix the skill and rerun the report?</p>
+                            </div>
+                          </div>
+                          <div class="ai-message assistant-message">
+                            <span class="ai-avatar">AI</span>
+                            <div>
+                              <strong>Workbench analysis</strong>
+                              <p class="typewriter-copy" data-typewriter data-typewriter-delay="18">Fixed. I corrected the misspelled accoutingService variable, changed the call to /accounting/v2/costs/by-region, and added a required region check before chart generation.</p>
+                              <div class="ai-evidence-grid" data-typewriter-reveal>
+                                <span><b>Typo</b>accoutingService -> accountingService.</span>
+                                <span><b>Endpoint</b>v2 costs by region.</span>
+                                <span><b>Guard</b>Fail fast before chart render.</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <figcaption>Patch the skill with the exact trace evidence instead of rereading the whole chat.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <div class="demo-screen report-demo report-fixed" role="img" aria-label="Simulated fixed report page with complete rows and working charts">
+                        <div class="mini-app-chrome">
+                          <span>Quarterly margin report</span>
+                          <span>Rerun complete</span>
+                        </div>
+                        <div class="report-grid">
+                          <section class="report-chart good">
+                            <h4>Revenue trend</h4>
+                            <span></span>
+                          </section>
+                          <section class="report-chart good bars">
+                            <h4>Cost allocation</h4>
+                            <span></span>
+                          </section>
+                          <section class="report-table">
+                            <h4>Regional rows</h4>
+                            <div><b>North</b><span>OK</span><span>12.4%</span></div>
+                            <div><b>South</b><span>OK</span><span>10.9%</span></div>
+                            <div><b>EU</b><span>OK</span><span>13.1%</span></div>
+                          </section>
+                        </div>
+                      </div>
+                      <figcaption>Rerun the same report with complete data and working charts.</figcaption>
                     </figure>
                   </div>
                   <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Think Trace story screenshots"></button>
@@ -458,7 +663,7 @@
                 <div>
                   <p class="eyebrow">PR Analysis + Code Scanner + Azure DevOps</p>
                   <h3 id="scanner-workflow-title">Use call hierarchy and provider history before trusting a PR review.</h3>
-                  <p>Modern apps get complicated fast, and some behavior is older than the developer's time on the team. Have the agent inspect the PR diff through Azure tools, ask Code Scanner for call hierarchy and impact paths, then compare recent PRs or work items from the last few days. AI can fill the context gaps before an old dependency becomes a new incident.</p>
+                  <p>Old code paths do not fit in one reviewer’s head. Let the agent read the diff, trace downstream callers, and compare recent PRs before a small change becomes a long-lived bug.</p>
                   <div class="workflow-beats" aria-label="PR Analysis workflow steps">
                     <span>Read the diff</span>
                     <span>Trace the impact</span>
@@ -607,6 +812,11 @@
               <p>The code is source-available. Personal learning, student work, teaching, and nonprofit research are allowed. Enterprise, commercial, production, client, customer, or revenue-generating use requires written permission.</p>
               <div class="license-actions">
                 <button class="button secondary" type="button" data-license-open>Read the full license</button>
+              </div>
+              <div class="license-duck-art" aria-hidden="true">
+                <img src="../../assets/img/workbench/duck_uncertain_transparent.png" width="320" height="320" alt="">
+                <span>noncommercial</span>
+                <span>written permission</span>
               </div>
             </div>
             <div class="trust-stack" aria-label="Licensing summary">
