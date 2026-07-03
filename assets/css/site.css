@@ -878,7 +878,7 @@ button.store-badge:focus {
 .license-duck-art {
   position: relative;
   display: inline-grid;
-  grid-template-columns: minmax(88px, 122px) minmax(0, max-content);
+  grid-template-columns: minmax(104px, 148px) minmax(0, max-content);
   align-items: center;
   gap: 12px;
   width: max-content;
@@ -2531,7 +2531,7 @@ button.store-badge:focus {
   }
 
   .license-duck-art {
-    grid-template-columns: minmax(86px, 112px) minmax(0, 1fr);
+    grid-template-columns: minmax(94px, 130px) minmax(0, 1fr);
     width: 100%;
     max-width: 360px;
   }
