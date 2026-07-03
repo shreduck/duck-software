@@ -287,9 +287,10 @@
                   <div class="carousel-dots" data-carousel-dots></div>
                 </div>
               </article>
-              <article class="feature-card visual-feature">
+              <article class="feature-card visual-feature corporate-neutral-feature">
                 <h3>Corporate neutral mode</h3>
-                <p>Admins can force a neutral portal UI for serious environments and disable the ducks. You monster.</p>
+                <p>Admins can force a neutral portal UI for serious environments and disable the ducks. You monsters.</p>
+                <img class="neutral-card-art" src="../../assets/img/workbench/duck_ai_unauthorized_no_text.png" width="946" height="756" alt="" aria-hidden="true">
                 <div class="feature-carousel" data-carousel aria-label="Corporate neutral mode screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
@@ -299,7 +300,7 @@
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
                       <img src="../../assets/img/workbench/screenshots/workbench-neutral-configuration.png" width="1280" height="720" alt="MCP Workbench neutral configuration screen with Gray 100 colour label">
-                      <figcaption>Colour labels become neutral, and the environment can lock the mode. You monster.</figcaption>
+                      <figcaption>Colour labels become neutral, and the environment can lock the mode. You monsters.</figcaption>
                     </figure>
                   </div>
                   <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge corporate neutral mode screenshots"></button>
@@ -360,15 +361,15 @@
                 <div class="feature-carousel workflow-carousel" data-carousel aria-label="Think Trace resume and skill-improvement story screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
-                    <figure class="carousel-slide is-active" data-carousel-slide>
+                    <figure class="carousel-slide workflow-focus-trace is-active" data-carousel-slide>
                       <img src="../../assets/img/workbench/screenshots/workbench-think-trace.png" width="1280" height="720" alt="MCP Workbench Think Trace showing a graph of AI work evidence and decisions">
                       <figcaption>Trace the old thread into evidence, decisions, and follow-up actions.</figcaption>
                     </figure>
-                    <figure class="carousel-slide" data-carousel-slide hidden>
+                    <figure class="carousel-slide workflow-focus-agent" data-carousel-slide hidden>
                       <img src="../../assets/img/workbench/screenshots/workbench-agent-kits.png" width="1280" height="720" alt="MCP Workbench Agent Kits screen for editing reusable skill guidance">
                       <figcaption>Use the trace to improve the skill or agent kit that caused the weak result.</figcaption>
                     </figure>
-                    <figure class="carousel-slide" data-carousel-slide hidden>
+                    <figure class="carousel-slide workflow-focus-preview" data-carousel-slide hidden>
                       <img src="../../assets/img/workbench/screenshots/workbench-page-preview.png" width="1280" height="720" alt="MCP Workbench page preview for sharing a handoff">
                       <figcaption>Return a portal link so another agent can resume from the shared handoff.</figcaption>
                     </figure>
@@ -388,16 +389,16 @@
                 <div class="feature-carousel workflow-carousel" data-carousel aria-label="PR Analysis and Code Scanner story screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
-                    <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-call-hierarchy-expanded.png" width="1920" height="1080" alt="Fake MCP Workbench Code Scanner call hierarchy graph expanded across dependent API paths">
+                    <figure class="carousel-slide workflow-focus-call is-active" data-carousel-slide>
+                      <img src="../../assets/img/workbench/screenshots/workbench-call-hierarchy-expanded.png" width="1920" height="1080" alt="MCP Workbench Code Scanner call hierarchy graph expanded across dependent API paths">
                       <figcaption>Start with an expanded call hierarchy search for the changed method.</figcaption>
                     </figure>
-                    <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-fake-pr-analysis-impact.png" width="1920" height="1080" alt="Fake MCP Workbench PR Analysis card showing a missing dependent API coverage finding">
-                      <figcaption>Capture a fake PR analysis card before pushing any provider comment.</figcaption>
+                    <figure class="carousel-slide workflow-focus-pr" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-local-pr-analysis-impact.png" width="1920" height="1080" alt="MCP Workbench local PR Analysis card showing a missing dependent API coverage finding">
+                      <figcaption>Capture a local pull request analysis card before pushing any provider comment.</figcaption>
                     </figure>
                     <figure class="carousel-slide ai-demo-slide" data-carousel-slide hidden>
-                      <div class="ai-demo" aria-label="Fake AI response explaining downstream API impact">
+                      <div class="ai-demo" aria-label="Workbench AI response explaining downstream API impact">
                         <div class="ai-demo-topbar">
                           <span>AI review query</span>
                           <span>PR #1842</span>
@@ -427,7 +428,7 @@
                       <figcaption>Ask the AI whether another dependent API is affected and missing from the review.</figcaption>
                     </figure>
                     <figure class="carousel-slide ai-demo-slide" data-carousel-slide hidden>
-                      <div class="ai-demo" aria-label="Fake AI response showing recent Azure DevOps PR context">
+                      <div class="ai-demo" aria-label="Workbench AI response showing recent Azure DevOps PR context">
                         <div class="ai-demo-topbar">
                           <span>Azure DevOps context</span>
                           <span>Last 7 days</span>
@@ -525,6 +526,9 @@
               <p class="eyebrow">Licensing</p>
               <h2 id="licensing-title">Free for individuals, not a corporate free-for-all.</h2>
               <p>The code is closed source. The software is free for individual use. Corporate, commercial, or profit-making use requires written, contract-signed consent before use.</p>
+              <div class="license-actions">
+                <button class="button secondary" type="button" data-license-open>Read the full license</button>
+              </div>
             </div>
             <div class="trust-stack" aria-label="Licensing summary">
               <div class="trust-banner">
@@ -594,6 +598,132 @@
         </div>
       </section>
     </div>
+    <div class="license-modal" id="licenseModal" hidden>
+      <div class="license-modal-backdrop" data-license-close></div>
+      <section class="license-modal-panel" role="dialog" aria-modal="true" aria-labelledby="license-modal-title">
+        <button class="download-modal-close" type="button" aria-label="Close license" data-license-close>
+          <svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+        <p class="eyebrow">Full license</p>
+        <h2 id="license-modal-title">MCP Workbench Source-Available License</h2>
+        <p class="license-source">Source: <a href="https://github.com/shreduck/mcp-workbench-release/blob/master/LICENSE" target="_blank" rel="noopener">mcp-workbench-release/LICENSE</a></p>
+        <pre class="license-text">MCP Workbench Source-Available License
+Version 1.0
+
+Copyright (c) 2026 Shreduck and contributors.
+
+Contact: duck_code_contact@proton.me
+
+This software and its source code, documentation, build files, container images,
+binary artifacts, forks, branches, modifications, and derivative works are
+collectively the "Licensed Materials".
+
+1. Non-Enterprise Permission
+
+Subject to this license, the repository owner grants individuals permission to
+use, copy, modify, build, and run the Licensed Materials for personal,
+educational, research, hobby, non-commercial, and non-enterprise purposes.
+
+This permission is implied by access to the Licensed Materials, but only for the
+uses allowed by this license.
+
+2. Enterprise Use, Trial Use, and Written Permission
+
+Enterprise and commercial users may use the Licensed Materials without a
+commercial license on a limited trial basis to evaluate whether the Licensed
+Materials are useful in an enterprise environment or workflow.
+
+This trial permission does not allow production deployment, enterprise product
+or service distribution, sublicensing, resale, or making the Licensed Materials
+available to clients or customers.
+
+The repository owner trusts enterprise and commercial users to act in good
+conscience. If the Licensed Materials become a used tool within an enterprise
+environment, business process, team workflow, client engagement, customer
+offering, or other commercial or organizational work, the user must contact the
+repository owner at duck_code_contact@proton.me to request written permission.
+
+Except for the limited trial permission above, you must obtain prior written
+permission from the repository owner before using the Licensed Materials for
+Enterprise Work.
+
+"Enterprise Work" means any use by, for, or on behalf of a company, business,
+government agency, non-profit institution, employer, client, customer, or other
+organization, including but not limited to:
+
+- internal business operations;
+- employee, contractor, consultant, client, or customer work;
+- production systems;
+- revenue-generating work;
+- commercial evaluation beyond the limited trial permission described above;
+- hosted services, SaaS, managed services, or internal platforms;
+- work performed as part of paid employment or paid consulting.
+
+The repository owner may condition Enterprise Work permission on a separate
+commercial agreement and payment of a fee.
+
+3. Enterprise Product Distribution Requires Written Permission
+
+You must obtain prior written permission from the repository owner before
+distributing, sublicensing, selling, offering, embedding, bundling, hosting, or
+otherwise making available the Licensed Materials, or any branch, fork,
+modification, derivative work, container image, binary artifact, or service based
+on them, as part of an enterprise product or enterprise-facing service.
+
+This restriction applies whether the distribution is source code, compiled code,
+container images, cloud services, appliances, plugins, integrations, forks,
+branches, or any other form.
+
+The repository owner may condition such permission on a separate commercial
+agreement and payment of a fee.
+
+4. Redistribution Limits
+
+Except for sharing unmodified copies for allowed Non-Enterprise Permission uses,
+you may not redistribute the Licensed Materials, modified versions, derivative
+works, forks, branches, binary artifacts, or container images without prior
+written permission from the repository owner.
+
+5. No Trademark Rights
+
+This license does not grant rights to use the names, logos, trademarks, service
+marks, or branding of the repository owner or contributors, except as necessary
+to identify the Licensed Materials in an allowed use.
+
+6. Notices
+
+You must keep this license and copyright notice with all copies or substantial
+portions of the Licensed Materials.
+
+7. No Warranty
+
+THE LICENSED MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, SECURITY,
+AVAILABILITY, OR ERROR-FREE OPERATION. USE THE LICENSED MATERIALS AT YOUR OWN
+RISK.
+
+8. Limitation Of Liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+WILL NOT BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN
+ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION
+WITH THE LICENSED MATERIALS OR THE USE OR OTHER DEALINGS IN THE LICENSED
+MATERIALS.
+
+9. Termination
+
+Any permission granted by this license terminates automatically if you violate
+this license. After termination, you must stop using and distributing the
+Licensed Materials and delete or destroy copies in your possession or control,
+except where retention is required by law.
+
+10. Separate Agreements
+
+If you have a separate written agreement with the repository owner, that
+agreement controls where it conflicts with this license.</pre>
+      </section>
+    </div>
     <div class="carousel-modal" id="carouselModal" hidden>
       <div class="carousel-modal-backdrop" data-carousel-modal-close></div>
       <section class="carousel-modal-panel" role="dialog" aria-modal="true" aria-labelledby="carousel-modal-title">
@@ -650,6 +780,37 @@
         document.addEventListener("keydown", (event) => {
           if (event.key === "Escape" && !modal.hidden) {
             closeModal();
+          }
+        });
+
+        const licenseModal = document.getElementById("licenseModal");
+        const licenseOpen = document.querySelector("[data-license-open]");
+
+        function closeLicenseModal() {
+          licenseModal.hidden = true;
+          licenseOpen?.focus();
+        }
+
+        function openLicenseModal() {
+          licenseModal.hidden = false;
+          licenseModal.querySelector(".license-modal-panel [data-license-close]")?.focus();
+        }
+
+        licenseOpen?.addEventListener("click", openLicenseModal);
+
+        document.addEventListener("click", (event) => {
+          if (event.target.closest("[data-license-open]")) {
+            openLicenseModal();
+          }
+        });
+
+        document.querySelectorAll("[data-license-close]").forEach((button) => {
+          button.addEventListener("click", closeLicenseModal);
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && !licenseModal.hidden) {
+            closeLicenseModal();
           }
         });
 

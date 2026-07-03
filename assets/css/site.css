@@ -546,8 +546,9 @@ button.store-badge:focus {
 }
 
 .workbench-hero .app-lockup {
-  grid-template-columns: 1fr;
-  align-items: start;
+  grid-template-columns: clamp(112px, 11vw, 148px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(18px, 3vw, 28px);
 }
 
 .workbench-hero h1 {
@@ -556,12 +557,14 @@ button.store-badge:focus {
 }
 
 .workbench-mark {
+  align-self: start;
   display: grid;
   place-items: center;
-  width: 74px;
+  width: 100%;
   aspect-ratio: 1;
+  margin-top: clamp(34px, 3vw, 44px);
   border: 1px solid rgba(11, 116, 128, 0.16);
-  border-radius: 8px;
+  border-radius: 14px;
   background: rgba(255, 255, 255, 0.82);
   color: #ffffff;
   box-shadow: 0 18px 46px rgba(31, 42, 45, 0.2);
@@ -570,8 +573,8 @@ button.store-badge:focus {
 
 .workbench-mark img {
   display: block;
-  width: 86%;
-  height: 86%;
+  width: 92%;
+  height: 92%;
   object-fit: contain;
 }
 
@@ -789,12 +792,21 @@ button.store-badge:focus {
 
 .feature-grid-visual {
   align-items: stretch;
+  grid-template-columns: 1fr;
 }
 
 .visual-feature {
-  gap: 8px;
-  min-height: 0;
-  padding-top: 22px;
+  display: grid;
+  grid-template-columns: minmax(190px, 0.58fr) minmax(0, 1fr);
+  grid-template-rows: auto auto minmax(0, 1fr);
+  align-items: start;
+  column-gap: clamp(22px, 4vw, 42px);
+  min-height: 354px;
+  padding: clamp(22px, 3vw, 30px);
+}
+
+.visual-feature > * {
+  min-width: 0;
 }
 
 .visual-feature::after {
@@ -803,6 +815,51 @@ button.store-badge:focus {
 
 .visual-feature p {
   margin-bottom: 8px;
+}
+
+.visual-feature .feature-carousel {
+  grid-column: 2;
+  grid-row: 1 / span 4;
+  align-self: start;
+  width: 100%;
+  height: 302px;
+  margin-top: 0;
+}
+
+.visual-feature .carousel-viewport {
+  height: 100%;
+}
+
+.visual-feature .carousel-slide:not([hidden]) {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) 64px;
+  height: 100%;
+}
+
+.visual-feature .carousel-slide img {
+  height: 100%;
+  aspect-ratio: auto;
+}
+
+.visual-feature .carousel-slide figcaption {
+  display: flex;
+  align-items: center;
+}
+
+.neutral-card-art {
+  grid-column: 1;
+  grid-row: 3;
+  align-self: end;
+  justify-self: end;
+  width: min(190px, 78%);
+  height: auto;
+  margin-top: 18px;
+  opacity: 0.94;
+  pointer-events: none;
+}
+
+.license-actions {
+  margin-top: 18px;
 }
 
 .feature-pullquote {
@@ -826,6 +883,7 @@ button.store-badge:focus {
 .workflow-carousel {
   align-self: stretch;
   width: min(980px, 100%);
+  min-height: clamp(350px, 35vw, 430px);
   justify-self: end;
 }
 
@@ -856,7 +914,54 @@ button.store-badge:focus {
 }
 
 .workflow-carousel .carousel-slide img {
-  object-position: top left;
+  object-position: var(--workflow-object-position, top left);
+}
+
+.workflow-carousel .carousel-viewport {
+  height: 100%;
+}
+
+.workflow-carousel .carousel-slide:not([hidden]) {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  height: 100%;
+}
+
+.workflow-carousel .carousel-slide img {
+  height: 100%;
+  aspect-ratio: auto;
+  transform: scale(var(--workflow-image-zoom, 1));
+  transform-origin: var(--workflow-image-origin, center);
+}
+
+.workflow-carousel .carousel-slide figcaption {
+  position: relative;
+  z-index: 1;
+}
+
+.workflow-focus-trace {
+  --workflow-image-zoom: 1.52;
+  --workflow-image-origin: 61% 45%;
+}
+
+.workflow-focus-agent {
+  --workflow-image-zoom: 1.48;
+  --workflow-image-origin: 58% 44%;
+}
+
+.workflow-focus-preview {
+  --workflow-image-zoom: 1.36;
+  --workflow-image-origin: 50% 42%;
+}
+
+.workflow-focus-call {
+  --workflow-image-zoom: 1.16;
+  --workflow-image-origin: 55% 45%;
+}
+
+.workflow-focus-pr {
+  --workflow-image-zoom: 1.12;
+  --workflow-image-origin: 53% 44%;
 }
 
 .ai-demo-slide {
@@ -1139,6 +1244,20 @@ button.store-badge:focus {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+#important-notes .note-grid {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scroll-snap-type: x proximity;
+}
+
+#important-notes .trust-banner {
+  flex: 0 0 min(300px, 78vw);
+  min-height: 100%;
+  scroll-snap-align: start;
+}
+
 .download-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1164,6 +1283,7 @@ button.store-badge:focus {
 }
 
 .download-modal,
+.license-modal,
 .carousel-modal {
   position: fixed;
   inset: 0;
@@ -1177,7 +1297,12 @@ button.store-badge:focus {
   display: none;
 }
 
+.license-modal[hidden] {
+  display: none;
+}
+
 .download-modal-backdrop,
+.license-modal-backdrop,
 .carousel-modal-backdrop {
   position: absolute;
   inset: 0;
@@ -1240,6 +1365,50 @@ button.store-badge:focus {
   margin-top: 22px;
 }
 
+.license-modal-panel {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-rows: auto auto auto minmax(0, 1fr);
+  width: min(920px, 96vw);
+  max-height: calc(100vh - 28px);
+  padding: clamp(20px, 3vw, 28px);
+  overflow: hidden;
+  border: 1px solid rgba(207, 226, 223, 0.92);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+}
+
+.license-modal-panel h2 {
+  padding-right: 42px;
+  font-size: clamp(1.45rem, 2.6vw, 2.1rem);
+}
+
+.license-source {
+  margin: 10px 0 16px;
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+
+.license-source a {
+  color: var(--accent-dark);
+  font-weight: 820;
+}
+
+.license-text {
+  min-height: 0;
+  margin: 0;
+  padding: 16px;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f7fbfa;
+  color: var(--ink);
+  font: 0.88rem/1.55 Consolas, "Liberation Mono", Menlo, monospace;
+  white-space: pre-wrap;
+}
+
 .carousel-modal-panel {
   position: relative;
   z-index: 1;
@@ -1281,6 +1450,10 @@ button.store-badge:focus {
   border-block: 1px solid var(--line);
   background: #f7fbfa;
   object-fit: contain;
+}
+
+.carousel-modal-figure img[hidden] {
+  display: none;
 }
 
 .carousel-modal-html {
@@ -1358,7 +1531,7 @@ button.store-badge:focus {
 }
 
 .workflow-card.wide-workflow {
-  grid-template-columns: minmax(0, 0.42fr) minmax(420px, 1fr);
+  grid-template-columns: minmax(180px, 0.34fr) minmax(460px, 1fr);
 }
 
 .screenshot-gallery {
@@ -1594,6 +1767,24 @@ button.store-badge:focus {
   }
 }
 
+@media (max-width: 1240px) {
+  .visual-feature {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .visual-feature .feature-carousel {
+    grid-column: 1;
+    grid-row: auto;
+    height: 320px;
+    margin-top: 8px;
+  }
+
+  .neutral-card-art {
+    width: min(170px, 58%);
+  }
+}
+
 .reading-block {
   padding-bottom: 64px;
   color: var(--muted);
@@ -1773,6 +1964,11 @@ button.store-badge:focus {
     gap: 14px;
   }
 
+  .workbench-hero .app-lockup {
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 16px;
+  }
+
   .actions {
     align-items: stretch;
   }
@@ -1796,6 +1992,18 @@ button.store-badge:focus {
   .feature-grid,
   .note-grid {
     grid-template-columns: 1fr;
+  }
+
+  .visual-feature {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .visual-feature .feature-carousel {
+    grid-column: 1;
+    grid-row: auto;
+    height: 280px;
+    margin-top: 6px;
   }
 
   .workflow-card {
