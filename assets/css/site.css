@@ -570,10 +570,12 @@ a.store-badge:focus {
 .workflow-card,
 .trust-banner,
 .future-screenshots article {
+  --hover-lift: 0px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.88);
   box-shadow: 0 14px 38px rgba(42, 87, 90, 0.09);
+  transform: translateY(var(--hover-lift));
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
@@ -608,9 +610,9 @@ a.store-badge:focus {
 .feature-card:hover,
 .workflow-card:hover,
 .trust-banner:hover {
+  --hover-lift: -2px;
   border-color: rgba(11, 116, 128, 0.26);
   box-shadow: 0 18px 44px rgba(42, 87, 90, 0.14);
-  transform: translateY(-2px);
 }
 
 .feature-icon {
@@ -855,6 +857,24 @@ a.store-badge:focus {
   color: var(--accent-dark);
   font-size: 0.78rem;
   font-weight: 820;
+}
+
+.scroll-focus-enabled .scroll-focus-card {
+  opacity: calc(0.58 + (var(--scroll-focus, 1) * 0.42));
+  filter:
+    saturate(calc(0.82 + (var(--scroll-focus, 1) * 0.18)))
+    blur(var(--scroll-blur, 0px));
+  transform: translateY(var(--hover-lift, 0px)) scale(var(--scroll-scale, 1));
+  will-change: opacity, filter, transform;
+}
+
+.scroll-focus-enabled .scroll-focus-card:hover,
+.scroll-focus-enabled .scroll-focus-card:focus-within {
+  --scroll-focus: 1 !important;
+  --scroll-scale: 1 !important;
+  --scroll-blur: 0px !important;
+  opacity: 1;
+  filter: none;
 }
 
 .document-page {
@@ -1129,7 +1149,13 @@ a.store-badge:focus {
   }
 
   a.store-badge:hover,
-  a.store-badge:focus {
+  a.store-badge:focus,
+  .feature-card,
+  .workflow-card,
+  .trust-banner,
+  .scroll-focus-card {
+    opacity: 1 !important;
+    filter: none !important;
     transform: none;
   }
 }
