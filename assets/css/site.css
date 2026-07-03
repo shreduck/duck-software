@@ -75,6 +75,10 @@ main {
   margin-inline: auto;
 }
 
+.workbench-page main {
+  width: min(1440px, calc(100% - clamp(32px, 6vw, 96px)));
+}
+
 .site-header {
   position: relative;
   z-index: 2;
@@ -554,6 +558,8 @@ button.store-badge:focus {
 .workbench-hero h1 {
   max-width: 680px;
   font-size: clamp(2.35rem, 4.2vw, 3.85rem);
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 .workbench-mark {
@@ -675,6 +681,7 @@ button.store-badge:focus {
 
 .feature-story {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: clamp(24px, 5vw, 46px);
   min-width: 0;
   padding-bottom: clamp(36px, 7vw, 76px);
@@ -727,7 +734,9 @@ button.store-badge:focus {
   position: relative;
   display: grid;
   align-content: start;
+  min-width: 0;
   min-height: 188px;
+  width: 100%;
   padding: 20px;
   overflow: hidden;
   background:
@@ -801,7 +810,9 @@ button.store-badge:focus {
   grid-template-rows: auto auto minmax(0, 1fr);
   align-items: start;
   column-gap: clamp(22px, 4vw, 42px);
+  min-width: 0;
   min-height: 354px;
+  width: 100%;
   padding: clamp(22px, 3vw, 30px);
 }
 
@@ -1413,7 +1424,7 @@ button.store-badge:focus {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  grid-template-rows: auto auto minmax(0, 1fr);
   width: min(1540px, 96vw);
   max-height: calc(100vh - 28px);
   padding: 0;
@@ -1435,6 +1446,7 @@ button.store-badge:focus {
 }
 
 .carousel-modal-figure {
+  position: relative;
   display: grid;
   gap: 0;
   min-height: 0;
@@ -1467,6 +1479,63 @@ button.store-badge:focus {
 
 .carousel-modal-html .ai-demo {
   max-height: calc(100vh - 220px);
+}
+
+.carousel-modal-nav {
+  position: absolute;
+  top: 0;
+  bottom: 48px;
+  z-index: 4;
+  display: grid;
+  align-items: center;
+  width: 50%;
+  padding: clamp(16px, 3vw, 34px);
+  border: 0;
+  color: #ffffff;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 160ms ease;
+}
+
+.carousel-modal-nav svg {
+  width: 46px;
+  height: 46px;
+  padding: 9px;
+  border-radius: 999px;
+  background: rgba(31, 42, 45, 0.66);
+  box-shadow: 0 18px 34px rgba(31, 42, 45, 0.22);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: translateX(var(--modal-arrow-offset, 0));
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.carousel-modal-nav:hover,
+.carousel-modal-nav:focus-visible {
+  opacity: 1;
+}
+
+.carousel-modal-nav:hover svg,
+.carousel-modal-nav:focus-visible svg {
+  background: rgba(31, 42, 45, 0.84);
+  transform: translateX(0);
+}
+
+.carousel-modal-prev {
+  left: 0;
+  justify-items: start;
+  --modal-arrow-offset: -8px;
+  background: linear-gradient(90deg, rgba(31, 42, 45, 0.42), rgba(31, 42, 45, 0.18) 44%, transparent);
+}
+
+.carousel-modal-next {
+  right: 0;
+  justify-items: end;
+  --modal-arrow-offset: 8px;
+  background: linear-gradient(270deg, rgba(31, 42, 45, 0.42), rgba(31, 42, 45, 0.18) 44%, transparent);
 }
 
 .carousel-modal-figure figcaption {
@@ -1765,6 +1834,50 @@ button.store-badge:focus {
   .feature-story {
     grid-column: 2;
   }
+
+  .workbench-page .product-hero,
+  .workbench-page .top-notice {
+    margin-left: clamp(150px, 13vw, 210px);
+  }
+
+  .workbench-page .product-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+    gap: clamp(28px, 3.2vw, 48px);
+  }
+
+  .workbench-page .workbench-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.34fr);
+  }
+
+  .workbench-page .workbench-hero .app-lockup {
+    grid-template-columns: clamp(100px, 8vw, 132px) minmax(0, 1fr);
+    gap: clamp(18px, 2.4vw, 26px);
+  }
+
+  .workbench-page .workbench-hero h1 {
+    max-width: 900px;
+    font-size: clamp(2.6rem, 3.9vw, 4.35rem);
+    line-height: 1.04;
+  }
+
+  .workbench-page .workbench-mark {
+    margin-top: clamp(20px, 2.4vw, 34px);
+  }
+
+  .workbench-page .hero-desktop {
+    width: min(560px, 100%);
+    justify-self: end;
+  }
+
+  .workbench-page .feature-layout {
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: clamp(18px, 2.5vw, 32px);
+  }
+
+  .workbench-page .section-index {
+    left: max(24px, calc((100vw - 1440px) / 2 + 12px));
+    width: 160px;
+  }
 }
 
 @media (max-width: 1240px) {
@@ -1825,6 +1938,10 @@ button.store-badge:focus {
 }
 
 @media (max-width: 980px) {
+  .workbench-page main {
+    width: min(1120px, calc(100% - 32px));
+  }
+
   .product-hero,
   .feature-layout,
   .split-block,
@@ -1910,6 +2027,7 @@ button.store-badge:focus {
 }
 
 @media (max-width: 760px) {
+  .workbench-page main,
   .site-header,
   .site-footer,
   main,
@@ -1965,8 +2083,17 @@ button.store-badge:focus {
   }
 
   .workbench-hero .app-lockup {
-    grid-template-columns: 92px minmax(0, 1fr);
-    gap: 16px;
+    grid-template-columns: 76px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .workbench-hero h1 {
+    font-size: clamp(1.95rem, 8.6vw, 2.35rem);
+    line-height: 1.08;
+  }
+
+  .workbench-mark {
+    margin-top: 10px;
   }
 
   .actions {
@@ -2017,6 +2144,18 @@ button.store-badge:focus {
   .carousel-control {
     width: 32px;
     height: 32px;
+  }
+
+  .carousel-modal-nav {
+    bottom: 44px;
+    padding: 12px;
+    opacity: 0.82;
+  }
+
+  .carousel-modal-nav svg {
+    width: 38px;
+    height: 38px;
+    padding: 8px;
   }
 
   .carousel-slide figcaption {

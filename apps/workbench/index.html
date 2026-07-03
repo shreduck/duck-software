@@ -735,12 +735,14 @@ agreement controls where it conflicts with this license.</pre>
         <figure class="carousel-modal-figure">
           <img id="carouselModalImage" src="../../assets/img/workbench/screenshots/workbench-home.png" width="1280" height="720" alt="">
           <div class="carousel-modal-html" id="carouselModalHtml" hidden></div>
+          <button class="carousel-modal-nav carousel-modal-prev" type="button" data-carousel-modal-prev aria-label="Previous screenshot">
+            <svg width="30" height="30" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <button class="carousel-modal-nav carousel-modal-next" type="button" data-carousel-modal-next aria-label="Next screenshot">
+            <svg width="30" height="30" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
           <figcaption id="carouselModalCaption"></figcaption>
         </figure>
-        <div class="carousel-modal-actions">
-          <button class="button secondary" type="button" data-carousel-modal-prev>Previous</button>
-          <button class="button secondary" type="button" data-carousel-modal-next>Next</button>
-        </div>
       </section>
     </div>
     <script src="../../assets/js/scroll-focus.js" defer></script>
@@ -834,6 +836,8 @@ agreement controls where it conflicts with this license.</pre>
         const modalImage = document.getElementById("carouselModalImage");
         const modalHtml = document.getElementById("carouselModalHtml");
         const modalCaption = document.getElementById("carouselModalCaption");
+        const modalPrev = document.querySelector("[data-carousel-modal-prev]");
+        const modalNext = document.querySelector("[data-carousel-modal-next]");
         const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         let modalSlides = [];
         let modalIndex = 0;
@@ -921,6 +925,13 @@ agreement controls where it conflicts with this license.</pre>
             modalHtml.append(content);
           }
           modalCaption.textContent = slide.caption;
+          const singleSlide = modalSlides.length < 2;
+          if (modalPrev) {
+            modalPrev.hidden = singleSlide;
+          }
+          if (modalNext) {
+            modalNext.hidden = singleSlide;
+          }
         }
 
         function openCarouselModal(carousel, index) {
@@ -1042,8 +1053,8 @@ agreement controls where it conflicts with this license.</pre>
           render(index);
         });
 
-        document.querySelector("[data-carousel-modal-prev]")?.addEventListener("click", () => showModalSlide(modalIndex - 1));
-        document.querySelector("[data-carousel-modal-next]")?.addEventListener("click", () => showModalSlide(modalIndex + 1));
+        modalPrev?.addEventListener("click", () => showModalSlide(modalIndex - 1));
+        modalNext?.addEventListener("click", () => showModalSlide(modalIndex + 1));
         document.querySelectorAll("[data-carousel-modal-close]").forEach((button) => {
           button.addEventListener("click", closeCarouselModal);
         });
