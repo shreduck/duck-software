@@ -1139,43 +1139,17 @@ button.store-badge:focus {
   padding: 4px 8px;
 }
 
-.visual-feature .mini-kanban-board,
-.visual-feature .mini-proposal-layout,
 .visual-feature .scanner-recommendations {
   gap: 8px;
 }
 
-.visual-feature .mini-kanban-board section,
-.visual-feature .mini-proposal-layout section,
 .visual-feature .scanner-recommendations article {
   padding: 8px;
 }
 
-.visual-feature .mini-kanban-board h4,
-.visual-feature .mini-proposal-layout h4 {
-  margin-bottom: 5px;
-  font-size: 0.68rem;
-}
-
-.visual-feature .mini-kanban-board article,
-.visual-feature .mini-proposal-layout article {
-  margin-top: 5px;
-  padding: 6px;
-  font-size: 0.66rem;
-  line-height: 1.25;
-}
-
-.visual-feature .mini-proposal-layout p,
 .visual-feature .scanner-recommendations p {
   font-size: 0.68rem;
   line-height: 1.28;
-}
-
-.visual-feature .mini-proposal-layout span,
-.visual-feature .mini-proposal-layout button {
-  margin-top: 7px;
-  padding: 5px 7px;
-  font-size: 0.62rem;
 }
 
 .visual-feature .scanner-recommendations b {
@@ -1261,8 +1235,6 @@ button.store-badge:focus {
   text-transform: none;
 }
 
-.mini-kanban-board,
-.mini-proposal-layout,
 .scanner-recommendations,
 .report-grid {
   display: grid;
@@ -1270,12 +1242,6 @@ button.store-badge:focus {
   min-height: 0;
 }
 
-.mini-kanban-board {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.mini-kanban-board section,
-.mini-proposal-layout section,
 .scanner-recommendations article,
 .report-chart,
 .report-table {
@@ -1287,53 +1253,17 @@ button.store-badge:focus {
   box-shadow: 0 10px 24px rgba(31, 42, 45, 0.06);
 }
 
-.mini-kanban-board h4,
-.mini-proposal-layout h4,
 .report-grid h4 {
   margin-bottom: 10px;
   color: var(--ink);
   font-size: 0.8rem;
 }
 
-.mini-kanban-board article,
-.mini-proposal-layout article {
-  margin-top: 8px;
-  padding: 10px;
-  border-radius: 7px;
-  background: #f6faf9;
-  color: var(--muted);
-  font-size: 0.78rem;
-  font-weight: 760;
-}
-
-.mini-proposal-layout {
-  grid-template-columns: 0.9fr 1.45fr 0.9fr;
-}
-
-.mini-proposal-layout p,
 .scanner-recommendations p,
 .report-chart p {
   margin: 0;
   color: var(--muted);
   font-size: 0.82rem;
-}
-
-.mini-proposal-layout span,
-.mini-proposal-layout button {
-  display: inline-flex;
-  width: max-content;
-  margin-top: 12px;
-  padding: 7px 10px;
-  border: 1px solid rgba(11, 116, 128, 0.2);
-  border-radius: 999px;
-  background: var(--wash-strong);
-  color: var(--accent-dark);
-  font-size: 0.74rem;
-  font-weight: 900;
-}
-
-.mini-proposal-layout button {
-  border: 0;
 }
 
 .scanner-recommendations {
