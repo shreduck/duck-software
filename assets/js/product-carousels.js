@@ -97,6 +97,16 @@
     const dots = carousel.querySelector("[data-carousel-dots]");
     let index = slides.findIndex((slide) => slide.classList.contains("is-active"));
     index = index >= 0 ? index : 0;
+    const singleSlide = slides.length < 2;
+    if (prev) {
+      prev.hidden = singleSlide;
+    }
+    if (next) {
+      next.hidden = singleSlide;
+    }
+    if (dots) {
+      dots.hidden = singleSlide;
+    }
 
     function render(nextIndex) {
       index = (nextIndex + slides.length) % slides.length;

@@ -2695,33 +2695,20 @@ button.store-badge:focus {
 .veintrack-page .phone-workflow-carousel .carousel-slide > img {
   align-self: center;
   width: auto;
-  max-width: min(230px, 72%);
+  max-width: min(230px, 82%);
   height: 100%;
   max-height: 100%;
-  aspect-ratio: 9 / 16;
-  border: 7px solid #ffffff;
-  border-radius: 24px;
+  border: 1px solid rgba(180, 207, 203, 0.72);
+  border-radius: 22px;
   background: #ffffff;
   box-shadow: 0 16px 34px rgba(31, 42, 45, 0.16);
-  object-fit: cover;
-  object-position: top center;
+  object-fit: contain;
+  object-position: center;
   transform: none;
 }
 
 .veintrack-page .phone-workflow-carousel .carousel-slide > img {
-  max-width: min(250px, 70%);
-}
-
-.veintrack-page .carousel-slide.screen-mid > img {
-  object-position: center 42%;
-}
-
-.veintrack-page .carousel-slide.screen-lower > img {
-  object-position: center 68%;
-}
-
-.veintrack-page .carousel-slide.screen-bottom > img {
-  object-position: center bottom;
+  max-width: min(260px, 78%);
 }
 
 .veintrack-page .widget-demo-slide:not([hidden]) {
@@ -2825,8 +2812,7 @@ button.store-badge:focus {
 
   .veintrack-page .phone-carousel .carousel-slide > img,
   .veintrack-page .phone-workflow-carousel .carousel-slide > img {
-    max-width: min(210px, 74%);
-    border-width: 6px;
+    max-width: min(220px, 84%);
   }
 
   .veintrack-page .download-grid .trust-banner {
