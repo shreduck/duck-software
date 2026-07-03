@@ -370,7 +370,20 @@ p {
   background: #101515;
   color: #ffffff;
   font-weight: 780;
+  text-decoration: none;
   box-shadow: 0 12px 26px rgba(31, 42, 45, 0.16);
+}
+
+a.store-badge:hover,
+a.store-badge:focus {
+  color: #ffffff;
+  filter: brightness(1.08);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+a.store-badge:focus-visible {
+  box-shadow: 0 0 0 4px rgba(11, 116, 128, 0.22), 0 12px 26px rgba(31, 42, 45, 0.16);
 }
 
 .store-badge.testflight-badge {
