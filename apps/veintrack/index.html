@@ -58,6 +58,13 @@
         </figure>
       </section>
 
+      <section class="top-notice" aria-label="Free app and payment safety">
+        <article class="trust-banner warning-banner payment-safety-banner">
+          <strong>Free app and payment safety</strong>
+          <span>VeinTrack is free to use. The only legitimate payments are optional in-app support purchases through Apple. If anyone asks you to pay outside the app or App Store flow, treat it as a scam and report it.</span>
+        </article>
+      </section>
+
       <div class="feature-layout">
         <aside class="section-index" aria-label="VeinTrack section index">
           <p class="eyebrow">On this page</p>
@@ -65,6 +72,7 @@
             <a href="#features">Features</a>
             <a href="#privacy-first">Privacy</a>
             <a href="#screenshots">Screenshots</a>
+            <a href="#activity-widget">Activity widget</a>
             <a href="#important-notes">Important notes</a>
           </nav>
         </aside>
@@ -77,33 +85,43 @@
             </div>
 
             <div class="feature-grid">
-              <article class="feature-card">
-                <span class="feature-icon" aria-hidden="true">QV</span>
+              <article class="feature-card feature-quick" style="--feature-image: url('../../assets/img/veintrack/artwork/welcome-checkin-calendar.png')">
+                <span class="feature-icon" aria-hidden="true">01</span>
                 <h3>Quick View</h3>
                 <p>Save activity, sleep, leg elevation, pain, swelling, and photos from one daily screen.</p>
               </article>
-              <article class="feature-card">
-                <span class="feature-icon" aria-hidden="true">AR</span>
+              <article class="feature-card feature-activity" style="--feature-image: url('../../assets/img/veintrack/artwork/event-form-activity-background.png')">
+                <span class="feature-icon" aria-hidden="true">02</span>
                 <h3>Activity and rest</h3>
                 <p>Track walking context and use gentle reminders to pause, sit, or rest when sessions run long.</p>
               </article>
-              <article class="feature-card">
-                <span class="feature-icon" aria-hidden="true">SP</span>
+              <article class="feature-card feature-photo" style="--feature-image: url('../../assets/img/veintrack/artwork/photo-reference.png')">
+                <span class="feature-icon" aria-hidden="true">03</span>
                 <h3>Symptoms and photos</h3>
                 <p>Keep pain, swelling, notes, and comparison photos close to the day they belong to.</p>
               </article>
-              <article class="feature-card">
-                <span class="feature-icon" aria-hidden="true">CH</span>
+              <article class="feature-card feature-care" style="--feature-image: url('../../assets/img/veintrack/artwork/event-form-leg-elevation-background.png')">
+                <span class="feature-icon" aria-hidden="true">04</span>
+                <h3>Consultations and prescriptions</h3>
+                <p>Organize appointment details, attach documents, and track compression prescription changes locally inside the app.</p>
+              </article>
+              <article class="feature-card feature-calendar" style="--feature-image: url('../../assets/img/veintrack/artwork/welcome-checkin-calendar.png')">
+                <span class="feature-icon" aria-hidden="true">05</span>
                 <h3>Calendar history</h3>
                 <p>Find past events, future consultations, travel records, and monthly summaries by date.</p>
               </article>
-              <article class="feature-card">
-                <span class="feature-icon" aria-hidden="true">SR</span>
+              <article class="feature-card feature-report" style="--feature-image: url('../../assets/img/veintrack/artwork/help-event-charts-reports.png')">
+                <span class="feature-icon" aria-hidden="true">06</span>
                 <h3>Stats and reports</h3>
                 <p>Turn local records into insights, charts, PDFs, email summaries, CSV files, and backups.</p>
               </article>
-              <article class="feature-card">
-                <span class="feature-icon" aria-hidden="true">FS</span>
+              <article class="feature-card feature-widget" style="--feature-image: url('../../assets/img/veintrack/artwork/rest-coach-park-sit.png')">
+                <span class="feature-icon" aria-hidden="true">07</span>
+                <h3>Widget and activity status</h3>
+                <p>Keep coached activity, rest actions, daily steps, and distance visible when iOS permissions allow.</p>
+              </article>
+              <article class="feature-card feature-support" style="--feature-image: url('../../assets/img/veintrack/artwork/flight-mode-short-walk.png')">
+                <span class="feature-icon" aria-hidden="true">08</span>
                 <h3>Feedback and support</h3>
                 <p>Send feedback, share the app, or optionally support development from Settings.</p>
               </article>
@@ -113,13 +131,13 @@
           <section class="story-block split-block" id="privacy-first" aria-labelledby="privacy-first-title">
             <div>
               <p class="eyebrow">Designed for private daily context</p>
-              <h2 id="privacy-first-title">No Duck Code account. No sale of personal data.</h2>
-              <p>VeinTrack stores app data on your device unless you choose to export, email, save, back up, or share it elsewhere. Apple Health and Motion data are used only after permission is granted.</p>
+              <h2 id="privacy-first-title">100% local unless you choose to share.</h2>
+              <p>VeinTrack keeps your app data on your device. It does not share your data with anyone or send it to the web unless you choose to export, email, save, back up, or share it.</p>
             </div>
             <div class="trust-stack" aria-label="Privacy highlights">
               <div class="trust-banner">
-                <strong>Local first</strong>
-                <span>Your records stay on device by default.</span>
+                <strong>Local by default</strong>
+                <span>Your records stay inside the app unless you choose otherwise.</span>
               </div>
               <div class="trust-banner">
                 <strong>Permission based</strong>
@@ -157,7 +175,7 @@
                 <div>
                   <p class="eyebrow">Calendar and history</p>
                   <h3 id="history-workflow-title">Records become easier to find later.</h3>
-                  <p>Calendar markers and summaries help connect what happened with when it happened.</p>
+                  <p>Calendar markers, appointment days, and prescription changes help connect what happened with when it happened.</p>
                 </div>
                 <div class="screenshot-gallery" aria-label="Calendar screenshots">
                   <figure class="screenshot-card phone-frame">
@@ -212,6 +230,36 @@
             </div>
           </section>
 
+          <section class="story-block activity-widget-story" id="activity-widget" aria-labelledby="activity-widget-title">
+            <div class="section-heading">
+              <p class="eyebrow">Activity tracker and widget</p>
+              <h2 id="activity-widget-title">A visible nudge when a session is running.</h2>
+            </div>
+            <div class="activity-widget-layout">
+              <div class="story-copy">
+                <p>Coached activity mode can keep rest actions and session status close at hand. The widget can show daily steps and distance, start a coached session, log rest, or open the app.</p>
+                <p>Passive detection stays private and local, but iOS may delay background updates. Coached sessions are more timely because you intentionally start them.</p>
+              </div>
+              <div class="activity-preview-stack" aria-label="Illustrated activity widget preview">
+                <div class="widget-preview">
+                  <span class="preview-kicker">Activity and rest</span>
+                  <strong>6,450 steps</strong>
+                  <span>4.2 km today</span>
+                  <div class="preview-actions" aria-hidden="true">
+                    <span>Start</span>
+                    <span>Log rest</span>
+                    <span>Open</span>
+                  </div>
+                </div>
+                <div class="live-activity-preview">
+                  <span class="preview-kicker">Coached session</span>
+                  <strong>52 min moving</strong>
+                  <span>Rest reminder approaching</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
           <section class="story-block" id="important-notes" aria-labelledby="important-notes-title">
             <div class="section-heading">
               <p class="eyebrow">Important notes</p>
@@ -223,13 +271,13 @@
                 <strong>Not medical advice</strong>
                 <span>VeinTrack supports personal tracking and preparation. It does not diagnose, treat, or replace a clinician.</span>
               </article>
-              <article class="trust-banner warning-banner">
-                <strong>Free app and payment safety</strong>
-                <span>VeinTrack is free to use. The only legitimate payments are optional in-app support purchases through Apple. If anyone asks you to pay outside the app or App Store flow, treat it as a scam and report it.</span>
-              </article>
               <article class="trust-banner">
                 <strong>Support is optional</strong>
                 <span>Feedback, sharing with someone who may benefit, and optional StoreKit support are all appreciated. None unlock features.</span>
+              </article>
+              <article class="trust-banner">
+                <strong>Your export, your choice</strong>
+                <span>Reports, images, files, and backups leave the app only when you choose where to send or save them.</span>
               </article>
             </div>
           </section>

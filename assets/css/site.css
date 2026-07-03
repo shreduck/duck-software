@@ -14,6 +14,7 @@
   --rose: #a85b58;
   --gold: #a97742;
   --shadow: 0 22px 58px rgba(42, 87, 90, 0.14);
+  --shadow-soft: 0 14px 34px rgba(42, 87, 90, 0.1);
 }
 
 * {
@@ -219,6 +220,7 @@ p {
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: var(--shadow);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
 .app-card-main {
@@ -281,6 +283,7 @@ p {
   font-size: 0.92rem;
   font-weight: 760;
   text-decoration: none;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
 .button,
@@ -303,6 +306,7 @@ p {
   background: var(--rose);
   border-color: var(--rose);
   color: #ffffff;
+  transform: translateY(-1px);
 }
 
 .button.secondary:hover {
@@ -333,6 +337,7 @@ p {
   font-weight: 780;
   text-decoration: none;
   box-shadow: 0 12px 26px rgba(31, 42, 45, 0.16);
+  transition: filter 180ms ease, transform 180ms ease, box-shadow 180ms ease, opacity 180ms ease;
 }
 
 a.store-badge:hover,
@@ -429,6 +434,11 @@ a.store-badge:focus {
   min-width: 0;
 }
 
+.hero-copy .actions,
+.document-hero .actions {
+  margin-top: 14px;
+}
+
 .app-lockup {
   display: grid;
   grid-template-columns: 86px minmax(0, 1fr);
@@ -456,14 +466,21 @@ a.store-badge:focus {
   grid-template-columns: 190px minmax(0, 1fr);
   gap: clamp(24px, 4vw, 50px);
   align-items: start;
+  padding-top: 8px;
 }
 
 .section-index {
   position: sticky;
   top: 16px;
-  padding: 34px 0;
+  z-index: 3;
+  padding: 16px 12px;
   max-height: calc(100vh - 32px);
   overflow: auto;
+  border: 1px solid rgba(207, 226, 223, 0.84);
+  border-radius: 12px;
+  background: rgba(251, 254, 253, 0.82);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(16px);
 }
 
 .section-index nav {
@@ -474,12 +491,14 @@ a.store-badge:focus {
 
 .section-index a {
   display: block;
-  padding: 8px 10px;
+  padding: 9px 10px;
   border-left: 3px solid transparent;
+  border-radius: 6px;
   color: var(--muted);
   font-size: 0.92rem;
   font-weight: 760;
   text-decoration: none;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
 .section-index a:hover,
@@ -490,16 +509,21 @@ a.store-badge:focus {
 }
 
 .feature-story {
+  display: grid;
+  gap: clamp(24px, 5vw, 46px);
   min-width: 0;
+  padding-bottom: clamp(36px, 7vw, 76px);
 }
 
 .story-block {
-  padding: clamp(50px, 7vw, 78px) 0;
-  border-top: 1px solid var(--line);
-}
-
-.story-block:first-child {
-  border-top: 0;
+  position: relative;
+  padding: clamp(34px, 5vw, 58px) clamp(18px, 3.5vw, 34px);
+  border: 1px solid rgba(207, 226, 223, 0.72);
+  border-radius: 26px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.93), rgba(238, 247, 245, 0.62)),
+    radial-gradient(circle at 92% 8%, rgba(168, 91, 88, 0.08), transparent 36%);
+  box-shadow: var(--shadow-soft);
 }
 
 .split-block {
@@ -517,8 +541,8 @@ a.store-badge:focus {
 
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .feature-card,
@@ -529,16 +553,48 @@ a.store-badge:focus {
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.88);
   box-shadow: 0 14px 38px rgba(42, 87, 90, 0.09);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
 .feature-card {
+  position: relative;
   display: grid;
   align-content: start;
-  min-height: 190px;
-  padding: 18px;
+  min-height: 188px;
+  padding: 20px;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.82) 58%, rgba(238, 247, 245, 0.7)),
+    var(--surface);
+}
+
+.feature-card::after {
+  content: "";
+  position: absolute;
+  right: -18px;
+  bottom: -24px;
+  width: 58%;
+  aspect-ratio: 1;
+  background-image: var(--feature-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.22;
+  filter: saturate(0.95);
+  pointer-events: none;
+}
+
+.feature-card:hover,
+.workflow-card:hover,
+.trust-banner:hover {
+  border-color: rgba(11, 116, 128, 0.26);
+  box-shadow: 0 18px 44px rgba(42, 87, 90, 0.14);
+  transform: translateY(-2px);
 }
 
 .feature-icon {
+  position: relative;
+  z-index: 1;
   display: inline-grid;
   place-items: center;
   width: 44px;
@@ -553,6 +609,8 @@ a.store-badge:focus {
 
 .feature-card h3,
 .workflow-card h3 {
+  position: relative;
+  z-index: 1;
   margin-bottom: 10px;
 }
 
@@ -560,6 +618,8 @@ a.store-badge:focus {
 .workflow-card p,
 .trust-banner span,
 .future-screenshots span {
+  position: relative;
+  z-index: 1;
   color: var(--muted);
 }
 
@@ -597,7 +657,7 @@ a.store-badge:focus {
 
 .workflow-stack {
   display: grid;
-  gap: 18px;
+  gap: 24px;
 }
 
 .workflow-card {
@@ -606,6 +666,7 @@ a.store-badge:focus {
   align-items: center;
   gap: clamp(18px, 4vw, 34px);
   padding: clamp(18px, 3vw, 26px);
+  overflow: hidden;
 }
 
 .workflow-card.wide-workflow {
@@ -682,6 +743,99 @@ a.store-badge:focus {
   padding: 18px;
 }
 
+.top-notice {
+  padding: clamp(22px, 4vw, 34px) 0 0;
+}
+
+.payment-safety-banner {
+  max-width: 100%;
+}
+
+.activity-widget-story {
+  overflow: hidden;
+}
+
+.activity-widget-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.75fr) minmax(260px, 0.7fr);
+  gap: clamp(22px, 5vw, 48px);
+  align-items: center;
+}
+
+.story-copy {
+  display: grid;
+  gap: 14px;
+}
+
+.activity-preview-stack {
+  position: relative;
+  display: grid;
+  gap: 14px;
+  justify-items: center;
+  padding: clamp(14px, 3vw, 24px);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 25% 10%, rgba(11, 116, 128, 0.16), transparent 34%),
+    linear-gradient(145deg, rgba(238, 247, 245, 0.92), rgba(255, 246, 239, 0.72));
+}
+
+.widget-preview,
+.live-activity-preview {
+  width: min(100%, 330px);
+  display: grid;
+  gap: 7px;
+  padding: 18px;
+  border: 1px solid rgba(207, 226, 223, 0.92);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow-soft);
+}
+
+.live-activity-preview {
+  width: min(86%, 280px);
+  margin-left: auto;
+  border-radius: 999px;
+  padding: 14px 18px;
+}
+
+.preview-kicker {
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.widget-preview strong,
+.live-activity-preview strong {
+  color: var(--ink);
+  font-size: 1.35rem;
+  line-height: 1.05;
+}
+
+.widget-preview > span:not(.preview-kicker),
+.live-activity-preview > span:not(.preview-kicker) {
+  color: var(--muted);
+}
+
+.preview-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.preview-actions span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: var(--wash-strong);
+  color: var(--accent-dark);
+  font-size: 0.78rem;
+  font-weight: 820;
+}
+
 .document-page {
   width: min(880px, calc(100% - 40px));
 }
@@ -705,6 +859,33 @@ a.store-badge:focus {
 
 .support-content .note-grid {
   grid-template-columns: 1fr;
+}
+
+@media (min-width: 981px) {
+  .product-hero,
+  .top-notice {
+    margin-left: 240px;
+  }
+
+  .product-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
+    gap: clamp(24px, 4vw, 54px);
+  }
+
+  .section-index {
+    position: fixed;
+    top: 112px;
+    left: max(20px, calc((100vw - 1120px) / 2));
+    width: 190px;
+  }
+
+  .section-index .eyebrow {
+    padding-inline: 10px;
+  }
+
+  .feature-story {
+    grid-column: 2;
+  }
 }
 
 .reading-block {
@@ -750,6 +931,7 @@ a.store-badge:focus {
   .product-hero,
   .feature-layout,
   .split-block,
+  .activity-widget-layout,
   .workflow-card,
   .workflow-card.wide-workflow,
   .support-content {
@@ -769,6 +951,8 @@ a.store-badge:focus {
     padding: 10px 0;
     background: rgba(251, 254, 253, 0.96);
     border-block: 1px solid var(--line);
+    border-radius: 0;
+    box-shadow: none;
   }
 
   .section-index .eyebrow {
@@ -799,6 +983,10 @@ a.store-badge:focus {
   .feature-grid,
   .note-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .activity-preview-stack {
+    justify-items: start;
   }
 
   .screenshot-gallery {
