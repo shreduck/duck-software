@@ -317,10 +317,31 @@ p {
 
 .store-badges {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 12px;
   flex-wrap: wrap;
   margin-top: 18px;
+}
+
+.availability-badge-group {
+  display: inline-grid;
+  gap: 6px;
+  justify-items: start;
+}
+
+.review-status-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 4px 10px;
+  border: 1px solid rgba(169, 119, 66, 0.32);
+  border-radius: 999px;
+  background: rgba(255, 246, 239, 0.9);
+  color: #7c4d1f;
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 .store-badge {
