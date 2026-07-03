@@ -389,6 +389,11 @@ a.store-badge:focus {
   border-color: #18242e;
 }
 
+.store-badge.stable-badge {
+  background: #426643;
+  border-color: #335433;
+}
+
 .store-badge.docker-badge {
   background: #0f6674;
   border-color: #0b5260;
@@ -760,13 +765,92 @@ a.store-badge:focus {
 
 .download-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
 
 .download-card {
   color: inherit;
   text-decoration: none;
+}
+
+.download-action-card {
+  width: 100%;
+  min-height: 0;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.download-modal[hidden] {
+  display: none;
+}
+
+.download-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.download-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(31, 42, 45, 0.36);
+  backdrop-filter: blur(5px);
+}
+
+.download-modal-panel {
+  position: relative;
+  z-index: 1;
+  width: min(520px, 100%);
+  padding: clamp(22px, 4vw, 30px);
+  border: 1px solid rgba(168, 91, 88, 0.42);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+}
+
+.download-modal-panel h2 {
+  padding-right: 34px;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+}
+
+.download-modal-panel p:not(.eyebrow) {
+  margin-top: 14px;
+  color: var(--muted);
+}
+
+.download-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.download-modal-close svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.download-modal-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 22px;
 }
 
 .trust-banner {

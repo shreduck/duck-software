@@ -37,9 +37,13 @@
           <p class="download-warning-note">Windows and macOS builds are unsigned and may trigger OS or browser download warnings.</p>
 
           <div class="store-badges" aria-label="MCP Workbench downloads">
-            <a class="store-badge desktop-badge" href="https://github.com/shreduck/mcp-workbench-release/releases/latest" target="_blank" rel="noopener">
+            <a class="store-badge desktop-badge" href="https://github.com/shreduck/mcp-workbench-release/releases/tag/2.0.0-SNAPSHOT" target="_blank" rel="noopener">
               <svg class="store-badge-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
-              <span><small>Download latest</small><strong>Windows/macOS</strong></span>
+              <span><small>Latest version</small><strong>2.0 snapshot</strong></span>
+            </a>
+            <a class="store-badge stable-badge" href="https://github.com/shreduck/mcp-workbench-release/releases/tag/v1.3.0" target="_blank" rel="noopener">
+              <svg class="store-badge-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/><path d="M5 20h14"/></svg>
+              <span><small>Latest stable</small><strong>v1.3.0</strong></span>
             </a>
             <a class="store-badge docker-badge" href="https://github.com/shreduck/mcp-workbench-release#run-with-docker" target="_blank" rel="noopener">
               <svg class="store-badge-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><path d="M3 15h18"/><path d="M5 15V9h3v6"/><path d="M8 15V7h3v8"/><path d="M11 15v-5h3v5"/><path d="M14 15V8h3v7"/><path d="M17 15v-4h3"/><path d="M4 18h14a4 4 0 0 0 4-4"/></svg>
@@ -109,6 +113,11 @@
                 <span class="feature-icon" aria-hidden="true">06</span>
                 <h3>Code Scanner</h3>
                 <p>Index Java/Spring and Maven projects for entrypoints, references, call hierarchy, dependency graphs, and risk hints.</p>
+              </article>
+              <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">07</span>
+                <h3>Corporate neutral mode</h3>
+                <p>Admins can force a neutral portal UI for serious environments and disable the ducks. You monster.</p>
               </article>
             </div>
           </section>
@@ -186,9 +195,13 @@
               <h2 id="downloads-title">Run it locally, in Docker, or with a portable Java launcher.</h2>
             </div>
             <div class="download-grid">
-              <a class="trust-banner download-card" href="https://github.com/shreduck/mcp-workbench-release/releases/latest" target="_blank" rel="noopener">
-                <strong>Latest GitHub release</strong>
-                <span>Download server jar, checksums, Windows zips, macOS zips, and bundled-JRE launchers.</span>
+              <a class="trust-banner download-card" href="https://github.com/shreduck/mcp-workbench-release/releases/tag/2.0.0-SNAPSHOT" target="_blank" rel="noopener">
+                <strong>Latest version</strong>
+                <span>Open the newest release, currently 2.0.0-SNAPSHOT, with the newest jar, Docker files, and desktop zips.</span>
+              </a>
+              <a class="trust-banner download-card" href="https://github.com/shreduck/mcp-workbench-release/releases/tag/v1.3.0" target="_blank" rel="noopener">
+                <strong>Latest stable</strong>
+                <span>Open the latest non-snapshot GitHub release, currently v1.3.0.</span>
               </a>
               <a class="trust-banner download-card" href="https://github.com/shreduck/mcp-workbench-release#run-with-docker" target="_blank" rel="noopener">
                 <strong>Docker</strong>
@@ -198,6 +211,14 @@
                 <strong>Connect an agent</strong>
                 <span>Generate an MCP key in the portal, then copy the client configuration for Claude or another MCP client.</span>
               </a>
+              <button class="trust-banner download-card download-action-card" type="button" data-download-name="Windows with bundled Java" data-download-url="https://github.com/shreduck/mcp-workbench-release/releases/download/2.0.0-SNAPSHOT/mcp-workbench-windows-with-jre-2.0.0-SNAPSHOT.zip">
+                <strong>Direct Windows download</strong>
+                <span>Download the latest Windows zip with a bundled Java runtime after the unsigned-app warning.</span>
+              </button>
+              <button class="trust-banner download-card download-action-card" type="button" data-download-name="macOS with bundled Java" data-download-url="https://github.com/shreduck/mcp-workbench-release/releases/download/2.0.0-SNAPSHOT/mcp-workbench-mac-with-jre-2.0.0-SNAPSHOT.zip">
+                <strong>Direct macOS download</strong>
+                <span>Download the latest macOS zip with a bundled Java runtime after the unsigned-app warning.</span>
+              </button>
             </div>
           </section>
 
@@ -230,6 +251,61 @@
       <span>Duck Code</span>
       <a href="mailto:duck_code_contact@proton.me">duck_code_contact@proton.me</a>
     </footer>
+    <div class="download-modal" id="downloadWarningModal" hidden>
+      <div class="download-modal-backdrop" data-download-close></div>
+      <section class="download-modal-panel" role="dialog" aria-modal="true" aria-labelledby="download-warning-title" aria-describedby="download-warning-body">
+        <button class="download-modal-close" type="button" aria-label="Close download warning" data-download-close>
+          <svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+        <p class="eyebrow">Before download</p>
+        <h2 id="download-warning-title">Unsigned desktop app</h2>
+        <p id="download-warning-body">This Windows/macOS build is a best-effort containment launcher for the local Workbench server. It is not signed or notarized, so your OS or browser may block it or show warnings. Only continue if you trust this release.</p>
+        <div class="download-modal-actions">
+          <button class="button" type="button" id="downloadWarningAccept">Got it, download</button>
+          <button class="button secondary" type="button" data-download-close>Close</button>
+        </div>
+      </section>
+    </div>
     <script src="../../assets/js/scroll-focus.js" defer></script>
+    <script>
+      (function () {
+        const modal = document.getElementById("downloadWarningModal");
+        const accept = document.getElementById("downloadWarningAccept");
+        const title = document.getElementById("download-warning-title");
+        let pendingUrl = "";
+
+        function closeModal() {
+          modal.hidden = true;
+          pendingUrl = "";
+        }
+
+        document.querySelectorAll("[data-download-url]").forEach((button) => {
+          button.addEventListener("click", () => {
+            pendingUrl = button.dataset.downloadUrl || "";
+            title.textContent = button.dataset.downloadName || "Unsigned desktop app";
+            modal.hidden = false;
+            accept.focus();
+          });
+        });
+
+        document.querySelectorAll("[data-download-close]").forEach((button) => {
+          button.addEventListener("click", closeModal);
+        });
+
+        accept.addEventListener("click", () => {
+          const url = pendingUrl;
+          closeModal();
+          if (url) {
+            window.location.href = url;
+          }
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && !modal.hidden) {
+            closeModal();
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
