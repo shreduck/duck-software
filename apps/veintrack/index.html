@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>VeinTrack | Duck Code</title>
-    <meta name="description" content="VeinTrack is a private iPhone app for vein-health-related daily context, reminders, and reports.">
+    <meta name="description" content="VeinTrack is a private iPhone app for daily vein-health context, rest reminders, and exportable reports.">
     <link rel="icon" href="../../assets/img/veintrack/icon-256.png">
     <link rel="stylesheet" href="../../assets/css/site.css">
   </head>
@@ -20,9 +20,9 @@
     </header>
 
     <main id="main">
-      <section class="app-hero" id="hero" aria-labelledby="app-title">
+      <section class="app-hero product-hero" id="hero" aria-labelledby="app-title">
         <img class="hero-artwork" src="../../assets/img/veintrack/artwork/welcome-vein-health-intro.png" width="480" height="160" alt="">
-        <div class="hero-content">
+        <div class="hero-copy">
           <div class="app-lockup">
             <img src="../../assets/img/veintrack/icon-256.png" width="256" height="256" alt="VeinTrack app icon">
             <div>
@@ -31,16 +31,9 @@
             </div>
           </div>
 
-          <p class="lede">VeinTrack helps people track vein-health-related daily context on device, including symptoms, leg elevation, compression use, activity and rest sessions, weight, sleep, travel context, consultations, photos, and reports.</p>
-          <p class="note">VeinTrack supports personal tracking, reminders, and report preparation. It does not diagnose, treat, or replace professional medical advice.</p>
+          <p class="lede">A gentle iPhone app for quick daily check-ins, rest reminders, photos, consultations, activity context, and reports you choose to share.</p>
+          <p class="note">VeinTrack is for personal tracking and preparation. It does not diagnose, treat, or replace professional medical advice.</p>
 
-          <div class="actions" aria-label="VeinTrack page links">
-            <a class="button active" href="./" aria-current="page">About</a>
-            <a class="button secondary" href="./privacy.html">Privacy</a>
-            <a class="button secondary" href="./licensing.html">Licensing</a>
-            <a class="button secondary" href="./support.html">Support</a>
-            <a class="button secondary" href="mailto:duck_code_contact@proton.me">Feedback</a>
-          </div>
           <div class="store-badges" aria-label="Download availability">
             <a class="store-badge testflight-badge" href="https://testflight.apple.com/join/SJRF4awd" target="_blank" rel="noopener">
               <svg class="store-badge-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M4.2 16.5 19.8 7.5"/><path d="M4.2 7.5 19.8 16.5"/></svg>
@@ -51,165 +44,194 @@
               <span><small>Coming soon on the</small><strong>App Store</strong></span>
             </span>
           </div>
-          <p class="payment-warning"><strong>Free app notice.</strong> VeinTrack is free to use. Optional payments are offered only inside the app, do not unlock features, and are never required.</p>
+
+          <div class="actions" aria-label="VeinTrack page links">
+            <a class="button secondary" href="./privacy.html">Privacy</a>
+            <a class="button secondary" href="./licensing.html">Licensing</a>
+            <a class="button secondary" href="./support.html">Support</a>
+            <a class="button secondary" href="mailto:duck_code_contact@proton.me">Feedback</a>
+          </div>
         </div>
+
+        <figure class="hero-phone phone-frame">
+          <img src="../../assets/img/veintrack/screenshots/01-home-dashboard.png" width="1206" height="2622" alt="VeinTrack home dashboard with daily cards for weight, activity, flight mode, care, and help">
+        </figure>
       </section>
 
       <div class="feature-layout">
         <aside class="section-index" aria-label="VeinTrack section index">
-          <p class="eyebrow">On This Page</p>
+          <p class="eyebrow">On this page</p>
           <nav>
-            <a href="#hero">Hero</a>
-            <a href="#private">Private by design</a>
-            <a href="#quick-view">Quick View</a>
-            <a href="#activity-rest">Activity and rest coaching</a>
-            <a href="#events-photos">Daily events and photos</a>
-            <a href="#calendar-history">Calendar and history</a>
-            <a href="#stats-reports">Stats, insights, and reports</a>
-            <a href="#widgets-live">Widgets and Live Activities</a>
-            <a href="#export-share">Export and share</a>
-            <a href="#privacy">Privacy</a>
-            <a href="#licensing">Licensing</a>
-            <a href="#support">Support</a>
+            <a href="#features">Features</a>
+            <a href="#privacy-first">Privacy</a>
+            <a href="#screenshots">Screenshots</a>
+            <a href="#important-notes">Important notes</a>
           </nav>
         </aside>
 
         <div class="feature-story">
-          <section class="story-section intro-section" id="private" aria-labelledby="private-title">
-            <div>
-              <p class="eyebrow">Private by design</p>
-              <h2 id="private-title">The dashboard keeps context on your device.</h2>
-              <p>The home screen brings today's cards together without requiring a Duck Code account: weight, activity and rest, travel mode, care events, guides, and report entry points stay close at hand.</p>
-              <ul class="check-list">
-                <li>Daily cards are stored locally unless you export or share them.</li>
-                <li>Apple Health and Motion access only after permission is granted.</li>
-                <li>No Duck Code backend account or sale of personal data.</li>
-              </ul>
+          <section class="story-block" id="features" aria-labelledby="features-title">
+            <div class="section-heading">
+              <p class="eyebrow">What you can do</p>
+              <h2 id="features-title">Record the useful bits without turning your day into paperwork.</h2>
             </div>
-            <figure class="phone-frame">
-              <img src="../../assets/img/veintrack/screenshots/01-home-dashboard.png" width="1206" height="2622" alt="VeinTrack home dashboard showing daily cards for weight, activity and rest, flight mode, care, and help">
-            </figure>
-          </section>
 
-          <section class="story-section" id="quick-view" aria-labelledby="quick-view-title">
-            <div>
-              <p class="eyebrow">Quick View</p>
-              <h2 id="quick-view-title">Save the essentials on busy days.</h2>
-              <p>Quick View turns the repeated bits of a day into a quick pass: activity, sleep, leg elevation, pain, swelling, and photos can be captured without opening several separate forms.</p>
-              <p>Those entries still become normal app records, so they can appear later in stats, insights, reports, exports, and calendar summaries.</p>
-            </div>
-            <figure class="phone-frame">
-              <img src="../../assets/img/veintrack/screenshots/02-quick-view-daily-composer.png" width="1206" height="2622" alt="VeinTrack Quick View daily composer with activity, sleep, leg elevation, pain, swelling, and photo controls">
-            </figure>
-          </section>
-
-          <section class="story-section" id="activity-rest" aria-labelledby="activity-rest-title">
-            <div>
-              <p class="eyebrow">Activity and rest coaching</p>
-              <h2 id="activity-rest-title">Activity and rest live beside the rest of the day.</h2>
-              <p>The dashboard keeps steps, walking distance, longest exercise, rest context, and flight-mode time in the same daily flow as care and compression records.</p>
-              <p>VeinTrack can use on-device activity context to help identify longer walking or running sessions and remind you to rest. Passive reminders may be delayed by iOS background scheduling. Coached activity sessions are more timely because you intentionally start or accept an active session.</p>
-              <p>The app frames reminders as comfort and rest prompts, not medical instructions.</p>
-            </div>
-            <figure class="phone-frame screen-mid">
-              <img src="../../assets/img/veintrack/screenshots/01-home-dashboard.png" width="1206" height="2622" alt="VeinTrack dashboard showing activity, rest, flight mode, and care cards">
-            </figure>
-          </section>
-
-          <section class="story-section" id="events-photos" aria-labelledby="events-photos-title">
-            <div>
-              <p class="eyebrow">Daily events and photos</p>
-              <h2 id="events-photos-title">Turn quick choices into useful event history.</h2>
-              <p>Pain, swelling, leg elevation, photos, and daily notes can be saved together, then reviewed later as part of the calendar, reports, and personal comparisons.</p>
-              <p>Photos and files remain part of local app data unless you choose to export, share, email, back up, or save them elsewhere.</p>
-            </div>
-            <figure class="phone-frame screen-bottom">
-              <img src="../../assets/img/veintrack/screenshots/02-quick-view-daily-composer.png" width="1206" height="2622" alt="VeinTrack Quick View screen showing daily event fields and an add photos control">
-            </figure>
-          </section>
-
-          <section class="story-section" id="calendar-history" aria-labelledby="calendar-history-title">
-            <div>
-              <p class="eyebrow">Calendar and history</p>
-              <h2 id="calendar-history-title">Browse records by day instead of memory.</h2>
-              <p>Calendar markers make small daily entries easier to find again. The month view helps you review what happened, when it happened, and which notes or attachments belong with each record.</p>
-            </div>
-            <figure class="phone-frame">
-              <img src="../../assets/img/veintrack/screenshots/06-calendar-month.png" width="1206" height="2622" alt="VeinTrack calendar month view with event markers and a month summary panel">
-            </figure>
-          </section>
-
-          <section class="story-section" id="stats-reports" aria-labelledby="stats-reports-title">
-            <div>
-              <p class="eyebrow">Stats, insights, and reports</p>
-              <h2 id="stats-reports-title">See patterns without pretending they are answers.</h2>
-              <p>Insights and charts help summarize what you recorded over time, including pain, swelling, activity, rest, photos, consultation records, and other context.</p>
-              <p>VeinTrack can generate reports from tracked data, including summaries, charts, photo comparisons, and appendices with raw data.</p>
-              <p>You decide when to export or share them.</p>
-            </div>
-            <div class="phone-pair" aria-label="VeinTrack stats screenshots">
-              <figure class="phone-frame">
-                <img src="../../assets/img/veintrack/screenshots/03-stats-insights.png" width="1206" height="2622" alt="VeinTrack Stats Insights screen with generated insight cards">
-              </figure>
-              <figure class="phone-frame screen-lower">
-                <img src="../../assets/img/veintrack/screenshots/04-stats-charts.png" width="1206" height="2622" alt="VeinTrack Stats Charts screen with pain and swelling chart cards">
-              </figure>
+            <div class="feature-grid">
+              <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">QV</span>
+                <h3>Quick View</h3>
+                <p>Save activity, sleep, leg elevation, pain, swelling, and photos from one daily screen.</p>
+              </article>
+              <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">AR</span>
+                <h3>Activity and rest</h3>
+                <p>Track walking context and use gentle reminders to pause, sit, or rest when sessions run long.</p>
+              </article>
+              <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">SP</span>
+                <h3>Symptoms and photos</h3>
+                <p>Keep pain, swelling, notes, and comparison photos close to the day they belong to.</p>
+              </article>
+              <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">CH</span>
+                <h3>Calendar history</h3>
+                <p>Find past events, future consultations, travel records, and monthly summaries by date.</p>
+              </article>
+              <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">SR</span>
+                <h3>Stats and reports</h3>
+                <p>Turn local records into insights, charts, PDFs, email summaries, CSV files, and backups.</p>
+              </article>
+              <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">FS</span>
+                <h3>Feedback and support</h3>
+                <p>Send feedback, share the app, or optionally support development from Settings.</p>
+              </article>
             </div>
           </section>
 
-          <section class="story-section" id="widgets-live" aria-labelledby="widgets-live-title">
+          <section class="story-block split-block" id="privacy-first" aria-labelledby="privacy-first-title">
             <div>
-              <p class="eyebrow">Widgets and Live Activities</p>
-              <h2 id="widgets-live-title">Keep reminders visible when you choose.</h2>
-              <p>Settings collect reminder timing, activity and health permissions, preferences, and related controls in one place. VeinTrack may use notifications, widgets, and Live Activities to show reminders and activity or rest session status.</p>
-              <p>These features are controlled by iOS permissions and user settings.</p>
+              <p class="eyebrow">Designed for private daily context</p>
+              <h2 id="privacy-first-title">No Duck Code account. No sale of personal data.</h2>
+              <p>VeinTrack stores app data on your device unless you choose to export, email, save, back up, or share it elsewhere. Apple Health and Motion data are used only after permission is granted.</p>
             </div>
-            <figure class="phone-frame screen-mid">
-              <img src="../../assets/img/veintrack/screenshots/07-settings-feedback-support.png" width="1206" height="2622" alt="VeinTrack settings screen showing reminders, preferences, tracked limbs, compression wear, and activity health controls">
-            </figure>
-          </section>
-
-          <section class="story-section" id="export-share" aria-labelledby="export-share-title">
-            <div>
-              <p class="eyebrow">Export and share</p>
-              <h2 id="export-share-title">Share summaries only when you choose.</h2>
-              <p>The Stats Summary view gives you a compact place to review all-time counts, recent context, and report actions before creating a PDF, HTML email summary, CSV export, or backup.</p>
-              <p>Generated reports, files, and backups are only shared when you choose to export, email, save, or send them elsewhere.</p>
-            </div>
-            <figure class="phone-frame">
-              <img src="../../assets/img/veintrack/screenshots/05-stats-summary.png" width="1206" height="2622" alt="VeinTrack Stats Summary screen with all-time event summaries and export controls">
-            </figure>
-          </section>
-
-          <section class="story-section text-only" id="privacy" aria-labelledby="privacy-title">
-            <div>
-              <p class="eyebrow">Privacy</p>
-              <h2 id="privacy-title">No backend account, no sale of user data.</h2>
-              <p>Depending on configuration, VeinTrack may handle user-entered health context, pain and swelling scores, rest records, compression details, activity session records, Apple Health sleep and weight data when permission is granted, Motion activity data when permission is granted, user-attached photos, consultation details, reports, exports, backups, and optional StoreKit support purchase status.</p>
-              <p><a href="./privacy.html">Read the full privacy policy</a></p>
+            <div class="trust-stack" aria-label="Privacy highlights">
+              <div class="trust-banner">
+                <strong>Local first</strong>
+                <span>Your records stay on device by default.</span>
+              </div>
+              <div class="trust-banner">
+                <strong>Permission based</strong>
+                <span>Health, Motion, notifications, and photos remain under iOS controls.</span>
+              </div>
+              <div class="trust-banner">
+                <strong>User controlled sharing</strong>
+                <span>Reports and exports leave the app only when you send or save them.</span>
+              </div>
             </div>
           </section>
 
-          <section class="story-section text-only" id="licensing" aria-labelledby="licensing-title">
-            <div>
-              <p class="eyebrow">Licensing</p>
-              <h2 id="licensing-title">Free to use, with optional support.</h2>
-              <p>VeinTrack may be used for personal tracking, reminders, reports, and related record keeping. Optional support options do not unlock features or change app behavior.</p>
-              <p><a href="./licensing.html">Read the app license</a></p>
+          <section class="story-block" id="screenshots" aria-labelledby="screenshots-title">
+            <div class="section-heading">
+              <p class="eyebrow">Screenshots by workflow</p>
+              <h2 id="screenshots-title">A quick look at the parts people use most.</h2>
+            </div>
+
+            <div class="workflow-stack">
+              <section class="workflow-card" aria-labelledby="daily-workflow-title">
+                <div>
+                  <p class="eyebrow">Daily check-in</p>
+                  <h3 id="daily-workflow-title">Quick View keeps busy days simple.</h3>
+                  <p>Use the day wheel and compact cards to record the essentials quickly.</p>
+                </div>
+                <div class="screenshot-gallery" aria-label="Daily check-in screenshots">
+                  <figure class="screenshot-card phone-frame">
+                    <img src="../../assets/img/veintrack/screenshots/02-quick-view-daily-composer.png" width="1206" height="2622" alt="Quick View daily composer with activity, sleep, leg elevation, symptom, and photo cards">
+                    <figcaption>Quick daily check-ins.</figcaption>
+                  </figure>
+                </div>
+              </section>
+
+              <section class="workflow-card" aria-labelledby="history-workflow-title">
+                <div>
+                  <p class="eyebrow">Calendar and history</p>
+                  <h3 id="history-workflow-title">Records become easier to find later.</h3>
+                  <p>Calendar markers and summaries help connect what happened with when it happened.</p>
+                </div>
+                <div class="screenshot-gallery" aria-label="Calendar screenshots">
+                  <figure class="screenshot-card phone-frame">
+                    <img src="../../assets/img/veintrack/screenshots/06-calendar-month.png" width="1206" height="2622" alt="Calendar month view with event markers and a month summary panel">
+                    <figcaption>Monthly context and event markers.</figcaption>
+                  </figure>
+                </div>
+              </section>
+
+              <section class="workflow-card wide-workflow" aria-labelledby="reports-workflow-title">
+                <div>
+                  <p class="eyebrow">Stats and reports</p>
+                  <h3 id="reports-workflow-title">Review patterns before deciding what to share.</h3>
+                  <p>Insights, charts, and summary views help turn local records into reports and exports.</p>
+                </div>
+                <div class="screenshot-gallery multi-gallery" aria-label="Stats and reports screenshots">
+                  <figure class="screenshot-card phone-frame">
+                    <img src="../../assets/img/veintrack/screenshots/03-stats-insights.png" width="1206" height="2622" alt="Stats insights screen with selected-period summary cards">
+                    <figcaption>Selected-period insight cards.</figcaption>
+                  </figure>
+                  <figure class="screenshot-card phone-frame">
+                    <img src="../../assets/img/veintrack/screenshots/04-stats-charts.png" width="1206" height="2622" alt="Stats charts screen with symptom trend charts">
+                    <figcaption>Trend charts for recorded data.</figcaption>
+                  </figure>
+                  <figure class="screenshot-card phone-frame">
+                    <img src="../../assets/img/veintrack/screenshots/05-stats-summary.png" width="1206" height="2622" alt="Stats summary screen with event totals and report export controls">
+                    <figcaption>Summary and export context.</figcaption>
+                  </figure>
+                </div>
+              </section>
+
+              <section class="workflow-card" aria-labelledby="settings-workflow-title">
+                <div>
+                  <p class="eyebrow">Settings and support</p>
+                  <h3 id="settings-workflow-title">Controls stay visible and optional.</h3>
+                  <p>Manage reminders, preferences, permissions, feedback, sharing, and optional support.</p>
+                </div>
+                <div class="screenshot-gallery" aria-label="Settings screenshots">
+                  <figure class="screenshot-card phone-frame">
+                    <img src="../../assets/img/veintrack/screenshots/07-settings-feedback-support.png" width="1206" height="2622" alt="Settings screen with feedback, support, reminders, preferences, and health controls">
+                    <figcaption>Settings, feedback, and optional support.</figcaption>
+                  </figure>
+                </div>
+              </section>
+            </div>
+
+            <div class="future-screenshots" aria-label="More app areas">
+              <article>
+                <strong>Also in the app</strong>
+                <span>Rest coach carousel, activity sessions, event forms, consultation attachments, photo comparisons, and generated PDF reports.</span>
+              </article>
             </div>
           </section>
 
-          <section class="story-section final-section" id="support" aria-labelledby="support-title">
-            <div>
-              <p class="eyebrow">Support</p>
-              <h2 id="support-title">Feedback is genuinely helpful.</h2>
-              <p>The settings screen keeps feedback, sharing, and optional support in one place. Feedback, error reports, and suggestions help shape VeinTrack; sharing it with someone who might find it useful is also meaningful support.</p>
-              <p>Optional financial support may be available inside the app through Apple StoreKit. It is always optional and does not unlock features.</p>
-              <p><a href="./support.html">Support and feedback details</a></p>
+          <section class="story-block" id="important-notes" aria-labelledby="important-notes-title">
+            <div class="section-heading">
+              <p class="eyebrow">Important notes</p>
+              <h2 id="important-notes-title">Useful, private, and intentionally low pressure.</h2>
             </div>
-            <figure class="phone-frame">
-              <img src="../../assets/img/veintrack/screenshots/07-settings-feedback-support.png" width="1206" height="2622" alt="VeinTrack settings screen showing the feedback and support panel">
-            </figure>
+
+            <div class="note-grid">
+              <article class="trust-banner warning-banner">
+                <strong>Not medical advice</strong>
+                <span>VeinTrack supports personal tracking and preparation. It does not diagnose, treat, or replace a clinician.</span>
+              </article>
+              <article class="trust-banner warning-banner">
+                <strong>Free app and payment safety</strong>
+                <span>VeinTrack is free to use. The only legitimate payments are optional in-app support purchases through Apple. If anyone asks you to pay outside the app or App Store flow, treat it as a scam and report it.</span>
+              </article>
+              <article class="trust-banner">
+                <strong>Support is optional</strong>
+                <span>Feedback, sharing with someone who may benefit, and optional StoreKit support are all appreciated. None unlock features.</span>
+              </article>
+            </div>
           </section>
         </div>
       </div>
