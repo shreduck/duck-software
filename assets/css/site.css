@@ -951,18 +951,13 @@ button.store-badge:focus {
 }
 
 .workflow-focus-trace {
-  --workflow-image-zoom: 1.52;
-  --workflow-image-origin: 61% 45%;
+  --workflow-image-zoom: 1.18;
+  --workflow-image-origin: 55% 45%;
 }
 
 .workflow-focus-agent {
-  --workflow-image-zoom: 1.48;
-  --workflow-image-origin: 58% 44%;
-}
-
-.workflow-focus-preview {
-  --workflow-image-zoom: 1.36;
-  --workflow-image-origin: 50% 42%;
+  --workflow-image-zoom: 1.14;
+  --workflow-image-origin: 52% 44%;
 }
 
 .workflow-focus-backlog {
@@ -1266,17 +1261,23 @@ button.store-badge:focus {
 }
 
 #important-notes .note-grid {
-  display: flex;
-  gap: 12px;
-  overflow-x: auto;
-  padding-bottom: 6px;
-  scroll-snap-type: x proximity;
+  grid-template-columns: 1fr;
 }
 
 #important-notes .trust-banner {
-  flex: 0 0 min(300px, 78vw);
-  min-height: 100%;
-  scroll-snap-align: start;
+  grid-template-columns: minmax(180px, 0.34fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(14px, 3vw, 28px);
+  min-height: 0;
+  padding: clamp(16px, 2.4vw, 22px);
+}
+
+#important-notes .trust-banner strong {
+  font-size: 1.02rem;
+}
+
+#important-notes .trust-banner span {
+  font-size: 0.98rem;
 }
 
 .download-grid {
@@ -2148,6 +2149,10 @@ button.store-badge:focus {
 
   .feature-grid,
   .note-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #important-notes .trust-banner {
     grid-template-columns: 1fr;
   }
 
