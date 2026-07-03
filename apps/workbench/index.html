@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MCP Workbench | Duck Code</title>
+    <meta name="description" content="MCP Workbench is a local control panel for connecting AI agents to GitHub, Azure DevOps, Kanban, backlog planning, PR review, traces, and code analysis.">
+    <link rel="icon" href="../../assets/img/workbench/screenshots/workbench-home.png">
+    <link rel="stylesheet" href="../../assets/css/site.css">
+  </head>
+  <body class="workbench-page">
+    <header class="site-header">
+      <a class="brand" href="../../">Duck Code</a>
+      <nav aria-label="Primary navigation">
+        <a href="../../#apps">Apps</a>
+        <a href="#downloads">Downloads</a>
+        <a href="https://github.com/shreduck/mcp-workbench-release" target="_blank" rel="noopener">Release repo</a>
+        <a href="mailto:duck_code_contact@proton.me">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="app-hero product-hero workbench-hero" id="hero" aria-labelledby="app-title">
+        <div class="hero-copy">
+          <div class="app-lockup compact-lockup">
+            <div class="workbench-mark" aria-hidden="true">
+              <span>mcp</span>
+            </div>
+            <div>
+              <p class="eyebrow">MCP Workbench <span class="status-label">Preview</span></p>
+              <h1 id="app-title">A local control room for AI-assisted software work.</h1>
+            </div>
+          </div>
+
+          <p class="lede">Run one private portal that lets AI clients use your approved tools for GitHub, Azure DevOps, Kanban, pull request review, backlog proposals, traceable reasoning, and Java/Spring code analysis.</p>
+          <p class="note">Workbench is for local and self-hosted workflows. You control the credentials, MCP keys, data folder, and which external writes are approved.</p>
+          <p class="download-warning-note">Windows and macOS builds are unsigned and may trigger OS or browser download warnings.</p>
+
+          <div class="store-badges" aria-label="MCP Workbench downloads">
+            <a class="store-badge desktop-badge" href="https://github.com/shreduck/mcp-workbench-release/releases/latest" target="_blank" rel="noopener">
+              <svg class="store-badge-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+              <span><small>Download latest</small><strong>Windows/macOS</strong></span>
+            </a>
+            <a class="store-badge docker-badge" href="https://github.com/shreduck/mcp-workbench-release#run-with-docker" target="_blank" rel="noopener">
+              <svg class="store-badge-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><path d="M3 15h18"/><path d="M5 15V9h3v6"/><path d="M8 15V7h3v8"/><path d="M11 15v-5h3v5"/><path d="M14 15V8h3v7"/><path d="M17 15v-4h3"/><path d="M4 18h14a4 4 0 0 0 4-4"/></svg>
+              <span><small>Run with</small><strong>Docker</strong></span>
+            </a>
+          </div>
+        </div>
+
+        <figure class="desktop-frame hero-desktop">
+          <img src="../../assets/img/workbench/screenshots/workbench-home.png" width="1280" height="720" alt="MCP Workbench home screen with app modules and system status">
+        </figure>
+      </section>
+
+      <section class="top-notice" aria-label="Unsigned desktop app warning">
+        <article class="trust-banner warning-banner payment-safety-banner">
+          <strong>Unsigned desktop builds</strong>
+          <span>The Windows and macOS apps are best-effort containment launchers for the local Workbench server. They are not code-signed or notarized, so Windows SmartScreen, macOS Gatekeeper, or browser download protection may block them or show warnings when you click download links.</span>
+        </article>
+      </section>
+
+      <div class="feature-layout">
+        <aside class="section-index" aria-label="MCP Workbench section index">
+          <p class="eyebrow">On this page</p>
+          <nav>
+            <a href="#features">Features</a>
+            <a href="#ai-workflows">AI workflows</a>
+            <a href="#screenshots">Screenshots</a>
+            <a href="#downloads">Downloads</a>
+            <a href="#important-notes">Important notes</a>
+          </nav>
+        </aside>
+
+        <div class="feature-story">
+          <section class="story-block" id="features" aria-labelledby="features-title">
+            <div class="section-heading">
+              <p class="eyebrow">What it brings together</p>
+              <h2 id="features-title">One portal for agent tools, human review, and local audit trails.</h2>
+            </div>
+
+            <div class="feature-grid">
+              <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">01</span>
+                <h3>MCP keys and tool access</h3>
+                <p>Create per-user MCP keys and connect Claude, Codex, GitHub Copilot, or another MCP client to the same local server.</p>
+              </article>
+              <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">02</span>
+                <h3>GitHub and Azure DevOps</h3>
+                <p>Store user-managed credentials for pull requests, diffs, files, branches, issues, work items, test plans, and PR comments.</p>
+              </article>
+              <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">03</span>
+                <h3>Kanban and backlog proposals</h3>
+                <p>Let agents organize local boards, draft work item or issue changes, and keep external writes behind an approval step.</p>
+              </article>
+              <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">04</span>
+                <h3>PR Analysis workspace</h3>
+                <p>Turn review findings into shared cards with comments and replies before selected feedback is pushed back to a PR.</p>
+              </article>
+              <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">05</span>
+                <h3>Agent Kits and Spec Docs</h3>
+                <p>Keep reusable agent files, skill notes, and project documentation close to the tools that need them.</p>
+              </article>
+              <article class="feature-card">
+                <span class="feature-icon" aria-hidden="true">06</span>
+                <h3>Code Scanner</h3>
+                <p>Index Java/Spring and Maven projects for entrypoints, references, call hierarchy, dependency graphs, and risk hints.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="story-block split-block" id="ai-workflows" aria-labelledby="ai-workflows-title">
+            <div>
+              <p class="eyebrow">Use alone or with agents</p>
+              <h2 id="ai-workflows-title">The portal stays useful even when the AI client changes.</h2>
+              <p>Use Workbench directly as a local dashboard, or connect an AI client through MCP so the agent can read context, create local planning artifacts, and hand work back to you with links into the portal.</p>
+            </div>
+            <div class="trust-stack" aria-label="AI workflow examples">
+              <div class="trust-banner">
+                <strong>Solo planning</strong>
+                <span>Ask an agent to break a messy support request into Kanban cards, then reorder or edit the cards yourself.</span>
+              </div>
+              <div class="trust-banner">
+                <strong>Skill-guided reviews</strong>
+                <span>Pair a review skill with PR Analysis and Code Scanner so findings point to diffs, symbols, and call paths.</span>
+              </div>
+              <div class="trust-banner">
+                <strong>Traceable handoffs</strong>
+                <span>Capture a Think Trace with evidence, decisions, comments, and a Markdown report before another agent continues.</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="story-block" id="screenshots" aria-labelledby="screenshots-title">
+            <div class="section-heading">
+              <p class="eyebrow">Screenshots by workflow</p>
+              <h2 id="screenshots-title">A quick look at the local portal in use.</h2>
+            </div>
+
+            <div class="workflow-stack">
+              <section class="workflow-card wide-workflow" aria-labelledby="kanban-workflow-title">
+                <div>
+                  <p class="eyebrow">Kanban</p>
+                  <h3 id="kanban-workflow-title">Agents can create work cards that humans can still manage visually.</h3>
+                  <p>Use boards for release checklists, support triage, review queues, or multi-agent work that needs a durable shared surface.</p>
+                </div>
+                <figure class="desktop-frame screenshot-desktop">
+                  <img src="../../assets/img/workbench/screenshots/workbench-kanban.png" width="1280" height="720" alt="MCP Workbench Kanban board with AI workflow cards across To Do, In Progress, and Done columns">
+                  <figcaption>AI-created cards on a local board.</figcaption>
+                </figure>
+              </section>
+
+              <section class="workflow-card wide-workflow" aria-labelledby="trace-workflow-title">
+                <div>
+                  <p class="eyebrow">Think Trace</p>
+                  <h3 id="trace-workflow-title">Decision trails become something you can inspect and share.</h3>
+                  <p>Record user requests, context fetches, tool use, decisions, comments, and final responses without storing private raw chain-of-thought.</p>
+                </div>
+                <figure class="desktop-frame screenshot-desktop">
+                  <img src="../../assets/img/workbench/screenshots/workbench-think-trace.png" width="1280" height="720" alt="MCP Workbench Think Trace showing an AI-assisted release readiness review">
+                  <figcaption>Explainable AI work as a graph.</figcaption>
+                </figure>
+              </section>
+
+              <section class="workflow-card wide-workflow" aria-labelledby="scanner-workflow-title">
+                <div>
+                  <p class="eyebrow">Code Scanner</p>
+                  <h3 id="scanner-workflow-title">Agents can ask code questions against indexed structure.</h3>
+                  <p>Find entrypoints, references, data IO, call hierarchy, Maven dependencies, and impact paths before changing a service.</p>
+                </div>
+                <figure class="desktop-frame screenshot-desktop">
+                  <img src="../../assets/img/workbench/screenshots/workbench-code-scanner.png" width="1280" height="720" alt="MCP Workbench Code Scanner target for the Workbench source repository">
+                  <figcaption>Indexed source code and scan state.</figcaption>
+                </figure>
+              </section>
+            </div>
+          </section>
+
+          <section class="story-block" id="downloads" aria-labelledby="downloads-title">
+            <div class="section-heading">
+              <p class="eyebrow">Downloads and installs</p>
+              <h2 id="downloads-title">Run it locally, in Docker, or with a portable Java launcher.</h2>
+            </div>
+            <div class="download-grid">
+              <a class="trust-banner download-card" href="https://github.com/shreduck/mcp-workbench-release/releases/latest" target="_blank" rel="noopener">
+                <strong>Latest GitHub release</strong>
+                <span>Download server jar, checksums, Windows zips, macOS zips, and bundled-JRE launchers.</span>
+              </a>
+              <a class="trust-banner download-card" href="https://github.com/shreduck/mcp-workbench-release#run-with-docker" target="_blank" rel="noopener">
+                <strong>Docker</strong>
+                <span>Run the published image on port 9999 and mount a data folder for persistent settings and history.</span>
+              </a>
+              <a class="trust-banner download-card" href="https://github.com/shreduck/mcp-workbench-release#connect-claude" target="_blank" rel="noopener">
+                <strong>Connect an agent</strong>
+                <span>Generate an MCP key in the portal, then copy the client configuration for Claude or another MCP client.</span>
+              </a>
+            </div>
+          </section>
+
+          <section class="story-block" id="important-notes" aria-labelledby="important-notes-title">
+            <div class="section-heading">
+              <p class="eyebrow">Important notes</p>
+              <h2 id="important-notes-title">Local-first does not mean risk-free.</h2>
+            </div>
+
+            <div class="note-grid">
+              <article class="trust-banner warning-banner">
+                <strong>Unsigned Windows and macOS apps</strong>
+                <span>Desktop launchers are not signed or notarized. Expect possible OS warnings, quarantine prompts, or blocked downloads.</span>
+              </article>
+              <article class="trust-banner">
+                <strong>Protect your data folder</strong>
+                <span>Workbench stores local settings, database files, encrypted credentials, keys, and history in its configured data directory.</span>
+              </article>
+              <article class="trust-banner">
+                <strong>Use narrow credentials</strong>
+                <span>Give GitHub and Azure DevOps tokens only the scopes needed for the tools and approval flow you intend to use.</span>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <span>Duck Code</span>
+      <a href="mailto:duck_code_contact@proton.me">duck_code_contact@proton.me</a>
+    </footer>
+    <script src="../../assets/js/scroll-focus.js" defer></script>
+  </body>
+</html>
