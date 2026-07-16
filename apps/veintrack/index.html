@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>VeinTrack | Duck Code</title>
-    <meta name="description" content="VeinTrack is a private iPhone app for daily vein-health context, rest reminders, and exportable reports.">
+    <meta name="description" content="VeinTrack is a private iPhone app for daily vein-health context, rest reminders, photos, calendar history, and exportable reports.">
     <link rel="icon" href="../../assets/img/veintrack/icon-256.png">
     <link rel="stylesheet" href="../../assets/css/site.css">
   </head>
-  <body>
+  <body class="veintrack-page">
     <header class="site-header">
       <a class="brand" href="../../">Duck Code</a>
       <nav aria-label="Primary navigation">
         <a href="../../#apps">Apps</a>
+        <a href="#availability">Availability</a>
         <a href="./privacy.html">Privacy</a>
         <a href="./licensing.html">Licensing</a>
         <a href="./support.html">Support</a>
@@ -20,7 +21,7 @@
     </header>
 
     <main id="main">
-      <section class="app-hero product-hero" id="hero" aria-labelledby="app-title">
+      <section class="app-hero product-hero veintrack-hero" id="hero" aria-labelledby="app-title">
         <img class="hero-artwork" src="../../assets/img/veintrack/artwork/welcome-vein-health-intro.png" width="480" height="160" alt="">
         <div class="hero-copy">
           <div class="app-lockup">
@@ -31,33 +32,32 @@
             </div>
           </div>
 
-          <p class="lede">A gentle iPhone app for quick daily check-ins, rest reminders, photos, consultations, activity context, and reports you choose to share.</p>
+          <p class="lede">A gentle iPhone app for quick daily check-ins, rest prompts, photos, consultation context, calendar history, and reports you choose to share.</p>
           <p class="note">VeinTrack is for personal tracking and preparation. It does not diagnose, treat, or replace professional medical advice.</p>
 
           <div class="store-badges" aria-label="Download availability">
             <div class="availability-badge-group">
-              <span class="review-status-badge">Waiting Apple review</span>
-              <a class="store-badge testflight-badge" href="https://testflight.apple.com/join/SJRF4awd" target="_blank" rel="noopener">
+				<a class="store-badge testflight-badge" href="https://testflight.apple.com/join/SJRF4awd" target="_blank" rel="noopener" aria-label="Join beta on TestFlight">
                 <svg class="store-badge-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M4.2 16.5 19.8 7.5"/><path d="M4.2 7.5 19.8 16.5"/></svg>
                 <span><small>Join beta on</small><strong>TestFlight</strong></span>
               </a>
             </div>
-            <span class="store-badge app-store-badge" aria-disabled="true">
+            <span class="store-badge app-store-badge" aria-disabled="true" aria-label="Coming soon on the App Store">
               <svg class="store-badge-icon apple-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><path d="M16.8 12.7c0-2.4 2-3.6 2.1-3.7-1.1-1.6-2.8-1.8-3.4-1.9-1.4-.1-2.8.8-3.5.8-.7 0-1.8-.8-3-.8-1.5 0-2.9.9-3.7 2.2-1.6 2.8-.4 6.9 1.1 9.1.8 1.1 1.7 2.3 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.2.9-1.3 1.2-2.5 1.2-2.6-.1-.1-2.5-1-2.5-3.2Z"/><path d="M14.6 5.6c.6-.7 1-1.7.9-2.6-.9 0-1.9.6-2.5 1.3-.6.6-1 1.6-.9 2.5.9.1 1.9-.5 2.5-1.2Z"/></svg>
               <span><small>Coming soon on the</small><strong>App Store</strong></span>
             </span>
           </div>
 
-          <div class="actions" aria-label="VeinTrack page links">
-            <a class="button secondary" href="./privacy.html">Privacy</a>
-            <a class="button secondary" href="./licensing.html">Licensing</a>
-            <a class="button secondary" href="./support.html">Support</a>
-            <a class="button secondary" href="mailto:duck_code_contact@proton.me">Feedback</a>
+          <div class="page-pill-links" aria-label="VeinTrack page links">
+            <a href="./privacy.html">Privacy</a>
+            <a href="./licensing.html">Licensing</a>
+            <a href="./support.html">Support</a>
+            <a href="mailto:duck_code_contact@proton.me">Feedback</a>
           </div>
         </div>
 
         <figure class="hero-phone phone-frame">
-          <img src="../../assets/img/veintrack/screenshots/01-home-dashboard.png" width="1206" height="2622" alt="VeinTrack home dashboard with daily cards for weight, activity, flight mode, care, and help">
+          <img src="../../assets/img/veintrack/screenshots/01-home-dashboard.png?v=appstore-20260703" width="1242" height="2688" alt="VeinTrack App Store screenshot showing the home dashboard and daily context cards">
         </figure>
       </section>
 
@@ -73,9 +73,9 @@
           <p class="eyebrow">On this page</p>
           <nav>
             <a href="#features">Features</a>
+            <a href="#workflows">Workflows</a>
             <a href="#privacy-first">Privacy</a>
-            <a href="#screenshots">Screenshots</a>
-            <a href="#activity-widget">Activity widget</a>
+            <a href="#availability">Availability</a>
             <a href="#important-notes">Important notes</a>
           </nav>
         </aside>
@@ -84,182 +84,311 @@
           <section class="story-block" id="features" aria-labelledby="features-title">
             <div class="section-heading">
               <p class="eyebrow">What you can do</p>
-              <h2 id="features-title">Record the useful bits without turning your day into paperwork.</h2>
+              <h2 id="features-title">Daily context, reminders, history, and reports without turning the app into pressure.</h2>
+              <p class="section-kicker">VeinTrack is built around small, private records: what happened today, what you want to remember later, and what you may choose to export.</p>
             </div>
 
-            <div class="feature-grid">
-              <article class="feature-card feature-quick" style="--feature-image: url('../../assets/img/veintrack/artwork/welcome-checkin-calendar.png')">
-                <span class="feature-icon" aria-hidden="true">01</span>
-                <h3>Quick View</h3>
-                <p>Save activity, sleep, leg elevation, pain, swelling, and photos from one daily screen.</p>
+            <div class="feature-grid feature-grid-visual">
+              <article class="feature-card visual-feature" style="--feature-image: url('../../assets/img/veintrack/artwork/welcome-checkin-calendar.png')">
+                <h3>Daily check-ins</h3>
+                <p>Use the dashboard and Quick View to capture weight, activity, sleep, leg elevation, symptoms, and photos from one calm daily flow.</p>
+                <div class="feature-carousel phone-carousel" data-carousel aria-label="Daily check-in screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/veintrack/screenshots/01-home-dashboard.png?v=appstore-20260703" width="1242" height="2688" alt="VeinTrack App Store screenshot titled Your day at a glance showing the home dashboard">
+                      <figcaption>Your day at a glance: weight, activity, sleep, care, and reminders stay together.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/veintrack/screenshots/02-quick-view-daily-composer.png?v=appstore-20260703" width="1242" height="2688" alt="VeinTrack App Store screenshot titled Log busy days in seconds showing Quick View">
+                      <figcaption>Quick View saves the essentials without long forms.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge daily check-in screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
               </article>
-              <article class="feature-card feature-activity" style="--feature-image: url('../../assets/img/veintrack/artwork/event-form-activity-background.png')">
-                <span class="feature-icon" aria-hidden="true">02</span>
-                <h3>Activity and rest</h3>
-                <p>Track walking context and use gentle reminders to pause, sit, or rest when sessions run long.</p>
+
+              <article class="feature-card visual-feature" style="--feature-image: url('../../assets/img/veintrack/artwork/rest-coach-park-sit.png')">
+                <h3>Activity, rest, and travel context</h3>
+                <p>Keep walking context, rest prompts, Flight Mode records, and care events visible together, with iOS background limits clearly framed.</p>
+                <div class="feature-carousel phone-carousel" data-carousel aria-label="Activity rest and travel screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/veintrack/screenshots/01-home-dashboard.png?v=appstore-20260703" width="1242" height="2688" alt="VeinTrack App Store screenshot showing dashboard cards for activity, rest, Flight Mode, and care context">
+                      <figcaption>The dashboard keeps activity, rest, Flight Mode, and care context visible together.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge activity rest and travel screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
               </article>
-              <article class="feature-card feature-photo" style="--feature-image: url('../../assets/img/veintrack/artwork/photo-reference.png')">
-                <span class="feature-icon" aria-hidden="true">03</span>
-                <h3>Symptoms and photos</h3>
-                <p>Keep pain, swelling, notes, and comparison photos close to the day they belong to.</p>
+
+              <article class="feature-card visual-feature" style="--feature-image: url('../../assets/img/veintrack/artwork/photo-reference.png')">
+                <h3>Symptoms, photos, and care records</h3>
+                <p>Keep pain, swelling, leg elevation, notes, comparison photos, consultation context, and compression details close to the date they belong to.</p>
+                <div class="feature-carousel phone-carousel" data-carousel aria-label="Symptoms photos and care screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/veintrack/screenshots/02-quick-view-daily-composer.png?v=appstore-20260703" width="1242" height="2688" alt="VeinTrack App Store screenshot showing Quick View entries for symptoms and photos">
+                      <figcaption>Quick View keeps symptoms and photos attached to the day they were recorded.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge symptom photo and care screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
               </article>
-              <article class="feature-card feature-care" style="--feature-image: url('../../assets/img/veintrack/artwork/event-form-leg-elevation-background.png')">
-                <span class="feature-icon" aria-hidden="true">04</span>
-                <h3>Consultations and prescriptions</h3>
-                <p>Organize appointment details, attach documents, and track compression prescription changes locally inside the app.</p>
+
+              <article class="feature-card visual-feature" style="--feature-image: url('../../assets/img/veintrack/artwork/help-event-charts-reports.png')">
+                <h3>Calendar, stats, and reports</h3>
+                <p>Use calendar markers, insight cards, charts, and summaries to prepare reports or exports only when you choose to share them.</p>
+                <div class="feature-carousel phone-carousel" data-carousel aria-label="Calendar stats and report screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/veintrack/screenshots/06-calendar-month.png?v=appstore-20260703" width="1242" height="2688" alt="VeinTrack App Store screenshot titled Find every day later showing calendar history">
+                      <figcaption>Calendar markers keep activity, care, travel, and photos easy to revisit.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/veintrack/screenshots/03-stats-insights.png?v=appstore-20260703" width="1242" height="2688" alt="VeinTrack App Store screenshot titled See what changed showing stats insights">
+                      <figcaption>Insight cards turn recorded context into summaries.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/veintrack/screenshots/04-stats-charts.png?v=appstore-20260703" width="1242" height="2688" alt="VeinTrack App Store screenshot titled Follow trends over time showing stats charts">
+                      <figcaption>Charts show recorded trends without claiming causes or outcomes.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/veintrack/screenshots/05-stats-summary.png?v=appstore-20260703" width="1242" height="2688" alt="VeinTrack App Store screenshot titled Export when you choose showing report export controls">
+                      <figcaption>Reports and exports are created only when you choose.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge calendar stats and report screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
               </article>
-              <article class="feature-card feature-calendar" style="--feature-image: url('../../assets/img/veintrack/artwork/welcome-checkin-calendar.png')">
-                <span class="feature-icon" aria-hidden="true">05</span>
-                <h3>Calendar history</h3>
-                <p>Find past events, future consultations, travel records, and monthly summaries by date.</p>
+
+              <article class="feature-card visual-feature" style="--feature-image: url('../../assets/img/veintrack/artwork/flight-mode-short-walk.png')">
+                <h3>Settings, reminders, and support</h3>
+                <p>Manage feedback, sharing, reminders, preferences, tracked limbs, compression wear, and optional support without feature locks.</p>
+                <div class="feature-carousel phone-carousel" data-carousel aria-label="Settings reminders and support screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/veintrack/screenshots/07-settings-feedback-support.png?v=appstore-20260703" width="1242" height="2688" alt="VeinTrack App Store screenshot titled Free private and optional showing settings and support">
+                      <figcaption>Settings collect feedback, support, reminders, preferences, and privacy controls.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide widget-demo-slide" data-carousel-slide hidden>
+                      <div class="activity-preview-stack carousel-widget-demo" role="img" aria-label="Illustrated VeinTrack activity widget and live activity preview">
+                        <div class="widget-preview">
+                          <span class="preview-kicker">Activity and rest</span>
+                          <strong>6,450 steps</strong>
+                          <span>4.2 km today</span>
+                          <div class="preview-actions" aria-hidden="true">
+                            <span>Start</span>
+                            <span>Log rest</span>
+                            <span>Open</span>
+                          </div>
+                        </div>
+                        <div class="live-activity-preview">
+                          <span class="preview-kicker">Coached session</span>
+                          <strong>52 min moving</strong>
+                          <span>Rest reminder approaching</span>
+                        </div>
+                      </div>
+                      <figcaption>Widget and Live Activity surfaces are optional and permission controlled.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge settings reminders and support screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
               </article>
-              <article class="feature-card feature-report" style="--feature-image: url('../../assets/img/veintrack/artwork/help-event-charts-reports.png')">
-                <span class="feature-icon" aria-hidden="true">06</span>
-                <h3>Stats and reports</h3>
-                <p>Turn local records into insights, charts, PDFs, email summaries, CSV files, and backups.</p>
-              </article>
-              <article class="feature-card feature-widget" style="--feature-image: url('../../assets/img/veintrack/artwork/rest-coach-park-sit.png')">
-                <span class="feature-icon" aria-hidden="true">07</span>
-                <h3>Widget and activity status</h3>
-                <p>Keep coached activity, rest actions, daily steps, and distance visible when iOS permissions allow.</p>
-              </article>
-              <article class="feature-card feature-support" style="--feature-image: url('../../assets/img/veintrack/artwork/flight-mode-short-walk.png')">
-                <span class="feature-icon" aria-hidden="true">08</span>
-                <h3>Feedback and support</h3>
-                <p>Send feedback, share the app, or optionally support development from Settings.</p>
-              </article>
+            </div>
+          </section>
+
+          <section class="story-block" id="workflows" aria-labelledby="workflows-title">
+            <div class="section-heading">
+              <p class="eyebrow">Workflow stories</p>
+              <h2 id="workflows-title">Move from a quick record to a useful history without losing control of the data.</h2>
+            </div>
+
+            <div class="workflow-stack">
+              <section class="workflow-card wide-workflow" aria-labelledby="checkin-workflow-title">
+                <div>
+                  <p class="eyebrow">Quick daily check-in</p>
+                  <h3 id="checkin-workflow-title">Start with today, save only what matters.</h3>
+                  <p>The dashboard gives you the day at a glance. Quick View turns repeated daily entries into normal app records for later review.</p>
+                  <div class="workflow-beats" aria-label="Daily check-in workflow steps">
+                    <span>Open dashboard</span>
+                    <span>Save Quick View</span>
+                    <span>Review later</span>
+                  </div>
+                </div>
+                <div class="feature-carousel workflow-carousel phone-workflow-carousel" data-carousel aria-label="Quick daily check-in workflow screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/veintrack/screenshots/01-home-dashboard.png?v=appstore-20260703" width="1242" height="2688" alt="VeinTrack App Store screenshot showing the home dashboard before a daily check-in">
+                      <figcaption>Start from the day-at-a-glance dashboard.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/veintrack/screenshots/02-quick-view-daily-composer.png?v=appstore-20260703" width="1242" height="2688" alt="VeinTrack App Store screenshot showing Quick View daily check-in values">
+                      <figcaption>Save the repeated daily values in Quick View.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge quick daily check-in workflow screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
+              </section>
+
+              <section class="workflow-card wide-workflow" aria-labelledby="share-workflow-title">
+                <div>
+                  <p class="eyebrow">Prepare to share context</p>
+                  <h3 id="share-workflow-title">Review the timeline before making a report.</h3>
+                  <p>Calendar, stats, and summary views help you decide what to export. Reports, CSV files, backups, and photos leave the app only when you choose where to send or save them.</p>
+                  <div class="workflow-beats" aria-label="Prepare to share workflow steps">
+                    <span>Find dates</span>
+                    <span>Review stats</span>
+                    <span>Export by choice</span>
+                  </div>
+                </div>
+                <div class="feature-carousel workflow-carousel phone-workflow-carousel" data-carousel aria-label="Prepare to share context workflow screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/veintrack/screenshots/06-calendar-month.png?v=appstore-20260703" width="1242" height="2688" alt="VeinTrack App Store screenshot showing calendar history before report preparation">
+                      <figcaption>Use dates and markers to orient yourself.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/veintrack/screenshots/03-stats-insights.png?v=appstore-20260703" width="1242" height="2688" alt="VeinTrack App Store screenshot showing stats insights before export">
+                      <figcaption>Review selected-period insight cards.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/veintrack/screenshots/04-stats-charts.png?v=appstore-20260703" width="1242" height="2688" alt="VeinTrack App Store screenshot showing stats charts before export">
+                      <figcaption>Use charts as recorded context, not as diagnosis.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/veintrack/screenshots/05-stats-summary.png?v=appstore-20260703" width="1242" height="2688" alt="VeinTrack App Store screenshot showing report export controls">
+                      <figcaption>Choose when to create reports or exports.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge prepare to share workflow screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
+              </section>
+
+              <section class="workflow-card wide-workflow" aria-labelledby="rest-workflow-title">
+                <div>
+                  <p class="eyebrow">Rest and session visibility</p>
+                  <h3 id="rest-workflow-title">Use visible prompts when you intentionally start a session.</h3>
+                  <p>Coached sessions can keep activity and rest actions visible. Passive detection remains local, but iOS may delay background updates.</p>
+                  <div class="workflow-beats" aria-label="Rest and session workflow steps">
+                    <span>See activity context</span>
+                    <span>Start a session</span>
+                    <span>Manage reminders</span>
+                  </div>
+                </div>
+                <div class="feature-carousel workflow-carousel phone-workflow-carousel" data-carousel aria-label="Rest and session visibility workflow screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/veintrack/screenshots/01-home-dashboard.png?v=appstore-20260703" width="1242" height="2688" alt="VeinTrack App Store screenshot showing activity and Flight Mode context on the dashboard">
+                      <figcaption>Start from daily activity and travel context.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide widget-demo-slide" data-carousel-slide hidden>
+                      <div class="activity-preview-stack carousel-widget-demo" role="img" aria-label="Illustrated activity widget and live activity status">
+                        <div class="widget-preview">
+                          <span class="preview-kicker">Activity and rest</span>
+                          <strong>6,450 steps</strong>
+                          <span>4.2 km today</span>
+                          <div class="preview-actions" aria-hidden="true">
+                            <span>Start</span>
+                            <span>Log rest</span>
+                            <span>Open</span>
+                          </div>
+                        </div>
+                        <div class="live-activity-preview">
+                          <span class="preview-kicker">Coached session</span>
+                          <strong>52 min moving</strong>
+                          <span>Rest reminder approaching</span>
+                        </div>
+                      </div>
+                      <figcaption>Widgets and Live Activities can keep chosen sessions visible.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/veintrack/screenshots/07-settings-feedback-support.png?v=appstore-20260703" width="1242" height="2688" alt="VeinTrack App Store screenshot showing settings, reminders, and activity controls">
+                      <figcaption>Settings keep reminders and permissions understandable.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge rest and session visibility workflow screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
+              </section>
             </div>
           </section>
 
           <section class="story-block split-block" id="privacy-first" aria-labelledby="privacy-first-title">
             <div>
-              <p class="eyebrow">Designed for private daily context</p>
-              <h2 id="privacy-first-title">100% local unless you choose to share.</h2>
-              <p>VeinTrack keeps your app data on your device. It does not share your data with anyone or send it to the web unless you choose to export, email, save, back up, or share it.</p>
+              <p class="eyebrow">Privacy</p>
+              <h2 id="privacy-first-title">Local by default, shared only by choice.</h2>
+              <p>VeinTrack keeps app data on your device. It does not share your data with anyone or send it to the web unless you choose to export, email, save, back up, or share it.</p>
+              <p><a href="./privacy.html">Read the full privacy policy</a></p>
             </div>
             <div class="trust-stack" aria-label="Privacy highlights">
               <div class="trust-banner">
-                <strong>Local by default</strong>
-                <span>Your records stay inside the app unless you choose otherwise.</span>
+                <strong>No Duck Code account</strong>
+                <span>There is no Duck Code backend account for VeinTrack data.</span>
               </div>
               <div class="trust-banner">
                 <strong>Permission based</strong>
                 <span>Health, Motion, notifications, and photos remain under iOS controls.</span>
               </div>
               <div class="trust-banner">
-                <strong>User controlled sharing</strong>
-                <span>Reports and exports leave the app only when you send or save them.</span>
+                <strong>User controlled exports</strong>
+                <span>Reports, backups, files, and photos leave the app only when you send or save them.</span>
               </div>
             </div>
           </section>
 
-          <section class="story-block" id="screenshots" aria-labelledby="screenshots-title">
+          <section class="story-block" id="availability" aria-labelledby="availability-title">
             <div class="section-heading">
-              <p class="eyebrow">Screenshots by workflow</p>
-              <h2 id="screenshots-title">A quick look at the parts people use most.</h2>
+              <p class="eyebrow">Availability and support</p>
+              <h2 id="availability-title">Join the beta, read the policies, or send feedback.</h2>
             </div>
-
-            <div class="workflow-stack">
-              <section class="workflow-card" aria-labelledby="daily-workflow-title">
-                <div>
-                  <p class="eyebrow">Daily check-in</p>
-                  <h3 id="daily-workflow-title">Quick View keeps busy days simple.</h3>
-                  <p>Use the day wheel and compact cards to record the essentials quickly.</p>
-                </div>
-                <div class="screenshot-gallery" aria-label="Daily check-in screenshots">
-                  <figure class="screenshot-card phone-frame">
-                    <img src="../../assets/img/veintrack/screenshots/02-quick-view-daily-composer.png" width="1206" height="2622" alt="Quick View daily composer with activity, sleep, leg elevation, symptom, and photo cards">
-                    <figcaption>Quick daily check-ins.</figcaption>
-                  </figure>
-                </div>
-              </section>
-
-              <section class="workflow-card" aria-labelledby="history-workflow-title">
-                <div>
-                  <p class="eyebrow">Calendar and history</p>
-                  <h3 id="history-workflow-title">Records become easier to find later.</h3>
-                  <p>Calendar markers, appointment days, and prescription changes help connect what happened with when it happened.</p>
-                </div>
-                <div class="screenshot-gallery" aria-label="Calendar screenshots">
-                  <figure class="screenshot-card phone-frame">
-                    <img src="../../assets/img/veintrack/screenshots/06-calendar-month.png" width="1206" height="2622" alt="Calendar month view with event markers and a month summary panel">
-                    <figcaption>Monthly context and event markers.</figcaption>
-                  </figure>
-                </div>
-              </section>
-
-              <section class="workflow-card wide-workflow" aria-labelledby="reports-workflow-title">
-                <div>
-                  <p class="eyebrow">Stats and reports</p>
-                  <h3 id="reports-workflow-title">Review patterns before deciding what to share.</h3>
-                  <p>Insights, charts, and summary views help turn local records into reports and exports.</p>
-                </div>
-                <div class="screenshot-gallery multi-gallery" aria-label="Stats and reports screenshots">
-                  <figure class="screenshot-card phone-frame">
-                    <img src="../../assets/img/veintrack/screenshots/03-stats-insights.png" width="1206" height="2622" alt="Stats insights screen with selected-period summary cards">
-                    <figcaption>Selected-period insight cards.</figcaption>
-                  </figure>
-                  <figure class="screenshot-card phone-frame">
-                    <img src="../../assets/img/veintrack/screenshots/04-stats-charts.png" width="1206" height="2622" alt="Stats charts screen with symptom trend charts">
-                    <figcaption>Trend charts for recorded data.</figcaption>
-                  </figure>
-                  <figure class="screenshot-card phone-frame">
-                    <img src="../../assets/img/veintrack/screenshots/05-stats-summary.png" width="1206" height="2622" alt="Stats summary screen with event totals and report export controls">
-                    <figcaption>Summary and export context.</figcaption>
-                  </figure>
-                </div>
-              </section>
-
-              <section class="workflow-card" aria-labelledby="settings-workflow-title">
-                <div>
-                  <p class="eyebrow">Settings and support</p>
-                  <h3 id="settings-workflow-title">Controls stay visible and optional.</h3>
-                  <p>Manage reminders, preferences, permissions, feedback, sharing, and optional support.</p>
-                </div>
-                <div class="screenshot-gallery" aria-label="Settings screenshots">
-                  <figure class="screenshot-card phone-frame">
-                    <img src="../../assets/img/veintrack/screenshots/07-settings-feedback-support.png" width="1206" height="2622" alt="Settings screen with feedback, support, reminders, preferences, and health controls">
-                    <figcaption>Settings, feedback, and optional support.</figcaption>
-                  </figure>
-                </div>
-              </section>
-            </div>
-
-            <div class="future-screenshots" aria-label="More app areas">
-              <article>
-                <strong>Also in the app</strong>
-                <span>Rest coach carousel, activity sessions, event forms, consultation attachments, photo comparisons, and generated PDF reports.</span>
-              </article>
-            </div>
-          </section>
-
-          <section class="story-block activity-widget-story" id="activity-widget" aria-labelledby="activity-widget-title">
-            <div class="section-heading">
-              <p class="eyebrow">Activity tracker and widget</p>
-              <h2 id="activity-widget-title">A visible nudge when a session is running.</h2>
-            </div>
-            <div class="activity-widget-layout">
-              <div class="story-copy">
-                <p>Coached activity mode can keep rest actions and session status close at hand. The widget can show daily steps and distance, start a coached session, log rest, or open the app.</p>
-                <p>Passive detection stays private and local, but iOS may delay background updates. Coached sessions are more timely because you intentionally start them.</p>
+            <div class="download-grid">
+              <a class="trust-banner download-card" href="https://testflight.apple.com/join/SJRF4awd" target="_blank" rel="noopener">
+                <strong>Join TestFlight</strong>
+                <span>Open Apple's TestFlight invite for the VeinTrack beta.</span>
+              </a>
+              <div class="trust-banner">
+                <strong>App Store</strong>
+                <span>Coming soon after Apple review. TestFlight remains the current public install path.</span>
               </div>
-              <div class="activity-preview-stack" aria-label="Illustrated activity widget preview">
-                <div class="widget-preview">
-                  <span class="preview-kicker">Activity and rest</span>
-                  <strong>6,450 steps</strong>
-                  <span>4.2 km today</span>
-                  <div class="preview-actions" aria-hidden="true">
-                    <span>Start</span>
-                    <span>Log rest</span>
-                    <span>Open</span>
-                  </div>
-                </div>
-                <div class="live-activity-preview">
-                  <span class="preview-kicker">Coached session</span>
-                  <strong>52 min moving</strong>
-                  <span>Rest reminder approaching</span>
-                </div>
-              </div>
+              <a class="trust-banner download-card" href="./privacy.html">
+                <strong>Privacy policy</strong>
+                <span>Read what VeinTrack may handle and how local-first sharing works.</span>
+              </a>
+              <a class="trust-banner download-card" href="./licensing.html">
+                <strong>App license</strong>
+                <span>Review the distributed app terms, free app note, and non-medical disclaimer.</span>
+              </a>
+              <a class="trust-banner download-card" href="./support.html">
+                <strong>Support page</strong>
+                <span>Feedback, sharing, and optional in-app support details.</span>
+              </a>
+              <a class="trust-banner download-card" href="mailto:duck_code_contact@proton.me">
+                <strong>Email feedback</strong>
+                <span>Send feedback, error reports, or suggestions to Duck Code.</span>
+              </a>
             </div>
           </section>
 
@@ -282,6 +411,10 @@
                 <strong>Your export, your choice</strong>
                 <span>Reports, images, files, and backups leave the app only when you choose where to send or save them.</span>
               </article>
+              <article class="trust-banner warning-banner">
+                <strong>Beta builds may change</strong>
+                <span>TestFlight builds can include unfinished features or changes while the app is being prepared for App Store review.</span>
+              </article>
             </div>
           </section>
         </div>
@@ -292,6 +425,30 @@
       <span>Duck Code</span>
       <a href="mailto:duck_code_contact@proton.me">duck_code_contact@proton.me</a>
     </footer>
+
+    <div class="carousel-modal" id="carouselModal" hidden>
+      <div class="carousel-modal-backdrop" data-carousel-modal-close></div>
+      <section class="carousel-modal-panel" role="dialog" aria-modal="true" aria-labelledby="carousel-modal-title">
+        <button class="download-modal-close" type="button" aria-label="Close enlarged screenshot" data-carousel-modal-close>
+          <svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+        <p class="eyebrow">Screenshot</p>
+        <h2 id="carousel-modal-title">VeinTrack screenshot</h2>
+        <figure class="carousel-modal-figure">
+          <img id="carouselModalImage" src="../../assets/img/veintrack/screenshots/01-home-dashboard.png?v=appstore-20260703" width="1242" height="2688" alt="">
+          <div class="carousel-modal-html" id="carouselModalHtml" hidden></div>
+          <button class="carousel-modal-nav carousel-modal-prev" type="button" data-carousel-modal-prev aria-label="Previous screenshot">
+            <svg width="30" height="30" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <button class="carousel-modal-nav carousel-modal-next" type="button" data-carousel-modal-next aria-label="Next screenshot">
+            <svg width="30" height="30" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+          <figcaption id="carouselModalCaption"></figcaption>
+        </figure>
+      </section>
+    </div>
+
     <script src="../../assets/js/scroll-focus.js" defer></script>
+    <script src="../../assets/js/product-carousels.js" defer></script>
   </body>
 </html>
