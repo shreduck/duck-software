@@ -35,7 +35,7 @@
           </div>
 
           <p class="lede">MCP Workbench gives Claude Code, Codex, Copilot, Grok, and other MCP clients the tools their harnesses are missing: controlled web fetching, an isolated browser you can share with the AI, provider context, approval-first planning, traceable handoffs, and Java/Spring analysis.</p>
-          <p class="note">Run it locally or self-host it. You control the credentials, MCP keys, browser profiles, network policy, data folder, and which external writes are approved.</p>
+          <p class="note">Run it locally with the default H2 file or self-host it with PostgreSQL when you need something sturdier. You control the credentials, MCP keys, browser profiles, network policy, data storage, and which external writes are approved.</p>
           <p class="download-warning-note">Windows and macOS builds are unsigned and may trigger OS or browser download warnings.</p>
 
           <div class="store-badges" aria-label="MCP Workbench downloads">
@@ -421,9 +421,9 @@
                 </div>
               </article>
               <article class="feature-card visual-feature">
-                <h3>Logs, configuration, and local data</h3>
-                <p>Keep the server understandable with visible configuration, local logs, data-folder control, and credential ownership.</p>
-                <div class="feature-carousel" data-carousel aria-label="Logs configuration and local data screenshots">
+                <h3>Logs, configuration, and database</h3>
+                <p>Keep the server understandable with visible configuration, local logs, credential ownership, and a choice between simple H2 file storage or PostgreSQL for shared deployments. Admins can scan another Workbench database and move selected app data without replacing accounts, MCP keys, credentials, policies, audit history, or migration metadata.</p>
+                <div class="feature-carousel" data-carousel aria-label="Logs, configuration, and database screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
@@ -1045,8 +1045,12 @@
           <section class="story-block" id="downloads" aria-labelledby="downloads-title">
             <div class="section-heading">
               <p class="eyebrow">Downloads and installs</p>
-              <h2 id="downloads-title">Choose a build, keep its data folder, and connect your first agent.</h2>
+              <h2 id="downloads-title">Choose a build, protect its data storage, and connect your first agent.</h2>
               <p class="section-kicker">The latest public preview is <strong>2.0.1-SNAPSHOT</strong>. The stable release stays <strong>v2.0.0</strong>; snapshot and stable links are kept separate below.</p>
+            </div>
+            <div class="trust-banner">
+              <strong>Outgrowing the H2 file?</strong>
+              <span>H2 remains the zero-setup default, but shared and server installations can use PostgreSQL through the database environment settings. On Windows and macOS, expand <strong>Advanced database options</strong> in the launcher; the JDBC URL, username, password, and import-size limit are also available in the per-user <code>mcp-workbench-launcher.properties</code> preferences file. Protect that file because its database password is stored as plain text. Configuration → Database can scan an H2 file or PostgreSQL source, show row counts by app persistence group, and copy only the groups you select. Matching schemas import directly; older schemas require acknowledgement, while newer or incompatible schemas are blocked.</span>
             </div>
             <div class="download-grid">
               <a class="trust-banner download-card" href="https://github.com/shreduck/mcp-workbench-release/releases/tag/2.0.1-SNAPSHOT" target="_blank" rel="noopener">
@@ -1106,7 +1110,7 @@
             <div>
               <p class="eyebrow">Privacy</p>
               <h2 id="privacy-title">Built for local-first control.</h2>
-              <p>Workbench runs as your local or self-hosted portal. Your data folder, credentials, MCP keys, traces, cards, and scan history stay under your control unless you explicitly connect external services or approve an action that writes to them.</p>
+              <p>Workbench runs as your local or self-hosted portal. Your chosen H2 or PostgreSQL database, credentials, MCP keys, traces, cards, and scan history stay under your control unless you explicitly connect external services or approve an action that writes to them.</p>
             </div>
             <div class="trust-stack" aria-label="Privacy notes">
               <div class="trust-banner">
@@ -1174,8 +1178,8 @@
                 <span>Desktop launchers are not signed or notarized. Expect possible OS warnings, quarantine prompts, or blocked downloads.</span>
               </article>
               <article class="trust-banner">
-                <strong>Protect your data folder</strong>
-                <span>Workbench stores local settings, database files, encrypted credentials, keys, and history in its configured data directory.</span>
+                <strong>Protect your data storage</strong>
+                <span>Back up the configured data directory when using H2, or the external database when using PostgreSQL. Keep the encryption key with the deployment; database rows alone cannot recover credentials encrypted with a different key.</span>
               </article>
               <article class="trust-banner">
                 <strong>Use narrow credentials</strong>
