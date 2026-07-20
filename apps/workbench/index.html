@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MCP Workbench | Duck Code</title>
-    <meta name="description" content="MCP Workbench is a local control panel for connecting AI agents to GitHub, Azure DevOps, Kanban, backlog planning, PR review, traces, and code analysis.">
+    <meta name="description" content="MCP Workbench helps AI agents and people solve software problems together with controlled web fetching, cooperative browsers, provider tools, approval-first planning, traces, and Java analysis.">
     <link rel="icon" href="../../assets/img/workbench/duck_uncertain_transparent.png">
-    <link rel="stylesheet" href="../../assets/css/site.css?v=workbench-20260703-real-screens">
+    <link rel="stylesheet" href="../../assets/css/site.css?v=workbench-20260720-hero-aside-v5">
   </head>
   <body class="workbench-page">
     <header class="site-header">
@@ -29,29 +29,29 @@
               <img src="../../assets/img/workbench/duck_uncertain_transparent.png" width="160" height="160" alt="">
             </div>
             <div>
-              <p class="eyebrow">MCP Workbench</p>
-              <h1 id="app-title">A local control room for AI-assisted software work.</h1>
+              <h1 id="app-title">MCP Workbench</h1>
+              <p class="hero-pitch">Got a software problem? Give your AI a safer way to help fix it.</p>
             </div>
           </div>
 
-          <p class="lede">Run one private portal that lets AI clients use your approved tools for GitHub, Azure DevOps, Kanban, pull request review, backlog proposals, traceable reasoning, and Java/Spring code analysis.</p>
-          <p class="note">Workbench is for local and self-hosted workflows. You control the credentials, MCP keys, data folder, and which external writes are approved.</p>
+          <p class="lede">MCP Workbench gives Claude Code, Codex, Copilot, Grok, and other MCP clients the tools their harnesses are missing: controlled web fetching, an isolated browser you can share with the AI, provider context, approval-first planning, traceable handoffs, and Java/Spring analysis.</p>
+          <p class="note">Run it locally or self-host it. You control the credentials, MCP keys, browser profiles, network policy, data folder, and which external writes are approved.</p>
           <p class="download-warning-note">Windows and macOS builds are unsigned and may trigger OS or browser download warnings.</p>
 
           <div class="store-badges" aria-label="MCP Workbench downloads">
-            <a class="store-badge desktop-badge" href="https://github.com/shreduck/mcp-workbench-release/releases/tag/v2.0.0" target="_blank" rel="noopener">
+            <a class="store-badge desktop-badge" href="https://github.com/shreduck/mcp-workbench-release/releases/tag/2.0.1-SNAPSHOT" target="_blank" rel="noopener">
               <svg class="store-badge-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
-              <span><small>Latest version</small><strong>v2.0.0</strong></span>
+              <span><small>Latest snapshot</small><strong>2.0.1-SNAPSHOT</strong></span>
             </a>
             <a class="store-badge stable-badge" href="https://github.com/shreduck/mcp-workbench-release/releases/tag/v2.0.0" target="_blank" rel="noopener">
               <svg class="store-badge-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/><path d="M5 20h14"/></svg>
               <span><small>Latest stable</small><strong>v2.0.0</strong></span>
             </a>
-            <button class="store-badge desktop-badge download-badge-button" type="button" data-download-name="Windows with bundled Java" data-download-url="https://github.com/shreduck/mcp-workbench-release/releases/download/v2.0.0/mcp-workbench-windows-with-jre-v2.0.0.zip">
+            <button class="store-badge desktop-badge download-badge-button" type="button" data-download-name="Windows with bundled Java (2.0.1-SNAPSHOT)" data-download-url="https://github.com/shreduck/mcp-workbench-release/releases/download/2.0.1-SNAPSHOT/mcp-workbench-windows-with-jre-2.0.1-SNAPSHOT.zip">
               <svg class="store-badge-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="8" height="7"/><rect x="13" y="4" width="8" height="7"/><rect x="3" y="13" width="8" height="7"/><rect x="13" y="13" width="8" height="7"/></svg>
               <span><small>Release downloads</small><strong>Windows</strong></span>
             </button>
-            <button class="store-badge stable-badge download-badge-button" type="button" data-download-name="macOS with bundled Java" data-download-url="https://github.com/shreduck/mcp-workbench-release/releases/download/v2.0.0/mcp-workbench-mac-with-jre-v2.0.0.zip">
+            <button class="store-badge stable-badge download-badge-button" type="button" data-download-name="macOS with bundled Java (2.0.1-SNAPSHOT)" data-download-url="https://github.com/shreduck/mcp-workbench-release/releases/download/2.0.1-SNAPSHOT/mcp-workbench-mac-with-jre-2.0.1-SNAPSHOT.zip">
               <svg class="store-badge-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 20c-4 0-7-3-7-7s3-7 7-7 7 3 7 7-3 7-7 7Z"/><path d="M12 6V3"/><path d="M9 3h6"/></svg>
               <span><small>Release downloads</small><strong>macOS</strong></span>
             </button>
@@ -67,7 +67,7 @@
         </div>
 
         <figure class="desktop-frame hero-desktop">
-          <img src="../../assets/img/workbench/screenshots/workbench-home.png" width="1280" height="720" alt="MCP Workbench home screen with app modules and system status">
+          <img src="../../assets/img/workbench/screenshots/workbench-home.png" width="1920" height="937" alt="MCP Workbench home screen with grouped apps, tools and docs plus compact deployment-hardening counters">
         </figure>
       </section>
 
@@ -101,28 +101,123 @@
         <div class="feature-story">
           <section class="story-block" id="features" aria-labelledby="features-title">
             <div class="section-heading">
-              <p class="eyebrow">What it brings together</p>
-              <h2 id="features-title">One portal for agent tools, human review, and local audit trails.</h2>
-              <p class="section-kicker">Turn the thought/process black box and tedious chat rereads into a more pleasant-ish UI for reviewing what happened, what changed, and what still needs a human decision.</p>
+              <p class="eyebrow">Problem, meet toolbox</p>
+              <h2 id="features-title">One portal for the gaps between an AI harness and the job you need done.</h2>
+              <p class="section-kicker">When the harness cannot fetch a page, cannot share a real browser, forgets why it made a decision, or is about to write to the wrong system, Workbench adds a visible, reviewable layer around the work.</p>
             </div>
 
             <div class="feature-grid feature-grid-visual">
               <article class="feature-card visual-feature">
                 <h3>MCP keys and tool access</h3>
-                <p>Create per-user MCP keys and connect Claude, Codex, GitHub Copilot, or another MCP client to the same local server.</p>
+                <p>Create per-user MCP keys, choose their tool groups, and follow a client-specific setup tab for Claude Code, Codex, GitHub Copilot, Grok, or another MCP client.</p>
                 <div class="feature-carousel" data-carousel aria-label="MCP keys and tool access screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-account.png" width="1920" height="1080" alt="MCP Workbench account screen for user and MCP key management">
-                      <figcaption>Create scoped MCP keys from the account screen.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-account.png" width="1920" height="937" alt="MCP Workbench account screen with horizontally separated key creation and key management">
+                      <figcaption>Create keys above; rename, scope, rotate, or revoke them in a stable table below.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-connect.png" width="1920" height="1080" alt="MCP Workbench Connect screen with client setup instructions">
-                      <figcaption>Copy the client setup flow after a key exists.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-connect.png" width="1920" height="937" alt="MCP Workbench Connect screen with a four-step tutorial and AI client tabs">
+                      <figcaption>Follow the four-step tutorial for your AI harness, then browse Available tools in its own tab.</figcaption>
                     </figure>
                   </div>
                   <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge MCP keys and tool access screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
+              </article>
+              <article class="feature-card visual-feature">
+                <h3>Fetch Proxy</h3>
+                <p>Your AI harness cannot reach an allowed page, blocks <code>curl</code>, or chokes on a large response. Fetch it through Workbench, search the temporary result, and read only the bounded parts you need.</p>
+                <p class="feature-pullquote">Small fetch or huge reference page: the same policy boundary, a different reading strategy.</p>
+                <div class="feature-carousel" data-carousel aria-label="Fetch Proxy screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/workbench/screenshots/workbench-fetch-proxy.png" width="1920" height="937" alt="MCP Workbench Fetch Proxy limits, temporary storage, tool policy and host network policy">
+                      <figcaption>Admins set global limits, host allow/deny rules, private-network policy, TTLs, and per-key narrowing.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide ai-demo-slide" data-carousel-slide hidden>
+                      <div class="ai-demo compact-demo" aria-label="Simulated AI using Fetch Proxy when its harness blocks a web request">
+                        <div class="ai-demo-topbar">
+                          <span>Restricted harness</span>
+                          <span>Fetch through Workbench</span>
+                        </div>
+                        <div class="ai-chat">
+                          <div class="ai-message user-message">
+                            <span class="ai-avatar">U</span>
+                            <div><strong>User</strong><p>Compare the migration guide with our error, but this harness cannot reach the page.</p></div>
+                          </div>
+                          <div class="ai-message assistant-message">
+                            <span class="ai-avatar">AI</span>
+                            <div>
+                              <strong>Workbench-assisted fetch</strong>
+                              <p class="typewriter-copy" data-typewriter data-typewriter-delay="16">I fetched the approved HTTPS page through Workbench, searched the retained result for the error code, and read two bounded sections. The source stays linked and the temporary result can now be deleted.</p>
+                              <div class="ai-evidence-grid" data-typewriter-reveal>
+                                <span><b>Policy</b>Public HTTPS host allowed.</span>
+                                <span><b>Read</b>2 relevant bounded parts.</span>
+                                <span><b>Cleanup</b>Temporary result ready to delete.</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <figcaption>Workbench becomes the controlled fetch path when the AI harness has a networking wall.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Fetch Proxy screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
+              </article>
+              <article class="feature-card visual-feature">
+                <h3>Cooperative browsers</h3>
+                <p>The AI can open a fresh Chrome, Chromium, Brave, or Firefox profile while you watch, take over, click the real page, and leave selector-linked notes for the AI to read.</p>
+                <p class="feature-pullquote">A shared session, not your personal profile: no saved passwords, personal cookies, extensions, or unrelated history.</p>
+                <div class="feature-carousel" data-carousel aria-label="Cooperative browser screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/workbench/screenshots/workbench-browsers.png" width="1920" height="937" alt="MCP Workbench detected browsers and isolated browser configuration form">
+                      <figcaption>Choose an installed browser, viewport, session limits, process arguments, environment, and proxy/helper policy.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-browser-annotation.png" width="1920" height="937" alt="A cooperative browser session with the Example Domain heading highlighted and an expanded selector-linked change request">
+                      <figcaption>Pin a concrete request to the real element: replace the heading and add a clear no-customer-data note below it.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide ai-demo-slide" data-carousel-slide hidden>
+                      <div class="ai-demo compact-demo" aria-label="Simulated user asking the AI to apply an open cooperative browser annotation">
+                        <div class="ai-demo-topbar">
+                          <span>Cooperative browser handoff</span>
+                          <span>1 open note · h1</span>
+                        </div>
+                        <div class="ai-chat">
+                          <div class="ai-message user-message">
+                            <span class="ai-avatar">U</span>
+                            <div>
+                              <strong>User</strong>
+                              <p>Please apply the open browser note and resolve it when the page matches.</p>
+                            </div>
+                          </div>
+                          <div class="ai-message assistant-message">
+                            <span class="ai-avatar">AI</span>
+                            <div>
+                              <strong>AI</strong>
+                              <p class="typewriter-copy" data-typewriter data-typewriter-delay="16">Done. I changed “Example Domain” to “A calmer place to test integrations”, added a sentence confirming that no customer data is used on the page, verified the h1 selector still resolves, and marked the annotation resolved.</p>
+                              <div class="ai-evidence-grid" data-typewriter-reveal>
+                                <span><b>Heading</b>Requested copy applied.</span>
+                                <span><b>Privacy note</b>No customer data statement added.</span>
+                                <span><b>Annotation</b>Selector verified and resolved.</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <figcaption>The AI reads the selector-linked request, applies the specified change, verifies it, and closes the note.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge cooperative browser screenshots"></button>
                   <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
                   <div class="carousel-dots" data-carousel-dots></div>
                 </div>
@@ -134,11 +229,11 @@
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-github.png" width="1920" height="1080" alt="MCP Workbench GitHub credential setup screen">
+                      <img src="../../assets/img/workbench/screenshots/workbench-github.png" width="1920" height="937" alt="MCP Workbench GitHub credential setup screen">
                       <figcaption>GitHub tokens can be scoped per user and repository.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-azure.png" width="1920" height="1080" alt="MCP Workbench Azure DevOps credential setup screen">
+                      <img src="../../assets/img/workbench/screenshots/workbench-azure.png" width="1920" height="937" alt="MCP Workbench Azure DevOps credential setup screen">
                       <figcaption>Azure DevOps credentials power PR, work item, and branch tools.</figcaption>
                     </figure>
                   </div>
@@ -154,11 +249,11 @@
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-kanban.png" width="1920" height="1080" alt="MCP Workbench Kanban board populated with local release, support, scan, and trace cards">
+                      <img src="../../assets/img/workbench/screenshots/workbench-kanban.png" width="1920" height="937" alt="MCP Workbench Kanban board populated with local release, support, scan, and trace cards">
                       <figcaption>Use a populated local board as the review surface.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-backlog.png" width="1920" height="1080" alt="MCP Workbench Backlog conversation with local work item, test plan, and pull request proposals">
+                      <img src="../../assets/img/workbench/screenshots/workbench-backlog.png" width="1920" height="937" alt="MCP Workbench Backlog conversation with cooperative-browser work item proposals">
                       <figcaption>Backlog proposals stay local until you approve the exact write.</figcaption>
                     </figure>
                   </div>
@@ -174,11 +269,11 @@
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-pr-analysis.png" width="1920" height="1080" alt="MCP Workbench PR Analysis workspace">
+                      <img src="../../assets/img/workbench/screenshots/workbench-pr-analysis.png" width="1920" height="937" alt="MCP Workbench PR Analysis workspace">
                       <figcaption>Start from local pull request analysis spaces.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-local-pr-analysis-impact.png" width="1920" height="1080" alt="MCP Workbench local PR Analysis card showing a dependent API impact finding">
+                      <img src="../../assets/img/workbench/screenshots/workbench-local-pr-analysis-impact.png" width="1920" height="937" alt="MCP Workbench local PR Analysis card showing a dependent API impact finding">
                       <figcaption>Review findings become shared local analysis cards before provider comments.</figcaption>
                     </figure>
                     <figure class="carousel-slide ai-demo-slide" data-carousel-slide hidden>
@@ -224,12 +319,12 @@
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-agent-kits.png" width="1920" height="1080" alt="MCP Workbench Agent Kits workspace">
-                      <figcaption>Agent and skill files are editable inside the portal.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-agent-kits.png" width="1920" height="937" alt="MCP Workbench Agent Kits workspace with browser, scanner, trace and planning skills">
+                      <figcaption>Agent and skill files are editable, versioned, and reusable inside the portal.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-spec-docs.png" width="1920" height="1080" alt="MCP Workbench Spec Docs workspace">
-                      <figcaption>Spec Docs keep project guidance next to the agent kits.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-spec-docs.png" width="1920" height="937" alt="MCP Workbench Spec Docs workspace with isolated cooperative browser guidance">
+                      <figcaption>Spec Docs keep project guidance—including direct and remote browser contracts—next to the agent kits.</figcaption>
                     </figure>
                   </div>
                   <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Agent Kits and Spec Docs screenshots"></button>
@@ -245,12 +340,16 @@
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-code-scanner.png" width="1920" height="1080" alt="MCP Workbench Code Scanner target for a Java project">
-                      <figcaption>Indexed targets and scan state.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-code-scanner.png" width="1920" height="937" alt="MCP Workbench Code Scanner Java analysis workspace for a sanitized local scan">
+                      <figcaption>Browse a sanitized local scan without publishing source code to a provider.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-call-hierarchy-expanded.png" width="1920" height="1080" alt="MCP Workbench Code Scanner call hierarchy graph expanded across dependent API paths">
-                      <figcaption>Call hierarchy shows the downstream paths a PR can accidentally touch.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-call-hierarchy-expanded.png" width="1920" height="937" alt="MCP Workbench Code Scanner hierarchy centered on BrowserSessionManager with linked incoming and outgoing nodes">
+                      <figcaption>Search a class or method, follow linked nodes, and inspect callers and downstream paths in one graph.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-code-scanner-entrypoints.png" width="1920" height="937" alt="MCP Workbench Code Scanner entry-point browser focused on the browser session service API">
+                      <figcaption>Browse detected service APIs, controllers, scheduled jobs, configuration, and data I/O entry points.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
                       <div class="demo-screen scanner-recommendation-screen" role="img" aria-label="Simulated Code Scanner recommendations and impact findings">
@@ -288,31 +387,12 @@
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-think-trace.png" width="1920" height="1080" alt="MCP Workbench Think Trace graph with evidence and decisions">
-                      <figcaption>Graph-backed work traces.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-think-trace.png" width="1920" height="937" alt="MCP Workbench Think Trace for repairing a quarterly accounting dashboard">
+                      <figcaption>Start with the query, failures, evidence, decisions, code change, comments, and final response together.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <div class="demo-screen trace-graph-screen dense-trace" role="img" aria-label="Simulated expanded Think Trace graph with many evidence, decision, tool, error, and fix nodes">
-                        <div class="mini-app-chrome">
-                          <span>Think Trace</span>
-                          <span>Expanded graph</span>
-                        </div>
-                        <div class="trace-node-map">
-                          <span class="node query">User query</span>
-                          <span class="node evidence">Source data</span>
-                          <span class="node tool">Report API</span>
-                          <span class="node error">Timeout</span>
-                          <span class="node error">N/A rows</span>
-                          <span class="node decision">Retry plan</span>
-                          <span class="node tool">Accounting API</span>
-                          <span class="node evidence">Trace #TT-2048</span>
-                          <span class="node fix">Skill patch</span>
-                          <span class="node evidence">Final report</span>
-                          <span class="node decision">Ship</span>
-                          <span class="node comment">Human note</span>
-                        </div>
-                      </div>
-                      <figcaption>Expanded traces can show the messy chain of evidence, errors, decisions, and fixes.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-think-trace-expanded.png" width="1920" height="937" alt="Expanded MCP Workbench accounting repair trace with branching API failures and a final response">
+                      <figcaption>Fullscreen mode shows the branching API failures, matched diagnosis, local repair, and merged completion evidence.</figcaption>
                     </figure>
                   </div>
                   <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Think Trace screenshots"></button>
@@ -327,11 +407,11 @@
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-mcp-apis.png" width="1920" height="1080" alt="MCP Workbench MCP API reference screen">
+                      <img src="../../assets/img/workbench/screenshots/workbench-mcp-apis.png" width="1920" height="937" alt="MCP Workbench MCP API reference screen">
                       <figcaption>Generated tool docs show the MCP surface agents can use.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-connect.png" width="1920" height="1080" alt="MCP Workbench Connect instructions screen">
+                      <img src="../../assets/img/workbench/screenshots/workbench-connect.png" width="1920" height="937" alt="MCP Workbench Connect instructions screen">
                       <figcaption>Connect pages turn the local server into client-ready config.</figcaption>
                     </figure>
                   </div>
@@ -347,12 +427,12 @@
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-logs.png" width="1920" height="1080" alt="MCP Workbench Logs screen">
+                      <img src="../../assets/img/workbench/screenshots/workbench-logs.png" width="1920" height="937" alt="MCP Workbench Logs screen">
                       <figcaption>Logs make local server activity inspectable.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-configuration.png" width="1920" height="1080" alt="MCP Workbench Configuration screen">
-                      <figcaption>Configuration exposes runtime values and reset controls.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-configuration.png" width="1920" height="937" alt="MCP Workbench Configuration App data tab with per-app and all-data reset scopes">
+                      <figcaption>Admins can reset one app persistence group or all non-system app data while keeping identities, keys, provider credentials, Fetch Proxy policy, audit logs, and migration state.</figcaption>
                     </figure>
                   </div>
                   <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge logs configuration and local data screenshots"></button>
@@ -362,30 +442,17 @@
               </article>
               <article class="feature-card visual-feature corporate-neutral-feature">
                 <h3>Corporate neutral mode</h3>
-                <p>Admins can force a neutral portal UI for serious environments and disable the ducks. You monsters.</p>
-                <img class="neutral-card-art" src="../../assets/img/workbench/duck_ai_unauthorized_no_text.png" width="946" height="756" alt="" aria-hidden="true">
+                <p>Admins can lock a restrained, brand-neutral portal for corporate deployments: no mascot artwork, no playful loading copy, and neutral labels in the display controls.</p>
                 <div class="feature-carousel" data-carousel aria-label="Corporate neutral mode screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <div class="demo-screen neutral-wipe-demo" role="img" aria-label="Animated comparison between duck loading and neutral loading mode">
-                        <div class="neutral-loading before">
-                          <img src="../../assets/img/workbench/duck_uncertain_transparent.png" width="320" height="320" alt="" aria-hidden="true">
-                          <strong>Polishing the breadcrumbs</strong>
-                          <span>Duck loading screen</span>
-                        </div>
-                        <div class="neutral-loading after">
-                          <b>HTTP 102</b>
-                          <strong>Processing</strong>
-                          <span>Neutral loading screen</span>
-                        </div>
-                        <span class="wipe-line" aria-hidden="true"></span>
-                      </div>
-                      <figcaption>A neutral mode wipe shows the same loading moment with and without ducks.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-neutral-configuration.png" width="1920" height="937" alt="Real MCP Workbench UI policy screen with neutral UI enabled and forced for all users">
+                      <figcaption>The real UI policy screen lets an administrator enable neutral presentation by default and lock it for every user.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-neutral-configuration.png" width="1280" height="720" alt="MCP Workbench neutral configuration screen with Gray 100 colour label">
-                      <figcaption>Colour labels become neutral, and the environment can lock the mode. You monsters.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-neutral-home.png" width="1920" height="937" alt="Real MCP Workbench home screen with Display settings open and Neutral UI locked by an administrator">
+                      <figcaption>The real portal shows neutral mode enabled and controlled by the administrator while keeping the rest of the display controls available.</figcaption>
                     </figure>
                   </div>
                   <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge corporate neutral mode screenshots"></button>
@@ -425,6 +492,189 @@
             </div>
 
             <div class="workflow-stack">
+              <section class="workflow-card wide-workflow" aria-labelledby="fetch-workflow-title">
+                <div>
+                  <p class="eyebrow">Fetch Proxy</p>
+                  <h3 id="fetch-workflow-title">The harness cannot fetch the evidence. Workbench can fetch it under your rules.</h3>
+                  <p>Send the URL through the Fetch Proxy instead of fighting the harness sandbox. Workbench validates the destination, enforces global and per-key policy, retains the response temporarily, and lets the agent search before reading bounded parts.</p>
+                  <div class="workflow-beats" aria-label="Fetch Proxy workflow steps">
+                    <span>Harness hits a wall</span>
+                    <span>Policy-approved fetch</span>
+                    <span>Search, read, delete</span>
+                  </div>
+                </div>
+                <div class="feature-carousel workflow-carousel" data-carousel aria-label="Restricted AI harness Fetch Proxy story">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide ai-demo-slide is-active" data-carousel-slide>
+                      <div class="ai-demo" aria-label="Simulated restricted AI harness conversation using Fetch Proxy">
+                        <div class="ai-demo-topbar">
+                          <span>Codex</span>
+                          <span>Network restricted</span>
+                        </div>
+                        <div class="ai-chat">
+                          <div class="ai-message user-message">
+                            <span class="ai-avatar">U</span>
+                            <div><strong>User</strong><p>The build references a new migration guide. Can you compare it with this stack trace?</p></div>
+                          </div>
+                          <div class="ai-message assistant-message">
+                            <span class="ai-avatar">AI</span>
+                            <div>
+                              <strong>AI + Workbench</strong>
+                              <p class="typewriter-copy" data-typewriter data-typewriter-delay="16">Direct networking is blocked here, so I used your Fetch Proxy key. Workbench allowed the public docs host, rejected redirecting into a private address, and stored the guide temporarily. I searched for the exception and read only the matching sections.</p>
+                              <div class="ai-evidence-grid" data-typewriter-reveal>
+                                <span><b>Destination</b>Approved public HTTPS host.</span>
+                                <span><b>Evidence</b>Migration steps 3 and 5.</span>
+                                <span><b>Result</b>Delete after this answer.</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <figcaption>The AI keeps working without receiving unrestricted network access.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-fetch-proxy.png" width="1920" height="937" alt="Fetch Proxy network, size, retention and per-key policy controls">
+                      <figcaption>The administrator—not the prompt—defines which hosts, tools, sizes, redirects, lifetimes, and private-network cases are acceptable.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Fetch Proxy workflow"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
+              </section>
+
+              <section class="workflow-card wide-workflow" aria-labelledby="browser-cooperation-title">
+                <div>
+                  <p class="eyebrow">Browser cooperation · local Workbench</p>
+                  <h3 id="browser-cooperation-title">The AI cannot feel the page. Open one safe browser and work in it together.</h3>
+                  <p>When Workbench runs on your machine, normal MCP browser tools open an isolated local profile directly. The AI can inspect semantic HTML and selectors; you can watch, click, type, and pin notes to the exact elements that need attention.</p>
+                  <div class="browser-path" aria-label="Local cooperative browser path">
+                    <span>AI harness</span><i>normal MCP browser tools</i><span>MCP Workbench</span><i>direct process pipe</i><span>Isolated local browser</span>
+                  </div>
+                </div>
+                <div class="feature-carousel workflow-carousel" data-carousel aria-label="Local cooperative browser story">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide ai-demo-slide is-active" data-carousel-slide>
+                      <div class="ai-demo browser-chat-demo" aria-label="Simulated person and AI cooperating in an isolated local browser">
+                        <div class="ai-demo-topbar"><span>Shared browser session</span><span>Fresh Chromium profile</span></div>
+                        <div class="ai-chat">
+                          <div class="ai-message user-message"><span class="ai-avatar">U</span><div><strong>User</strong><p>Open checkout in a clean browser. I’ll reproduce the part that feels wrong.</p></div></div>
+                          <div class="ai-message assistant-message"><span class="ai-avatar">AI</span><div><strong>AI</strong><p>I opened an isolated Chromium session. Your personal cookies, passwords, history, extensions, and profile are not mounted.</p></div></div>
+                          <div class="ai-message user-message"><span class="ai-avatar">U</span><div><strong>User</strong><p>I clicked through it and pinned two notes on the same field: stale validation and no error summary.</p></div></div>
+                          <div class="ai-message assistant-message"><span class="ai-avatar">AI</span><div><strong>AI</strong><p class="typewriter-copy" data-typewriter data-typewriter-delay="14">I can read the grouped selector-linked notes and the current page state. I reproduced both issues and drafted two approval-first backlog proposals. Nothing was pushed.</p></div></div>
+                        </div>
+                      </div>
+                      <figcaption>You handle the human feel; the AI keeps the semantic page state, selectors, screenshots, and notes connected.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <div class="demo-screen checkout-annotation-demo" role="img" aria-label="Simulated checkout page with two expanded selector-linked annotations on the card number field">
+                        <div class="checkout-browser-chrome">
+                          <span aria-hidden="true"><i></i><i></i><i></i></span>
+                          <b>checkout.cedar.test/payment</b>
+                          <em>Isolated session</em>
+                        </div>
+                        <div class="checkout-page">
+                          <header>
+                            <strong>Cedar &amp; Co.</strong>
+                            <span>Cart</span><b>Information</b><b>Payment</b>
+                            <em>Secure checkout</em>
+                          </header>
+                          <div class="checkout-main">
+                            <section class="checkout-form">
+                              <small>Step 3 of 3</small>
+                              <h4>Payment details</h4>
+                              <p>All transactions are encrypted and processed in this isolated demo.</p>
+                              <label>Cardholder name<input value="Alex Morgan" readonly></label>
+                              <label class="annotated-checkout-field">
+                                Card number
+                                <input value="4242 4242 4242 4242" aria-invalid="true" readonly>
+                                <span class="checkout-field-error">Card number is invalid</span>
+                                <b class="checkout-annotation-pin">2</b>
+                              </label>
+                              <div class="checkout-field-row">
+                                <label>Expiry<input value="12 / 29" readonly></label>
+                                <label>Security code<input value="123" readonly></label>
+                              </div>
+                              <button type="button">Pay $128.00</button>
+                            </section>
+                            <aside class="checkout-summary">
+                              <small>Order summary</small>
+                              <div><span>Canvas weekender</span><b>$112.00</b></div>
+                              <div><span>Shipping</span><b>$16.00</b></div>
+                              <strong><span>Total</span><b>$128.00</b></strong>
+                            </aside>
+                          </div>
+                        </div>
+                        <aside class="checkout-annotations">
+                          <header>
+                            <div><b>2 annotations</b><span>#card-number</span></div>
+                            <em>OPEN</em>
+                          </header>
+                          <article>
+                            <span>USER NOTE · 1</span>
+                            <p>Validation stays red after I correct the card number.</p>
+                          </article>
+                          <article>
+                            <span>USER NOTE · 2</span>
+                            <p>After a failed submit, move focus to an error summary so the problem is announced.</p>
+                          </article>
+                          <footer>Same element · notes grouped</footer>
+                        </aside>
+                      </div>
+                      <figcaption>The person pins both human-feel problems to the real card field; Workbench groups them under one selector and one count badge.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-browsers.png" width="1920" height="937" alt="Workbench isolated local browser configuration and installed browser detection">
+                      <figcaption>Fresh profiles, process arguments, viewport, timeouts, session caps, ownership, and annotations remain under Workbench policy.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-backlog.png" width="1920" height="937" alt="Two approval-first proposals created from a cooperative browser review">
+                      <figcaption>The browser notes can become local proposals with their evidence and conversation still attached.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge local browser cooperation story"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
+              </section>
+
+              <section class="workflow-card wide-workflow" aria-labelledby="browser-remote-title">
+                <div>
+                  <p class="eyebrow">Browser cooperation · remote Workbench</p>
+                  <h3 id="browser-remote-title">Workbench is on another machine. Keep the browser beside the person anyway.</h3>
+                  <p>Run the small proxy/helper beside the reviewer. Workbench sends the same browser API requests over the configured authenticated HTTP/WS path; the helper turns them into local piped browser commands and returns semantic snapshots, selector-linked annotations, and bounded screenshots.</p>
+                  <div class="browser-path remote-path" aria-label="Remote cooperative browser path">
+                    <span>AI harness</span><i>MCP</i><span>Remote Workbench</span><i>authenticated HTTP/WS</i><span>Local proxy/helper</span><i>process pipe</i><span>Isolated local browser</span>
+                  </div>
+                </div>
+                <div class="feature-carousel workflow-carousel" data-carousel aria-label="Remote Workbench local browser helper story">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide ai-demo-slide is-active" data-carousel-slide>
+                      <div class="ai-demo browser-chat-demo" aria-label="Simulated AI explaining a remote Workbench browser helper session">
+                        <div class="ai-demo-topbar"><span>Remote Workbench</span><span>Local helper connected</span></div>
+                        <div class="ai-chat">
+                          <div class="ai-message user-message"><span class="ai-avatar">U</span><div><strong>User</strong><p>The server is in my lab. Can the shared Firefox still open here on my laptop?</p></div></div>
+                          <div class="ai-message assistant-message"><span class="ai-avatar">AI</span><div><strong>AI</strong><p>Yes. I will use the same MCP browser API. Workbench routes it to the authenticated helper on your laptop, and the helper opens a fresh local Firefox profile.</p></div></div>
+                          <div class="ai-message user-message"><span class="ai-avatar">U</span><div><strong>User</strong><p>I can see it. I added a note to the consent dialog and moved to the next page.</p></div></div>
+                          <div class="ai-message assistant-message"><span class="ai-avatar">AI</span><div><strong>AI</strong><p class="typewriter-copy" data-typewriter data-typewriter-delay="14">The helper returned the new semantic snapshot and your selector-linked note. I can continue from the same page without the remote server touching your personal browser profile.</p></div></div>
+                        </div>
+                      </div>
+                      <figcaption>The network hop changes; the browser tool contract and isolation guarantees do not.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-spec-docs.png" width="1920" height="937" alt="Spec Doc with direct browser and remote proxy-helper execution paths">
+                      <figcaption>The helper is the proxy: one small local component handles transport, local process control, and the same browser API contract.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge remote browser helper story"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
+              </section>
+
               <section class="workflow-card wide-workflow" aria-labelledby="backlog-workflow-title">
                 <div>
                   <p class="eyebrow">Backlog + Kanban</p>
@@ -440,7 +690,7 @@
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide workflow-focus-kanban is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-kanban.png" width="1920" height="1080" alt="MCP Workbench Kanban board with release and support cards">
+                      <img src="../../assets/img/workbench/screenshots/workbench-kanban.png" width="1920" height="937" alt="MCP Workbench Kanban board with release and support cards">
                       <figcaption>Use a real local board as the review surface for AI-drafted work.</figcaption>
                     </figure>
                     <figure class="carousel-slide ai-demo-slide" data-carousel-slide hidden>
@@ -474,7 +724,7 @@
                       <figcaption>Use the AI to draft provider-ready changes while keeping the write behind approval.</figcaption>
                     </figure>
                     <figure class="carousel-slide workflow-focus-backlog" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-backlog.png" width="1920" height="1080" alt="MCP Workbench Backlog proposal workspace with local drafts">
+                      <img src="../../assets/img/workbench/screenshots/workbench-backlog.png" width="1920" height="937" alt="MCP Workbench Backlog proposal workspace with local drafts">
                       <figcaption>Review the actual backlog proposal screen before anything is pushed to a provider.</figcaption>
                     </figure>
                   </div>
@@ -501,51 +751,88 @@
                     <figure class="carousel-slide is-active" data-carousel-slide>
                       <div class="demo-screen report-demo report-broken" role="img" aria-label="Simulated report page with missing data, failed charts, and N/A rows">
                         <div class="mini-app-chrome">
-                          <span>Quarterly margin report</span>
-                          <span>Trace TT-2048</span>
+                          <span>Quarterly margin &amp; allocation dashboard</span>
+                          <span>Trace TT-2048 · partial</span>
+                        </div>
+                        <div class="report-kpis">
+                          <span><small>Revenue</small><b>$8.42M</b><em>+6.8%</em></span>
+                          <span><small>Gross margin</small><b>12.4%</b><em>1/4 regions</em></span>
+                          <span class="kpi-error"><small>Allocated cost</small><b>N/A</b><em>request timed out</em></span>
+                          <span class="kpi-error"><small>Coverage</small><b>25%</b><em>3 regions missing</em></span>
                         </div>
                         <div class="report-grid">
                           <section class="report-chart good">
                             <h4>Revenue trend</h4>
-                            <span></span>
+                            <div class="chart-legend"><span>Actual revenue</span><b>+$0.54M</b></div>
+                            <svg class="line-chart" viewBox="0 0 420 132" role="img" aria-label="Revenue rises from 7.88 million to 8.42 million over six months">
+                              <defs>
+                                <linearGradient id="brokenRevenueArea" x1="0" y1="0" x2="0" y2="1">
+                                  <stop offset="0%" stop-color="#0b7480" stop-opacity="0.28"/>
+                                  <stop offset="100%" stop-color="#0b7480" stop-opacity="0.02"/>
+                                </linearGradient>
+                              </defs>
+                              <g class="chart-grid">
+                                <path d="M34 18H404M34 55H404M34 92H404"/>
+                                <path d="M34 18V105M108 18V105M182 18V105M256 18V105M330 18V105M404 18V105"/>
+                              </g>
+                              <path class="chart-area" fill="url(#brokenRevenueArea)" d="M34 91L108 82L182 70L256 61L330 43L404 30V105H34Z"/>
+                              <path class="chart-line" d="M34 91L108 82L182 70L256 61L330 43L404 30"/>
+                              <g class="chart-points">
+                                <circle cx="34" cy="91" r="4"/><circle cx="108" cy="82" r="4"/><circle cx="182" cy="70" r="4"/>
+                                <circle cx="256" cy="61" r="4"/><circle cx="330" cy="43" r="4"/><circle cx="404" cy="30" r="4"/>
+                              </g>
+                              <g class="chart-labels">
+                                <text x="34" y="124">Jan</text><text x="108" y="124">Feb</text><text x="182" y="124">Mar</text>
+                                <text x="256" y="124">Apr</text><text x="330" y="124">May</text><text x="404" y="124">Jun</text>
+                              </g>
+                            </svg>
                           </section>
                           <section class="report-chart error">
                             <h4>Cost allocation</h4>
-                            <p>Chart failed: timeout</p>
+                            <p>Chart failed after deprecated endpoint retry</p>
+                          </section>
+                          <section class="report-chart error compact-error">
+                            <h4>Margin by region</h4>
+                            <p>Required region parameter missing</p>
                           </section>
                           <section class="report-table">
                             <h4>Regional rows</h4>
-                            <div><b>North</b><span>OK</span><span>12.4%</span></div>
-                            <div><b>South</b><span>N/A</span><span>N/A</span></div>
-                            <div><b>EU</b><span>late</span><span>N/A</span></div>
+                            <div><b>North America</b><span>complete</span><span>12.4%</span></div>
+                            <div><b>South America</b><span>missing</span><span>N/A</span></div>
+                            <div><b>Europe</b><span>retry timed out</span><span>N/A</span></div>
+                            <div><b>APAC</b><span>missing</span><span>N/A</span></div>
                           </section>
                         </div>
                       </div>
                       <figcaption>Start from the broken report: missing rows, failed graphs, and no obvious reason why.</figcaption>
                     </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-think-trace-expanded.png" width="1920" height="937" alt="Expanded accounting repair trace showing the missing-region and deprecated-endpoint branches">
+                      <figcaption>Expand the real trace to compare both failure branches without rereading the whole support chat.</figcaption>
+                    </figure>
                     <figure class="carousel-slide ai-demo-slide" data-carousel-slide hidden>
                       <div class="ai-demo trace-debug-demo" aria-label="Workbench AI response explaining Think Trace error nodes for a slow incomplete report">
                         <div class="ai-demo-topbar">
-                          <span>Trace analysis</span>
-                          <span>TT-2048</span>
+                          <span>Support room · #finance-reporting</span>
+                          <span>Trace TT-2048 attached</span>
                         </div>
                         <div class="ai-chat">
                           <div class="ai-message user-message">
                             <span class="ai-avatar">U</span>
                             <div>
                               <strong>User</strong>
-                              <p>Why is report TT-2048 slow and incomplete?</p>
+                              <p>Finance says the regional dashboard has been incomplete since this morning. Why is trace TT-2048 slow, and is the accounting data itself bad?</p>
                             </div>
                           </div>
                           <div class="ai-message assistant-message">
                             <span class="ai-avatar">AI</span>
                             <div>
                               <strong>Workbench analysis</strong>
-                              <p class="typewriter-copy" data-typewriter data-typewriter-delay="18">The trace has two error nodes. The skill calls /accounting/v1/costs without the region parameter, then retries a deprecated totals endpoint. That explains the timeout, N/A rows, and missing cost chart.</p>
+                              <p class="typewriter-copy" data-typewriter data-typewriter-delay="18">The source data is intact. The trace branches into two client-side failures: the reporting skill calls regional costs without a region, then retries the deprecated v1 totals endpoint until most of the time budget is gone. That explains the N/A rows and both missing charts.</p>
                               <div class="ai-evidence-grid" data-typewriter-reveal>
-                                <span><b>Error node</b>Missing region parameter.</span>
-                                <span><b>Error node</b>Deprecated totals endpoint.</span>
-                                <span><b>Impact</b>Slow charts and N/A rows.</span>
+                                <span><b>Data check</b>12 sanitized monthly records loaded.</span>
+                                <span><b>Failure branch</b>Region omitted from v1 costs call.</span>
+                                <span><b>Retry branch</b>Deprecated totals endpoint timed out.</span>
                               </div>
                             </div>
                           </div>
@@ -556,26 +843,26 @@
                     <figure class="carousel-slide ai-demo-slide" data-carousel-slide hidden>
                       <div class="ai-demo trace-debug-demo" aria-label="Workbench AI response fixing a report skill typo and endpoint">
                         <div class="ai-demo-topbar">
-                          <span>Skill repair</span>
-                          <span>Applied locally</span>
+                          <span>Repair proposal</span>
+                          <span>Local change · reviewer note</span>
                         </div>
                         <div class="ai-chat">
                           <div class="ai-message user-message">
                             <span class="ai-avatar">U</span>
                             <div>
                               <strong>User</strong>
-                              <p>Can you fix the skill and rerun the report?</p>
+                              <p>Patch it locally, include APAC in the validation, and show me the evidence before we call it fixed.</p>
                             </div>
                           </div>
                           <div class="ai-message assistant-message">
                             <span class="ai-avatar">AI</span>
                             <div>
                               <strong>Workbench analysis</strong>
-                              <p class="typewriter-copy" data-typewriter data-typewriter-delay="18">Fixed. I corrected the misspelled accoutingService variable, changed the call to /accounting/v2/costs/by-region, and added a required region check before chart generation.</p>
+                              <p class="typewriter-copy" data-typewriter data-typewriter-delay="18">Patched and rerun. I corrected the accoutingService typo, moved the call to /accounting/v2/costs/by-region, added a fail-fast region check, and kept APAC as an explicit reviewer assertion. The new trace completes all four regions without the fallback retry.</p>
                               <div class="ai-evidence-grid" data-typewriter-reveal>
                                 <span><b>Typo</b>accoutingService -> accountingService.</span>
                                 <span><b>Endpoint</b>v2 costs by region.</span>
-                                <span><b>Guard</b>Fail fast before chart render.</span>
+                                <span><b>Human note</b>APAC must stay visible.</span>
                               </div>
                             </div>
                           </div>
@@ -586,23 +873,68 @@
                     <figure class="carousel-slide" data-carousel-slide hidden>
                       <div class="demo-screen report-demo report-fixed" role="img" aria-label="Simulated fixed report page with complete rows and working charts">
                         <div class="mini-app-chrome">
-                          <span>Quarterly margin report</span>
-                          <span>Rerun complete</span>
+                          <span>Quarterly margin &amp; allocation dashboard</span>
+                          <span>Rerun complete · 2.8s</span>
+                        </div>
+                        <div class="report-kpis">
+                          <span><small>Revenue</small><b>$8.42M</b><em>+6.8%</em></span>
+                          <span><small>Gross margin</small><b>12.1%</b><em>4/4 regions</em></span>
+                          <span><small>Allocated cost</small><b>$7.40M</b><em>complete</em></span>
+                          <span><small>Coverage</small><b>100%</b><em>12 months</em></span>
                         </div>
                         <div class="report-grid">
                           <section class="report-chart good">
                             <h4>Revenue trend</h4>
-                            <span></span>
+                            <div class="chart-legend"><span>Actual revenue</span><b>+$0.54M</b></div>
+                            <svg class="line-chart" viewBox="0 0 420 132" role="img" aria-label="Revenue rises from 7.88 million to 8.42 million over six months">
+                              <defs>
+                                <linearGradient id="fixedRevenueArea" x1="0" y1="0" x2="0" y2="1">
+                                  <stop offset="0%" stop-color="#0b7480" stop-opacity="0.28"/>
+                                  <stop offset="100%" stop-color="#0b7480" stop-opacity="0.02"/>
+                                </linearGradient>
+                              </defs>
+                              <g class="chart-grid">
+                                <path d="M34 18H404M34 55H404M34 92H404"/>
+                                <path d="M34 18V105M108 18V105M182 18V105M256 18V105M330 18V105M404 18V105"/>
+                              </g>
+                              <path class="chart-area" fill="url(#fixedRevenueArea)" d="M34 91L108 82L182 70L256 61L330 43L404 30V105H34Z"/>
+                              <path class="chart-line" d="M34 91L108 82L182 70L256 61L330 43L404 30"/>
+                              <g class="chart-points">
+                                <circle cx="34" cy="91" r="4"/><circle cx="108" cy="82" r="4"/><circle cx="182" cy="70" r="4"/>
+                                <circle cx="256" cy="61" r="4"/><circle cx="330" cy="43" r="4"/><circle cx="404" cy="30" r="4"/>
+                              </g>
+                              <g class="chart-labels">
+                                <text x="34" y="124">Jan</text><text x="108" y="124">Feb</text><text x="182" y="124">Mar</text>
+                                <text x="256" y="124">Apr</text><text x="330" y="124">May</text><text x="404" y="124">Jun</text>
+                              </g>
+                            </svg>
                           </section>
                           <section class="report-chart good bars">
                             <h4>Cost allocation</h4>
-                            <span></span>
+                            <div class="chart-legend"><span>Allocated by category</span><b>$7.40M</b></div>
+                            <div class="vertical-bars" role="img" aria-label="Payroll 3.2 million, cloud 1.5 million, operations 1.2 million, vendors 1.5 million">
+                              <span style="--bar-height: 88%"><b>$3.2M</b><i>Payroll</i></span>
+                              <span style="--bar-height: 46%"><b>$1.5M</b><i>Cloud</i></span>
+                              <span style="--bar-height: 36%"><b>$1.2M</b><i>Ops</i></span>
+                              <span style="--bar-height: 46%"><b>$1.5M</b><i>Vendors</i></span>
+                            </div>
+                          </section>
+                          <section class="report-chart good region-bars">
+                            <h4>Margin by region</h4>
+                            <div class="chart-legend"><span>Gross margin</span><b>12.1% avg</b></div>
+                            <div class="horizontal-bars" role="img" aria-label="North America 12.4 percent, South America 10.9 percent, Europe 13.1 percent, APAC 11.8 percent">
+                              <span><i>NA</i><b style="--bar-width: 94%">12.4%</b></span>
+                              <span><i>SA</i><b style="--bar-width: 83%">10.9%</b></span>
+                              <span><i>EU</i><b style="--bar-width: 100%">13.1%</b></span>
+                              <span><i>APAC</i><b style="--bar-width: 90%">11.8%</b></span>
+                            </div>
                           </section>
                           <section class="report-table">
                             <h4>Regional rows</h4>
-                            <div><b>North</b><span>OK</span><span>12.4%</span></div>
-                            <div><b>South</b><span>OK</span><span>10.9%</span></div>
-                            <div><b>EU</b><span>OK</span><span>13.1%</span></div>
+                            <div><b>North America</b><span>complete</span><span>12.4%</span></div>
+                            <div><b>South America</b><span>complete</span><span>10.9%</span></div>
+                            <div><b>Europe</b><span>complete</span><span>13.1%</span></div>
+                            <div><b>APAC</b><span>complete</span><span>11.8%</span></div>
                           </section>
                         </div>
                       </div>
@@ -630,11 +962,15 @@
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide workflow-focus-call is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-call-hierarchy-expanded.png" width="1920" height="1080" alt="MCP Workbench Code Scanner call hierarchy graph expanded across dependent API paths">
+                      <img src="../../assets/img/workbench/screenshots/workbench-call-hierarchy-expanded.png" width="1920" height="937" alt="MCP Workbench Code Scanner BrowserSessionManager hierarchy with linked incoming and outgoing nodes">
                       <figcaption>Start with an expanded call hierarchy search for the changed method.</figcaption>
                     </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-code-scanner-entrypoints.png" width="1920" height="937" alt="MCP Workbench Code Scanner entry-point browser focused on a service API">
+                      <figcaption>Browse entry points first so the review starts from externally reachable behavior, not an isolated method.</figcaption>
+                    </figure>
                     <figure class="carousel-slide workflow-focus-pr" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-local-pr-analysis-impact.png" width="1920" height="1080" alt="MCP Workbench local PR Analysis card showing a missing dependent API coverage finding">
+                      <img src="../../assets/img/workbench/screenshots/workbench-local-pr-analysis-impact.png" width="1920" height="937" alt="MCP Workbench local PR Analysis card showing a missing dependent API coverage finding">
                       <figcaption>Capture a local pull request analysis card before pushing any provider comment.</figcaption>
                     </figure>
                     <figure class="carousel-slide ai-demo-slide" data-carousel-slide hidden>
@@ -709,15 +1045,16 @@
           <section class="story-block" id="downloads" aria-labelledby="downloads-title">
             <div class="section-heading">
               <p class="eyebrow">Downloads and installs</p>
-              <h2 id="downloads-title">Run it locally, in Docker, or with a portable Java launcher.</h2>
+              <h2 id="downloads-title">Choose a build, keep its data folder, and connect your first agent.</h2>
+              <p class="section-kicker">The latest public preview is <strong>2.0.1-SNAPSHOT</strong>. The stable release stays <strong>v2.0.0</strong>; snapshot and stable links are kept separate below.</p>
             </div>
             <div class="download-grid">
-              <a class="trust-banner download-card" href="https://github.com/shreduck/mcp-workbench-release/releases/tag/v2.0.0" target="_blank" rel="noopener">
-                <strong>Latest version</strong>
-                <span>Open the newest release, currently v2.0.0, with the newest jar, Docker files, and desktop zips.</span>
+              <a class="trust-banner download-card" href="https://github.com/shreduck/mcp-workbench-release/releases/tag/2.0.1-SNAPSHOT" target="_blank" rel="noopener">
+                <strong>Latest snapshot · 2.0.1-SNAPSHOT</strong>
+                <span>Preview the current jar, Docker bundle, launcher-only zips, bundled-runtime desktop zips, checksums, and release notes.</span>
               </a>
               <a class="trust-banner download-card" href="https://github.com/shreduck/mcp-workbench-release/releases/tag/v2.0.0" target="_blank" rel="noopener">
-                <strong>Latest stable</strong>
+                <strong>Latest stable · v2.0.0</strong>
                 <span>Open the latest stable GitHub release, currently v2.0.0.</span>
               </a>
               <a class="trust-banner download-card" href="https://github.com/shreduck/mcp-workbench-release#run-with-docker" target="_blank" rel="noopener">
@@ -726,16 +1063,42 @@
               </a>
               <a class="trust-banner download-card" href="https://github.com/shreduck/mcp-workbench-release#connect-claude" target="_blank" rel="noopener">
                 <strong>Connect an agent</strong>
-                <span>Generate an MCP key in the portal, then copy the client configuration for Claude or another MCP client.</span>
+                <span>Generate a scoped MCP key, then use the Connect tutorial tab for Claude Code, Codex, Copilot, Grok, or another MCP client.</span>
               </a>
-              <button class="trust-banner download-card download-action-card" type="button" data-download-name="Windows with bundled Java" data-download-url="https://github.com/shreduck/mcp-workbench-release/releases/download/v2.0.0/mcp-workbench-windows-with-jre-v2.0.0.zip">
-                <strong>Windows release download</strong>
-                <span>Download the latest Windows zip with a bundled Java runtime after the unsigned-app warning.</span>
+              <button class="trust-banner download-card download-action-card" type="button" data-download-name="Windows with bundled Java (2.0.1-SNAPSHOT)" data-download-url="https://github.com/shreduck/mcp-workbench-release/releases/download/2.0.1-SNAPSHOT/mcp-workbench-windows-with-jre-2.0.1-SNAPSHOT.zip">
+                <strong>Windows snapshot with Java</strong>
+                <span>Download the 2.0.1-SNAPSHOT Windows zip with its bundled runtime after the unsigned-app warning.</span>
               </button>
-              <button class="trust-banner download-card download-action-card" type="button" data-download-name="macOS with bundled Java" data-download-url="https://github.com/shreduck/mcp-workbench-release/releases/download/v2.0.0/mcp-workbench-mac-with-jre-v2.0.0.zip">
-                <strong>macOS release download</strong>
-                <span>Download the latest macOS zip with a bundled Java runtime after the unsigned-app warning.</span>
+              <button class="trust-banner download-card download-action-card" type="button" data-download-name="macOS with bundled Java (2.0.1-SNAPSHOT)" data-download-url="https://github.com/shreduck/mcp-workbench-release/releases/download/2.0.1-SNAPSHOT/mcp-workbench-mac-with-jre-2.0.1-SNAPSHOT.zip">
+                <strong>macOS snapshot with Java</strong>
+                <span>Download the 2.0.1-SNAPSHOT macOS zip with its bundled runtime after the unsigned-app warning.</span>
               </button>
+            </div>
+            <div class="install-steps" aria-label="MCP Workbench installation steps">
+              <article>
+                <span>1</span>
+                <div><strong>Download and extract</strong><p>Choose the bundled-runtime zip unless you deliberately want the smaller launcher-only build and already manage a compatible Java runtime.</p></div>
+              </article>
+              <article>
+                <span>2</span>
+                <div><strong>Start the launcher</strong><p>Run the Windows or macOS launcher from the extracted folder. It starts Workbench with a dedicated data directory and attributes launcher requests as <code>windows-launcher</code> or <code>mac-launcher</code> in the audit trail.</p></div>
+              </article>
+              <article class="install-warning">
+                <span>3</span>
+                <div><strong>macOS: allow the unsigned app</strong><p>If macOS blocks the first launch, open <strong>System Settings → Privacy &amp; Security</strong>, find the blocked MCP Workbench message, choose <strong>Open Anyway</strong>, then confirm. Only do this for the release you intended to download.</p></div>
+              </article>
+              <article class="install-warning">
+                <span>4</span>
+                <div><strong>Windows: review the warning</strong><p>If SmartScreen appears, verify the download came from the release repository, inspect the published SHA-256 file if needed, then choose the option to run it. Corporate policy may require an administrator.</p></div>
+              </article>
+              <article>
+                <span>5</span>
+                <div><strong>Create an account key</strong><p>Sign in, open User Account, create one named MCP key per agent, and narrow its tool groups before copying the secret. The secret is shown once.</p></div>
+              </article>
+              <article>
+                <span>6</span>
+                <div><strong>Connect and test</strong><p>Open Connect, select your AI harness tab, follow the four steps, and ask the agent to list available tools before granting provider credentials or write scopes.</p></div>
+              </article>
             </div>
           </section>
 
@@ -757,6 +1120,14 @@
               <div class="trust-banner">
                 <strong>Agents get only what you connect</strong>
                 <span>MCP clients need a portal key and can only use the tools and credentials configured for that local Workbench instance.</span>
+              </div>
+              <div class="trust-banner">
+                <strong>Cooperative browsers start clean</strong>
+                <span>Workbench launches a temporary isolated profile rather than mounting your personal browser profile, saved passwords, cookies, history, or extensions. The same rule applies when a remote Workbench uses the local proxy/helper.</span>
+              </div>
+              <div class="trust-banner">
+                <strong>Fetches still have a network boundary</strong>
+                <span>Fetch Proxy validates destinations, redirects, private-network addresses, response sizes, retention, and global/per-key allow and deny rules. It is a controlled relay, not an unrestricted tunnel.</span>
               </div>
             </div>
           </section>
@@ -817,6 +1188,14 @@
               <article class="trust-banner">
                 <strong>Provider calls leave the machine</strong>
                 <span>Local-first storage does not make GitHub, Azure DevOps, OAuth, or other provider API calls local. Anything an authorized tool sends to those services is subject to that provider account, token, network, audit, and retention model.</span>
+              </article>
+              <article class="trust-banner warning-banner">
+                <strong>Remote browser helpers cross a network</strong>
+                <span>When Workbench is remote, protect the configured HTTP/WS or HTTPS/WSS helper path, authenticate it, keep session lifetimes narrow, and expose only the browser tool contract you intend to use.</span>
+              </article>
+              <article class="trust-banner">
+                <strong>Temporary does not mean invisible</strong>
+                <span>Browser screenshots, semantic snapshots, annotations, fetched pages, and delegated tool output can contain sensitive material. Keep profiles isolated, narrow MCP keys, delete retained results, and close sessions when the task is finished.</span>
               </article>
             </div>
           </section>
@@ -1425,14 +1804,31 @@ unless applicable law requires otherwise.</pre>
     </div>
     <div class="carousel-modal" id="carouselModal" hidden>
       <div class="carousel-modal-backdrop" data-carousel-modal-close></div>
-      <section class="carousel-modal-panel" role="dialog" aria-modal="true" aria-labelledby="carousel-modal-title">
+      <section class="carousel-modal-panel" role="dialog" aria-modal="true" aria-labelledby="carousel-modal-title" aria-describedby="carousel-modal-description">
         <button class="download-modal-close" type="button" aria-label="Close enlarged carousel" data-carousel-modal-close>
           <svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
         </button>
-        <p class="eyebrow">Screenshot</p>
-        <h2 id="carousel-modal-title">Workbench screenshot</h2>
+        <header class="carousel-modal-story-header">
+          <div class="carousel-modal-story-copy">
+            <p class="eyebrow" id="carouselModalEyebrow">Feature story</p>
+            <h2 id="carousel-modal-title">Workbench screenshot</h2>
+            <p id="carousel-modal-description"></p>
+          </div>
+          <div class="carousel-modal-series-controls" aria-label="Move between carousel stories">
+            <button type="button" data-carousel-modal-series-prev aria-label="Previous carousel">
+              <svg width="24" height="24" aria-hidden="true" viewBox="0 0 24 24"><path d="m6 15 6-6 6 6"/></svg>
+            </button>
+            <span>
+              <b id="carouselModalSeriesCounter">Story 1 of 1</b>
+              <small>↑↓ stories · ←→ images</small>
+            </span>
+            <button type="button" data-carousel-modal-series-next aria-label="Next carousel">
+              <svg width="24" height="24" aria-hidden="true" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+          </div>
+        </header>
         <figure class="carousel-modal-figure">
-          <img id="carouselModalImage" src="../../assets/img/workbench/screenshots/workbench-home.png" width="1280" height="720" alt="">
+          <img id="carouselModalImage" src="../../assets/img/workbench/screenshots/workbench-home.png" width="1920" height="937" alt="">
           <div class="carousel-modal-html" id="carouselModalHtml" hidden></div>
           <button class="carousel-modal-nav carousel-modal-prev" type="button" data-carousel-modal-prev aria-label="Previous screenshot">
             <svg width="30" height="30" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
@@ -1516,30 +1912,42 @@ unless applicable law requires otherwise.</pre>
         });
 
         const licenseFloat = document.getElementById("licenseFloat");
-        const featuresSection = document.getElementById("features");
+        const licenseFloatDesktop = window.matchMedia("(min-width: 761px)");
+
+        function licenseFloatScrollLimit() {
+          return licenseFloatDesktop.matches ? 150 : 50;
+        }
 
         function updateLicenseFloat() {
-          if (!licenseFloat || !featuresSection) {
+          if (!licenseFloat) {
             return;
           }
-          const featuresVisible = featuresSection.getBoundingClientRect().top < window.innerHeight;
-          licenseFloat.classList.toggle("is-hidden", window.scrollY > 0 && featuresVisible);
+          licenseFloat.classList.toggle("is-hidden", window.scrollY > licenseFloatScrollLimit());
         }
 
         window.addEventListener("scroll", updateLicenseFloat, { passive: true });
         window.addEventListener("resize", updateLicenseFloat);
+        licenseFloatDesktop.addEventListener("change", updateLicenseFloat);
         updateLicenseFloat();
 
         const carouselModal = document.getElementById("carouselModal");
         const modalTitle = document.getElementById("carousel-modal-title");
+        const modalEyebrow = document.getElementById("carouselModalEyebrow");
+        const modalDescription = document.getElementById("carousel-modal-description");
+        const modalSeriesCounter = document.getElementById("carouselModalSeriesCounter");
         const modalImage = document.getElementById("carouselModalImage");
         const modalHtml = document.getElementById("carouselModalHtml");
         const modalCaption = document.getElementById("carouselModalCaption");
         const modalPrev = document.querySelector("[data-carousel-modal-prev]");
         const modalNext = document.querySelector("[data-carousel-modal-next]");
+        const modalSeriesPrev = document.querySelector("[data-carousel-modal-series-prev]");
+        const modalSeriesNext = document.querySelector("[data-carousel-modal-series-next]");
+        const carousels = Array.from(document.querySelectorAll("[data-carousel]"));
         const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         let modalSlides = [];
         let modalIndex = 0;
+        let modalCarouselIndex = 0;
+        let modalOpener = null;
 
         function prepareTypewriter(copy) {
           if (!copy.dataset.typewriterText) {
@@ -1633,8 +2041,31 @@ unless applicable law requires otherwise.</pre>
           }
         }
 
-        function openCarouselModal(carousel, index) {
-          const heading = carousel.closest(".feature-card, .workflow-card")?.querySelector("h3")?.textContent || "Workbench screenshot";
+        function carouselStory(carousel) {
+          const card = carousel.closest(".feature-card, .workflow-card");
+          const copyRoot = card?.classList.contains("workflow-card")
+            ? card.querySelector(":scope > div:first-child")
+            : card;
+          const eyebrow = copyRoot?.querySelector(":scope > .eyebrow")?.textContent
+            || carousel.getAttribute("aria-label")
+            || "Feature story";
+          const heading = copyRoot?.querySelector("h3")?.textContent
+            || card?.querySelector("h3")?.textContent
+            || "Workbench screenshot";
+          const description = Array.from(copyRoot?.querySelectorAll(":scope > p:not(.eyebrow)") || [])
+            .map((paragraph) => paragraph.textContent.trim())
+            .filter(Boolean)
+            .join(" ");
+          return { eyebrow, heading, description };
+        }
+
+        function loadModalCarousel(carouselIndex, requestedSlideIndex) {
+          if (!carousels.length) {
+            return;
+          }
+          modalCarouselIndex = (carouselIndex + carousels.length) % carousels.length;
+          const carousel = carousels[modalCarouselIndex];
+          const story = carouselStory(carousel);
           modalSlides = Array.from(carousel.querySelectorAll("[data-carousel-slide]")).map((slide) => {
             const image = slide.querySelector(":scope > img");
             const richContent = Array.from(slide.children).find((child) => child.tagName !== "IMG" && child.tagName !== "FIGCAPTION");
@@ -1653,21 +2084,45 @@ unless applicable law requires otherwise.</pre>
               caption: caption ? caption.textContent : ""
             };
           });
-          modalTitle.textContent = heading;
+          const activeIndex = Array.from(carousel.querySelectorAll("[data-carousel-slide]"))
+            .findIndex((slide) => slide.classList.contains("is-active"));
+          const slideIndex = Number.isInteger(requestedSlideIndex)
+            ? requestedSlideIndex
+            : Math.max(0, activeIndex);
+          modalEyebrow.textContent = story.eyebrow;
+          modalTitle.textContent = story.heading;
+          modalDescription.textContent = story.description;
+          modalDescription.hidden = !story.description;
+          modalSeriesCounter.textContent = "Story " + (modalCarouselIndex + 1) + " of " + carousels.length;
+          const singleCarousel = carousels.length < 2;
+          modalSeriesPrev.hidden = singleCarousel;
+          modalSeriesNext.hidden = singleCarousel;
+          showModalSlide(slideIndex);
+        }
+
+        function openCarouselModal(carousel, index, opener) {
+          modalOpener = opener || null;
           carouselModal.hidden = false;
-          showModalSlide(index);
+          loadModalCarousel(carousels.indexOf(carousel), index);
+          carouselModal.querySelector("[data-carousel-modal-close]")?.focus();
+        }
+
+        function showAdjacentModalCarousel(delta) {
+          loadModalCarousel(modalCarouselIndex + delta);
         }
 
         function closeCarouselModal() {
           carouselModal.hidden = true;
           modalSlides = [];
           modalHtml.replaceChildren();
+          modalOpener?.focus();
+          modalOpener = null;
         }
 
         const CAROUSEL_AUTO_ADVANCE_DELAY = 45000;
         const CAROUSEL_FIRST_ADVANCE_STAGGER = 10000;
 
-        document.querySelectorAll("[data-carousel]").forEach((carousel, carouselIndex) => {
+        carousels.forEach((carousel, carouselIndex) => {
           const slides = Array.from(carousel.querySelectorAll("[data-carousel-slide]"));
           const prev = carousel.querySelector("[data-carousel-prev]");
           const next = carousel.querySelector("[data-carousel-next]");
@@ -1756,7 +2211,7 @@ unless applicable law requires otherwise.</pre>
 
           open?.addEventListener("click", () => {
             stopAuto();
-            openCarouselModal(carousel, index);
+            openCarouselModal(carousel, index, open);
           });
 
           render(index);
@@ -1764,6 +2219,8 @@ unless applicable law requires otherwise.</pre>
 
         modalPrev?.addEventListener("click", () => showModalSlide(modalIndex - 1));
         modalNext?.addEventListener("click", () => showModalSlide(modalIndex + 1));
+        modalSeriesPrev?.addEventListener("click", () => showAdjacentModalCarousel(-1));
+        modalSeriesNext?.addEventListener("click", () => showAdjacentModalCarousel(1));
         document.querySelectorAll("[data-carousel-modal-close]").forEach((button) => {
           button.addEventListener("click", closeCarouselModal);
         });
@@ -1773,10 +2230,20 @@ unless applicable law requires otherwise.</pre>
             closeCarouselModal();
           }
           if (!carouselModal.hidden && event.key === "ArrowLeft") {
+            event.preventDefault();
             showModalSlide(modalIndex - 1);
           }
           if (!carouselModal.hidden && event.key === "ArrowRight") {
+            event.preventDefault();
             showModalSlide(modalIndex + 1);
+          }
+          if (!carouselModal.hidden && event.key === "ArrowUp") {
+            event.preventDefault();
+            showAdjacentModalCarousel(-1);
+          }
+          if (!carouselModal.hidden && event.key === "ArrowDown") {
+            event.preventDefault();
+            showAdjacentModalCarousel(1);
           }
         });
       })();
