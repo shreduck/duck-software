@@ -3632,11 +3632,6 @@ button.store-badge:focus {
   filter: saturate(1.08);
 }
 
-.store-badge.beta-build-badge {
-  border-color: #5631aa;
-  background: linear-gradient(135deg, #6c43ca, #4c2d9c);
-}
-
 .colourtrainer-page .store-badge[aria-disabled="true"],
 .colourtrainer-app-card .store-badge[aria-disabled="true"] {
   cursor: default;
