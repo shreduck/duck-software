@@ -9,5 +9,8 @@ Static GitHub Pages site for Duck Code app pages.
 - `apps/veintrack/privacy.html` is the VeinTrack privacy page.
 - `apps/veintrack/licensing.html` is the VeinTrack app license page.
 - `apps/veintrack/support.html` is the VeinTrack support page.
+- `apps/colourtrainer/index.html` is the ColourTrainer product page.
+- `apps/colourtrainer/privacy.html` is the ColourTrainer privacy policy.
+- `apps/colourtrainer/support.html` is the ColourTrainer support page.
 
 VeinTrack source material came from `/Users/rafa/Documents/Code/Personal/VeinTrack/page-manager-handoff/veintrack`.

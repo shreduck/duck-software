@@ -2963,7 +2963,8 @@ button.store-badge:focus {
 }
 
 .reading-block p,
-.reading-block ul {
+.reading-block ul,
+.reading-block ol {
   margin: 0 0 20px;
 }
 
@@ -2973,7 +2974,8 @@ button.store-badge:focus {
   font-size: 1.35rem;
 }
 
-.reading-block ul {
+.reading-block ul,
+.reading-block ol {
   padding-left: 1.2em;
 }
 
