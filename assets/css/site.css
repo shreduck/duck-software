@@ -314,8 +314,13 @@ p {
 .css-reference { position: relative; display: inline-flex; align-items: center; gap: 7px; cursor: help; }
 .css-reference i { width: 14px; height: 14px; flex: 0 0 14px; border: 1px solid rgba(31, 42, 45, 0.28); border-radius: 50%; }
 .css-reference b { display: inline-grid; width: 16px; height: 16px; place-items: center; border: 1px solid currentColor; border-radius: 50%; font-size: 0.68rem; }
-.css-reference-tooltip { position: absolute; z-index: 4; bottom: calc(100% + 9px); left: 0; display: none; width: min(320px, 76vw); padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--ink); color: var(--paper) !important; box-shadow: var(--shadow-soft); font-size: 0.76rem !important; line-height: 1.4; }
-.css-reference-tooltip strong { display: block; margin-bottom: 3px; color: var(--paper); }
+.css-reference-tooltip { position: absolute; z-index: 4; bottom: calc(100% + 9px); left: 0; display: none; width: min(330px, 76vw); padding: 11px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink) !important; box-shadow: var(--shadow-soft); font-size: 0.76rem !important; line-height: 1.4; }
+.css-reference-tooltip strong { display: block; margin-bottom: 3px; color: var(--ink); }
+.css-reference-method { display: block; color: var(--muted) !important; }
+.css-reference-neighbours { display: grid; gap: 4px; margin-top: 8px; }
+.css-reference-neighbours span { display: flex; align-items: center; gap: 6px; color: var(--ink) !important; }
+.css-reference-neighbours i { width: 12px; height: 12px; flex: 0 0 12px; }
+.css-reference-neighbours code { color: var(--muted); font-size: 0.72rem; }
 .css-reference:hover .css-reference-tooltip, .css-reference:focus .css-reference-tooltip { display: block; }
 
 @media (max-width: 600px) {
