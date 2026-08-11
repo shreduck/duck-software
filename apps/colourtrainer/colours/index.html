@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Full Colour Sheet | ColourTrainer</title>
+  <meta name="description" content="Browse ColourTrainer's full offline colour atlas.">
+  <link rel="stylesheet" href="../../../assets/css/site.css">
+</head>
+<body class="colourtrainer-page colour-sheet-page">
+  <header class="site-header"><a class="brand" href="../../../">Duck Code</a><nav aria-label="Primary navigation"><a href="../">ColourTrainer</a><a href="#sheet">Full colour sheet</a></nav></header>
+  <main><section class="catalog-hero"><p class="eyebrow">ColourTrainer atlas</p><h1>Full colour sheet</h1><p class="lede">Browse the same bundled colour names, approximate sRGB swatches, families, and nearest CSS references used by ColourTrainer.</p><p class="note">Samples are everyday-display approximations, not calibrated physical colour references. Names and family boundaries can vary between people, languages, and contexts.</p></section>
+  <section class="section" id="sheet"><div class="colour-sheet-controls"><label>Find a colour <input id="colour-search" type="search" placeholder="Name, hex, family, or CSS reference"></label><span id="colour-count" aria-live="polite"></span></div><div id="colour-sheet" class="colour-sheet" aria-live="polite"></div></section></main>
+  <footer class="site-footer"><span>Duck Code</span><a href="mailto:duck_code_contact@proton.me">duck_code_contact@proton.me</a></footer>
+  <script>
+  document.addEventListener('DOMContentLoaded', async () => { const sheet=document.querySelector('#colour-sheet'), search=document.querySelector('#colour-search'), count=document.querySelector('#colour-count'); const atlas=await fetch('../data/colour-atlas.json').then(r=>r.json()); const draw=()=>{const q=search.value.trim().toLowerCase(); const entries=atlas.entries.filter(e=>!q||[e.name,e.hex,e.family,e.closestCSSName].join(' ').toLowerCase().includes(q)); count.textContent=`${entries.length.toLocaleString()} of ${atlas.entries.length.toLocaleString()} colours`; sheet.innerHTML=entries.map(e=>`<article class="colour-sheet-entry" id="${e.id}"><span class="colour-sheet-swatch" style="background:${e.hex}"></span><strong>${e.name}</strong><span>${e.family} · ${e.hex}</span><small>Closest CSS: ${e.closestCSSName} ${e.closestCSSHex}</small></article>`).join('');}; search.addEventListener('input',draw); draw(); });
+  </script>
+</body></html>

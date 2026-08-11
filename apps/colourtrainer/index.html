@@ -47,6 +47,7 @@
 
           <div class="page-pill-links" aria-label="ColourTrainer page links">
             <a href="#training">The trainer</a>
+            <a href="#colour-of-the-day">Colour of the Day</a>
             <a href="#research">The research</a>
             <a href="#references">Data sources</a>
             <a href="mailto:duck_code_contact@proton.me?subject=ColourTrainer%20beta">Beta feedback</a>
@@ -73,6 +74,14 @@
           <strong>Public beta available</strong>
           <span>Join ColourTrainer through Apple TestFlight. The app is still in active development and there is no App Store listing yet.</span>
         </a>
+      </section>
+
+      <section class="top-notice" id="colour-of-the-day" aria-label="Colour of the Day">
+        <aside class="colour-of-day-mini colour-of-day-feature" data-colour-of-day data-colour-atlas="data/colour-atlas.json" data-colour-sheet="colours/" hidden>
+          <span class="colour-of-day-swatch" data-colour-swatch aria-hidden="true"></span>
+          <span><small>Today in ColourTrainer</small><strong data-colour-name></strong><em><span data-colour-family></span> · <span data-colour-hex></span></em></span>
+          <a data-colour-sheet href="colours/">Check the full colour sheet</a>
+        </aside>
       </section>
 
       <div class="feature-layout">
@@ -283,5 +292,6 @@
     </footer>
 
     <script src="../../assets/js/scroll-focus.js" defer></script>
+    <script src="../../assets/js/colour-atlas.js" defer></script>
   </body>
 </html>
