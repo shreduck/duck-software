@@ -311,8 +311,12 @@ p {
 .colour-sheet-entry { display: grid; gap: 6px; padding: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
 .colour-sheet-swatch { display: block; height: 116px; border: 1px solid rgba(31, 42, 45, 0.22); border-radius: 7px; }
 .colour-sheet-entry span, .colour-sheet-entry small { color: var(--muted); font-size: 0.82rem; }
-.css-reference { display: inline-flex; align-items: center; gap: 7px; }
+.css-reference { position: relative; display: inline-flex; align-items: center; gap: 7px; cursor: help; }
 .css-reference i { width: 14px; height: 14px; flex: 0 0 14px; border: 1px solid rgba(31, 42, 45, 0.28); border-radius: 50%; }
+.css-reference b { display: inline-grid; width: 16px; height: 16px; place-items: center; border: 1px solid currentColor; border-radius: 50%; font-size: 0.68rem; }
+.css-reference-tooltip { position: absolute; z-index: 4; bottom: calc(100% + 9px); left: 0; display: none; width: min(320px, 76vw); padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--ink); color: var(--paper) !important; box-shadow: var(--shadow-soft); font-size: 0.76rem !important; line-height: 1.4; }
+.css-reference-tooltip strong { display: block; margin-bottom: 3px; color: var(--paper); }
+.css-reference:hover .css-reference-tooltip, .css-reference:focus .css-reference-tooltip { display: block; }
 
 @media (max-width: 600px) {
   .colour-of-day-mini { grid-template-columns: 42px minmax(0, 1fr); }
