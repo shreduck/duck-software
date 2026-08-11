@@ -18,19 +18,12 @@
     const family = document.querySelector('#colour-family');
     const appearance = document.querySelector('#colour-appearance');
     const count = document.querySelector('#colour-count');
-    const [atlas, cssCatalogue] = await Promise.all([
+    const [atlas, cssCatalogue, colourStandard] = await Promise.all([
       fetch('../data/colour-atlas.json').then((response) => response.json()),
       fetch('../data/css-named-colours.json').then((response) => response.json()),
+      fetch('../data/colour-family-standard.json').then((response) => response.json()),
     ]);
     const escape = (value) => String(value).replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
-    const metrics = (hex) => {
-      const values = [1, 3, 5].map((index) => Number.parseInt(hex.slice(index, index + 2), 16) / 255);
-      const [red, green, blue] = values;
-      const maximum = Math.max(...values), minimum = Math.min(...values);
-      const lightness = 0.2126 * red + 0.7152 * green + 0.0722 * blue;
-      const chroma = maximum - minimum;
-      return { lightness, chroma };
-    };
     const oklab = (hex) => {
       const linear = (offset) => { const value = Number.parseInt(hex.slice(offset, offset + 2), 16) / 255; return value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4; };
       const red = linear(1), green = linear(3), blue = linear(5);
@@ -43,13 +36,16 @@
     const nearestFive = (hex) => { const target = oklab(hex); return cssReferences.map((reference) => ({ ...reference, distance: Math.hypot(reference.lab.l - target.l, reference.lab.a - target.a, reference.lab.b - target.b) })).sort((first, second) => first.distance - second.distance || first.id.localeCompare(second.id)).slice(0, 5); };
     const matchesAppearance = (entry, filter) => {
       if (!filter) return true;
-      const { lightness, chroma } = metrics(entry.hex);
-      if (filter === 'light') return lightness >= 0.72;
-      if (filter === 'dark') return lightness < 0.32;
-      if (filter === 'mid') return lightness >= 0.32 && lightness < 0.72;
-      if (filter === 'vivid') return chroma >= 0.55;
-      if (filter === 'soft') return chroma >= 0.18 && chroma < 0.55;
-      return chroma < 0.18;
+      const lab = oklab(entry.hex);
+      const lightness = lab.l;
+      const chroma = Math.hypot(lab.a, lab.b);
+      const standard = colourStandard.appearance;
+      if (filter === 'light') return lightness >= standard.midToneUpperLightness;
+      if (filter === 'dark') return lightness < standard.darkUpperLightness;
+      if (filter === 'mid') return lightness >= standard.darkUpperLightness && lightness < standard.midToneUpperLightness;
+      if (filter === 'vivid') return chroma >= standard.softUpperChroma;
+      if (filter === 'soft') return chroma >= standard.mutedUpperChroma && chroma < standard.softUpperChroma;
+      return chroma < standard.mutedUpperChroma;
     };
     family.innerHTML += [...new Set(atlas.entries.map((entry) => entry.family))].sort().map((name) => `<option value="${escape(name)}">${escape(name)}</option>`).join('');
     const draw = () => {

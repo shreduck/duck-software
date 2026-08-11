@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 3,
+  "appearance": {
+    "veryDarkUpperLightness": 0.28,
+    "darkUpperLightness": 0.46,
+    "midToneUpperLightness": 0.7,
+    "lightUpperLightness": 0.87,
+    "mutedUpperChroma": 0.055,
+    "softUpperChroma": 0.14
+  },
+  "atlas": {
+    "white": {
+      "brightMinimumLightness": 0.94,
+      "brightMaximumChroma": 0.055,
+      "offWhiteMinimumLightness": 0.9,
+      "offWhiteMaximumChroma": 0.032
+    },
+    "black": { "maximumLightness": 0.2, "maximumChroma": 0.08 },
+    "neutralMaximumChroma": 0.035,
+    "pink": { "minimumLightness": 0.68, "maximumChroma": 0.2, "minimumWrappedHue": 315, "maximumWrappedHue": 25 },
+    "brown": { "minimumHue": 25, "maximumHue": 85, "maximumLightness": 0.68, "maximumChroma": 0.16 },
+    "chromaticUpperHue": [
+      { "family": "red", "upperHue": 35 },
+      { "family": "orange", "upperHue": 90 },
+      { "family": "yellow", "upperHue": 115 },
+      { "family": "green", "upperHue": 168 },
+      { "family": "cyan", "upperHue": 230 },
+      { "family": "blue", "upperHue": 283 },
+      { "family": "violet", "upperHue": 315 }
+    ]
+  },
+  "atlasOverrides": [
+    { "entryID": "colour-name.chrome-white", "family": "white", "reason": "Reviewed source-defined white name outside the numeric off-white corridor." },
+    { "entryID": "colour-name.durian-white", "family": "white", "reason": "Reviewed source-defined white name outside the numeric off-white corridor." },
+    { "entryID": "colour-name.matt-white", "family": "white", "reason": "Reviewed source-defined white name outside the numeric off-white corridor." },
+    { "entryID": "colour-name.muffled-white", "family": "white", "reason": "Reviewed source-defined white name outside the numeric off-white corridor." },
+    { "entryID": "colour-name.navajo-white", "family": "white", "reason": "Reviewed source-defined white name outside the numeric off-white corridor." },
+    { "entryID": "colour-name.olympus-white", "family": "white", "reason": "Reviewed source-defined white name outside the numeric off-white corridor." },
+    { "entryID": "colour-name.timid-white", "family": "white", "reason": "Reviewed source-defined white name outside the numeric off-white corridor." },
+    { "entryID": "colour-name.whisper-of-white", "family": "white", "reason": "Reviewed source-defined white name outside the numeric off-white corridor." },
+    { "entryID": "colour-name.white-asparagus", "family": "white", "reason": "Reviewed source-defined white name outside the numeric off-white corridor." },
+    { "entryID": "colour-name.white-chocolate", "family": "white", "reason": "Reviewed source-defined white name outside the numeric off-white corridor." },
+    { "entryID": "colour-name.white-strawberry", "family": "white", "reason": "Reviewed source-defined white name outside the numeric off-white corridor." }
+  ],
+  "toneCorridors": [
+    { "familyID": "colour-group.red", "minimumHue": 0, "maximumHue": 35 },
+    { "familyID": "colour-group.orange", "minimumHue": 40, "maximumHue": 70 },
+    { "familyID": "colour-group.yellow", "minimumHue": 80, "maximumHue": 105 },
+    { "familyID": "colour-group.yellow-green", "minimumHue": 108, "maximumHue": 132 },
+    { "familyID": "colour-group.green", "minimumHue": 135, "maximumHue": 165 },
+    { "familyID": "colour-group.cyan", "minimumHue": 165, "maximumHue": 210 },
+    { "familyID": "colour-group.blue", "minimumHue": 220, "maximumHue": 265 },
+    { "familyID": "colour-group.violet", "minimumHue": 270, "maximumHue": 305 },
+    { "familyID": "colour-group.magenta", "minimumHue": 310, "maximumHue": 335 },
+    { "familyID": "colour-group.pink", "minimumHue": 335, "maximumHue": 360 }
+  ]
+}
