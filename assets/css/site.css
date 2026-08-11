@@ -297,26 +297,28 @@ p {
 .colour-of-day-feature { max-width: 760px; margin-inline: auto; }
 
 .colour-sheet-controls {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(230px, 1fr) repeat(2, minmax(150px, auto)) auto;
   align-items: end;
-  justify-content: space-between;
-  gap: 18px;
+  gap: 14px;
   margin-bottom: 24px;
 }
 
 .colour-sheet-controls label { display: grid; gap: 6px; font-weight: 760; }
-.colour-sheet-controls input { width: min(460px, 78vw); padding: 11px 12px; border: 1px solid var(--line); border-radius: 8px; font: inherit; }
+.colour-sheet-controls input, .colour-sheet-controls select { width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; }
 .colour-sheet-controls span { color: var(--muted); font-weight: 700; }
 .colour-sheet { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
 .colour-sheet-entry { display: grid; gap: 6px; padding: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
 .colour-sheet-swatch { display: block; height: 116px; border: 1px solid rgba(31, 42, 45, 0.22); border-radius: 7px; }
 .colour-sheet-entry span, .colour-sheet-entry small { color: var(--muted); font-size: 0.82rem; }
+.css-reference { display: inline-flex; align-items: center; gap: 7px; }
+.css-reference i { width: 14px; height: 14px; flex: 0 0 14px; border: 1px solid rgba(31, 42, 45, 0.28); border-radius: 50%; }
 
 @media (max-width: 600px) {
   .colour-of-day-mini { grid-template-columns: 42px minmax(0, 1fr); }
   .colour-of-day-mini a { grid-column: 1 / -1; }
   .colour-of-day-swatch { width: 42px; height: 42px; }
-  .colour-sheet-controls { align-items: start; flex-direction: column; }
+  .colour-sheet-controls { grid-template-columns: 1fr; align-items: start; }
 }
 
 .app-card-links a,
