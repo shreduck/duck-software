@@ -1,0 +1,29 @@
+import {createCodeScannerFindingsView} from '/js/apps/code-scanner-findings.js';
+import {createCodeScannerReferenceGraph} from '/js/apps/code-scanner-reference-graph.js';
+import {createCodeScannerGraphControls} from '/js/apps/code-scanner-graph-controls.js';
+import {createCodeScannerHierarchyRenderer} from '/js/apps/code-scanner-hierarchy-renderer.js';
+import {akSvg} from '/js/icons.js';
+import {hydrateIconButtons} from '/js/components/icon-buttons.js';
+import {loadingDuckHtml} from '/js/components/loading-surfaces.js';
+const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+export async function showEntrypoints(){
+ const state=window.screenshotState;
+ for(const key of ['csEntryKindFilters','csEntryConfidenceFilters','csIoKindFilters','csIoConfidenceFilters','csIoModeFilters','csUiKindFilters','csUiConfidenceFilters','csExpandedFindingGroups'])state[key]=new Set();
+ const definitions=[['OrderController',['POST /api/orders','GET /api/orders/{orderId}','POST /api/orders/{orderId}/cancel']],['BasketController',['GET /api/basket','POST /api/basket/items']],['CatalogController',['GET /api/catalog','GET /api/catalog/{sku}','GET /api/catalog/categories']],['WebhooksController',['POST /api/webhooks/payment','POST /api/webhooks/shipment']],['FulfillmentWorker',['fulfillment.pack','fulfillment.dispatch']],['ReservationListener',['inventory.reserved','inventory.expired']]];
+ state.csEntrypoints=definitions.flatMap(([name,routes],g)=>routes.map((resource,i)=>({id:g*10+i+1,fileId:screenshotSourceFiles.find(file=>file.path.endsWith(name+'.java')).id,symbolId:g*10+i+1,filePath:`src/main/java/${name}.java`,symbolQualifiedName:`com.harbor.commerce.${name}#${['create','find','cancel'][i%3]}`,lineNumber:20+i*14,kind:g<4?'HTTP_ENDPOINT':g===4?'SCHEDULED_TASK':'EVENT_LISTENER',confidence:'HIGH',resource,detail:g<4?'Spring request mapping with typed request and response contracts.':'Processes a durable fulfillment event with idempotent handling.'})));
+ state.csDataIo=[];state.csUiChanges=[];state.csSelectedSymbol=null;state.csFile=null;
+ for(const [name]of definitions)state.csExpandedFindingGroups.add(`entry:java-file:src/main/java/${name}.java`);
+ const findings=createCodeScannerFindingsView({state,esc,akSvg,loadingDuckHtml,val:id=>document.getElementById(id)?.value||'',isMavenTarget:()=>false,visibleTreeFiles:()=>screenshotSourceFiles,statusDuckHtml:()=>'',dataIoMode:()=>''});
+ Object.assign(App,findings);App.csShowAnalyzeTab('entrypoints');findings.renderFindings();hydrateIconButtons(document,{renderIcon:akSvg});
+}
+export async function showHierarchy(){
+ const state=window.screenshotState;
+ const names=['OrderController.placeOrder','CheckoutService.confirm','InventoryService.reserveStock','PaymentGateway.authorizePayment','OrderRepository.persistOrder','OrderEvents.publishConfirmed','StockRepository.loadAvailableStock','ReservationRepository.saveReservation','PaymentClient.requestAuthorization','OutboxRepository.appendOutbox','SubscriptionRenewal.renewOrder','AdminOrderController.createOrder','TaxService.computeTax','DeliveryService.estimateDelivery','PromotionService.applyPromotion','AuditService.recordAudit','TaxRepository.loadTaxRule','CarrierClient.loadCarrierRates','PromotionRepository.loadPromotion','AuditRepository.writeAuditRecord'];
+ const graph={nodes:names.map((label,i)=>({symbolId:i+1,label,kind:'METHOD',qualifiedName:`com.harbor.commerce.${label.replace('.','#')}`,filePath:`src/main/java/${label.split('.')[0]}.java`,lineStart:24+i*9})),edges:[[1,2],[11,2],[12,2],[2,3],[2,4],[2,5],[2,6],[2,13],[2,14],[2,15],[2,16],[3,7],[3,8],[4,9],[6,10],[13,17],[14,18],[15,19],[16,20]].map(([fromSymbolId,toSymbolId])=>({fromSymbolId,toSymbolId,kind:'CALLS',confidence:'HIGH'}))};
+ state.csGraph=graph;state.csSelectedSymbol={id:2,name:'confirm',qualifiedName:'com.harbor.commerce.CheckoutService#confirm',kind:'METHOD',filePath:'src/main/java/CheckoutService.java',lineStart:33};state.csGraphZoom=1;state.csEntrypoints=[];let renderer;const controls=createCodeScannerGraphControls({state,esc,renderGraph:()=>{},renderHierarchyGraph:()=>renderer.renderHierarchyGraph(),renderFindings:()=>{},isMavenTarget:()=>false,hydrateIcons:()=>hydrateIconButtons(document,{renderIcon:akSvg})});controls.initGraphState();Object.assign(App,controls);
+ const reference=createCodeScannerReferenceGraph({state,esc,akSvg,loadingDuckHtml,isMavenTarget:()=>false,entrypointBadgesForSymbol:()=>[],dataIoMode:()=>''});
+ state.csTargets=[{...state.csTarget,project:'Harbor Commerce',repository:'harbor-commerce',provider:'LOCAL',branch:'main'}];state.csHierarchyQuery='checkout';state.csHierarchyUp=1;state.csHierarchyDown=2;
+ state.csHierarchyResults=[{symbol:state.csSelectedSymbol,graph},{symbol:{id:1,name:'placeOrder',kind:'METHOD',qualifiedName:'com.harbor.commerce.OrderController#placeOrder',filePath:'src/main/java/OrderController.java',lineStart:24},graph}];state.csHierarchySelectedSymbolId=2;
+ renderer=createCodeScannerHierarchyRenderer({state,esc,akSvg,loadingDuckHtml,graphControls:controls,scannerSortRank:()=>0,scannerLabel:()=> 'Java',scannerMeta:()=>({className:'scanner-java',icon:'file',label:'Java',shortLabel:'Java'}),...reference,renderGraphFilterOptions:()=>{},filteredGraphForVisibleKinds:value=>value,targetSourceLine:()=> 'harbor-commerce / main',codeScannerProvider:()=> 'LOCAL',codeScannerProviderLabel:()=> 'Local repositories',hierarchySelectedResult:()=>state.csHierarchyResults[0],activateHierarchyResultState:()=>{}});
+ document.getElementById('csHierarchyRootMount').innerHTML=renderer.renderCodeScannerHierarchyShell();fixtureSetScannerScreen('hierarchy');renderer.renderHierarchyTargets();renderer.renderHierarchySearchChrome();renderer.renderHierarchyResults();await renderer.renderHierarchyGraph();controls.csToggleGraphFullscreen('hierarchy',true);hydrateIconButtons(document,{renderIcon:akSvg});
+}

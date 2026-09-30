@@ -1,0 +1,245 @@
+{
+  "workbenchCommit": "955cee221da1fc426368c1b4e597ada618e5d71e",
+  "data": "Fictional Harbor/Acme examples; no live credentials, customers, provider calls, JVM attachment or captures.",
+  "renderer": "Production Workbench HTML/CSS/JavaScript and annotation overlay; native Chromium via CDP",
+  "images": [
+    {
+      "file": "workbench-account.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 159800,
+      "sha256": "42e6c67c3a79842e10fd785424e515e09ec462e25ba5e38fb48c32ed3589b1d2"
+    },
+    {
+      "file": "workbench-agent-kits.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 246446,
+      "sha256": "f52503e1279a12059b6f54da98a146363b08288e76bc156580d5ece1f2ecdffb"
+    },
+    {
+      "file": "workbench-ai-testing.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 155707,
+      "sha256": "9aae03e703dfb9dd6cde2263ea6d8c88b69182a62d2ed9c85329241e8bafd0c7"
+    },
+    {
+      "file": "workbench-azure.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 187567,
+      "sha256": "b7bd973aa41140ce406a1c83c74e48c26beb3707b431a3e54abcf889132c617c"
+    },
+    {
+      "file": "workbench-backlog.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 197174,
+      "sha256": "cdeea525a789f157202a5b726e47d260e3610e56b5092c216e420f41e10efc4f"
+    },
+    {
+      "file": "workbench-browser-annotation.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 172376,
+      "sha256": "3a23b669ef9e81f338b2d4e28ae60c1d64516e15aea1ae14c9942f1c71923096"
+    },
+    {
+      "file": "workbench-browsers.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 173050,
+      "sha256": "1731262f9fa8a1ec5be9542d2ee273d3d42ffc789f783dfe7512b1956ef614ed"
+    },
+    {
+      "file": "workbench-call-hierarchy-expanded.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 112656,
+      "sha256": "f64ccc8858b4655372c64786dd6d4e3365b1c5587aaea5ab6bf47f090c9923f9"
+    },
+    {
+      "file": "workbench-code-atlas.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 229386,
+      "sha256": "c255f3180d560b4f0c1b5108949bbf5c50bbd9b14586bb6e6cb28d2543b39f87"
+    },
+    {
+      "file": "workbench-code-scanner-entrypoints.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 201243,
+      "sha256": "1e95503cfb0dff70963472ce7dc551189ec0877a8142ae167f4ba0e3eb137c60"
+    },
+    {
+      "file": "workbench-code-scanner.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 232272,
+      "sha256": "548ec12d3a766792e233bd9a7700a53740dfe8a995732914f22828ddad3ca518"
+    },
+    {
+      "file": "workbench-configuration.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 160911,
+      "sha256": "8519a5cc229bb3cffe7b537dd914fb4878aa5b0dd413a3feefeb7b3f99d5ec3a"
+    },
+    {
+      "file": "workbench-connect.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 191873,
+      "sha256": "f28d5970791cc12498d3e028ed1d1cfdc593acfa4ffa68eb15bb598750c7dacc"
+    },
+    {
+      "file": "workbench-fetch-proxy-policy.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 127687,
+      "sha256": "01b7e13e31aef645115be32e056562c4de2cbb156ed36b2e63e76178fc4f91a8"
+    },
+    {
+      "file": "workbench-fetch-proxy.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 169614,
+      "sha256": "54dca1a5f4047df79b8656f8f104f8fc4821f75a6176950e908633c616c8585f"
+    },
+    {
+      "file": "workbench-github.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 184865,
+      "sha256": "a95a7b3eab68956b541d724119145e7ee4e4afaf6fa792e2654e3ecbcaa85e79"
+    },
+    {
+      "file": "workbench-home.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 219811,
+      "sha256": "d510ac965718046e161c78f2c28d7bc78388ef2af65b0d70674603033764234c"
+    },
+    {
+      "file": "workbench-jobs.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 185858,
+      "sha256": "d9a04107c81a97b2f70bb174d7532184e8f042dddb0220a17c803d275df37afd"
+    },
+    {
+      "file": "workbench-jvm-profiler.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 154704,
+      "sha256": "95de3c9bde05ca04fab4ed69db8b6faf7251432ec605ff94817034ad67dc3d6a"
+    },
+    {
+      "file": "workbench-kanban.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 231271,
+      "sha256": "f3ab270f6afed10615c97e56d3d3a38d346b3351da2e79945de98a38b7b1280e"
+    },
+    {
+      "file": "workbench-local-pr-analysis-impact.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 289834,
+      "sha256": "25e10ace25e9ac9d5ec3509497eab9c952e68260218ae8ffff3905eb3ddad782"
+    },
+    {
+      "file": "workbench-logs.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 357370,
+      "sha256": "2ae4c601e0bc1a1950eb5ba8570d86476bcbd1bac05744e53b27d58dd55553c1"
+    },
+    {
+      "file": "workbench-mcp-apis.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 141248,
+      "sha256": "cb55dc4285b1a95e6afca54ae8790e8314c8d9e6931e021fbdbdb0a6c891f0c7"
+    },
+    {
+      "file": "workbench-neutral-configuration.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 218330,
+      "sha256": "cbc773ab2d96ab00d12a2c1fbcdefb4a858318cc4c28d6c95e78401cd2abc5a9"
+    },
+    {
+      "file": "workbench-neutral-home.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 242880,
+      "sha256": "f83f84cf512779c384a04d5b20bfd35ff130230ed90489c68410a9f9bffe4ccd"
+    },
+    {
+      "file": "workbench-performance-tracker.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 157224,
+      "sha256": "8ad11c08f919735ebbf826c40e1c2c4906422b422e58550b741d63516758612c"
+    },
+    {
+      "file": "workbench-pr-analysis.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 265318,
+      "sha256": "3ffadc15751b3dace104bc1b6e052d7838b2aeb2461fb3fe866a74617495cf41"
+    },
+    {
+      "file": "workbench-repository-query.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 167072,
+      "sha256": "e9d8fae7c2eeec8492d6614babc4a65a382fc7800a25e13e632ded42d833aa8a"
+    },
+    {
+      "file": "workbench-spec-docs-graph.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 206341,
+      "sha256": "058699907aba57f7e5968142b3355da82d9a5d3a9249e318c1274275c2212c8a"
+    },
+    {
+      "file": "workbench-spec-docs.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 229641,
+      "sha256": "b4131d6f7d473cddb7dfbdbd3a254045648cd26aecfc2a615ebc31da2c11920a"
+    },
+    {
+      "file": "workbench-test-suite-profile.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 182611,
+      "sha256": "6bf2704fe26f55224097825ab801ed0e9147bb244edbd9ef63615220326aa8b3"
+    },
+    {
+      "file": "workbench-test-suite.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 226188,
+      "sha256": "b4a7818c151030f3b62d143faa257c919169da9f101e8452b03cc8d728e0f295"
+    },
+    {
+      "file": "workbench-think-trace-expanded.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 177962,
+      "sha256": "b01f5f076a9073d010a0fdf865f08e415a6ae521e419e0fff776642f1a9c6385"
+    },
+    {
+      "file": "workbench-think-trace.png",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 184916,
+      "sha256": "4af7b0c119abb09e2263c6b73d981d280a62f4c12bef61145a4e92d3d23d7eaf"
+    }
+  ]
+}

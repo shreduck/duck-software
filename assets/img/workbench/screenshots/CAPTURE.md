@@ -1,62 +1,61 @@
-# Refreshing the MCP Workbench screenshots
+# MCP Workbench screenshot refresh — 2026-09-30
 
-These images document product stories, not a real user installation. Always capture them from a disposable Workbench data directory with synthetic users, keys, provider records, boards, traces, proposals, and browser sessions.
+These 34 images show the current Workbench development interface at source commit `955cee2`, using populated fictional Harbor/Acme data. All 24 previous screenshots were recaptured, and 10 views were added. Every PNG is a native 1600 × 1000 browser capture; none is a resized legacy image or an AI-generated UI mockup.
 
-## Capture contract
+The captures use production HTML/CSS/JavaScript renderers with isolated, in-memory API fixtures. The cooperative-browser image uses a fictional storefront and the actual Workbench annotation overlay. No live provider tokens, MCP keys, customer data, personal browser profiles, private source, provider execution, JVM attachment or recording operation is involved.
 
-- Build the current MCP Workbench branch and start it with a temporary `APP_DATA_DIR`.
-- Use a fresh browser configuration at `1920 × 1080`. The browser chrome leaves a `1920 × 937` page capture.
-- Capture the headed annotation story with the same `1920 × 1080` browser configuration so its `1920 × 937` PNG matches the portal screenshots. Verify the PNG header after capture instead of trusting the session dimensions.
-- Recapture at the smaller viewport; do not resize a legacy 1440p PNG. The narrower composition is what makes labels, controls, annotations, and graph nodes readable in the page carousel.
-- Use a temporary administrator and a temporary MCP key limited to Browser Automation and Fetch Proxy.
-- Never populate real provider tokens, personal browser profiles, passwords, customer data, private repository content, or raw source excerpts.
-- For Code Scanner, index a sanitized temporary copy. Prefer architecture names, entry-point metadata, and graphs over source panes.
-- Wait at least seven seconds after a full portal navigation. The bootstrap gate can still cover a hydrated page during shorter waits.
-- Inspect every PNG visually before replacing site assets.
-- Delete the temporary MCP key, close browser sessions, stop the demo server, and remove disposable data when finished.
+## Reproduce
 
-## Required synthetic stories
+See [the screenshot tooling guide](../../../../tools/workbench-screenshots/README.md). Run from the website repository:
 
-1. A populated release Kanban board.
-2. A cooperative-browser Backlog conversation with two approval-first proposals.
-3. A PR Analysis workspace with several findings and one focused impact card.
-4. Agent Kits with browser, scanner, trace, planning, and documentation skills.
-5. Spec Docs explaining direct browser execution and the remote proxy/helper path.
-6. A sanitized local Java scan with Analysis, a `BrowserSessionManager` hierarchy, and Entry points.
-7. An accounting-dashboard Think Trace with two failure branches, a reviewer comment, a local repair, and a final response.
-8. Browser and Fetch Proxy configuration pages with no secrets.
-9. A headed cooperative browser on `https://example.com/` with annotation mode enabled. Attach this synthetic note to `h1`, focus it so the editor is expanded, and capture the viewport:
-   `Please change this heading to “A calmer place to test integrations” and add a short sentence below it explaining that no customer data is used on this page.`
+```sh
+node tools/workbench-screenshots/capture-all.mjs
+node tools/workbench-screenshots/manifest.mjs --check
+```
+
+The [manifest](../../../../tools/workbench-screenshots/manifest.json) records source revision, dimensions and SHA-256 hashes. Each capture process closes its temporary server and browser profile. The separately requested static website preview is not a live Workbench instance.
 
 ## Page map
 
-Capture the following portal routes and interaction states:
-
-| File | Route or state |
+| Image | Production view and fictional example |
 |---|---|
-| `workbench-home.png` | Home |
-| `workbench-account.png` | User Account → MCP keys |
-| `workbench-connect.png` | Connect tutorial |
-| `workbench-github.png` | GitHub setup |
-| `workbench-azure.png` | Azure DevOps setup |
-| `workbench-kanban.png` | Populated board |
-| `workbench-backlog.png` | Cooperative-browser conversation |
-| `workbench-pr-analysis.png` | Populated analysis |
-| `workbench-local-pr-analysis-impact.png` | Focused analysis card |
-| `workbench-agent-kits.png` | Populated Agent Kits workspace |
-| `workbench-spec-docs.png` | Isolated cooperative browser document |
-| `workbench-code-scanner.png` | Sanitized Java Analyze tab |
-| `workbench-call-hierarchy-expanded.png` | Hierarchy search after its animation settles |
-| `workbench-code-scanner-entrypoints.png` | Analyze → Entry points |
-| `workbench-think-trace.png` | Accounting repair trace |
-| `workbench-think-trace-expanded.png` | Fullscreen accounting trace graph |
-| `workbench-mcp-apis.png` | MCP APIs |
-| `workbench-logs.png` | Logs |
-| `workbench-configuration.png` | Configuration → App data |
-| `workbench-browsers.png` | Browsers |
-| `workbench-browser-annotation.png` | Neutral public page with an expanded `h1` change request |
-| `workbench-fetch-proxy.png` | Fetch Proxy |
-| `workbench-neutral-configuration.png` | Configuration → UI policy with Neutral UI enabled and forced |
-| `workbench-neutral-home.png` | Neutral Home with Display settings open and the policy shown as admin-controlled |
+| `workbench-home.png` | Current grouped application home |
+| `workbench-account.png` | Six named keys with distinct tool grants |
+| `workbench-connect.png` | Client setup and connection instructions |
+| `workbench-github.png` | Fictional provider connections |
+| `workbench-azure.png` | Fictional credential setup and saved Azure DevOps connections |
+| `workbench-kanban.png` | Release board with 29 cards |
+| `workbench-backlog.png` | Versioned work-item proposals with approval actions |
+| `workbench-pr-analysis.png` | Review collection with 13 findings |
+| `workbench-local-pr-analysis-impact.png` | Focused finding in the current PR Analysis workspace |
+| `workbench-agent-kits.png` | Reusable instructions and skills across 18 files |
+| `workbench-spec-docs.png` | Specification editor with 24 documents |
+| `workbench-spec-docs-graph.png` | Specification and its native Context relationship graph |
+| `workbench-code-scanner.png` | Source snapshot and analysis workspace |
+| `workbench-call-hierarchy-expanded.png` | Expanded native hierarchy with 20 symbols |
+| `workbench-code-scanner-entrypoints.png` | Controller and service entry points |
+| `workbench-code-atlas.png` | Treemap of 90 source files with selected file history |
+| `workbench-repository-query.png` | Release PRs and associated work-item IDs |
+| `workbench-think-trace.png` | Investigation workspace with graph and evidence |
+| `workbench-think-trace-expanded.png` | Expanded investigation graph, 18 nodes and 20 edges |
+| `workbench-browsers.png` | Six saved browser definitions |
+| `workbench-browser-annotation.png` | Delivery-option review on a populated fictional checkout |
+| `workbench-fetch-proxy.png` | Nine retained reference-document results |
+| `workbench-fetch-proxy-policy.png` | Configured limits, unit hints and network policy |
+| `workbench-performance-tracker.png` | Browser recording with 96 samples and populated action/request evidence |
+| `workbench-jvm-profiler.png` | JVM playback with 12 sampled thread timelines and thread-dump action |
+| `workbench-test-suite.png` | Browser/JVM run overlay with eight saved runs and five profiles |
+| `workbench-test-suite-profile.png` | Reusable profile, alias, target and capture settings |
+| `workbench-jobs.png` | Native workflow graph and selected node inspector |
+| `workbench-ai-testing.png` | Fictional multi-turn provider test with visible composer |
+| `workbench-mcp-apis.png` | Representative tool reference |
+| `workbench-logs.png` | Fictional operation and audit events |
+| `workbench-configuration.png` | Configuration Assistant and reviewable draft settings |
+| `workbench-neutral-configuration.png` | Neutral UI policy |
+| `workbench-neutral-home.png` | Neutral Home with Display controls open |
 
-After capture, verify that every referenced image exists and that HTML image dimensions remain `1920 × 937`.
+## Verification and limits
+
+Every image was visually reviewed and refined for populated content and useful framing. Native capture checks reject page exceptions and horizontal overflow. The site is checked at 1920 × 1080, 960 × 1080, 2560 × 1600, 1280 × 1600, 960 × 650 and 390 × 844, including image loading, internal anchors, enlarged galleries, keyboard navigation and Escape dismissal. Workbench Browser Automation also reviews the static page from Windows Brave.
+
+These are UI fixtures, not live integration checks or measured benchmark results. Some graphs intentionally use the application's native expansion controls or saved pane widths. The JVM image shows sampled thread states, not instrumented method profiling; its existing gallery filename is retained. A Context graph beside a Spec Doc uses the native inline pane, avoiding an observed overlap between the current context modal and topbar.

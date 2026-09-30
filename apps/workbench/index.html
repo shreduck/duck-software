@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MCP Workbench | Duck Code</title>
-    <meta name="description" content="MCP Workbench helps AI agents and people solve software problems together with controlled web fetching, cooperative browsers, provider tools, approval-first planning, traces, and Java analysis.">
+    <meta name="description" content="MCP Workbench brings code analysis, repository research, browser and JVM performance measurements, reusable Test Suite profiles, Jobs, planning and scoped MCP tools into one local or self-hosted workspace.">
     <link rel="icon" href="../../assets/img/workbench/duck_uncertain_transparent.png">
-    <link rel="stylesheet" href="../../assets/css/site.css?v=workbench-20260720-hero-aside-v5">
+    <link rel="stylesheet" href="../../assets/css/site.css?v=workbench-20260930-tour">
   </head>
   <body class="workbench-page">
     <header class="site-header">
@@ -30,12 +30,13 @@
             </div>
             <div>
               <h1 id="app-title">MCP Workbench</h1>
-              <p class="hero-pitch">Got a software problem? Give your AI a safer way to help fix it.</p>
+              <p class="hero-pitch">Understand the code. Review the work. Measure what changed.</p>
             </div>
           </div>
 
-          <p class="lede">MCP Workbench gives Claude Code, Codex, Copilot, Grok, and other MCP clients the tools their harnesses are missing: controlled web fetching, an isolated browser you can share with the AI, provider context, approval-first planning, traceable handoffs, and Java/Spring analysis.</p>
+          <p class="lede">MCP Workbench brings people and MCP agents into one technical workspace: explore code and release history, plan and review changes, share isolated browsers, automate jobs, and record browser and JVM performance. Reusable Test Suite profiles keep repeated measurements and their evidence together.</p>
           <p class="note">Run it locally with the default H2 file or self-host it with PostgreSQL when you need something sturdier. You control the credentials, MCP keys, browser profiles, network policy, data storage, and which external writes are approved.</p>
+          <p class="note">This tour reflects the current development interface. Check the release notes for the capabilities included in your download.</p>
           <p class="download-warning-note">Windows and macOS builds are unsigned and may trigger OS or browser download warnings.</p>
 
           <div class="store-badges" aria-label="MCP Workbench downloads">
@@ -67,7 +68,7 @@
         </div>
 
         <figure class="desktop-frame hero-desktop">
-          <img src="../../assets/img/workbench/screenshots/workbench-home.png" width="1920" height="937" alt="MCP Workbench home screen with grouped apps, tools and docs plus compact deployment-hardening counters">
+          <img src="../../assets/img/workbench/screenshots/workbench-home.png" width="1600" height="1000" alt="MCP Workbench home with grouped applications, a searchable app switcher and setup status">
         </figure>
       </section>
 
@@ -89,6 +90,8 @@
           <p class="eyebrow">On this page</p>
           <nav>
             <a href="#features">Features</a>
+            <a href="#repository-query">Code &amp; repos</a>
+            <a href="#runtime-tools">Runtime &amp; tools</a>
             <a href="#ai-workflows">AI workflows</a>
             <a href="#screenshots">Screenshots</a>
             <a href="#downloads">Downloads</a>
@@ -102,23 +105,25 @@
           <section class="story-block" id="features" aria-labelledby="features-title">
             <div class="section-heading">
               <p class="eyebrow">Problem, meet toolbox</p>
-              <h2 id="features-title">One portal for the gaps between an AI harness and the job you need done.</h2>
-              <p class="section-kicker">When the harness cannot fetch a page, cannot share a real browser, forgets why it made a decision, or is about to write to the wrong system, Workbench adds a visible, reviewable layer around the work.</p>
+              <h2 id="features-title">A connected workspace from first question to saved evidence.</h2>
+              <p class="section-kicker">Use the portal directly or connect an MCP client. Scoped tools, reviewable local records and links into the same workspace let people and agents work with the same context.</p>
             </div>
+
+            <p class="note" id="screenshot-note">All Workbench screenshots use the current application interface with populated, fictional Harbor and Acme examples. Names, code, conversations, credentials and measurements are demonstration data, not customer information or benchmark results. Illustrated AI conversations are examples, not recorded provider responses.</p>
 
             <div class="feature-grid feature-grid-visual">
               <article class="feature-card visual-feature">
                 <h3>MCP keys and tool access</h3>
-                <p>Create per-user MCP keys, choose their tool groups, and follow a client-specific setup tab for Claude Code, Codex, GitHub Copilot, Grok, or another MCP client.</p>
+                <p>Create per-user MCP keys, choose their tool groups, and follow client-specific setup for Claude Code, Codex, GitHub Copilot, Grok or another MCP client. Performance, JVM, Test Suite and configuration grants remain explicit; owning a key does not grant every capability.</p>
                 <div class="feature-carousel" data-carousel aria-label="MCP keys and tool access screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-account.png" width="1920" height="937" alt="MCP Workbench account screen with horizontally separated key creation and key management">
-                      <figcaption>Create keys above; rename, scope, rotate, or revoke them in a stable table below.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-account.png" width="1600" height="1000" loading="lazy" alt="Workbench account settings with fictional named MCP keys and scoped tool grants">
+                      <figcaption>Create named keys, review their tool scope, and rename, rotate or revoke them.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-connect.png" width="1920" height="937" alt="MCP Workbench Connect screen with a four-step tutorial and AI client tabs">
+                      <img src="../../assets/img/workbench/screenshots/workbench-connect.png" width="1600" height="1000" loading="lazy" alt="Connect guide with client setup instructions and available Workbench tool groups">
                       <figcaption>Follow the four-step tutorial for your AI harness, then browse Available tools in its own tab.</figcaption>
                     </figure>
                   </div>
@@ -126,17 +131,21 @@
                   <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
                   <div class="carousel-dots" data-carousel-dots></div>
                 </div>
+
               </article>
               <article class="feature-card visual-feature">
                 <h3>Fetch Proxy</h3>
                 <p>Your AI harness cannot reach an allowed page, blocks <code>curl</code>, or chokes on a large response. Fetch it through Workbench, search the temporary result, and read only the bounded parts you need.</p>
-                <p class="feature-pullquote">Small fetch or huge reference page: the same policy boundary, a different reading strategy.</p>
                 <div class="feature-carousel" data-carousel aria-label="Fetch Proxy screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-fetch-proxy.png" width="1920" height="937" alt="MCP Workbench Fetch Proxy limits, temporary storage, tool policy and host network policy">
-                      <figcaption>Admins set global limits, host allow/deny rules, private-network policy, TTLs, and per-key narrowing.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-fetch-proxy.png" width="1600" height="1000" loading="lazy" alt="Fetch Proxy results with a populated list of fictional retained Harbor reference documents">
+                      <figcaption>Inspect retained fetch results, search the relevant text and read bounded parts.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-fetch-proxy-policy.png" width="1600" height="1000" loading="lazy" alt="Fetch Proxy policy settings with example destination rules and retention limits">
+                      <figcaption>Admins set global limits, host allow/deny rules, private-network policy, TTLs and per-key narrowing.</figcaption>
                     </figure>
                     <figure class="carousel-slide ai-demo-slide" data-carousel-slide hidden>
                       <div class="ai-demo compact-demo" aria-label="Simulated AI using Fetch Proxy when its harness blocks a web request">
@@ -170,21 +179,22 @@
                   <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
                   <div class="carousel-dots" data-carousel-dots></div>
                 </div>
+                <p class="feature-pullquote">Small fetch or huge reference page: the same policy boundary, a different reading strategy.</p>
+
               </article>
               <article class="feature-card visual-feature">
                 <h3>Cooperative browsers</h3>
-                <p>The AI can open a fresh Chrome, Chromium, Brave, or Firefox profile while you watch, take over, click the real page, and leave selector-linked notes for the AI to read.</p>
-                <p class="feature-pullquote">A shared session, not your personal profile: no saved passwords, personal cookies, extensions, or unrelated history.</p>
+                <p>The AI can open an isolated Chrome, Chromium, Brave or Firefox session while you watch, take over and leave selector-linked notes. Saved definitions cover local and authenticated helper execution; snapshots, tabs, screenshots and console output support the handoff.</p>
                 <div class="feature-carousel" data-carousel aria-label="Cooperative browser screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-browsers.png" width="1920" height="937" alt="MCP Workbench detected browsers and isolated browser configuration form">
+                      <img src="../../assets/img/workbench/screenshots/workbench-browsers.png" width="1600" height="1000" loading="lazy" alt="Browsers workspace with six saved fictional Harbor browser definitions">
                       <figcaption>Choose an installed browser, viewport, session limits, process arguments, environment, and proxy/helper policy.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-browser-annotation.png" width="1920" height="937" alt="A cooperative browser session with the Example Domain heading highlighted and an expanded selector-linked change request">
-                      <figcaption>Pin a concrete request to the real element: replace the heading and add a clear no-customer-data note below it.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-browser-annotation.png" width="1600" height="1000" loading="lazy" alt="A fictional Harbor browser page with a selector-linked review annotation">
+                      <figcaption>Pin a concrete review request to a page element and keep the selector with the note.</figcaption>
                     </figure>
                     <figure class="carousel-slide ai-demo-slide" data-carousel-slide hidden>
                       <div class="ai-demo compact-demo" aria-label="Simulated user asking the AI to apply an open cooperative browser annotation">
@@ -221,59 +231,63 @@
                   <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
                   <div class="carousel-dots" data-carousel-dots></div>
                 </div>
+                <p class="feature-pullquote">Browser QA adds scoped network inspection, request replay, cookie controls and connection observations where the browser supports them. Sensitive capture and changes require their own permissions and destination policy.</p>
+
               </article>
               <article class="feature-card visual-feature">
                 <h3>GitHub and Azure DevOps</h3>
-                <p>Store user-managed credentials for pull requests, diffs, files, branches, issues, work items, test plans, and PR comments.</p>
+                <p>Store user-managed credentials for pull requests, diffs, files, branches, issues, work items, test plans and PR comments. Azure project configurations describe expected custom fields and can narrow assigned keys to approved work-item subtrees or PR target branches.</p>
                 <div class="feature-carousel" data-carousel aria-label="GitHub and Azure DevOps screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-github.png" width="1920" height="937" alt="MCP Workbench GitHub credential setup screen">
+                      <img src="../../assets/img/workbench/screenshots/workbench-github.png" width="1600" height="1000" loading="lazy" alt="GitHub settings with a fictional Acme credential and repository scope">
                       <figcaption>GitHub tokens can be scoped per user and repository.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-azure.png" width="1920" height="937" alt="MCP Workbench Azure DevOps credential setup screen">
-                      <figcaption>Azure DevOps credentials power PR, work item, and branch tools.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-azure.png" width="1600" height="1000" loading="lazy" alt="Azure DevOps Setup showing fictional Harbor saved credentials and credential configuration controls">
+                      <figcaption>Manage saved Azure DevOps credentials used by pull-request, work-item and branch tools.</figcaption>
                     </figure>
                   </div>
                   <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge GitHub and Azure DevOps screenshots"></button>
                   <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
                   <div class="carousel-dots" data-carousel-dots></div>
                 </div>
+
               </article>
               <article class="feature-card visual-feature">
                 <h3>Kanban and backlog proposals</h3>
-                <p>Let agents organize local boards, draft work item or issue changes, and keep external writes behind an approval step.</p>
+                <p>Organize local boards with cards, comments and links, then turn conversations into versioned work-item, issue, test-plan or pull-request proposals. Review text or JSON, inspect historical versions and approve scoped publication; explicitly granted immediate-write permissions remain separate.</p>
                 <div class="feature-carousel" data-carousel aria-label="Kanban and backlog proposal screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-kanban.png" width="1920" height="937" alt="MCP Workbench Kanban board populated with local release, support, scan, and trace cards">
+                      <img src="../../assets/img/workbench/screenshots/workbench-kanban.png" width="1600" height="1000" loading="lazy" alt="A populated fictional Harbor Kanban board with release, review and maintenance cards">
                       <figcaption>Use a populated local board as the review surface.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-backlog.png" width="1920" height="937" alt="MCP Workbench Backlog conversation with cooperative-browser work item proposals">
-                      <figcaption>Backlog proposals stay local until you approve the exact write.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-backlog.png" width="1600" height="1000" loading="lazy" alt="Backlog with fictional Harbor conversations and versioned work-item proposals">
+                      <figcaption>Review the proposed version before an explicitly authorized publication.</figcaption>
                     </figure>
                   </div>
                   <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Kanban and backlog proposal screenshots"></button>
                   <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
                   <div class="carousel-dots" data-carousel-dots></div>
                 </div>
+
               </article>
               <article class="feature-card visual-feature">
                 <h3>PR Analysis workspace</h3>
-                <p>Turn review findings into shared cards with comments and replies before selected feedback is pushed back to a PR.</p>
+                <p>Review Azure DevOps or GitHub pull requests in shared local analyses. Organize findings, comments, replies and history, follow live updates, export review material and publish selected feedback through the configured write permissions.</p>
                 <div class="feature-carousel" data-carousel aria-label="PR Analysis workspace screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-pr-analysis.png" width="1920" height="937" alt="MCP Workbench PR Analysis workspace">
+                      <img src="../../assets/img/workbench/screenshots/workbench-pr-analysis.png" width="1600" height="1000" loading="lazy" alt="PR Analysis with populated fictional Harbor pull-request reviews and findings">
                       <figcaption>Start from local pull request analysis spaces.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-local-pr-analysis-impact.png" width="1920" height="937" alt="MCP Workbench local PR Analysis card showing a dependent API impact finding">
+                      <img src="../../assets/img/workbench/screenshots/workbench-local-pr-analysis-impact.png" width="1600" height="1000" loading="lazy" alt="A Harbor PR Analysis finding with review details, discussion and publication actions">
                       <figcaption>Review findings become shared local analysis cards before provider comments.</figcaption>
                     </figure>
                     <figure class="carousel-slide ai-demo-slide" data-carousel-slide hidden>
@@ -311,44 +325,85 @@
                   <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
                   <div class="carousel-dots" data-carousel-dots></div>
                 </div>
+
               </article>
               <article class="feature-card visual-feature">
                 <h3>Agent Kits and Spec Docs</h3>
-                <p>Keep reusable agent files, skill notes, and project documentation close to the tools that need them.</p>
+                <p>Keep reusable agent instructions, skills and project documentation in folders with search, stable links, version history and Markdown/Mermaid previews. Built-in and Always-on indicators distinguish reusable defaults; editing drafts survive app navigation.</p>
                 <div class="feature-carousel" data-carousel aria-label="Agent Kits and Spec Docs screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-agent-kits.png" width="1920" height="937" alt="MCP Workbench Agent Kits workspace with browser, scanner, trace and planning skills">
+                      <img src="../../assets/img/workbench/screenshots/workbench-agent-kits.png" width="1600" height="1000" loading="lazy" alt="Agent Kits with fictional reusable Harbor instructions and skills">
                       <figcaption>Agent and skill files are editable, versioned, and reusable inside the portal.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-spec-docs.png" width="1920" height="937" alt="MCP Workbench Spec Docs workspace with isolated cooperative browser guidance">
-                      <figcaption>Spec Docs keep project guidance—including direct and remote browser contracts—next to the agent kits.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-spec-docs.png" width="1600" height="1000" loading="lazy" alt="Spec Docs with a populated Harbor documentation tree and a selected Markdown document">
+                      <figcaption>Spec Docs keep project architecture, operating notes and review guidance next to the agent kits.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-spec-docs-graph.png" width="1600" height="1000" loading="lazy" alt="Spec Docs Context graph showing fictional Harbor method calls beside the selected delivery-flow document">
+                      <figcaption>Explore method-call relationships in the Context graph beside the versioned project documentation.</figcaption>
                     </figure>
                   </div>
                   <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Agent Kits and Spec Docs screenshots"></button>
                   <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
                   <div class="carousel-dots" data-carousel-dots></div>
                 </div>
+
               </article>
-              <article class="feature-card visual-feature">
+              <article class="feature-card visual-feature" id="repository-query">
+                <h3>Repository Query</h3>
+                <p>Explore Azure DevOps and GitHub pull requests and commit history with provider-specific filters, current-page grouping, cursor pagination and JSON export. Credential-backed discovery keeps project/owner, repository and target branch explicit.</p>
+                <div class="feature-carousel" data-carousel aria-label="Repository Query screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/workbench/screenshots/workbench-repository-query.png" width="1600" height="1000" loading="lazy" alt="Repository Query showing a Harbor release range with pull requests and associated work-item IDs">
+                      <figcaption>Follow release changes from commits to pull requests and linked Azure work items.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Repository Query screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
+                <p>Bound a release with tags or commit IDs. Leave the end revision blank to use the latest commit on the selected branch. History includes associated PRs, and Azure PR reads include their linked work-item IDs.</p>
+
+              </article>
+              <article class="feature-card visual-feature" id="code-atlas">
+                <h3>Code Atlas</h3>
+                <p>See a repository as an interactive map of files, folders or Maven modules. Size tiles by files, physical lines or bytes; color them by committed age, with working-tree changes and unknown history shown separately.</p>
+                <div class="feature-carousel" data-carousel aria-label="Code Atlas screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/workbench/screenshots/workbench-code-atlas.png" width="1600" height="1000" loading="lazy" alt="Code Atlas map of Harbor modules with code-age colors, file metrics and repository scope controls">
+                      <figcaption>Explore code size, change history and activity without treating age as a quality score.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Code Atlas screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
+                <p>Drill into groups, compare staleness and activity charts, inspect commits, contributors and associated PRs, or use the accessible table and CSV export. Atlas keeps its own source snapshots; Code Scanner supplies the separate semantic analysis.</p>
+
+              </article>
+              <article class="feature-card visual-feature" id="code-scanner">
                 <h3>Code Scanner</h3>
-                <p>Index Java/Spring and Maven projects for entrypoints, references, call hierarchy, dependency graphs, and risk hints.</p>
-                <p class="feature-pullquote">Avoid long-term and unintended bugs with Code Scanner plus AI analysis.</p>
+                <p>Scan server-local folders or authenticated GitHub and Azure DevOps branches. Analyze Java/Spring symbols, references, call hierarchy and entry points; inspect configuration and Data I/O paths, Maven dependencies and CVE findings, or browser JavaScript/HTML/CSS and UI relationships.</p>
                 <div class="feature-carousel" data-carousel aria-label="Code Scanner screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-code-scanner.png" width="1920" height="937" alt="MCP Workbench Code Scanner Java analysis workspace for a sanitized local scan">
-                      <figcaption>Browse a sanitized local scan without publishing source code to a provider.</figcaption>
-                    </figure>
-                    <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-call-hierarchy-expanded.png" width="1920" height="937" alt="MCP Workbench Code Scanner hierarchy centered on BrowserSessionManager with linked incoming and outgoing nodes">
+                      <img src="../../assets/img/workbench/screenshots/workbench-call-hierarchy-expanded.png" width="1600" height="1000" loading="lazy" alt="Code Scanner graph showing callers and downstream relationships in a fictional Harbor service">
                       <figcaption>Search a class or method, follow linked nodes, and inspect callers and downstream paths in one graph.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-code-scanner-entrypoints.png" width="1920" height="937" alt="MCP Workbench Code Scanner entry-point browser focused on the browser session service API">
+                      <img src="../../assets/img/workbench/screenshots/workbench-code-scanner.png" width="1600" height="1000" loading="lazy" alt="Code Scanner with a fictional Harbor repository, source and analysis controls">
+                      <figcaption>Browse the fictional Harbor source snapshot alongside its analysis.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-code-scanner-entrypoints.png" width="1600" height="1000" loading="lazy" alt="Code Scanner entry points with fictional Harbor controller and service API routes">
                       <figcaption>Browse detected service APIs, controllers, scheduled jobs, configuration, and data I/O entry points.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
@@ -372,13 +427,15 @@
                           </article>
                         </div>
                       </div>
-                      <figcaption>Scanner recommendations turn graphs into review actions.</figcaption>
+                      <figcaption>An illustrative AI review turns scanner evidence into proposed follow-up checks.</figcaption>
                     </figure>
                   </div>
                   <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Code Scanner screenshots"></button>
                   <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
                   <div class="carousel-dots" data-carousel-dots></div>
                 </div>
+                <p class="feature-pullquote">Move from source to graphs, entry points and findings without losing the selected scope. Static analysis supplies evidence for a review; it does not prove behavior at runtime.</p>
+
               </article>
               <article class="feature-card visual-feature">
                 <h3>Think Trace</h3>
@@ -387,18 +444,19 @@
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-think-trace.png" width="1920" height="937" alt="MCP Workbench Think Trace for repairing a quarterly accounting dashboard">
-                      <figcaption>Start with the query, failures, evidence, decisions, code change, comments, and final response together.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-think-trace-expanded.png" width="1600" height="1000" loading="lazy" alt="Expanded Think Trace graph with fictional investigation steps, evidence and a final response">
+                      <figcaption>Expand the investigation to follow its branches, evidence and final handoff.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-think-trace-expanded.png" width="1920" height="937" alt="Expanded MCP Workbench accounting repair trace with branching API failures and a final response">
-                      <figcaption>Fullscreen mode shows the branching API failures, matched diagnosis, local repair, and merged completion evidence.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-think-trace.png" width="1600" height="1000" loading="lazy" alt="Think Trace with a populated fictional Harbor investigation graph and evidence details">
+                      <figcaption>Start with the query, failures, evidence, decisions, code change, comments, and final response together.</figcaption>
                     </figure>
                   </div>
                   <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Think Trace screenshots"></button>
                   <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
                   <div class="carousel-dots" data-carousel-dots></div>
                 </div>
+
               </article>
               <article class="feature-card visual-feature">
                 <h3>MCP APIs and portal links</h3>
@@ -407,11 +465,11 @@
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-mcp-apis.png" width="1920" height="937" alt="MCP Workbench MCP API reference screen">
+                      <img src="../../assets/img/workbench/screenshots/workbench-mcp-apis.png" width="1600" height="1000" loading="lazy" alt="MCP APIs catalogue showing available Workbench tool descriptions and input schemas">
                       <figcaption>Generated tool docs show the MCP surface agents can use.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-connect.png" width="1920" height="937" alt="MCP Workbench Connect instructions screen">
+                      <img src="../../assets/img/workbench/screenshots/workbench-connect.png" width="1600" height="1000" loading="lazy" alt="Connect guide with client setup instructions and available Workbench tool groups">
                       <figcaption>Connect pages turn the local server into client-ready config.</figcaption>
                     </figure>
                   </div>
@@ -419,46 +477,144 @@
                   <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
                   <div class="carousel-dots" data-carousel-dots></div>
                 </div>
+
               </article>
               <article class="feature-card visual-feature">
                 <h3>Logs, configuration, and database</h3>
-                <p>Keep the server understandable with visible configuration, local logs, credential ownership, and a choice between simple H2 file storage or PostgreSQL for shared deployments. Admins can scan another Workbench database and move selected app data without replacing accounts, MCP keys, credentials, policies, audit history, or migration metadata.</p>
+                <p>Inspect local logs and audit history, manage users and credentials, and choose H2 or PostgreSQL storage. Configuration Assistant provides discoverable settings, read-only setup checks, reviewable previews and inactive drafts. Protected grants and global policy stay human-controlled. Database tools compare schemas before selected imports; recordings and Test Suite data retain their separate lifecycle protections.</p>
                 <div class="feature-carousel" data-carousel aria-label="Logs, configuration, and database screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-logs.png" width="1920" height="937" alt="MCP Workbench Logs screen">
+                      <img src="../../assets/img/workbench/screenshots/workbench-logs.png" width="1600" height="1000" loading="lazy" alt="Workbench logs populated with fictional local operation and audit records">
                       <figcaption>Logs make local server activity inspectable.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-configuration.png" width="1920" height="937" alt="MCP Workbench Configuration App data tab with per-app and all-data reset scopes">
-                      <figcaption>Admins can reset one app persistence group or all non-system app data while keeping identities, keys, provider credentials, Fetch Proxy policy, audit logs, and migration state.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-configuration.png" width="1600" height="1000" loading="lazy" alt="Workbench Configuration Assistant showing display settings and an inactive draft for the fictional Harbor account">
+                      <figcaption>Configuration Assistant makes settings discoverable and keeps proposed changes in reviewable, inactive drafts.</figcaption>
                     </figure>
                   </div>
                   <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge logs configuration and local data screenshots"></button>
                   <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
                   <div class="carousel-dots" data-carousel-dots></div>
                 </div>
+
               </article>
               <article class="feature-card visual-feature corporate-neutral-feature">
-                <h3>Corporate neutral mode</h3>
-                <p>Admins can lock a restrained, brand-neutral portal for corporate deployments: no mascot artwork, no playful loading copy, and neutral labels in the display controls.</p>
+                <h3>Display preferences and Neutral UI</h3>
+                <p>Choose light or dark appearance, color palettes, vision settings, density and interface scaling. Administrators can enforce a restrained Neutral UI presentation. The loading duck remains visible; grouped navigation, the searchable Ctrl/Cmd+K app switcher and adaptive panes support full or half-width desktop work.</p>
                 <div class="feature-carousel" data-carousel aria-label="Corporate neutral mode screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-neutral-configuration.png" width="1920" height="937" alt="Real MCP Workbench UI policy screen with neutral UI enabled and forced for all users">
-                      <figcaption>The real UI policy screen lets an administrator enable neutral presentation by default and lock it for every user.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-neutral-configuration.png" width="1600" height="1000" loading="lazy" alt="Workbench display policy with Neutral UI settings for the demonstration installation">
+                      <figcaption>Administrators can set Neutral UI as the default and enforce it for every user.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-neutral-home.png" width="1920" height="937" alt="Real MCP Workbench home screen with Display settings open and Neutral UI locked by an administrator">
-                      <figcaption>The real portal shows neutral mode enabled and controlled by the administrator while keeping the rest of the display controls available.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-neutral-home.png" width="1600" height="1000" loading="lazy" alt="Workbench home in Neutral UI with its display preferences open">
+                      <figcaption>Other display preferences remain available when Neutral UI is enforced.</figcaption>
                     </figure>
                   </div>
                   <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge corporate neutral mode screenshots"></button>
                   <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
                   <div class="carousel-dots" data-carousel-dots></div>
                 </div>
+
+              </article>
+            </div>
+          </section>
+
+          <section class="story-block" id="runtime-tools" aria-labelledby="runtime-tools-title">
+            <div class="section-heading">
+              <p class="eyebrow">Measure and automate</p>
+              <h2 id="runtime-tools-title">Measure changes. Keep the evidence.</h2>
+              <p class="section-kicker">Test Suite organizes the scenario. Performance Tracker retains the evidence. Jobs runs the workflows you explicitly configure.</p>
+            </div>
+            <div class="feature-grid feature-grid-visual">
+              <article class="feature-card visual-feature" id="test-suite">
+                <h3>Test Suite</h3>
+                <p>Organize browser, JVM or combined measurement profiles in folders such as <code>Harbor/sortB</code>. Reuse <code>Harbor#sortB</code> to start another run and keep its evidence together.</p>
+                <div class="feature-carousel" data-carousel aria-label="Test Suite screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/workbench/screenshots/workbench-test-suite.png" width="1600" height="1000" loading="lazy" alt="Test Suite showing Harbor folders, repeated measurements and aligned browser and JVM charts">
+                      <figcaption>Organize repeated runs, overlay their measurements and open the original source evidence.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-test-suite-profile.png" width="1600" height="1000" loading="lazy" alt="Test Suite profile editor showing fictional Harbor folders, a reusable alias and browser/JVM capture settings">
+                      <figcaption>Save the scenario once: folder, alias, approved targets, start URL and explicit capture options.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Test Suite screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
+                <p>Start by alias, wait for interaction readiness, use the existing browser tools, then stop by the returned run ID. Workbench resets the configured site data before capture and starts every selected collector before the measured initial navigation. Stop leaves the browser and application open.</p>
+                <p>Compare repeated runs on a shared timeline with navigation markers, synchronized zoom and an accessible data table. Each run keeps its immutable profile snapshot, environment manifest and your build, commit or dataset labels. Metadata distinguishes observed target information from supplied labels and explicitly marks unavailable hardware fields.</p>
+                <p class="feature-pullquote">Reusable measurement, not an automated test verdict. Initial browser profiles use local Chrome/Brave definitions; complete Firefox and remote-helper reset are not supported. JVM targets attach to an already running, approved application.</p>
+
+              </article>
+              <article class="feature-card visual-feature" id="performance-tracker">
+                <h3>Performance Tracker · Browser</h3>
+                <p>Record browser activity across all tabs, the selected tab or one pinned tab. Align supported CPU, JavaScript heap and DOM/layout observations with browser actions and request metadata, then inspect live or saved evidence with pause, playback, seeking, annotations and JSON/CSV export.</p>
+                <div class="feature-carousel" data-carousel aria-label="Performance Tracker · Browser screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/workbench/screenshots/workbench-performance-tracker.png" width="1600" height="1000" loading="lazy" alt="Performance Tracker browser recording with populated resource charts, request evidence and playback controls">
+                      <figcaption>Inspect timing and browser evidence together; capture, playback and cleanup remain separate actions.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Performance Tracker · Browser screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
+                <p>Capture a screenshot or HTML snapshot explicitly; optional HTML and network payload capture remain permission-controlled. Missing samples remain gaps, and tab readings are not added into an invented browser-wide total. Saved playback never repeats actions or requests.</p>
+                <p>Use the recording list or Storage Atlas to explore sessions and their telemetry, artifacts and indexes. Locks protect evidence from ordinary deletion; explicit recording controls remain available in dedicated popouts.</p>
+
+              </article>
+              <article class="feature-card visual-feature" id="jvm-profiler">
+                <h3>Performance Tracker · JVM</h3>
+                <p>Connect an approved local JVM or saved JMX target. Restart-following targets identify the application without relying on a fixed PID. Observe process CPU, heap and memory pools, garbage collection, classes and platform-thread states over the recording timeline.</p>
+                <div class="feature-carousel" data-carousel aria-label="Performance Tracker · JVM screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/workbench/screenshots/workbench-jvm-profiler.png" width="1600" height="1000" loading="lazy" alt="JVM Performance Tracker showing a Harbor service recording with sampled thread timelines and Capture thread dump">
+                      <figcaption>Explore sampled thread states during playback; capture a thread dump explicitly when a connected recording is active.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Performance Tracker · JVM screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
+                <p><strong>Capture thread dump</strong> provides explicit stack evidence. Optional JFR adds sampled execution, allocation, GC and contention evidence; method profiling uses a separately installed agent, a scope preview and an explicit Start. Thread states alone do not establish CPU use.</p>
+                <p>Inspect class histograms or heap dumps with the bundled analysis worker: dominators, retained sets, paths to roots and histogram comparisons. Impact acknowledgements and diagnostic permissions remain required; healthy captures have no fixed duration ceiling.</p>
+
+              </article>
+              <article class="feature-card visual-feature" id="jobs">
+                <h3>Jobs and AI provider testing</h3>
+                <p>Build and validate visual workflows from triggers, actions, conditions and reports. Schedule them with a timezone, inspect execution history and audit events, and keep run controls visible beside the graph and node inspector.</p>
+                <div class="feature-carousel" data-carousel aria-label="Jobs and AI provider testing screenshots">
+                  <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+                  <div class="carousel-viewport">
+                    <figure class="carousel-slide is-active" data-carousel-slide>
+                      <img src="../../assets/img/workbench/screenshots/workbench-jobs.png" width="1600" height="1000" loading="lazy" alt="Jobs visual editor containing a Harbor maintenance workflow with triggers, branches and node settings">
+                      <figcaption>Validate the workflow, inspect node settings and review execution history from one workspace.</figcaption>
+                    </figure>
+                    <figure class="carousel-slide" data-carousel-slide hidden>
+                      <img src="../../assets/img/workbench/screenshots/workbench-ai-testing.png" width="1600" height="1000" loading="lazy" alt="AI provider configuration test with a populated Harbor code-review conversation and visible composer">
+                      <figcaption>Try a saved provider configuration before using it in Jobs; follow-up turns share the same test conversation.</figcaption>
+                    </figure>
+                  </div>
+                  <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge Jobs and AI provider testing screenshots"></button>
+                  <button class="carousel-control carousel-next" type="button" data-carousel-next aria-label="Next screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+                  <div class="carousel-dots" data-carousel-dots></div>
+                </div>
+                <p>Administration defines enabled capabilities, command profiles, filesystem rules, provider models and mandatory instructions. <strong>Test your config</strong> opens an administrator-only chat against a saved Codex or Claude CLI configuration, with Send, Stop, usage information and New chat. The test is read-only and creates no workflow run.</p>
+                <p>Provider tests use the Workbench service account's provider login and can consume paid usage. They help validate configuration; they are not operating-system isolation.</p>
+
               </article>
             </div>
           </section>
@@ -477,6 +633,10 @@
               <div class="trust-banner">
                 <strong>Skill-guided reviews</strong>
                 <span>Pair a review skill with PR Analysis and Code Scanner so findings point to diffs, symbols, and call paths.</span>
+              </div>
+              <div class="trust-banner">
+                <strong>Repeatable measurement</strong>
+                <span>Ask an agent to start <code>Harbor#sortB</code>, wait until ready, exercise the browser and stop by run ID. Compare saved runs without replaying the actions.</span>
               </div>
               <div class="trust-banner">
                 <strong>Traceable handoffs</strong>
@@ -534,7 +694,7 @@
                       <figcaption>The AI keeps working without receiving unrestricted network access.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-fetch-proxy.png" width="1920" height="937" alt="Fetch Proxy network, size, retention and per-key policy controls">
+                      <img src="../../assets/img/workbench/screenshots/workbench-fetch-proxy-policy.png" width="1600" height="1000" loading="lazy" alt="Fetch Proxy policy settings with example destination rules and retention limits">
                       <figcaption>The administrator—not the prompt—defines which hosts, tools, sizes, redirects, lifetimes, and private-network cases are acceptable.</figcaption>
                     </figure>
                   </div>
@@ -626,11 +786,11 @@
                       <figcaption>The person pins both human-feel problems to the real card field; Workbench groups them under one selector and one count badge.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-browsers.png" width="1920" height="937" alt="Workbench isolated local browser configuration and installed browser detection">
+                      <img src="../../assets/img/workbench/screenshots/workbench-browsers.png" width="1600" height="1000" loading="lazy" alt="Browsers workspace with six saved fictional Harbor browser definitions">
                       <figcaption>Fresh profiles, process arguments, viewport, timeouts, session caps, ownership, and annotations remain under Workbench policy.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-backlog.png" width="1920" height="937" alt="Two approval-first proposals created from a cooperative browser review">
+                      <img src="../../assets/img/workbench/screenshots/workbench-backlog.png" width="1600" height="1000" loading="lazy" alt="Backlog with fictional Harbor conversations and versioned work-item proposals">
                       <figcaption>The browser notes can become local proposals with their evidence and conversation still attached.</figcaption>
                     </figure>
                   </div>
@@ -665,8 +825,8 @@
                       <figcaption>The network hop changes; the browser tool contract and isolation guarantees do not.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-spec-docs.png" width="1920" height="937" alt="Spec Doc with direct browser and remote proxy-helper execution paths">
-                      <figcaption>The helper is the proxy: one small local component handles transport, local process control, and the same browser API contract.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-browsers.png" width="1600" height="1000" loading="lazy" alt="Browsers showing fictional Harbor local launch definitions and their configuration controls">
+                      <figcaption>Browsers keeps reusable launch definitions together; the shown Harbor definitions are local examples.</figcaption>
                     </figure>
                   </div>
                   <button class="carousel-open" type="button" data-carousel-enlarge aria-label="Enlarge remote browser helper story"></button>
@@ -690,7 +850,7 @@
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide workflow-focus-kanban is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-kanban.png" width="1920" height="937" alt="MCP Workbench Kanban board with release and support cards">
+                      <img src="../../assets/img/workbench/screenshots/workbench-kanban.png" width="1600" height="1000" loading="lazy" alt="A populated fictional Harbor Kanban board with release, review and maintenance cards">
                       <figcaption>Use a real local board as the review surface for AI-drafted work.</figcaption>
                     </figure>
                     <figure class="carousel-slide ai-demo-slide" data-carousel-slide hidden>
@@ -724,7 +884,7 @@
                       <figcaption>Use the AI to draft provider-ready changes while keeping the write behind approval.</figcaption>
                     </figure>
                     <figure class="carousel-slide workflow-focus-backlog" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-backlog.png" width="1920" height="937" alt="MCP Workbench Backlog proposal workspace with local drafts">
+                      <img src="../../assets/img/workbench/screenshots/workbench-backlog.png" width="1600" height="1000" loading="lazy" alt="Backlog with fictional Harbor conversations and versioned work-item proposals">
                       <figcaption>Review the actual backlog proposal screen before anything is pushed to a provider.</figcaption>
                     </figure>
                   </div>
@@ -807,8 +967,8 @@
                       <figcaption>Start from the broken report: missing rows, failed graphs, and no obvious reason why.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-think-trace-expanded.png" width="1920" height="937" alt="Expanded accounting repair trace showing the missing-region and deprecated-endpoint branches">
-                      <figcaption>Expand the real trace to compare both failure branches without rereading the whole support chat.</figcaption>
+                      <img src="../../assets/img/workbench/screenshots/workbench-think-trace-expanded.png" width="1600" height="1000" loading="lazy" alt="Expanded Think Trace graph with fictional investigation steps, evidence and a final response">
+                      <figcaption>Expand the investigation graph to follow evidence and decisions without rereading the whole conversation.</figcaption>
                     </figure>
                     <figure class="carousel-slide ai-demo-slide" data-carousel-slide hidden>
                       <div class="ai-demo trace-debug-demo" aria-label="Workbench AI response explaining Think Trace error nodes for a slow incomplete report">
@@ -962,15 +1122,15 @@
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">
                     <figure class="carousel-slide workflow-focus-call is-active" data-carousel-slide>
-                      <img src="../../assets/img/workbench/screenshots/workbench-call-hierarchy-expanded.png" width="1920" height="937" alt="MCP Workbench Code Scanner BrowserSessionManager hierarchy with linked incoming and outgoing nodes">
+                      <img src="../../assets/img/workbench/screenshots/workbench-call-hierarchy-expanded.png" width="1600" height="1000" loading="lazy" alt="Code Scanner graph showing callers and downstream relationships in a fictional Harbor service">
                       <figcaption>Start with an expanded call hierarchy search for the changed method.</figcaption>
                     </figure>
                     <figure class="carousel-slide" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-code-scanner-entrypoints.png" width="1920" height="937" alt="MCP Workbench Code Scanner entry-point browser focused on a service API">
+                      <img src="../../assets/img/workbench/screenshots/workbench-code-scanner-entrypoints.png" width="1600" height="1000" loading="lazy" alt="Code Scanner entry points with fictional Harbor controller and service API routes">
                       <figcaption>Browse entry points first so the review starts from externally reachable behavior, not an isolated method.</figcaption>
                     </figure>
                     <figure class="carousel-slide workflow-focus-pr" data-carousel-slide hidden>
-                      <img src="../../assets/img/workbench/screenshots/workbench-local-pr-analysis-impact.png" width="1920" height="937" alt="MCP Workbench local PR Analysis card showing a missing dependent API coverage finding">
+                      <img src="../../assets/img/workbench/screenshots/workbench-local-pr-analysis-impact.png" width="1600" height="1000" loading="lazy" alt="A Harbor PR Analysis finding with review details, discussion and publication actions">
                       <figcaption>Capture a local pull request analysis card before pushing any provider comment.</figcaption>
                     </figure>
                     <figure class="carousel-slide ai-demo-slide" data-carousel-slide hidden>
@@ -1832,7 +1992,7 @@ unless applicable law requires otherwise.</pre>
           </div>
         </header>
         <figure class="carousel-modal-figure">
-          <img id="carouselModalImage" src="../../assets/img/workbench/screenshots/workbench-home.png" width="1920" height="937" alt="">
+          <img id="carouselModalImage" src="../../assets/img/workbench/screenshots/workbench-home.png" width="1600" height="1000" alt="MCP Workbench home with grouped applications, a searchable app switcher and setup status">
           <div class="carousel-modal-html" id="carouselModalHtml" hidden></div>
           <button class="carousel-modal-nav carousel-modal-prev" type="button" data-carousel-modal-prev aria-label="Previous screenshot">
             <svg width="30" height="30" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
@@ -2043,6 +2203,9 @@ unless applicable law requires otherwise.</pre>
           if (modalNext) {
             modalNext.hidden = singleSlide;
           }
+          if (carouselModal.contains(document.activeElement) && !document.activeElement.getClientRects().length) {
+            carouselModal.querySelector("button[data-carousel-modal-close]")?.focus();
+          }
         }
 
         function carouselStory(carousel) {
@@ -2056,10 +2219,7 @@ unless applicable law requires otherwise.</pre>
           const heading = copyRoot?.querySelector("h3")?.textContent
             || card?.querySelector("h3")?.textContent
             || "Workbench screenshot";
-          const description = Array.from(copyRoot?.querySelectorAll(":scope > p:not(.eyebrow)") || [])
-            .map((paragraph) => paragraph.textContent.trim())
-            .filter(Boolean)
-            .join(" ");
+          const description = copyRoot?.querySelector(":scope > p:not(.eyebrow)")?.textContent.trim() || "";
           return { eyebrow, heading, description };
         }
 
@@ -2108,7 +2268,7 @@ unless applicable law requires otherwise.</pre>
           modalOpener = opener || null;
           carouselModal.hidden = false;
           loadModalCarousel(carousels.indexOf(carousel), index);
-          carouselModal.querySelector("[data-carousel-modal-close]")?.focus();
+          carouselModal.querySelector("button[data-carousel-modal-close]")?.focus();
         }
 
         function showAdjacentModalCarousel(delta) {
@@ -2138,6 +2298,10 @@ unless applicable law requires otherwise.</pre>
           let renderToken = 0;
           let hasScheduledFirstAdvance = false;
           index = index >= 0 ? index : 0;
+          const singleSlide = slides.length < 2;
+          if (prev) prev.hidden = singleSlide;
+          if (next) next.hidden = singleSlide;
+          if (dots) dots.hidden = singleSlide;
 
           function nextAutoAdvanceDelay() {
             const delay = CAROUSEL_AUTO_ADVANCE_DELAY + (hasScheduledFirstAdvance ? 0 : carouselIndex * CAROUSEL_FIRST_ADVANCE_STAGGER);
@@ -2230,8 +2394,27 @@ unless applicable law requires otherwise.</pre>
         });
 
         document.addEventListener("keydown", (event) => {
-          if (event.key === "Escape" && !carouselModal.hidden) {
+          if (carouselModal.hidden) {
+            return;
+          }
+          if (event.key === "Tab") {
+            const focusable = Array.from(carouselModal.querySelectorAll("button, a[href], input, select, textarea, [tabindex]"))
+              .filter((element) => !element.disabled && element.tabIndex >= 0 && element.getClientRects().length);
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (!carouselModal.contains(document.activeElement) || (event.shiftKey && document.activeElement === first)) {
+              event.preventDefault();
+              (event.shiftKey ? last : first)?.focus();
+            } else if (!event.shiftKey && document.activeElement === last) {
+              event.preventDefault();
+              first?.focus();
+            }
+            return;
+          }
+          if (event.key === "Escape") {
+            event.preventDefault();
             closeCarouselModal();
+            return;
           }
           if (!carouselModal.hidden && event.key === "ArrowLeft") {
             event.preventDefault();

@@ -1,0 +1,60 @@
+import { mountWorkspaceFixtureShell } from '/workspace-fixture-shell.js';
+import { createThinkTraceApp } from '/js/apps/think-trace.js';
+import { createKanbanApp } from '/js/apps/kanban.js';
+import { createJobsApp } from '/js/apps/jobs.js';
+import { createBrowsersApp } from '/js/apps/browsers.js';
+import { createFetchProxyApp } from '/js/apps/fetch-proxy.js';
+import { createDefaultJobGraph } from '/js/apps/jobs-graph.js';
+import { initializeActionMenus } from '/js/components/action-menu.js';
+import { hydrateIconButtons } from '/js/components/icon-buttons.js';
+import { loadingDuckHtml, loadingPlaceholderHtml } from '/js/components/loading-surfaces.js';
+import { akSvg } from '/js/icons.js';
+const mode = new URLSearchParams(location.search).get('mode');
+const assert = (value, message) => { if (!value) throw new Error(message); };
+const calls = [], state = { user: { id: 1, role: 'ADMIN', username: 'Maya Chen' } };
+const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const configurations = [{ id: 1, name: 'Release verification', browserType: 'CHROMIUM', executablePath: '/opt/browsers/chromium', headlessDefault: true, enabled: true, seleniumManagerEnabled: true, persistentProfile: false, viewportWidth: 1280, viewportHeight: 900, operationTimeoutSeconds: 30, idleTimeoutSeconds: 300, maxLifetimeSeconds: 1800, maxSessionsPerKey: 2, hostWhitelist: ['*'], hostBlacklist: [], arguments: [], environment: {} }];
+const jobs = [{ id: 1, name: 'Check repository documentation', enabled: true, owner: 'You', schedule: '0 0 9 * * MON-FRI', timezone: 'Europe/London', lastStatus: 'SUCCESS', nextFireAt: '2026-09-28 09:00', lastFinishedAt: '2026-09-25 09:01', revision: 3 }, { id: 2, name: 'Collect application diagnostics', enabled: true, owner: 'You', activeRunId: 'fixture-running', activeRunLifecycle: 'RUNNING', schedule: 'Manual', timezone: 'UTC' }];
+const trace={id:1,title:'Investigate checkout latency',rootQuery:'Why does checkout slow down when an order has many items?',status:'COMPLETED',nodeCount:18,edgeCount:20,updatedAt:'2026-09-28T15:30:00Z'};
+const nodeData=[['USER_QUERY','Investigate checkout','Trace the slow checkout path'],['PLAN','Collect evidence','Compare browser and JVM timing'],['OBSERVATION','Browser timing','Order API dominates the wait'],['OBSERVATION','JVM samples','Stock reads repeat per item'],['SEARCH_RESULT','Call hierarchy','Checkout calls inventory in a loop'],['DECISION','Batch stock reads','One query for all basket items'],['CODE_CHANGE','Inventory batch API','Reuse the existing repository query'],['ACTION','Measure both versions','Run Harbor#checkout twice'],['OBSERVATION','Captured measurements','Keep raw timings and environment'],['CRITIQUE','Review edge cases','Check mixed warehouse baskets'],['OBSERVATION','Verification complete','Contract and integration checks pass'],['FINAL_RESPONSE','Explain the change','Link code, evidence and limitations'],['CONTEXT_FETCH','Checkout contract','Read API and event guarantees'],['OBSERVATION','Retry boundary','Payment requests reuse one key'],['ACTION','Exercise failure paths','Check a delayed gateway response'],['CONTEXT_FETCH','Reservation lifecycle','Read expiry and release behavior'],['DECISION','Bound retry policy','Keep retries within the deadline'],['OBSERVATION','Review evidence','Link traces and integration checks']];
+const nodes=nodeData.map(([type,title,summary],i)=>({id:i+1,sequence:i+1,type,title,summary,body:summary+'. Evidence is attached to the Harbor Commerce checkout investigation.',agentName:'Commerce assistant',createdAt:'2026-09-28T14:30:00Z'}));
+const pairs=[[1,2,'CONTINUES'],[1,3,'BRANCHES'],[1,4,'BRANCHES'],[2,5,'CONTINUES'],[3,6,'SUPPORTS'],[4,7,'SUPPORTS'],[5,8,'CONTINUES'],[6,9,'CONTINUES'],[7,10,'CONTINUES'],[8,11,'SUPPORTS'],[9,12,'ANSWERED_BY'],[10,12,'SUPPORTS'],[1,13,'BRANCHES'],[13,14,'CONTINUES'],[14,15,'CONTINUES'],[15,12,'SUPPORTS'],[1,16,'BRANCHES'],[16,17,'CONTINUES'],[17,18,'CONTINUES'],[18,12,'SUPPORTS']];
+const traceDetail={trace,nodes,edges:pairs.map(([fromNodeId,toNodeId,type],i)=>({id:i+1,fromNodeId,toNodeId,type})),comments:[{id:1,nodeId:6,body:'The existing repository query already accepts a set of product IDs.',createdBy:'Maya Chen',createdAt:'2026-09-28T14:45:00Z'}]};
+const cardTitles=[['Add order search pagination','Document refund event contracts','Support split shipment estimates','Add basket keyboard shortcuts','Expose inventory reservation age','Review webhook retry limits','Add saved delivery addresses','Document reservation expiry'],['Batch stock availability reads','Add checkout idempotency keys','Instrument fulfillment events','Update delivery estimate cache','Validate promotion boundaries','Add shipment event metrics','Refine invoice rounding'],['Verify mixed-warehouse checkout','Review refund audit history','Test payment timeout recovery','Verify duplicate event handling','Review API contract examples','Check catalog query pagination','Audit refund permissions'],['Publish order lifecycle guide','Add structured correlation IDs','Restrict customer order access','Improve empty basket guidance','Cache catalog categories','Add fulfillment retry policy','Document release rollback']];
+const board={id:1,name:'Harbor Commerce · Release 2.4',description:'Checkout reliability, fulfillment and the autumn release',columns:['Ready','In progress','In review','Done'].map((name,i)=>({id:i+1,name,color:['#718096','#ad673f','#805ad5','#368267'][i],cards:cardTitles[i].map((title,n)=>({id:i*100+n+1,title,description:'Harbor Commerce release work. Acceptance criteria and review evidence are linked in Backlog.',assignee:['Maya Chen','Alex Rivera','Sam Patel','Jordan Lee'][(i+n)%4],priority:n===0?'High':'Medium',labels:['checkout',i===3?'verified':'release-2.4'],commentCount:n+1,linkCount:2}))}))};
+const api = async (method, path) => {
+	calls.push({method,path}); assert(method === 'GET', `Navigation must not mutate: ${method} ${path}`);
+	if(path==='/api/think-traces')return[trace];
+	if(path==='/api/think-traces/1/graph')return{nodes:traceDetail.nodes,edges:traceDetail.edges};
+	if(path.startsWith('/api/think-traces/1?'))return traceDetail;
+	if(path==='/api/kanban/boards')return[{...board,columnCount:4,cardCount:32}];
+	if(path==='/api/kanban/boards/1')return board;
+	if (path === '/api/jobs/catalog') return {actions:[],providers:[]};
+	if (path === '/api/jobs') return jobs;
+	if (path === '/api/jobs/1') return {...jobs[0],graph:createDefaultJobGraph()};
+	if (path === '/api/code-scanner/targets') return [];
+	if (path === '/api/browsers/network-policy') return {enforcedHostWhitelist:['*'],enforcedHostBlacklist:[]};
+	if (path === '/api/browsers/configurations') return configurations;
+	if (path.endsWith('/profile')) return {configurationId:1,persistent:false,active:false,hasStoredData:false};
+	if (path === '/api/browsers/detected' || path === '/api/browsers/sessions') return [];
+	if (path === '/api/fetch-proxy/settings') return {maxActivePerKey:2,maxRetainedPerKey:20,resultTtlSeconds:900,activeJobTimeoutSeconds:120,maxWireBytes:1048576,maxResultBytes:1048576,maxBytesPerKey:10485760,maxGlobalBytes:104857600,maxRedirects:5,connectTimeoutSeconds:10,toolWhitelist:['*'],toolBlacklist:[],hostWhitelist:['*'],hostBlacklist:[]};
+	if (path === '/api/fetch-proxy/jobs') return [{mcpKeyId:3,result:{resultId:'fixture',sourceType:'HTTP',source:'https://example.invalid/documentation/latest',status:'COMPLETED',sizeBytes:18432,expiresAt:'2026-09-25 15:00'}}];
+	if (path === '/api/fetch-proxy/keys') return [{id:3,owner:'You',label:'Development'}];
+	throw new Error(`Unexpected fixture read ${path}`);
+};
+const deps = {state,api,esc,fmt:value=>value||'—',alertBox:(_id,ok,message)=>{if(!ok)throw new Error(message);},confirmDialog:async()=>false,loadingDuckHtml,loadingPlaceholderHtml,akSvg,hydrateIconButtons:root=>hydrateIconButtons(root,{renderIcon:akSvg}),updatePortalUrl:()=>{},waitForUiPaint:async()=>{},withScopedLoadingOverlay:async(_root,task)=>task()};
+initializeActionMenus();
+const appRoot=document.getElementById('runtimeFixtureRoot');
+const uiScale=Number(new URLSearchParams(location.search).get('scale')||1);
+for(const property of ['--ui-scale','--ui-font-scale','--ui-component-scale'])document.documentElement.style.setProperty(property,String(uiScale));
+assert(['--ui-font-scale','--ui-component-scale'].every(property=>Number(getComputedStyle(document.documentElement).getPropertyValue(property))===uiScale),'Both font and component scales match the requested125% geometry');
+const shellControls=mountWorkspaceFixtureShell({state,app:mode==='fetch-proxy'?'fetchproxy':mode,root:appRoot});
+
+if(mode==='thinktrace') {
+ appRoot.innerHTML='<section id="thinktrace" class="app active"><div id="ttAppRoot" class="ui-render-root ui-workspace"></div></section>';
+ window.App=createThinkTraceApp(deps);await App.ttLoad();await App.ttOpenTrace(1);App.ttSetGraphRenderMode('FULL');App.ttGraphZoom(-.2);
+} else {
+ appRoot.innerHTML='<section id="kanban" class="app active"><div id="kanbanWorkspaceRoot" class="ui-render-root ui-workspace"></div></section>';
+ window.App=createKanbanApp({...deps,colorValue:value=>value||'#ad673f',val:id=>document.getElementById(id)?.value||'',initSidePanelResize:()=>{},autoRefreshMs:60000});await App.kbBack();await App.kbOpen(1);
+}
+Object.assign(window.App,shellControls);window.screenshotState=state;window.captureReady=true;
