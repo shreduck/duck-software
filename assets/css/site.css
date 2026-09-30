@@ -465,6 +465,10 @@ button.store-badge:focus {
 }
 
 .store-badge.app-store-badge {
+  opacity: 1;
+}
+
+.store-badge[aria-disabled="true"] {
   opacity: 0.84;
 }
 
@@ -3776,7 +3780,7 @@ button.store-badge:focus {
   font-weight: 780;
 }
 
-.colour-beta-banner {
+.colour-availability-banner {
   grid-template-columns: minmax(130px, 0.26fr) minmax(0, 1fr);
   border-color: rgba(112, 72, 207, 0.23);
   background: linear-gradient(100deg, rgba(240, 234, 255, 0.94), rgba(255, 252, 235, 0.94));
@@ -4071,7 +4075,7 @@ button.store-badge:focus {
     justify-self: center;
   }
 
-  .colour-beta-banner,
+  .colour-availability-banner,
   .evidence-note,
   .source-row {
     grid-template-columns: 1fr;
