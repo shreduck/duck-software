@@ -4218,6 +4218,38 @@ button.store-badge:focus {
   hyphens: none;
 }
 
+@media (max-width: 700px) {
+  .aipet-hero .app-lockup {
+    grid-template-columns: 60px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .aipet-hero .app-lockup h1 {
+    display: contents;
+  }
+
+  .aipet-hero .app-lockup > img {
+    grid-row: 1;
+  }
+
+  .aipet-hero .app-lockup > div {
+    display: contents;
+  }
+
+  .aipet-hero .app-lockup .eyebrow {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+  }
+
+  .aipet-hero .app-lockup h1 {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin-top: 8px;
+    font-size: clamp(2.5rem, 10vw, 3.4rem);
+  }
+}
+
 .aipet-shot {
   border-color: var(--line);
   background: #eef3f4; /* the GIF's own background: a shade darker than the page */
