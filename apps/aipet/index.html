@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AIPet | Duck Code</title>
+    <meta name="description" content="AIPet is a desktop pet for your AI coding sessions: one little robot per Claude Code, Cowork or Codex session that shows when it is working, done, or needs you. Windows and macOS.">
+    <link rel="icon" href="../../assets/img/aipet/icon-1024.png">
+    <link rel="stylesheet" href="../../assets/css/site.css">
+  </head>
+  <body class="aipet-page">
+    <header class="site-header">
+      <a class="brand" href="../../">Duck Code</a>
+      <nav aria-label="Primary navigation">
+        <a href="../../#apps">Apps</a>
+        <a href="#downloads">Downloads</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#licensing">Licensing</a>
+        <a href="https://github.com/shreduck/AIPet" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:duck_code_contact@proton.me">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="app-hero product-hero aipet-hero" id="hero" aria-labelledby="app-title">
+        <div class="hero-copy">
+          <div class="app-lockup compact-lockup">
+            <img src="../../assets/img/aipet/icon-1024.png" width="1024" height="1024" alt="AIPet app icon, a small white pixel-art robot">
+            <div>
+              <p class="eyebrow">AIPet <span class="status-label">Beta</span></p>
+              <h1 id="app-title">A desktop pet for every AI session.</h1>
+            </div>
+          </div>
+
+          <p class="lede">One little robot per Claude Code, Cowork or Codex session sits at the edge of your screen. It works while your agent works, jumps when it needs you, and naps when the job is done, so you can stop checking terminals.</p>
+          <p class="note">Click a pet to jump to its session. For Claude Code you can even answer a permission prompt straight from the pet.</p>
+          <p class="download-warning-note">Windows and macOS builds are unsigned and may trigger OS or browser download warnings.</p>
+
+          <div class="store-badges" aria-label="AIPet downloads">
+            <a class="store-badge desktop-badge" href="https://github.com/shreduck/AIPet/releases" target="_blank" rel="noopener">
+              <svg class="store-badge-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="8" height="7"/><rect x="13" y="4" width="8" height="7"/><rect x="3" y="13" width="8" height="7"/><rect x="13" y="13" width="8" height="7"/></svg>
+              <span><small>Releases for</small><strong>Windows</strong></span>
+            </a>
+            <a class="store-badge stable-badge" href="https://github.com/shreduck/AIPet/releases" target="_blank" rel="noopener">
+              <svg class="store-badge-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 20c-4 0-7-3-7-7s3-7 7-7 7 3 7 7-3 7-7 7Z"/><path d="M12 6V3"/><path d="M9 3h6"/></svg>
+              <span><small>Releases for</small><strong>macOS</strong></span>
+            </a>
+            <a class="store-badge docker-badge" href="https://github.com/shreduck/AIPet" target="_blank" rel="noopener">
+              <svg class="store-badge-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="8" r="2"/><path d="M6 7v10"/><path d="M18 10c0 4-6 3-11 7"/></svg>
+              <span><small>Source on</small><strong>GitHub</strong></span>
+            </a>
+          </div>
+          <div class="page-pill-links" aria-label="AIPet page links">
+            <a href="#features">Features</a>
+            <a href="#works-with">Works with</a>
+            <a href="#downloads">Install</a>
+            <a href="#privacy">Privacy</a>
+            <a href="mailto:duck_code_contact@proton.me?subject=AIPet%20feedback">Send feedback</a>
+          </div>
+        </div>
+
+        <figure class="desktop-frame hero-desktop aipet-shot">
+          <img src="../../assets/img/aipet/pets-macos.png" width="1180" height="446" alt="Three AIPet robots on a dark desktop: a finished Cowork session with a check mark, a session waiting for permission with check, cross and question-mark bubbles, and a working session with a green terminal bubble">
+          <figcaption>Three sessions at a glance: done, needs you, working.</figcaption>
+        </figure>
+      </section>
+
+      <section class="top-notice" aria-label="Unsigned desktop app warning">
+        <article class="trust-banner warning-banner payment-safety-banner">
+          <strong>Unsigned desktop builds</strong>
+          <span>AIPet for Windows and macOS is not code-signed or notarized, so Windows SmartScreen, macOS Gatekeeper, or browser download protection may block it or show warnings. Only continue if you trust this release.</span>
+        </article>
+      </section>
+
+      <div class="feature-layout">
+        <aside class="section-index" aria-label="AIPet section index">
+          <p class="eyebrow">On this page</p>
+          <nav>
+            <a href="#features">Features</a>
+            <a href="#works-with">Works with</a>
+            <a href="#downloads">Downloads</a>
+            <a href="#privacy">Privacy</a>
+            <a href="#licensing">Licensing</a>
+            <a href="#important-notes">Important notes</a>
+          </nav>
+        </aside>
+
+        <div class="feature-story">
+          <section class="story-block" id="features" aria-labelledby="features-title">
+            <div class="section-heading">
+              <p class="eyebrow">Glanceable agents</p>
+              <h2 id="features-title">Know what every session is doing without switching windows.</h2>
+              <p class="section-kicker">Run three agents in three terminals and the question is always the same: which one is waiting for me? AIPet answers it from the corner of your eye.</p>
+            </div>
+
+            <div class="feature-grid">
+              <article class="feature-card">
+                <h3>One pet per session</h3>
+                <p>Every session gets its own robot, named after its project folder. Pets keep their place on screen, and small badges say where the session runs: Claude, Cowork, Codex, WSL or VS Code. Only the robot catches clicks, so the pets never block what is behind them.</p>
+              </article>
+              <article class="feature-card">
+                <h3>States you can feel</h3>
+                <p>Working pets bob with a scrolling terminal bubble. A pet that needs you jumps with a question mark and a beep, and reminds you until you click it. Finished pets nap, then clear themselves after a timeout you choose.</p>
+              </article>
+              <article class="feature-card">
+                <h3>Answer from the pet</h3>
+                <p>When Claude Code asks for permission, click the bubble to see the exact command and choose <strong>Allow once</strong> or <strong>Deny</strong>. Claude Code's own prompt stays available and the first answer wins.</p>
+              </article>
+              <article class="feature-card">
+                <h3>Click to jump</h3>
+                <p>Clicking a pet brings its terminal or app window to the front. For the Claude Code VS Code extension it raises the right VS Code window, even when a parent folder is open there, and asks the extension to show that conversation.</p>
+              </article>
+              <article class="feature-card aipet-states-card">
+                <h3>Red means you</h3>
+                <p>The tray icon on Windows and the Dock icon on macOS are the robot too: white while things run, red when a session needs you.</p>
+                <img src="../../assets/img/aipet/tray-states.png" width="800" height="400" alt="The AIPet robot icon in white, and in red with a question-mark face">
+              </article>
+              <article class="feature-card">
+                <h3>Make it yours</h3>
+                <p>Robot, mole or cat; light or dark theme; a size slider; how long finished pets stay; how long the pet waits for an answer. Drag the pets anywhere, on any monitor.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="story-block split-block" id="works-with" aria-labelledby="works-with-title">
+            <div>
+              <p class="eyebrow">Works with</p>
+              <h2 id="works-with-title">Your agents, wherever they run.</h2>
+              <p>AIPet listens through each tool's own hooks: small commands the agent runs at moments like "prompt sent", "tool used" or "finished". The setup window finds your installs and adds them for you, keeping your other settings and backing up every file first.</p>
+            </div>
+            <div class="trust-stack" aria-label="Supported tools">
+              <div class="trust-banner">
+                <strong>Claude Code</strong>
+                <span>Terminal, VS Code extension and the Claude desktop app's Code tab, on Windows, macOS and inside WSL distros.</span>
+              </div>
+              <div class="trust-banner">
+                <strong>Cowork in the Claude desktop app</strong>
+                <span>Cowork reads hooks only from plugins, so AIPet builds a plugin zip for you to upload under Customize → Plugins. Sessions are named after the folder you connected.</span>
+              </div>
+              <div class="trust-banner">
+                <strong>Codex <span class="status-label">New</span></strong>
+                <span>Codex CLI on Windows, macOS and WSL. After installing, run <code>/hooks</code> in Codex once to trust the AIPet hooks. The pet shows Codex permission prompts but you answer them in Codex.</span>
+              </div>
+              <div class="trust-banner">
+                <strong>MCP Workbench agent chats</strong>
+                <span>Optionally show <a href="../workbench/">MCP Workbench</a> agent chats as pets too.</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="story-block" id="downloads" aria-labelledby="downloads-title">
+            <div class="section-heading">
+              <p class="eyebrow">Downloads and installs</p>
+              <h2 id="downloads-title">Download, run, pick your installs.</h2>
+              <p class="section-kicker">Builds are published on the GitHub Releases page: numbered versions, plus a rolling <strong>latest</strong> build for testing.</p>
+            </div>
+            <div class="download-grid">
+              <a class="trust-banner download-card" href="https://github.com/shreduck/AIPet/releases" target="_blank" rel="noopener">
+                <strong>Windows</strong>
+                <span>On the Releases page, download <code>AIPet.exe</code>: a single program with nothing to install.</span>
+              </a>
+              <a class="trust-banner download-card" href="https://github.com/shreduck/AIPet/releases" target="_blank" rel="noopener">
+                <strong>macOS (Apple Silicon)</strong>
+                <span>On the Releases page, download <code>AIPet-mac-arm64.zip</code> and unzip it to get the app.</span>
+              </a>
+              <a class="trust-banner download-card" href="https://github.com/shreduck/AIPet/releases/tag/latest" target="_blank" rel="noopener">
+                <strong>Latest build</strong>
+                <span>The rolling pre-release built from the newest commit, for trying fixes before a version is tagged.</span>
+              </a>
+              <a class="trust-banner download-card" href="https://github.com/shreduck/AIPet" target="_blank" rel="noopener">
+                <strong>Source and docs</strong>
+                <span>Read the README for every option, or run AIPet from source with Python.</span>
+              </a>
+            </div>
+            <div class="install-steps" aria-label="AIPet installation steps">
+              <article>
+                <span>1</span>
+                <div><strong>Download and run</strong><p>Pick the newest version on the Releases page. Start <code>AIPet.exe</code>, or unzip and open <code>AIPet.app</code>. A robot appears in the bottom-right corner, with an icon in the tray or Dock.</p></div>
+              </article>
+              <article class="install-warning">
+                <span>2</span>
+                <div><strong>Allow the unsigned app</strong><p>Windows: choose <strong>More info → Run anyway</strong> in SmartScreen. macOS: right-click the app and choose <strong>Open</strong> the first time, or use <strong>System Settings → Privacy &amp; Security → Open Anyway</strong>.</p></div>
+              </article>
+              <article>
+                <span>3</span>
+                <div><strong>Pick your installs</strong><p>The setup window lists the Claude Code and Codex installs it found on this computer and in running WSL distros. Tick the ones to hook up; nothing changes before you press Install.</p></div>
+              </article>
+              <article>
+                <span>4</span>
+                <div><strong>Cowork and Codex extras</strong><p>For Cowork, upload the plugin zip AIPet builds (menu: hooks → Cowork). For Codex, run <code>/hooks</code> in Codex and trust the AIPet hooks.</p></div>
+              </article>
+              <article>
+                <span>5</span>
+                <div><strong>Start a new session</strong><p>Only sessions started after installing show up. Hover a pet for details, click it to jump, right-click for the menu.</p></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="story-block split-block" id="privacy" aria-labelledby="privacy-title">
+            <div>
+              <p class="eyebrow">Privacy</p>
+              <h2 id="privacy-title">Everything stays on your computer.</h2>
+              <p>AIPet has no account, no telemetry and no server. The hooks write small status files to a folder in your user profile, and the pet reads them from there.</p>
+            </div>
+            <div class="trust-stack" aria-label="Privacy notes">
+              <div class="trust-banner">
+                <strong>No network</strong>
+                <span>AIPet makes no internet connections. The only optional connection is to an MCP Workbench you run yourself, off by default.</span>
+              </div>
+              <div class="trust-banner">
+                <strong>Small status files</strong>
+                <span>Each session file holds its state, folder name and timestamps, plus the command being asked about while a permission prompt is pending. Sessions without a project folder are titled with the first words of their first prompt.</span>
+              </div>
+              <div class="trust-banner">
+                <strong>Your settings are backed up</strong>
+                <span>Before changing a Claude Code <code>settings.json</code> or Codex <code>hooks.json</code>, AIPet saves a byte-exact copy you can restore from the menu. Backups are local copies, so they contain whatever your settings contain.</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="story-block split-block licensing-block" id="licensing" aria-labelledby="licensing-title">
+            <div>
+              <p class="eyebrow">Licensing</p>
+              <h2 id="licensing-title">Free for everyone. Credit it, don't resell it.</h2>
+              <p>Use, copy, modify and share AIPet freely, at home or at work. Forks and modified versions must credit AIPet by Duck Code. Selling AIPet, or a product built from it, needs a written agreement first.</p>
+              <div class="license-actions">
+                <a class="button secondary" href="https://github.com/shreduck/AIPet/blob/master/LICENSE" target="_blank" rel="noopener">Read the full license</a>
+              </div>
+            </div>
+            <div class="trust-stack" aria-label="Licensing summary">
+              <div class="trust-banner">
+                <strong>Use and change it freely</strong>
+                <span>Personal, educational and work use are all fine, and so is modifying the code and sharing your version.</span>
+              </div>
+              <div class="trust-banner">
+                <strong>Give credit in forks</strong>
+                <span>Keep the license and a visible credit, "Based on AIPet by Duck Code", in copies, forks and modified versions.</span>
+              </div>
+              <div class="trust-banner warning-banner">
+                <strong>No reselling without agreement</strong>
+                <span>Do not sell AIPet, a modified version, or a product that mainly provides it, unless Duck Code has agreed in writing.</span>
+              </div>
+              <div class="trust-banner">
+                <strong>Contact</strong>
+                <span>For an agreement or license questions, email duck_code_contact@proton.me.</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="story-block" id="important-notes" aria-labelledby="important-notes-title">
+            <div class="section-heading">
+              <p class="eyebrow">Important notes</p>
+              <h2 id="important-notes-title">A cute robot with real permissions.</h2>
+            </div>
+            <div class="note-grid">
+              <article class="trust-banner warning-banner">
+                <strong>Unsigned Windows and macOS apps</strong>
+                <span>Builds are not signed or notarized. Expect possible OS warnings, quarantine prompts, or blocked downloads.</span>
+              </article>
+              <article class="trust-banner warning-banner">
+                <strong>Allow means allow</strong>
+                <span>Answering a permission prompt from the pet is the same as answering it in Claude Code. Read the command in the popup before you click Allow once.</span>
+              </article>
+              <article class="trust-banner">
+                <strong>It edits agent settings</strong>
+                <span>Installing adds hook entries to Claude Code's <code>settings.json</code> and Codex's <code>hooks.json</code>. Your other hooks and settings are kept, and Remove takes them out again.</span>
+              </article>
+              <article class="trust-banner">
+                <strong>Beta software</strong>
+                <span>Codex support and the macOS app are new. Window focusing is best effort, especially for WSL terminals and Windows Terminal tabs.</span>
+              </article>
+              <article class="trust-banner">
+                <strong>Formerly Claude Pet</strong>
+                <span>AIPet was called Claude Pet. On first start it moves your settings over, offers to update old hooks, and reminds you once a day about anything still on the old name.</span>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <span>Duck Code</span>
+      <a href="mailto:duck_code_contact@proton.me">duck_code_contact@proton.me</a>
+    </footer>
+    <script src="../../assets/js/scroll-focus.js" defer></script>
+  </body>
+</html>

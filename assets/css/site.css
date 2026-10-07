@@ -4178,3 +4178,63 @@ button.store-badge:focus {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+/* ---- AIPet (apps/aipet): the robot's palette - dark screen, cyan face, amber light */
+.aipet-page {
+  --wash: #edf6f8;
+  --wash-strong: #dff0f3;
+  --ink: #18242c;
+  --muted: #536a73;
+  --soft: #dcebef;
+  --line: #cde1e6;
+  --accent: #127a8f;
+  --accent-dark: #0c5868;
+  --rose: #c8463d;
+  --gold: #b9741a;
+  --shadow: 0 22px 58px rgba(18, 52, 64, 0.16);
+  --shadow-soft: 0 14px 34px rgba(18, 52, 64, 0.1);
+}
+
+.aipet-page::before {
+  background:
+    radial-gradient(circle at 12% 10%, rgba(110, 231, 243, 0.12), transparent 26%),
+    radial-gradient(circle at 86% 6%, rgba(245, 165, 36, 0.08), transparent 28%),
+    linear-gradient(90deg, rgba(18, 122, 143, 0.035) 1px, transparent 1px),
+    linear-gradient(rgba(18, 122, 143, 0.03) 1px, transparent 1px);
+  background-size: auto, auto, 48px 48px, 48px 48px;
+}
+
+.aipet-page .app-lockup img {
+  border-radius: 18%;
+  background: #12202a;
+  image-rendering: pixelated;
+}
+
+.aipet-shot {
+  border-color: #22313b;
+  background: #0b1016;
+}
+
+.aipet-shot > img {
+  background: #0b1016;
+  image-rendering: pixelated;
+}
+
+.aipet-shot figcaption {
+  padding: 2px 6px 4px;
+  color: #a9c3cb;
+  font-size: 0.86rem;
+}
+
+.aipet-states-card img {
+  display: block;
+  width: min(220px, 70%);
+  height: auto;
+  margin-top: 14px;
+  image-rendering: pixelated;
+}
+
+@media (min-width: 981px) {
+  .aipet-page .product-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 470px);
+  }
+}

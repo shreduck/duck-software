@@ -13,6 +13,7 @@ Static GitHub Pages site for Duck Code app pages.
 - `apps/colourtrainer/index.html` is the ColourTrainer product page.
 - `apps/colourtrainer/privacy.html` is the ColourTrainer privacy policy.
 - `apps/colourtrainer/support.html` is the ColourTrainer support page.
+- `apps/aipet/index.html` is the AIPet product page (desktop pet for Claude Code, Cowork and Codex sessions); download buttons open the `shreduck/AIPet` Releases page (no direct downloads, so no warning modal) and the licensing section summarises the AIPet license (free use, credit in forks, no reselling without agreement).
 
 VeinTrack source material came from `/Users/rafa/Documents/Code/Personal/VeinTrack/page-manager-handoff/veintrack`.
 
