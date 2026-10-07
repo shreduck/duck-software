@@ -4209,19 +4209,27 @@ button.store-badge:focus {
   image-rendering: pixelated;
 }
 
+.aipet-hero h1 {
+  max-width: 760px;
+  font-size: clamp(2.3rem, 4.2vw, 4.1rem);
+  line-height: 1.02;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
 .aipet-shot {
-  border-color: #22313b;
-  background: #0b1016;
+  border-color: var(--line);
+  background: #eef3f4; /* the GIF's own background: a shade darker than the page */
 }
 
 .aipet-shot > img {
-  background: #0b1016;
-  image-rendering: pixelated;
+  background: #eef3f4;
 }
 
 .aipet-shot figcaption {
   padding: 2px 6px 4px;
-  color: #a9c3cb;
+  color: var(--muted);
   font-size: 0.86rem;
 }
 
@@ -4235,6 +4243,6 @@ button.store-badge:focus {
 
 @media (min-width: 981px) {
   .aipet-page .product-hero {
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 470px);
+    grid-template-columns: minmax(0, 1.05fr) minmax(300px, 440px);
   }
 }
