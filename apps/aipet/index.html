@@ -33,7 +33,7 @@
 
         <div class="hero-copy">
           <p class="lede">One little robot per Claude Code, Cowork or Codex session sits at the edge of your screen. It works while your agent works, jumps when it needs you, and naps when the job is done, so you can stop checking terminals.</p>
-          <p class="note">Click a pet to jump to its session. For Claude Code you can even answer a permission prompt straight from the pet.</p>
+          <p class="note">Click a pet to jump to its session. Answer permission prompts, and even Claude's questions, straight from the pet.</p>
           <p class="download-warning-note">Windows and macOS builds are unsigned and may trigger OS or browser download warnings.</p>
 
           <div class="store-badges" aria-label="AIPet downloads">
@@ -60,7 +60,7 @@
         </div>
 
         <figure class="desktop-frame hero-desktop aipet-shot">
-          <img src="../../assets/img/aipet/pets-demo.gif" width="404" height="708" alt="Animated AIPet robots: a working Claude CLI session with a scrolling terminal bubble, a Codex session in WSL hopping with check, cross and question-mark bubbles and a faint red badge, a finished Cowork session and an idle session asleep. Below, compact mode: one pet with three robots, where the first session that asked is in front; once it is answered, the next waiting session steps forward.">
+          <img src="../../assets/img/aipet/pets-demo.gif" width="600" height="708" alt="Animated AIPet robots: a working Claude CLI session humming with a wavy mouth under a scrolling terminal bubble, a Codex session in WSL hopping with check, cross and question-mark bubbles, a Claude session in WSL asking a question with a single question-mark bubble, a finished Cowork session with a green check seal, a session that hit an error shaking under a red cross, and an idle session asleep. Below, compact mode: one pet with three robots, where the first session that asked is in front; once it is answered, the next waiting session steps forward.">
           <figcaption>Every session at a glance, or all in one pet with compact mode.</figcaption>
         </figure>
       </section>
@@ -77,6 +77,7 @@
           <p class="eyebrow">On this page</p>
           <nav>
             <a href="#features">Features</a>
+            <a href="#whats-new">What's new</a>
             <a href="#works-with">Works with</a>
             <a href="#downloads">Downloads</a>
             <a href="#privacy">Privacy</a>
@@ -100,15 +101,15 @@
               </article>
               <article class="feature-card">
                 <h3>States you can feel</h3>
-                <p>Working pets bob with a scrolling terminal bubble. A pet that needs you jumps with a question mark and a beep, and reminds you until you click it. Finished pets nap, then clear themselves after a timeout you choose.</p>
+                <p>Working pets bob and hum, with a scrolling terminal bubble and a slow blink. A pet that needs you jumps with a question mark and a soft two-note chime, and reminds you until you click it. Errors and usage limits show in red with the reason. Finished pets get a green check, then clear themselves after a timeout you choose.</p>
               </article>
               <article class="feature-card">
                 <h3>Answer from the pet</h3>
-                <p>When Claude Code asks for permission, click the bubble to see the exact command and choose <strong>Allow once</strong> or <strong>Deny</strong>. Claude Code's own prompt stays available and the first answer wins.</p>
+                <p>When Claude Code or Codex asks for permission, click the bubble to see the exact command and choose <strong>Allow once</strong>, <strong>Allow + whitelist</strong> or <strong>Deny</strong>. Several prompts at once are handled one by one. When Claude asks you a question, pick an option or type your own answer right in the pet's card. The agent's own prompt stays available and the first answer wins.</p>
               </article>
               <article class="feature-card">
                 <h3>Click to jump</h3>
-                <p>Clicking a pet brings its terminal or app window to the front. For the Claude Code VS Code extension it raises the right VS Code window, even when a parent folder is open there, and asks the extension to show that conversation.</p>
+                <p>Clicking a pet brings its terminal or app window to the front, switching to the right virtual desktop if needed. Sessions in the Claude desktop app bring up the app. For the Claude Code VS Code extension it raises the right VS Code window and asks the extension to show that conversation.</p>
               </article>
               <article class="feature-card aipet-states-card">
                 <h3>Red means you</h3>
@@ -117,7 +118,40 @@
               </article>
               <article class="feature-card">
                 <h3>Make it yours</h3>
-                <p>Robot, mole or cat; light or dark theme; a size slider; how long finished pets stay; how long the pet waits for an answer. Drag the pets anywhere, on any monitor.</p>
+                <p>A settings window with search and a short explanation for every option: light or dark theme, pet size, AIPet chimes or your system's sounds, timers, auto-approve rules and more. Settings live in one plain <code>config.json</code> that applies as soon as you save it, and a button copies a guide your AI assistant can use to change them for you. Drag the pets anywhere, on any monitor.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="story-block" id="whats-new" aria-labelledby="whats-new-title">
+            <div class="section-heading">
+              <p class="eyebrow">What's new in 0.4</p>
+              <h2 id="whats-new-title">Smarter prompts, a proper settings window, nicer sounds.</h2>
+            </div>
+            <div class="note-grid">
+              <article class="trust-banner">
+                <strong>Questions on the pet</strong>
+                <span>Answer Claude's multiple-choice questions from the pet's card. Codex questions show there too, to answer in Codex.</span>
+              </article>
+              <article class="trust-banner">
+                <strong>No more false alarms</strong>
+                <span>Prompts the agent settled by itself, or that belonged to a stopped subagent, no longer leave a pet stuck on "needs you".</span>
+              </article>
+              <article class="trust-banner">
+                <strong>Errors explained</strong>
+                <span>When a turn ends on an API error such as a usage limit, the pet turns red and says why.</span>
+              </article>
+              <article class="trust-banner">
+                <strong>Settings window</strong>
+                <span>Every option grouped by section, with pixel icons, explanations, search and Ctrl-zoom. The permission card can be resized too.</span>
+              </article>
+              <article class="trust-banner">
+                <strong>Gentler sounds</strong>
+                <span>Soft two-note chimes for done, needs you and error, on Windows and macOS. Your system's sounds are one click away.</span>
+              </article>
+              <article class="trust-banner">
+                <strong>Native menus</strong>
+                <span>The pet's right-click menu now looks like every other menu on Windows and macOS.</span>
               </article>
             </div>
           </section>
@@ -139,7 +173,7 @@
               </div>
               <div class="trust-banner">
                 <strong>Codex <span class="status-label">New</span></strong>
-                <span>Codex CLI on Windows, macOS and WSL. After installing, run <code>/hooks</code> in Codex once to trust the AIPet hooks. The pet shows Codex permission prompts but you answer them in Codex.</span>
+                <span>Codex CLI and the Codex VS Code extension on Windows, macOS and WSL. After installing, run <code>/hooks</code> in Codex once to trust the AIPet hooks. Permission prompts can be answered from the pet; Codex questions show on the pet and are answered in Codex.</span>
               </div>
               <div class="trust-banner">
                 <strong>MCP Workbench agent chats</strong>
@@ -204,8 +238,8 @@
             </div>
             <div class="trust-stack" aria-label="Privacy notes">
               <div class="trust-banner">
-                <strong>No network</strong>
-                <span>AIPet makes no internet connections. The only optional connection is to an MCP Workbench you run yourself, off by default.</span>
+                <strong>Almost no network</strong>
+                <span>The only connection AIPet makes by itself is a daily check on GitHub for a new release, which you can switch off; it never installs anything. Everything else is opt-in and off by default: an MCP Workbench you run yourself, and an experimental Claude usage reading that asks for consent first.</span>
               </div>
               <div class="trust-banner">
                 <strong>Small status files</strong>
@@ -259,7 +293,11 @@
               </article>
               <article class="trust-banner warning-banner">
                 <strong>Allow means allow</strong>
-                <span>Answering a permission prompt from the pet is the same as answering it in Claude Code. Read the command in the popup before you click Allow once.</span>
+                <span>Answering a permission prompt from the pet is the same as answering it in Claude Code or Codex. Read the command in the popup before you click Allow once.</span>
+              </article>
+              <article class="trust-banner warning-banner">
+                <strong>Whitelists approve by themselves</strong>
+                <span><strong>Allow + whitelist</strong> and the auto-approve rules let matching commands run without asking next time. Whitelisting adds the exact command only, and questions from the AI are never answered automatically.</span>
               </article>
               <article class="trust-banner">
                 <strong>It edits agent settings</strong>
@@ -267,7 +305,7 @@
               </article>
               <article class="trust-banner">
                 <strong>Still growing</strong>
-                <span>Codex support and the macOS app are new. Window focusing is best effort, especially for WSL terminals and Windows Terminal tabs.</span>
+                <span>Codex support and the macOS app are new. Window focusing is best effort: for sessions in the Claude desktop app it brings up the app, not the exact conversation, and Windows Terminal tabs can't be picked individually.</span>
               </article>
               <article class="trust-banner">
                 <strong>Formerly Claude Pet</strong>
