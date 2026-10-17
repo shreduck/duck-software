@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AIPet | Duck Code</title>
-    <meta name="description" content="AIPet is a desktop pet for your AI coding sessions: one little robot per Claude Code, Cowork or Codex session that shows when it is working, done, or needs you. Windows and macOS.">
+    <meta name="description" content="AIPet is a desktop pet for your AI coding sessions: robots, a live agent graph, local activity logs and context readings for Claude Code, Cowork and Codex. Windows and macOS.">
     <link rel="icon" href="../../assets/img/aipet/icon-1024.png">
     <link rel="stylesheet" href="../../assets/css/site.css">
   </head>
@@ -33,8 +33,8 @@
 
         <div class="hero-copy">
           <p class="lede">One little robot per Claude Code, Cowork or Codex session sits at the edge of your screen. It works while your agent works, jumps when it needs you, and naps when the job is done, so you can stop checking terminals.</p>
-          <p class="note">Click a pet to jump to its session. Answer permission prompts, and even Claude's questions, straight from the pet.</p>
-          <p class="download-warning-note">Windows and macOS builds are unsigned and may trigger OS or browser download warnings.</p>
+          <p class="note">Click a pet to jump to its session, or open the agent network to follow subagents and tools. Answer permission prompts and Claude's questions from the pet; Codex questions are answered in Codex.</p>
+          <p class="download-warning-note">Windows builds are unsigned; Mac builds are locally signed but not notarized by Apple. Your OS may ask you to allow the app on first launch.</p>
 
           <div class="store-badges" aria-label="AIPet downloads">
             <a class="store-badge desktop-badge" href="https://github.com/shreduck/AIPet/releases" target="_blank" rel="noopener">
@@ -52,6 +52,7 @@
           </div>
           <div class="page-pill-links" aria-label="AIPet page links">
             <a href="#features">Features</a>
+            <a href="#agent-network">Agent network</a>
             <a href="#works-with">Works with</a>
             <a href="#downloads">Install</a>
             <a href="#privacy">Privacy</a>
@@ -65,10 +66,10 @@
         </figure>
       </section>
 
-      <section class="top-notice" aria-label="Unsigned desktop app warning">
+      <section class="top-notice" aria-label="Desktop app first-launch notice">
         <article class="trust-banner warning-banner payment-safety-banner">
-          <strong>Unsigned desktop builds</strong>
-          <span>AIPet for Windows and macOS is not code-signed or notarized, so Windows SmartScreen, macOS Gatekeeper, or browser download protection may block it or show warnings. Only continue if you trust this release.</span>
+          <strong>First-launch security prompts</strong>
+          <span>Windows builds are unsigned. Mac builds have an ad-hoc signature, but are not Developer ID signed or notarized. SmartScreen, Gatekeeper or your browser may show a warning; download only from the project's GitHub Releases page.</span>
         </article>
       </section>
 
@@ -77,6 +78,7 @@
           <p class="eyebrow">On this page</p>
           <nav>
             <a href="#features">Features</a>
+            <a href="#agent-network">Agent network</a>
             <a href="#whats-new">What's new</a>
             <a href="#works-with">Works with</a>
             <a href="#downloads">Downloads</a>
@@ -105,7 +107,7 @@
               </article>
               <article class="feature-card">
                 <h3>Answer from the pet</h3>
-                <p>When Claude Code or Codex asks for permission, click the bubble to see the exact command and choose <strong>Allow once</strong>, <strong>Allow + whitelist</strong> or <strong>Deny</strong>. Several prompts at once are handled one by one. When Claude asks you a question, pick an option or type your own answer right in the pet's card. The agent's own prompt stays available and the first answer wins.</p>
+                <p>Click the bubble to read a permission request before choosing <strong>Allow once</strong>, <strong>Allow + whitelist</strong> or <strong>Deny</strong>. Answer Claude Code questions with a choice, several picks or your own text. Browse queued prompts with the side arrows; <strong>Go to window</strong> opens the session and advances to the next waiting prompt. Codex questions are read-only in AIPet and answered in Codex.</p>
               </article>
               <article class="feature-card">
                 <h3>Click to jump</h3>
@@ -118,40 +120,79 @@
               </article>
               <article class="feature-card">
                 <h3>Make it yours</h3>
-                <p>A settings window with search and a short explanation for every option: light or dark theme, pet size, AIPet chimes or your system's sounds, timers, auto-approve rules and more. Settings live in one plain <code>config.json</code> that applies as soon as you save it, and a button copies a guide your AI assistant can use to change them for you. Drag the pets anywhere, on any monitor.</p>
+                <p>Search the AIPet menu window for light or dark theme, pet size, tooltip text size, sounds, timers and approval rules. Use AIPet chimes or your system's sounds. The agent window has separate window and text scales, both starting at 100%. Settings saved in <code>config.json</code> apply automatically, and a copied settings guide lets your AI assistant help you change them.</p>
+              </article>
+              <article class="feature-card">
+                <h3>Context and usage at a glance</h3>
+                <p>See how much of a session's context window is in use, alongside separate account-limit badges when readings are available. Codex reports its context window; Claude's is estimated and marked as such. Hover for the source and reset times. Optional Claude usage collectors stay off until you enable them.</p>
+              </article>
+              <article class="feature-card">
+                <h3>Stay on your desktop</h3>
+                <p>Show pets across virtual desktops, including macOS full-screen Spaces. Session and usage tooltips open above the pet, with their own text-size control. On macOS, hovering or opening a prompt card leaves the current app in place; <strong>Go to window</strong> is the deliberate handoff.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="story-block" id="agent-network" aria-labelledby="agent-network-title">
+            <div class="section-heading">
+              <p class="eyebrow">Agent network</p>
+              <h2 id="agent-network-title">See the whole task, from the main agent to its tools.</h2>
+              <p class="section-kicker">Open <strong>Agent network window</strong> from the pet or tray menu for Claude Code and Codex. Follow one session in its own window, or bring several sessions together in a shared view.</p>
+            </div>
+            <figure class="desktop-frame">
+              <img src="../../assets/img/aipet/agent-network.png" width="1280" height="828" loading="lazy" alt="AIPet agent network with a main agent branching into Review layout and Check behavior, a nested Keyboard controls agent, Read and Bash tool nodes, context readings and a filtered activity log below.">
+              <figcaption>The actual agent window, shown with fictional demo data: nested agents, tool calls and local logs together.</figcaption>
+            </figure>
+            <div class="feature-grid">
+              <article class="feature-card">
+                <h3>Agents and their agents</h3>
+                <p>The live graph links each subagent to the agent that started it, including nested branches. Nodes show names, models, reasoning effort and state when available. Select a tool node to see its inputs and results in the calling agent's log.</p>
+              </article>
+              <article class="feature-card">
+                <h3>Logs you can actually follow</h3>
+                <p>Switch between the combined activity log and individual agents. Filter messages, tools and MCP calls; expand a one-line entry to read or copy its full content. Move logs above, below or beside the graph, or fold them to a small bar to give the graph more room.</p>
+              </article>
+              <article class="feature-card">
+                <h3>Context, tokens and tool counts</h3>
+                <p>Read each agent's reported token totals and context usage, with estimates or incomplete history marked. Tool nodes distinguish calls in the current task from calls across the session. Context readings describe the model's current input; token totals describe usage so far.</p>
+              </article>
+              <article class="feature-card">
+                <h3>Explore at your own scale</h3>
+                <p>Pan, zoom, center or fit the whole graph. On a Mac trackpad, use two fingers to pan and pinch to zoom around the pointer. Separate window and text scales keep labels readable. Permission controls and supported question answers are available in this view too; Codex questions still open in Codex.</p>
               </article>
             </div>
           </section>
 
           <section class="story-block" id="whats-new" aria-labelledby="whats-new-title">
             <div class="section-heading">
-              <p class="eyebrow">What's new in 0.4</p>
-              <h2 id="whats-new-title">Smarter prompts, a proper settings window, nicer sounds.</h2>
+              <p class="eyebrow">What's new in 0.7.0</p>
+              <h2 id="whats-new-title">A live view of the work behind every pet.</h2>
+              <p class="section-kicker">The <a href="https://github.com/shreduck/AIPet/releases/tag/v0.7.0" target="_blank" rel="noopener">0.7.0 release</a> brings the agent network, richer local logs and prompt navigation, with a smaller portable Windows package and Mac disk-image downloads.</p>
             </div>
             <div class="note-grid">
               <article class="trust-banner">
-                <strong>Questions on the pet</strong>
-                <span>Answer Claude's multiple-choice questions from the pet's card. Codex questions show there too, to answer in Codex.</span>
+                <strong>Follow nested agents</strong>
+                <span>See who started each subagent, which tools it used and when it finished. One shared graph or separate session windows: your choice.</span>
               </article>
               <article class="trust-banner">
-                <strong>No more false alarms</strong>
-                <span>Prompts the agent settled by itself, or that belonged to a stopped subagent, no longer leave a pet stuck on "needs you".</span>
+                <strong>Read the activity that matters</strong>
+                <span>Filter tool calls and messages, unfold entries, copy results and move or fold the logs while the graph stays in view.</span>
               </article>
               <article class="trust-banner">
-                <strong>Errors explained</strong>
-                <span>When a turn ends on an API error such as a usage limit, the pet turns red and says why.</span>
+                <strong>Browse waiting prompts</strong>
+                <span>Side arrows move through the queue without answering. Go to window opens the AI session and advances the card. Choices and typed drafts stay with their prompts.</span>
               </article>
               <article class="trust-banner">
-                <strong>Settings window</strong>
-                <span>Every option grouped by section, with pixel icons, explanations, search and Ctrl-zoom. The permission card can be resized too.</span>
+                <strong>Keep Codex questions visible</strong>
+                <span>Pending questions stay visible until settled, including when Codex has finished its reply. Desktop sessions are recognized separately from VS Code. Answer questions in Codex itself.</span>
               </article>
               <article class="trust-banner">
-                <strong>Gentler sounds</strong>
-                <span>Soft two-note chimes for done, needs you and error, on Windows and macOS. Your system's sounds are one click away.</span>
+                <strong>Approve one session for a while</strong>
+                <span>Live Management offers a timed auto-approve for a selected session, after confirmation. See its countdown and stop it early; AI questions always wait for your answer.</span>
               </article>
               <article class="trust-banner">
-                <strong>Native menus</strong>
-                <span>The pet's right-click menu now looks like every other menu on Windows and macOS.</span>
+                <strong>Hooks that survive an app move</strong>
+                <span>Installed hooks get their own runtime, so moving or replacing the portable app does not leave them depending on its old folder.</span>
               </article>
             </div>
           </section>
@@ -172,8 +213,8 @@
                 <span>Cowork reads hooks only from plugins, so AIPet builds a plugin zip for you to upload under Customize → Plugins. Sessions are named after the folder you connected.</span>
               </div>
               <div class="trust-banner">
-                <strong>Codex <span class="status-label">New</span></strong>
-                <span>Codex CLI and the Codex VS Code extension on Windows, macOS and WSL. After installing, run <code>/hooks</code> in Codex once to trust the AIPet hooks. Permission prompts can be answered from the pet; Codex questions show on the pet and are answered in Codex.</span>
+                <strong>Codex</strong>
+                <span>Codex CLI, desktop app sessions and the Codex VS Code extension, with Windows, macOS and WSL hook targets. After installing, run <code>/hooks</code> in Codex once to trust the AIPet hooks. Permission prompts can be answered from the pet; Codex questions show on the pet and are answered in Codex.</span>
               </div>
               <div class="trust-banner">
                 <strong>MCP Workbench agent chats</strong>
@@ -191,14 +232,14 @@
             <div class="download-grid">
               <a class="trust-banner download-card" href="https://github.com/shreduck/AIPet/releases" target="_blank" rel="noopener">
                 <strong>Windows</strong>
-                <span>On the Releases page, download <code>AIPet.exe</code>: a single program with nothing to install.</span>
+                <span>Download <code>AIPet-windows-x64.zip</code>, extract the whole archive and run <code>AIPet.exe</code> inside the <code>AIPet</code> folder. Keep its companion files together; no installer is needed.</span>
               </a>
               <a class="trust-banner download-card" href="https://github.com/shreduck/AIPet/releases" target="_blank" rel="noopener">
                 <strong>macOS (Apple Silicon)</strong>
-                <span>On the Releases page, download <code>AIPet-mac-arm64.zip</code> and unzip it to get the app.</span>
+                <span>Download <code>AIPet-mac-arm64.dmg</code> and drag AIPet to Applications, or unzip <code>AIPet-mac-arm64.zip</code>. Both downloads contain the same Apple Silicon app.</span>
               </a>
               <a class="trust-banner download-card" href="https://github.com/shreduck/AIPet/releases/tag/latest" target="_blank" rel="noopener">
-                <strong>Latest build</strong>
+                <strong>Latest test build</strong>
                 <span>The rolling pre-release built from the newest commit, for trying fixes before a version is tagged.</span>
               </a>
               <a class="trust-banner download-card" href="https://github.com/shreduck/AIPet" target="_blank" rel="noopener">
@@ -209,15 +250,15 @@
             <div class="install-steps" aria-label="AIPet installation steps">
               <article>
                 <span>1</span>
-                <div><strong>Download and run</strong><p>Pick the newest version on the Releases page. Start <code>AIPet.exe</code>, or unzip and open <code>AIPet.app</code>. A robot appears in the bottom-right corner, with an icon in the tray or Dock.</p></div>
+                <div><strong>Download and run</strong><p>Choose your platform on the Releases page. On Windows, extract the ZIP and run <code>AIPet.exe</code> inside its folder. On Mac, open the DMG and drag AIPet to Applications, or use the ZIP. A robot appears with a tray or menu-bar icon.</p></div>
               </article>
               <article class="install-warning">
                 <span>2</span>
-                <div><strong>Allow the unsigned app</strong><p>Windows: choose <strong>More info → Run anyway</strong> in SmartScreen. macOS: right-click the app and choose <strong>Open</strong> the first time, or use <strong>System Settings → Privacy &amp; Security → Open Anyway</strong>.</p></div>
+                <div><strong>First launch</strong><p>Windows: choose <strong>More info → Run anyway</strong> in SmartScreen. macOS: right-click the app and choose <strong>Open</strong> the first time, or use <strong>System Settings → Privacy &amp; Security → Open Anyway</strong>.</p></div>
               </article>
               <article>
                 <span>3</span>
-                <div><strong>Pick your installs</strong><p>The setup window lists the Claude Code and Codex installs it found on this computer and in running WSL distros. Tick the ones to hook up; nothing changes before you press Install.</p></div>
+                <div><strong>Pick your installs</strong><p>The setup window lists Claude Code and Codex in their own sections, including detected running WSL installs. Tick the ones to connect; nothing changes before you press Install.</p></div>
               </article>
               <article>
                 <span>4</span>
@@ -233,8 +274,8 @@
           <section class="story-block split-block" id="privacy" aria-labelledby="privacy-title">
             <div>
               <p class="eyebrow">Privacy</p>
-              <h2 id="privacy-title">Everything stays on your computer.</h2>
-              <p>AIPet has no account, no telemetry and no server. The hooks write small status files to a folder in your user profile, and the pet reads them from there.</p>
+              <h2 id="privacy-title">Your session history stays local.</h2>
+              <p>AIPet has no account, no telemetry and no server. Hooks write local status files; the agent view also reads your existing local transcripts for messages, tool activity and context. It does not upload those conversations.</p>
             </div>
             <div class="trust-stack" aria-label="Privacy notes">
               <div class="trust-banner">
@@ -242,8 +283,8 @@
                 <span>The only connection AIPet makes by itself is a daily check on GitHub for a new release, which you can switch off; it never installs anything. Everything else is opt-in and off by default: an MCP Workbench you run yourself, and an experimental Claude usage reading that asks for consent first.</span>
               </div>
               <div class="trust-banner">
-                <strong>Small status files</strong>
-                <span>Each session file holds its state, folder name and timestamps, plus the command being asked about while a permission prompt is pending. Sessions without a project folder are titled with the first words of their first prompt.</span>
+                <strong>Local status and activity</strong>
+                <span>Status files hold session state, folder names, timestamps and pending requests. The agent view reads local transcript content rather than copying entire transcripts. Debug logs can include prompts and tool details; they stay in your user profile and are cleaned up locally.</span>
               </div>
               <div class="trust-banner">
                 <strong>Your settings are backed up</strong>
@@ -288,8 +329,8 @@
             </div>
             <div class="note-grid">
               <article class="trust-banner warning-banner">
-                <strong>Unsigned Windows and macOS apps</strong>
-                <span>Builds are not signed or notarized. Expect possible OS warnings, quarantine prompts, or blocked downloads.</span>
+                <strong>Publisher signing and notarization</strong>
+                <span>Windows builds are unsigned. Mac builds are ad-hoc signed, but not Developer ID signed or notarized. First-launch OS or download warnings may still appear.</span>
               </article>
               <article class="trust-banner warning-banner">
                 <strong>Allow means allow</strong>
@@ -305,7 +346,7 @@
               </article>
               <article class="trust-banner">
                 <strong>Still growing</strong>
-                <span>Codex support and the macOS app are new. Window focusing is best effort: for sessions in the Claude desktop app it brings up the app, not the exact conversation, and Windows Terminal tabs can't be picked individually.</span>
+                <span>Window focusing is best effort: desktop-app sessions bring up the host app, not necessarily the exact conversation, and Windows Terminal tabs cannot be picked individually. Codex question replies must be entered in Codex, even when the question is visible in AIPet.</span>
               </article>
               <article class="trust-banner">
                 <strong>Formerly Claude Pet</strong>

@@ -17,6 +17,13 @@ Static GitHub Pages site for Duck Code app pages.
 
 VeinTrack source material came from `/Users/rafa/Documents/Code/Personal/VeinTrack/page-manager-handoff/veintrack`.
 
+## AIPet product page
+
+The AIPet page follows v0.7.0 and its published Windows ZIP, Apple Silicon DMG and Mac ZIP downloads.
+It covers the agent network, local logs, context and token readings, prompt navigation and timed approvals.
+Codex questions remain read-only in AIPet. Keep this distinction, the download formats, signing notes and
+local transcript/privacy wording aligned with the AIPet source and release assets.
+
 ## Workbench product tour
 
 The Workbench page follows the current development interface; published release assets may differ.
