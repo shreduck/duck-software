@@ -66,7 +66,7 @@
     if (!modal || !modalTitle || !modalImage || !modalHtml || !modalCaption) {
       return;
     }
-    const heading = carousel.closest(".feature-card, .workflow-card")?.querySelector("h3")?.textContent || "VeinTrack screenshot";
+    const heading = carousel.closest(".feature-card, .workflow-card")?.querySelector("h3")?.textContent || "App screenshot";
     modalSlides = Array.from(carousel.querySelectorAll("[data-carousel-slide]")).map(slideData);
     modalReturnFocus = opener;
     modalTitle.textContent = heading;

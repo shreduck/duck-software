@@ -6,16 +6,18 @@ Static GitHub Pages site for Duck Code app pages.
 
 - `index.html` is the root app catalog.
 - `apps/workbench/index.html` is the MCP Workbench product tour, feature gallery, downloads and policy page.
-- `apps/veintrack/index.html` is the VeinTrack scrolling feature page.
-- `apps/veintrack/privacy.html` is the VeinTrack privacy page.
-- `apps/veintrack/licensing.html` is the VeinTrack app license page.
-- `apps/veintrack/support.html` is the VeinTrack support page.
+- `apps/veinjournal/index.html` is the VeinJournal scrolling feature page.
+- `apps/veinjournal/privacy.html` is the VeinJournal privacy page.
+- `apps/veinjournal/licensing.html` is the VeinJournal app license page.
+- `apps/veinjournal/support.html` is the VeinJournal support page.
 - `apps/colourtrainer/index.html` is the ColourTrainer product page.
 - `apps/colourtrainer/privacy.html` is the ColourTrainer privacy policy.
 - `apps/colourtrainer/support.html` is the ColourTrainer support page.
 - `apps/aipet/index.html` is the AIPet product page (desktop pet for Claude Code, Cowork and Codex sessions); download buttons open the `shreduck/AIPet` Releases page (no direct downloads, so no warning modal) and the licensing section summarises the AIPet license (free use, credit in forks, no reselling without agreement).
 
-VeinTrack source material came from `/Users/rafa/Documents/Code/Personal/VeinTrack/page-manager-handoff/veintrack`.
+VeinJournal is the current public name. The legacy `apps/veintrack/` pages redirect to the corresponding VeinJournal pages so existing privacy, support and policy links keep working.
+
+The site uses the current app icon from the VeinJournal project. Existing screenshots and artwork under `assets/img/veintrack/` are retained historical beta assets; the product page labels the older screenshots. Their original source material came from the VeinTrack page handoff.
 
 ## AIPet product page
 
