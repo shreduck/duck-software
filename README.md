@@ -64,3 +64,14 @@ Web-sized ducks and the group illustration reuse approved artwork from the
 ColourTrainer repository. `assets/img/colourtrainer/artwork-provenance.json`
 records source and output hashes; no new mascot or simulated app screenshot
 was generated. Challenge colours remain native app data, independent of art.
+
+## Search discoverability
+
+ColourTrainer uses a descriptive colour-games page title and description plus
+canonical URLs for its product, support and privacy pages. `sitemap.xml` lists
+the current site pages and excludes legacy VeinTrack redirects and tool/demo
+fixtures. Submit `https://shreduck.github.io/duck-software/sitemap.xml` in a
+verified Google Search Console property and request product-page recrawling.
+No Search Console submission, paid search campaign or ranking guarantee is
+implied by these metadata changes. App Store subtitle/keyword changes are a
+separate next-version task in the ColourTrainer repository.
