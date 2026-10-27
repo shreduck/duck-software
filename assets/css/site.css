@@ -4319,3 +4319,32 @@ button.store-badge:focus {
     align-self: start;
   }
 }
+
+/* ColourTrainer 1.1.1: approved activity artwork and whole-app feature tour. */
+.colourtrainer-hero .hero-copy,
+.colour-hero-cast { grid-column: 1 / -1; }
+.colour-hero-cast { position: relative; z-index: 1; margin: 0; }
+.colour-hero-cast > img {
+  display: block; width: 100%; height: auto; aspect-ratio: 21 / 9;
+  object-fit: cover; border-radius: 30px; border: 1px solid var(--line);
+}
+.colour-hero-cast figcaption { margin-top: 10px; color: var(--muted); font-size: .85rem; text-align: center; }
+.colour-activity-duck { display: block; width: 100%; height: 155px; object-fit: contain; }
+.colour-game-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.colour-game-card { min-width: 0; }
+.colour-game-card::after { display: none; }
+.colour-game-duck { display: block; width: 100%; height: 210px; object-fit: contain; }
+.colour-game-card h3 { margin-top: 0; }
+.colour-game-card .eyebrow { margin: 18px 0 8px; }
+.colour-daily-section { display: grid; grid-template-columns: minmax(0, 1fr) 180px; align-items: center; gap: 28px; }
+.colour-daily-duck { width: 100%; height: auto; max-height: 240px; object-fit: contain; }
+.colour-everyday-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 760px) {
+  .colour-game-grid, .colour-everyday-grid { grid-template-columns: 1fr; }
+  .colour-daily-section { grid-template-columns: 1fr; }
+  .colour-daily-duck { width: 150px; justify-self: center; }
+  .colour-hero-cast > img { border-radius: 18px; }
+}
+
+.colourtrainer-page .section-index a { white-space: normal; overflow-wrap: anywhere; }
+.colour-game-card p + p { margin-top: 12px; }

@@ -52,3 +52,15 @@ python3 -m http.server 8765 --bind 127.0.0.1
 Open `http://localhost:8765/apps/workbench/`. No build step or frontend dependency is required.
 
 Screenshot fixtures and regeneration instructions are in [tools/workbench-screenshots](tools/workbench-screenshots/README.md).
+
+## ColourTrainer 1.1.1 product page
+
+The product page covers the three training paths, Flip & Match, Colour Slice,
+configurable Daily Mix, iPhone/iPad support, atlas/widgets, accessibility and
+optional supporter benefits. The homepage card and support/privacy pages follow
+that scope. App Store Connect confirmed 1.1.1 READY_FOR_SALE on 2026-10-27.
+
+Web-sized ducks and the group illustration reuse approved artwork from the
+ColourTrainer repository. `assets/img/colourtrainer/artwork-provenance.json`
+records source and output hashes; no new mascot or simulated app screenshot
+was generated. Challenge colours remain native app data, independent of art.

@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-27",
+  "method": "Web-sized derivatives of approved existing ColourTrainer artwork; no newly generated mascot or app UI. Originals remain unchanged in the app repository.",
+  "files": {
+    "spectrum-duck.png": {
+      "source": "ColourTrainer/Assets.xcassets/HomeMascotSpectrum.imageset/home-mascot-spectrum.png",
+      "sourceSHA256": "581daa7fe86026c29c2f4cffeffbafd805e01a2f1ae278682fc2e7bf8afa9967",
+      "outputSHA256": "581daa7fe86026c29c2f4cffeffbafd805e01a2f1ae278682fc2e7bf8afa9967"
+    },
+    "tone-duck.png": {
+      "source": "ColourTrainer/Assets.xcassets/HomeMascotTone.imageset/home-mascot-tone.png",
+      "sourceSHA256": "d1f8d35c92c7c2844a774173b4ee4043974005b711d44abfe04cd8648e1180f8",
+      "outputSHA256": "d1f8d35c92c7c2844a774173b4ee4043974005b711d44abfe04cd8648e1180f8"
+    },
+    "motion-duck.png": {
+      "source": "ColourTrainer/Assets.xcassets/HomeMascotMotion.imageset/home-mascot-motion.png",
+      "sourceSHA256": "a2cd1eb894b5745e85a6fe94e6e48c0ba49bbca28f8127e982407626ae57d7c9",
+      "outputSHA256": "a2cd1eb894b5745e85a6fe94e6e48c0ba49bbca28f8127e982407626ae57d7c9"
+    },
+    "memory-duck.png": {
+      "source": "ColourTrainer/Assets.xcassets/HomeMascotMemoryTable.imageset/home-mascot-memory-table.png",
+      "sourceSHA256": "0f555bbaa4bbc5ca55bd1e6a2efcfcb532df505533d7d386d26f3c61d3d7313e",
+      "outputSHA256": "797e9e30d42f417c00c98b6e648cee85817146d410b5af4124986fc34a1fd03f"
+    },
+    "slice-duck.png": {
+      "source": "ColourTrainer/Assets.xcassets/HomeMascotSliceSamurai.imageset/home-mascot-slice-samurai.png",
+      "sourceSHA256": "0c5e0c254730854021657d399646fcaeea548cb7e00628a6259248ff15bbc2a8",
+      "outputSHA256": "df21ff688afcd1f40a4d444ce0590a645fb1754f56a246197436fbd797c3f82c"
+    },
+    "daily-duck.png": {
+      "source": "ColourTrainer/Assets.xcassets/HomeMascotDaily.imageset/home-mascot-daily.png",
+      "sourceSHA256": "61aeeb17fc939e3a492446b647b8a4fe793f82c96fdc71ec906266f61f63dc61",
+      "outputSHA256": "61aeeb17fc939e3a492446b647b8a4fe793f82c96fdc71ec906266f61f63dc61"
+    },
+    "duck-group.jpg": {
+      "source": "distribution-media/1.1/listing/header-duck-group.png",
+      "sourceSHA256": "6239a3df07bb47258ee4dced7e68dc17a7dfeda6bfd986d027f94f2b6a311ebb",
+      "outputSHA256": "c44c9a013afdc55f7f6c89438005d642773cf3d42dab66ded2e1f32e65b65d6c"
+    }
+  }
+}
