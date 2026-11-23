@@ -4179,6 +4179,89 @@ button.store-badge:focus {
   }
 }
 /* ---- AIPet (apps/aipet): the robot's palette - dark screen, cyan face, amber light */
+.aipet-ssh-badge {
+  display: inline-flex;
+  padding: 3px 9px;
+  border: 1px solid #90bfc8;
+  border-radius: 999px;
+  background: #e5f5f7;
+  color: #105764;
+  font-size: 0.875rem;
+  font-weight: 750;
+  line-height: 1.3;
+}
+
+.aipet-overview {
+  display: grid;
+  gap: 12px;
+  padding: clamp(16px, 3vw, 32px) 0 0;
+}
+
+.aipet-ssh-banner {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr) max-content;
+  align-items: center;
+  gap: clamp(12px, 2vw, 24px);
+  padding: clamp(16px, 3vw, 30px);
+  border: 1px solid #95c5cd;
+  border-radius: 16px;
+  background: linear-gradient(125deg, #e7f7f9, #f8fcfb);
+}
+
+.aipet-ssh-banner h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2.35rem);
+}
+
+.aipet-ssh-banner p:last-child {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+.aipet-mosaic {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.aipet-mosaic li {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #f8fcfc;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.aipet-mosaic li:nth-child(3n + 2) { background: #fdf8ee; }
+.aipet-mosaic li:nth-child(3n) { background: #eef7f8; }
+.aipet-mosaic strong { display: block; color: var(--ink); }
+
+.aipet-mini-bot {
+  display: block;
+  width: 37px;
+  height: 52px;
+  background: url("../img/aipet/feature-bots.png") no-repeat;
+  image-rendering: pixelated;
+}
+
+.aipet-mini-bot.bot-asking { background-position: -37px 0; }
+.aipet-mini-bot.bot-joy { background-position: -74px 0; }
+.aipet-mini-bot.bot-sleeping { background-position: -111px 0; }
+.aipet-mini-bot.bot-error { background-position: -148px 0; }
+
+@media (max-width: 640px) {
+  .aipet-ssh-banner { grid-template-columns: max-content minmax(0, 1fr); }
+  .aipet-ssh-banner .button { grid-column: 1 / -1; justify-self: start; }
+}
+
 .aipet-page {
   --wash: #edf6f8;
   --wash-strong: #dff0f3;

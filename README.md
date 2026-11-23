@@ -21,10 +21,11 @@ The site uses the current app icon from the VeinJournal project. Existing screen
 
 ## AIPet product page
 
-The AIPet page follows v0.7.0 and its published Windows ZIP, Apple Silicon DMG and Mac ZIP downloads.
-It covers the agent network, local logs, context and token readings, prompt navigation and timed approvals.
-Codex questions remain read-only in AIPet. Keep this distinction, the download formats, signing notes and
-local transcript/privacy wording aligned with the AIPet source and release assets.
+The AIPet page follows v1.0.0 and highlights SSH connections to Linux and macOS hosts.
+It covers the agent network, activity logs, context and token readings, prompt navigation and timed approvals.
+Codex questions remain read-only in AIPet. Keep the supported SSH platforms, download formats, signing notes
+and privacy wording aligned with the AIPet source and release assets. The feature mosaic reuses five
+state sprites rendered from AIPet's robot artwork.
 
 ## Workbench product tour
 

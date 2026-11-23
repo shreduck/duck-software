@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AIPet | Duck Code</title>
-    <meta name="description" content="AIPet is a desktop pet for your AI coding sessions: robots, a live agent graph, local activity logs and context readings for Claude Code, Cowork and Codex. Windows and macOS.">
+    <meta name="description" content="AIPet is a desktop pet for your AI coding sessions: robots, an agent graph and activity logs for Claude Code, Cowork and Codex. Connect to Linux and macOS SSH hosts.">
     <link rel="icon" href="../../assets/img/aipet/icon-1024.png">
     <link rel="stylesheet" href="../../assets/css/site.css">
   </head>
@@ -51,6 +51,7 @@
             </a>
           </div>
           <div class="page-pill-links" aria-label="AIPet page links">
+            <a href="#ssh">SSH</a>
             <a href="#features">Features</a>
             <a href="#agent-network">Agent network</a>
             <a href="#works-with">Works with</a>
@@ -66,6 +67,32 @@
         </figure>
       </section>
 
+      <section class="aipet-overview" id="whats-new" aria-labelledby="ssh">
+        <div class="aipet-ssh-banner">
+          <span class="aipet-mini-bot bot-working" aria-hidden="true"></span>
+          <div>
+            <p class="eyebrow">New in AIPet 1.0</p>
+            <h2 id="ssh">SSH hosts are now supported.</h2>
+            <p>Follow Claude Code and Codex on remote Linux and macOS hosts. Add a host under <strong>Settings → Integrations → SSH connections</strong>.</p>
+          </div>
+          <a class="button secondary" href="https://github.com/shreduck/AIPet/releases/tag/v1.0.0" target="_blank" rel="noopener">Get AIPet 1.0</a>
+        </div>
+        <ul class="aipet-mosaic" aria-label="AIPet features">
+          <li><span class="aipet-mini-bot bot-working" aria-hidden="true"></span><span><strong>Session pets</strong> See which agent is working, done, or waiting.</span></li>
+          <li><span class="aipet-mini-bot bot-asking" aria-hidden="true"></span><span><strong>Prompt queue</strong> Approve or deny requests and answer Claude’s questions.</span></li>
+          <li><span class="aipet-mini-bot bot-joy" aria-hidden="true"></span><span><strong>Agent network</strong> Follow nested subagents and their tool calls.</span></li>
+          <li><span class="aipet-mini-bot bot-working" aria-hidden="true"></span><span><strong>Session logs</strong> Filter messages, tool activity, and MCP calls.</span></li>
+          <li><span class="aipet-mini-bot bot-joy" aria-hidden="true"></span><span><strong>Context and usage</strong> Check context, token totals, and available account limits.</span></li>
+          <li><span class="aipet-mini-bot bot-asking" aria-hidden="true"></span><span><strong>Timed approvals</strong> Set rules and a time limit for a local session.</span></li>
+          <li><span class="aipet-mini-bot bot-sleeping" aria-hidden="true"></span><span><strong>Compact mode</strong> Keep several sessions together in one pet.</span></li>
+          <li><span class="aipet-mini-bot bot-joy" aria-hidden="true"></span><span><strong>Jump to the session</strong> Bring a supported local terminal or editor forward.</span></li>
+          <li><span class="aipet-mini-bot bot-error" aria-hidden="true"></span><span><strong>Alerts</strong> See errors and get a chime when a session needs you.</span></li>
+          <li><span class="aipet-mini-bot bot-sleeping" aria-hidden="true"></span><span><strong>Make it yours</strong> Choose themes, pet styles, scaling, and sounds.</span></li>
+          <li><span class="aipet-mini-bot bot-working" aria-hidden="true"></span><span><strong>Local and WSL hooks</strong> Set up Claude Code, Codex, or the Cowork plugin.</span></li>
+          <li><span class="aipet-mini-bot bot-asking" aria-hidden="true"></span><span><strong>Add-ins</strong> Show custom status and alerts from hook events.</span></li>
+        </ul>
+      </section>
+
       <section class="top-notice" aria-label="Desktop app first-launch notice">
         <article class="trust-banner warning-banner payment-safety-banner">
           <strong>First-launch security prompts</strong>
@@ -79,7 +106,7 @@
           <nav>
             <a href="#features">Features</a>
             <a href="#agent-network">Agent network</a>
-            <a href="#whats-new">What's new</a>
+            <a href="#ssh">SSH support</a>
             <a href="#works-with">Works with</a>
             <a href="#downloads">Downloads</a>
             <a href="#privacy">Privacy</a>
@@ -99,7 +126,7 @@
             <div class="feature-grid">
               <article class="feature-card">
                 <h3>One pet per session</h3>
-                <p>Every session gets its own robot, named after its project folder. Pets keep their place on screen, and small badges say where the session runs: Claude, Cowork, Codex, WSL or VS Code. Only the robot catches clicks, so the pets never block what is behind them.</p>
+                <p>Every session gets its own robot, named after its project folder. Pets keep their place on screen, and small badges identify Claude, Cowork, Codex, WSL, VS Code, or SSH sessions. Only the robot catches clicks, so the pets never block what is behind them.</p>
               </article>
               <article class="feature-card">
                 <h3>States you can feel</h3>
@@ -159,40 +186,6 @@
               <article class="feature-card">
                 <h3>Explore at your own scale</h3>
                 <p>Pan, zoom, center or fit the whole graph. On a Mac trackpad, use two fingers to pan and pinch to zoom around the pointer. Separate window and text scales keep labels readable. Permission controls and supported question answers are available in this view too; Codex questions still open in Codex.</p>
-              </article>
-            </div>
-          </section>
-
-          <section class="story-block" id="whats-new" aria-labelledby="whats-new-title">
-            <div class="section-heading">
-              <p class="eyebrow">What's new in 0.7.0</p>
-              <h2 id="whats-new-title">A live view of the work behind every pet.</h2>
-              <p class="section-kicker">The <a href="https://github.com/shreduck/AIPet/releases/tag/v0.7.0" target="_blank" rel="noopener">0.7.0 release</a> brings the agent network, richer local logs and prompt navigation, with a smaller portable Windows package and Mac disk-image downloads.</p>
-            </div>
-            <div class="note-grid">
-              <article class="trust-banner">
-                <strong>Follow nested agents</strong>
-                <span>See who started each subagent, which tools it used and when it finished. One shared graph or separate session windows: your choice.</span>
-              </article>
-              <article class="trust-banner">
-                <strong>Read the activity that matters</strong>
-                <span>Filter tool calls and messages, unfold entries, copy results and move or fold the logs while the graph stays in view.</span>
-              </article>
-              <article class="trust-banner">
-                <strong>Browse waiting prompts</strong>
-                <span>Side arrows move through the queue without answering. Go to window opens the AI session and advances the card. Choices and typed drafts stay with their prompts.</span>
-              </article>
-              <article class="trust-banner">
-                <strong>Keep Codex questions visible</strong>
-                <span>Pending questions stay visible until settled, including when Codex has finished its reply. Desktop sessions are recognized separately from VS Code. Answer questions in Codex itself.</span>
-              </article>
-              <article class="trust-banner">
-                <strong>Approve one session for a while</strong>
-                <span>Live Management offers a timed auto-approve for a selected session, after confirmation. See its countdown and stop it early; AI questions always wait for your answer.</span>
-              </article>
-              <article class="trust-banner">
-                <strong>Hooks that survive an app move</strong>
-                <span>Installed hooks get their own runtime, so moving or replacing the portable app does not leave them depending on its old folder.</span>
               </article>
             </div>
           </section>
@@ -280,7 +273,7 @@
             <div class="trust-stack" aria-label="Privacy notes">
               <div class="trust-banner">
                 <strong>Almost no network</strong>
-                <span>The only connection AIPet makes by itself is a daily check on GitHub for a new release, which you can switch off; it never installs anything. Everything else is opt-in and off by default: an MCP Workbench you run yourself, and an experimental Claude usage reading that asks for consent first.</span>
+                <span>AIPet can check GitHub for updates. Optional connections include SSH hosts you add, a Workbench you run yourself, and experimental Claude usage collection. SSH sends session status and recent activity directly between your machine and your host. AIPet encrypts saved SSH passwords and keeps the key in the operating system credential store.</span>
               </div>
               <div class="trust-banner">
                 <strong>Local status and activity</strong>
@@ -288,7 +281,7 @@
               </div>
               <div class="trust-banner">
                 <strong>Your settings are backed up</strong>
-                <span>Before changing a Claude Code <code>settings.json</code> or Codex <code>hooks.json</code>, AIPet saves a byte-exact copy you can restore from the menu. Backups are local copies, so they contain whatever your settings contain.</span>
+                <span>Before changing Claude Code or Codex hook settings, AIPet saves a copy on the machine that owns those settings. Backups may include any credentials already present in those files.</span>
               </div>
             </div>
           </section>
