@@ -5,9 +5,11 @@
   <title>Full Colour Sheet | ColourTrainer</title>
   <meta name="description" content="Browse ColourTrainer's full offline colour atlas.">
   <link rel="stylesheet" href="../../../assets/css/site.css">
+  <link rel="stylesheet" href="../../../theme.css">
+  <script src="../../../theme.js"></script>
 </head>
 <body class="colourtrainer-page colour-sheet-page">
-  <header class="site-header"><a class="brand" href="../../../">Duck Code</a><nav aria-label="Primary navigation"><a href="../">ColourTrainer</a><a href="#sheet">Full colour sheet</a></nav></header>
+  <header class="site-header"><a class="brand" href="../../../">Duck Code</a><nav aria-label="Primary navigation"><a href="../">ColourTrainer</a><a href="#sheet">Full colour sheet</a><button class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" hidden><span aria-hidden="true"></span>Dark mode</button></nav></header>
   <main><section class="catalog-hero"><p class="eyebrow">ColourTrainer atlas</p><h1>Full colour sheet</h1><p class="lede">Browse the same bundled colour names, approximate sRGB swatches, families, and nearest CSS references used by ColourTrainer.</p><p class="note">Samples are everyday-display approximations, not calibrated physical colour references. Names and family boundaries can vary between people, languages, and contexts.</p></section>
   <section class="section" id="sheet"><div class="colour-sheet-controls"><label>Find a colour <input id="colour-search" type="search" placeholder="Name, hex, family, or CSS reference"></label><label>Family <select id="colour-family"><option value="">All families</option></select></label><label>Appearance <select id="colour-appearance"><option value="">Any appearance</option><option value="light">Light</option><option value="mid">Mid-tone</option><option value="dark">Dark</option><option value="vivid">Vivid</option><option value="soft">Soft</option><option value="muted">Muted</option></select></label><span id="colour-count" aria-live="polite"></span></div><div id="colour-sheet" class="colour-sheet" aria-live="polite"></div></section></main>
   <footer class="site-footer"><span>Duck Code</span><a href="mailto:duck_code_contact@proton.me">duck_code_contact@proton.me</a></footer>

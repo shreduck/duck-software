@@ -1,0 +1,20 @@
+.wb-overview { align-self: center; min-width: 0; }
+.wb-overview h2 { font-size: clamp(1.6rem, 2.5vw, 2.1rem); line-height: 1.15; margin: 0 0 1rem; }
+.wb-overview .section-kicker { margin: 0 0 1.25rem; max-width: 82ch; }
+.wb-overview ul { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(12rem,100%),1fr)); gap: .6rem; padding: 0; margin: 0; list-style: none; }
+.wb-overview li { display: flex; }
+.wb-overview a { flex: 1; display: grid; align-content: start; gap: .35rem; padding: 1rem; background: #edf4f0; border: 1px solid #bacdc2; border-radius: .75rem; color: #213d30; text-decoration: none; }
+.wb-overview li:nth-child(3n+2) a { background: #edf2f6; border-color: #c2d0da; color: #233d51; }
+.wb-overview li:nth-child(3n) a { background: #faf3e6; border-color: #d9cbb1; color: #493a20; }
+.wb-overview a:hover strong, .wb-overview a:focus-visible strong { text-decoration: underline; }
+.wb-overview strong { font-size: 1.1rem; }
+.wb-overview span { font-size: 1rem; line-height: 1.4; }
+@media (min-width: 1000px) {
+  .workbench-page .workbench-hero { grid-template-columns: 1fr 1fr; }
+}
+:is(.store-badge,.button)[href*="github.com"][href*="/releases"], .store-badge[data-download-url] { background: #171b20; color: white; border-color: #555; }
+.button[href*="github.com"][href*="/releases"]::before,
+.download-card:is([href*="github.com"][href*="/releases"],[data-download-url]) > strong::before {
+  content: ""; display: inline-block; width: 1.25rem; height: 1.25rem; margin-right: .5rem;
+  background: currentColor; mask: url("media/github.svg") center / contain no-repeat; vertical-align: -.2em;
+}

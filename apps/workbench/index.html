@@ -7,7 +7,10 @@
     <meta name="description" content="MCP Workbench brings code analysis, repository research, browser and JVM performance measurements, reusable Test Suite profiles, Jobs, planning and scoped MCP tools into one local or self-hosted workspace.">
     <link rel="icon" href="../../assets/img/workbench/duck_uncertain_transparent.png">
     <link rel="stylesheet" href="../../assets/css/site.css?v=workbench-20260930-tour">
-  </head>
+    <link rel="stylesheet" href="../../product-preview.css">
+    <link rel="stylesheet" href="../../theme.css">
+  <script src="../../theme.js"></script>
+</head>
   <body class="workbench-page">
     <header class="site-header">
       <a class="brand" href="../../">Duck Code</a>
@@ -18,7 +21,7 @@
         <a href="#licensing">Licensing</a>
         <a href="https://github.com/shreduck/mcp-workbench-release" target="_blank" rel="noopener">Release repo</a>
         <a href="mailto:duck_code_contact@proton.me">Contact</a>
-      </nav>
+      <button class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" hidden><span aria-hidden="true"></span>Dark mode</button></nav>
     </header>
 
     <main id="main">
@@ -34,22 +37,23 @@
             </div>
           </div>
 
-          <p class="lede">MCP Workbench brings people and MCP agents into one technical workspace: explore code and release history, plan and review changes, share isolated browsers, automate jobs, and record browser and JVM performance. Reusable Test Suite profiles keep repeated measurements and their evidence together.</p>
-          <p class="note">Run it locally with the default H2 file or self-host it with PostgreSQL when you need something sturdier. You control the credentials, MCP keys, browser profiles, network policy, data storage, and which external writes are approved.</p>
+          <p class="lede">Connect your AI to a local or self-hosted workspace. Its MCP access key determines which tools it can use to explore code, review changes and run tests.</p>
+          <p class="note"><strong>Fine-grained access per MCP key.</strong> Give a review agent repository read access and a test agent browser tools. Grant permission to run Jobs or publish changes separately. You can rotate or revoke each key independently.</p>
+          <p class="note"><strong>Too many settings and screens?</strong> Give your AI permission to configure Workbench, then tell it what you want to set up.</p>
           <p class="note">This tour reflects the current development interface. Check the release notes for the capabilities included in your download.</p>
           <p class="download-warning-note">Windows and macOS builds are unsigned and may trigger OS or browser download warnings.</p>
 
           <div class="store-badges" aria-label="MCP Workbench downloads">
             <a class="store-badge stable-badge" href="https://github.com/shreduck/mcp-workbench-release/releases/tag/v3.0.0" target="_blank" rel="noopener">
-              <svg class="store-badge-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/><path d="M5 20h14"/></svg>
+              <img src="../../media/github.svg" width="24" height="24" alt="">
               <span><small>Latest stable</small><strong>v3.0.0</strong></span>
             </a>
             <button class="store-badge desktop-badge download-badge-button" type="button" data-download-name="Windows v3.0.0 with bundled Java" data-download-url="https://github.com/shreduck/mcp-workbench-release/releases/download/v3.0.0/mcp-workbench-windows-with-jre-v3.0.0.zip">
-              <svg class="store-badge-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="8" height="7"/><rect x="13" y="4" width="8" height="7"/><rect x="3" y="13" width="8" height="7"/><rect x="13" y="13" width="8" height="7"/></svg>
+              <img src="../../media/github.svg" width="24" height="24" alt="">
               <span><small>Stable download</small><strong>Windows</strong></span>
             </button>
             <button class="store-badge desktop-badge download-badge-button" type="button" data-download-name="macOS v3.0.0 with bundled Java" data-download-url="https://github.com/shreduck/mcp-workbench-release/releases/download/v3.0.0/mcp-workbench-mac-with-jre-v3.0.0.zip">
-              <svg class="store-badge-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 20c-4 0-7-3-7-7s3-7 7-7 7 3 7 7-3 7-7 7Z"/><path d="M12 6V3"/><path d="M9 3h6"/></svg>
+              <img src="../../media/github.svg" width="24" height="24" alt="">
               <span><small>Stable download</small><strong>macOS</strong></span>
             </button>
             <a class="store-badge docker-badge" href="https://github.com/shreduck/mcp-workbench-release#run-with-docker" target="_blank" rel="noopener">
@@ -99,17 +103,25 @@
 
         <div class="feature-story">
           <section class="story-block" id="features" aria-labelledby="features-title">
-            <div class="section-heading">
-              <p class="eyebrow">Problem, meet toolbox</p>
-              <h2 id="features-title">A connected workspace from first question to saved evidence.</h2>
-              <p class="section-kicker">Use the portal directly or connect an MCP client. Scoped tools, reviewable local records and links into the same workspace let people and agents work with the same context.</p>
+            <div class="wb-overview">
+              <h2 id="features-title">Workbench at a glance</h2>
+              <ul>
+                <li><a href="#key-grants"><span class="feature-duck duck-key" aria-hidden="true"></span><strong>Set AI tool access</strong><span>Choose which tools your AI can use with each MCP key. Repository access also follows the connected account’s permissions.</span></a></li>
+                <li><a href="#fetch-policy"><span class="feature-duck duck-shield" aria-hidden="true"></span><strong>Set destination rules</strong><span>Narrow web access per key with allowlists and blocklists inside the workspace’s network policy.</span></a></li>
+                <li><a href="#code-scanner"><span class="feature-duck duck-code" aria-hidden="true"></span><strong>Explore code</strong><span>Trace callers, dependencies and repository history.</span></a></li>
+                <li><a href="#plan-review"><span class="feature-duck duck-review" aria-hidden="true"></span><strong>Plan &amp; review</strong><span>Turn backlog proposals into reviewed changes.</span></a></li>
+                <li><a href="#browser-tools"><span class="feature-duck duck-browser" aria-hidden="true"></span><strong>Share a browser</strong><span>Inspect pages and annotate a shared session.</span></a></li>
+                <li><a href="#fetch-policy"><span class="feature-duck duck-evidence" aria-hidden="true"></span><strong>Fetch evidence</strong><span>Retrieve approved URLs and search their contents.</span></a></li>
+                <li><a href="#jobs"><span class="feature-duck duck-jobs" aria-hidden="true"></span><strong>Automate jobs</strong><span>Schedule workflows and inspect each run.</span></a></li>
+                <li><a href="#test-suite"><span class="feature-duck duck-timer" aria-hidden="true"></span><strong>Measure performance</strong><span>Repeat browser and JVM tests with saved profiles.</span></a></li>
+                <li><a href="#agent-chat"><span class="feature-duck duck-chat" aria-hidden="true"></span><strong>Connect agents</strong><span>Let one agent ask another for help and read its reply in a saved chat.</span></a></li>
+                <li><a href="#think-trace"><span class="feature-duck duck-trace" aria-hidden="true"></span><strong>Trackable and queryable threads</strong><span>Use Think Trace to link questions, evidence and decisions in a graph. Query a step or follow a branch to see how a decision was reached.</span></a></li>
+              </ul>
             </div>
-
-            <p class="note" id="screenshot-note">All Workbench screenshots use the current application interface with populated, fictional Harbor and Acme examples. Names, code, conversations, credentials and measurements are demonstration data, not customer information or benchmark results. Illustrated AI conversations are examples, not recorded provider responses.</p>
 
             <div class="feature-grid feature-grid-visual">
               <article class="feature-card visual-feature">
-                <h3>MCP keys and tool access</h3>
+                <h3 id="key-grants">MCP keys and tool access</h3>
                 <p>Create per-user MCP keys, choose their tool groups, and follow client-specific setup for Claude Code, Codex, GitHub Copilot, Grok or another MCP client. Performance, JVM, Test Suite and configuration grants remain explicit; owning a key does not grant every capability.</p>
                 <div class="feature-carousel" data-carousel aria-label="MCP keys and tool access screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
@@ -130,7 +142,7 @@
 
               </article>
               <article class="feature-card visual-feature">
-                <h3>Fetch Proxy</h3>
+                <h3 id="fetch-policy">Fetch Proxy</h3>
                 <p>Your AI harness cannot reach an allowed page, blocks <code>curl</code>, or chokes on a large response. Fetch it through Workbench, search the temporary result, and read only the bounded parts you need.</p>
                 <div class="feature-carousel" data-carousel aria-label="Fetch Proxy screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
@@ -179,7 +191,7 @@
 
               </article>
               <article class="feature-card visual-feature">
-                <h3>Cooperative browsers</h3>
+                <h3 id="browser-tools">Cooperative browsers</h3>
                 <p>The AI can open an isolated Chrome, Chromium, Brave or Firefox session while you watch, take over and leave selector-linked notes. Saved definitions cover local and authenticated helper execution; snapshots, tabs, screenshots and console output support the handoff.</p>
                 <div class="feature-carousel" data-carousel aria-label="Cooperative browser screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
@@ -252,7 +264,7 @@
 
               </article>
               <article class="feature-card visual-feature">
-                <h3>Kanban and backlog proposals</h3>
+                <h3 id="plan-review">Kanban and backlog proposals</h3>
                 <p>Organize local boards with cards, comments and links, then turn conversations into versioned work-item, issue, test-plan or pull-request proposals. Review text or JSON, inspect historical versions and approve scoped publication; explicitly granted immediate-write permissions remain separate.</p>
                 <div class="feature-carousel" data-carousel aria-label="Kanban and backlog proposal screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
@@ -433,9 +445,14 @@
                 <p class="feature-pullquote">Move from source to graphs, entry points and findings without losing the selected scope. Static analysis supplies evidence for a review; it does not prove behavior at runtime.</p>
 
               </article>
+              <article class="feature-card">
+                <h3 id="agent-chat">Agent-to-agent chat</h3>
+                <p>An agent with chat access can send a question to another configured agent, check when its turn finishes and read the reply. The saved conversation keeps the request and response together for follow-up.</p>
+              </article>
+
               <article class="feature-card visual-feature">
-                <h3>Think Trace</h3>
-                <p>Capture evidence, decisions, comments, and final responses as a graph-backed handoff that avoids storing private raw chain-of-thought.</p>
+                <h3 id="think-trace">Think Trace</h3>
+                <p>Record an investigation as linked questions, evidence and decisions. Another agent can query a specific step, follow its connections and pick up where the investigation stopped.</p>
                 <div class="feature-carousel" data-carousel aria-label="Think Trace screenshots">
                   <button class="carousel-control carousel-prev" type="button" data-carousel-prev aria-label="Previous screenshot"><svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
                   <div class="carousel-viewport">

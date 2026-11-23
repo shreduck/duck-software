@@ -1,0 +1,103 @@
+/* Shared palette, page frame and controls for the local proposal. */
+html, html body {
+  --paper: #fafaf5; --surface: #fff; --ink: #192c25; --muted: #465a50;
+  --wash: #eff3e9; --wash-strong: #e1ebdb; --soft: #e4eadf;
+  --surface-warm: #faf0d7; --line: #c7d1c5; --accent: #296043;
+  --accent-dark: #20533d; --green: #20533d; --rose: #884b32; --gold: #805a19;
+  --solid: #20533d; --on-solid: #fff; --focus: #aa5318;
+  --shadow-soft: 0 5px 20px #152f2010; --shadow: 0 12px 36px #152f201c;
+  --gutter: clamp(1rem, 3.2vw, 5rem);
+}
+html[data-theme="dark"], html[data-theme="dark"] body {
+  color-scheme: dark;
+  --paper: #141c18; --surface: #1d2822; --ink: #eef4ec; --muted: #c0cec2;
+  --wash: #26342b; --wash-strong: #34473a; --soft: #39473b;
+  --surface-warm: #382f21; --line: #47574a; --accent: #a3d7b2;
+  --accent-dark: #b3e4bd; --green: #b3e4bd; --rose: #f1b196; --gold: #edca85;
+  --solid: #acdbb6; --on-solid: #13271a; --focus: #f0c778;
+  --shadow-soft: 0 5px 20px #0002; --shadow: 0 12px 36px #0004;
+}
+html body { background: var(--paper); color: var(--ink); min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; }
+html body::before { display: none; }
+html body > main { flex: 1 0 auto; }
+html body > :is(main, .site-header, .site-footer), html body .wrap { width: calc(100% - 2 * var(--gutter)); max-width: none; margin-inline: auto; }
+html body .site-header { border-bottom: 1px solid var(--line); padding-block: .85rem; min-height: 4.6rem; }
+html body .brand { font-size: 1.4rem; letter-spacing: -.045em; color: var(--ink); }
+html body .theme-toggle { display: inline-flex; gap: .5rem; align-items: center; min-height: 44px; padding: .45rem .8rem; border: 1px solid var(--line); border-radius: .55rem; background: var(--surface); color: var(--ink); line-height: 1.2; font-family: inherit; font-size: .95rem; font-weight: 600; cursor: pointer; }
+.theme-toggle span { width: 1rem; height: 1rem; border: 1.5px solid currentColor; border-radius: 50%; background: linear-gradient(to right,currentColor 50%,transparent 50%); }
+html body .theme-toggle[hidden] { display: none; }
+html body :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+html body .product-hero, html body .top-notice { margin-inline: 0; min-height: auto; }
+html body .product-hero { padding-block: clamp(2rem,6svh,5rem); }
+html body .hero-desktop { width: 100%; max-width: none; }
+html body .hero-desktop img { max-height: 62svh; object-fit: contain; }
+html body .colour-hero-cast > img { max-height: 60svh; }
+html body .poster { max-height: 56svh; width: 100%; }
+html body .hero { padding-block: clamp(2rem,6svh,5rem); }
+html body .reading-block { max-width: 80ch; }
+html body .wb-overview { margin-block-end: 1.5rem; }
+html body .wb-overview ul { grid-template-columns: repeat(4,minmax(0,1fr)); }
+html body .wb-overview li a { grid-template-rows: auto auto 1fr; background: var(--wash); border-color: var(--line); color: var(--ink); }
+html body .wb-overview li:nth-child(-n+2) a { background: var(--wash-strong); border-color: var(--accent); }
+.feature-duck {
+  display: block; width: 4rem; height: 4rem; margin-bottom: .3rem;
+  background: url("media/workbench-ducks.webp") 0 0 / 400% 200% no-repeat;
+}
+.duck-shield { background-position: 33.3333% 0; }
+.duck-code { background-position: 66.6667% 0; }
+.duck-review { background-position: 100% 0; }
+.duck-browser { background-position: 0 100%; }
+.duck-evidence { background-position: 33.3333% 100%; }
+.duck-jobs { background-position: 66.6667% 100%; }
+.duck-timer { background-position: 100% 100%; }
+html body :is(.section-index,.story-block,.feature-card,.workflow-card,.card,.trust-banner,.widget-preview,.live-activity-preview,.future-screenshots article,.page-pill-links a,.source-row,.evidence-note,.colour-of-day-mini,.feature-carousel,.carousel-modal-panel,.download-modal-panel,.license-modal-panel,.carousel-modal-story,.carousel-modal-figure,.carousel-modal-figure figcaption,.download-modal-close,.desktop-frame,.install-steps > div,.license-float,.colour-availability-banner,.aipet-availability,.aipet-mosaic li,.screen-card,.screenshot-card) { background: var(--surface); border-color: var(--line); color: var(--ink); }
+html body :is(.warning-banner,.install-warning,.feature-pullquote) { background: var(--surface-warm); color: var(--ink); }
+html body :is(.summary,.details > p:not(.meta),.meta,.index-label,.license-float span,.warning-banner span,.aipet-shot figcaption) { color: var(--muted); }
+html body :is(.license-float strong,.warning-banner strong,.download-warning-note) { color: var(--rose); }
+html body .aipet-shot figcaption { background: var(--surface); }
+html body .button:not(.secondary):not([href*="github.com"]) { color: var(--on-solid); background: var(--solid); }
+html body :is(.button.secondary,.aipet-ssh-badge,.status-label,.primary) { color: var(--accent-dark); background: var(--wash-strong); border-color: var(--line); }
+html body .card-link { color: var(--ink); }
+html body .scroll-focus-card { opacity: 1; filter: none; }
+html body .site-footer { margin-top: auto; }
+html body .document-content { width: 100%; }
+html body .license-float { position: static; width: auto; display: block; margin-block: .75rem; box-shadow: none; }
+html body .license-float > * { margin-inline-end: .55rem; }
+html body .license-float.is-hidden { transform: none; visibility: visible; opacity: 1; pointer-events: auto; }
+@media (min-width: 981px) {
+  html body .section-index { position: sticky; top: 1rem; left: auto; width: auto; max-height: calc(100dvh - 2rem); }
+  html body .feature-layout { grid-template-columns: clamp(11rem,14vw,16rem) minmax(0,1fr); gap: clamp(1rem,2.6vw,3rem); }
+  html body main:has(> .document-content) { display: grid; grid-template-columns: minmax(15rem, .75fr) minmax(0,1.25fr); gap: clamp(2rem,5vw,6rem); align-content: start; align-items: start; }
+  html body .document-content { padding-block: clamp(2rem,6vh,5rem); }
+  html body .document-content > .reading-block { margin-right: auto; }
+}
+@media (min-width: 1500px) {
+  .grid:has(.card) { grid-template-columns: repeat(4,minmax(0,1fr)); }
+  .grid .meta { align-items: flex-start; }
+}
+@media (max-width: 1150px) { html body .wb-overview ul { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 760px) {
+  html body .site-header, .mast .bar { flex-wrap: wrap; align-items: flex-start; gap: .45rem 1rem; padding-block: .7rem; }
+  .mast .bar { align-items: center; }
+  .mast nav, .site-header nav { flex-wrap: wrap; gap: .15rem .9rem; }
+  .mast .brand img { width: 30px; height: 30px; }
+  html body .product-hero { padding-block: 2rem; }
+  html body .section-index nav { justify-content: start; }
+}
+@media (max-width: 480px) { html body .wb-overview ul { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Keep the navigation rail anchored to the viewport while the document scrolls. */
+html, html body { overflow-x: clip; }
+html body .skip { background: var(--surface); color: var(--ink); }
+html body .wb-overview li:nth-child(n) a { color: var(--ink); }
+html body .wb-overview li:nth-child(n+3) a { background: var(--wash); border-color: var(--line); }
+html body .aipet-mosaic li:nth-child(n),
+html body :is(.aipet-ssh-banner,.research-card,.carousel-slide figcaption,.carousel-modal-actions,.carousel-modal-story-header,.carousel-modal-series-controls button,.license-modal-text,.colour-challenge-card,.license-duck-art,.license-duck-art span,.activity-preview-stack,.workflow-beats span,.browser-path span) { background: var(--surface); border-color: var(--line); color: var(--ink); }
+html body .install-steps article > span { background: var(--solid); color: var(--on-solid); }
+/* Screens inside product demonstrations retain their own interface colours. */
+html body :is(.demo-screen,.ai-demo,.report-preview) { color-scheme: light; --ink: #192c25; --muted: #465a50; --surface: #fff; --accent: #296043; --accent-dark: #20533d; --line: #c7d1c5; color: var(--ink); }
+@media (max-width: 760px) { .section-index { scroll-margin-top: 0; } html:has(.section-index) { scroll-padding-top: 6rem; } }
+.duck-chat, .duck-trace { background-image: url("media/workbench-chat-trace.webp"); background-size: 200% 100%; }
+.duck-trace { background-position: 100% 0; }
+@media (min-width: 1600px) { html body .wb-overview ul { grid-template-columns: repeat(5,minmax(0,1fr)); } }

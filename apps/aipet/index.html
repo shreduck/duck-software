@@ -7,7 +7,10 @@
     <meta name="description" content="AIPet is a desktop pet for your AI coding sessions: robots, an agent graph and activity logs for Claude Code, Cowork and Codex. Connect to Linux and macOS SSH hosts.">
     <link rel="icon" href="../../assets/img/aipet/icon-1024.png">
     <link rel="stylesheet" href="../../assets/css/site.css">
-  </head>
+    <link rel="stylesheet" href="../../product-preview.css">
+    <link rel="stylesheet" href="../../theme.css">
+  <script src="../../theme.js"></script>
+</head>
   <body class="aipet-page">
     <header class="site-header">
       <a class="brand" href="../../">Duck Code</a>
@@ -18,7 +21,7 @@
         <a href="#licensing">Licensing</a>
         <a href="https://github.com/shreduck/AIPet" target="_blank" rel="noopener">GitHub</a>
         <a href="mailto:duck_code_contact@proton.me">Contact</a>
-      </nav>
+      <button class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" hidden><span aria-hidden="true"></span>Dark mode</button></nav>
     </header>
 
     <main id="main">
@@ -38,11 +41,11 @@
 
           <div class="store-badges" aria-label="AIPet downloads">
             <a class="store-badge desktop-badge" href="https://github.com/shreduck/AIPet/releases" target="_blank" rel="noopener">
-              <svg class="store-badge-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="8" height="7"/><rect x="13" y="4" width="8" height="7"/><rect x="3" y="13" width="8" height="7"/><rect x="13" y="13" width="8" height="7"/></svg>
+              <img src="../../media/github.svg" width="24" height="24" alt="">
               <span><small>Releases for</small><strong>Windows</strong></span>
             </a>
             <a class="store-badge stable-badge" href="https://github.com/shreduck/AIPet/releases" target="_blank" rel="noopener">
-              <svg class="store-badge-icon" width="22" height="22" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 20c-4 0-7-3-7-7s3-7 7-7 7 3 7 7-3 7-7 7Z"/><path d="M12 6V3"/><path d="M9 3h6"/></svg>
+              <img src="../../media/github.svg" width="24" height="24" alt="">
               <span><small>Releases for</small><strong>macOS</strong></span>
             </a>
             <a class="store-badge docker-badge" href="https://github.com/shreduck/AIPet" target="_blank" rel="noopener">
