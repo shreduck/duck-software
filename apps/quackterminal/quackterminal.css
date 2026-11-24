@@ -20,3 +20,15 @@ header nav { gap: .9rem; }
   .quack-intro, .quack-features { grid-template-columns: minmax(0, 1fr); }
   .quack-icon { grid-row: 1; }
 }
+
+.quack-beta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem .8rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: .75rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: .65rem;
+}
