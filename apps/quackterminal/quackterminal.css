@@ -1,0 +1,22 @@
+.quack-page { padding-block: clamp(1.5rem, 6vw, 4rem); }
+.quack-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  padding: clamp(1.25rem, 5vw, 3.5rem);
+  gap: clamp(1rem, 5vw, 3rem);
+  border: 1px solid currentColor;
+  border-radius: 1.25rem;
+}
+.quack-intro h1 { margin: .25em 0; font-size: clamp(2.4rem, 7vw, 5rem); line-height: 1; }
+.quack-lede { font-size: clamp(1.1rem, 2vw, 1.4rem); max-width: 38ch; margin-block: 1rem 1.5rem; }
+.quack-icon { width: clamp(7rem, 19vw, 14rem); height: auto; }
+.quack-features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; margin-block: 2.5rem; }
+.quack-features h2 { margin-top: 0; }
+.quack-start li { margin-block: .6em; }
+.quack-start code { overflow-wrap: anywhere; }
+header nav { gap: .9rem; }
+@media (max-width: 42rem) {
+  .quack-intro, .quack-features { grid-template-columns: minmax(0, 1fr); }
+  .quack-icon { grid-row: 1; }
+}
